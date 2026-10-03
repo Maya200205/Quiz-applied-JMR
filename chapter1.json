@@ -2,118 +2,163 @@
   "id": "chapter1",
   "title": "Chapter 1 — Introduction to PCB Technology",
   "source": "01 - An introduction to PCB technology.pdf",
+  "question_count": 173,
   "questions": [
     {
       "id": "q1",
       "type": "single",
-      "question": "Which description best defines a Printed Circuit Board (PCB)?",
+      "question": "What does PCB stand for?",
       "options": [
-        "A mechanical support and electrical interconnection platform for electronic components",
-        "A mechanical support with no electrical interconnections",
-        "A power supply designed specifically for electronic components",
-        "A protective polymer coating applied over electronic components"
+        "Printed Circuit Board",
+        "Printed Component Base",
+        "Power Circuit Board",
+        "Programmable Circuit Bus"
       ],
       "answer": [
         0
       ],
-      "explanation": "A PCB provides both mechanical support and electrical interconnections for electronic components."
+      "explanation": "PCB stands for Printed Circuit Board.",
+      "category": "Basics",
+      "difficulty": "easy"
     },
     {
       "id": "q2",
       "type": "single",
-      "question": "Once electronic components are mounted on a PCB, what is the assembled board commonly called?",
+      "question": "What is the primary role of a PCB according to the chapter?",
       "options": [
-        "A fabrication house",
-        "A PCBA or PCA",
-        "A Gerber stack",
-        "An FR-4 laminate"
+        "Mechanical support and electrical interconnection of components",
+        "Only mechanical support",
+        "Only power conversion",
+        "Only thermal dissipation"
       ],
       "answer": [
-        1
+        0
       ],
-      "explanation": "PCBA means Printed Circuit Board Assembly; PCA means Printed Circuit Assembly."
+      "explanation": "A PCB provides both mechanical support and electrical interconnection for electronic components.",
+      "category": "Basics",
+      "difficulty": "easy"
     },
     {
       "id": "q3",
       "type": "single",
-      "question": "What is FR-4 in the context of PCB construction?",
+      "question": "What does PCBA stand for?",
       "options": [
-        "A glass-reinforced epoxy laminate used as dielectric material",
-        "A copper alloy used for PCB traces",
-        "A gold surface finish for exposed pads",
-        "A solder alloy used for component assembly"
+        "Printed Circuit Board Assembly",
+        "Printed Copper Board Arrangement",
+        "Power Circuit Board Assembly",
+        "Printed Circuit Base Architecture"
       ],
       "answer": [
         0
       ],
-      "explanation": "FR-4 is the common glass-reinforced epoxy dielectric used between conductive copper layers."
+      "explanation": "PCBA stands for Printed Circuit Board Assembly.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
     },
     {
       "id": "q4",
       "type": "single",
-      "question": "According to the chapter, what is the typical relative permittivity εr range of FR-4?",
+      "question": "What does PCA stand for in the chapter?",
       "options": [
-        "1.0–1.2",
-        "2.0–2.5",
-        "3.8–4.8",
-        "8.0–10.0"
+        "Printed Circuit Assembly",
+        "Power Control Assembly",
+        "Printed Component Array",
+        "Passive Circuit Arrangement"
       ],
       "answer": [
-        2
+        0
       ],
-      "explanation": "The chapter states that FR-4 typically has εr around 3.8–4.8."
+      "explanation": "PCA stands for Printed Circuit Assembly.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
     },
     {
       "id": "q5",
-      "type": "single",
-      "question": "What is 1 mil equal to?",
+      "type": "true",
+      "question": "Once components are mounted, the board may be called a PCBA or PCA.",
       "options": [
-        "2.54 µm",
-        "25.4 µm",
-        "254 µm",
-        "2.54 mm"
+        "True",
+        "False"
       ],
       "answer": [
-        1
+        0
       ],
-      "explanation": "1 mil = 0.001 inch = 25.4 µm."
+      "explanation": "The chapter states that an assembled board is generally called a PCBA, or sometimes a PCA.",
+      "category": "Basics",
+      "difficulty": "easy"
     },
     {
       "id": "q6",
-      "type": "multi",
-      "question": "Select every approximate PCB dimension conversion that agrees with the chapter.",
+      "type": "single",
+      "question": "What does FR-4 stand for?",
       "options": [
-        "6 mil ≈ 0.15 mm",
-        "20 mil ≈ 0.5 mm",
-        "100 mil = 2.54 mm",
-        "63 mil ≈ 6.3 mm"
+        "Flame Retardant 4",
+        "Frequency Rated 4",
+        "Fiber Reinforced 4",
+        "Fabrication Resin 4"
       ],
       "answer": [
-        0,
-        1,
-        2
+        0
       ],
-      "explanation": "6 mil ≈ 0.15 mm, 20 mil ≈ 0.5 mm, 63 mil ≈ 1.6 mm, and 100 mil = 2.54 mm."
+      "explanation": "FR-4 means Flame Retardant 4.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
     },
     {
       "id": "q7",
       "type": "single",
-      "question": "When a PCB is described as a 4-layer board, what does the number of layers refer to?",
+      "question": "What is FR-4?",
       "options": [
-        "The total number of physical layers including solder mask",
-        "The number of conductive copper layers",
-        "The number of Gerber files",
-        "The number of dielectric FR-4 layers only"
+        "A glass-reinforced epoxy laminate",
+        "A copper alloy",
+        "A solder finish",
+        "A plated via material"
       ],
       "answer": [
-        1
+        0
       ],
-      "explanation": "PCB layer count refers to conductive copper layers."
+      "explanation": "FR-4 is the common glass-reinforced epoxy dielectric laminate used in PCBs.",
+      "category": "Materials",
+      "difficulty": "easy"
     },
     {
       "id": "q8",
-      "type": "tf",
-      "question": "Even numbers of copper layers are generally preferred because they allow more symmetric stack-ups and are typically easier and cheaper to manufacture.",
+      "type": "single",
+      "question": "Which material is the common PCB conductor mentioned in the chapter?",
+      "options": [
+        "Copper foil",
+        "Aluminum foil",
+        "Gold foil",
+        "Tin foil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter describes PCBs as alternating conductive copper foil and dielectric material.",
+      "category": "Materials",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "single",
+      "question": "What typical range of relative permittivity εr is given for FR-4?",
+      "options": [
+        "3.8–4.8",
+        "1.0–1.2",
+        "6.5–7.5",
+        "10–12"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives a typical FR-4 relative permittivity of about 3.8–4.8.",
+      "category": "Materials",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "true",
+      "question": "The relative permittivity of FR-4 can depend on material composition and frequency.",
       "options": [
         "True",
         "False"
@@ -121,196 +166,218 @@
       "answer": [
         0
       ],
-      "explanation": "The chapter states that even layer counts are generally preferred; odd counts are possible but less common."
-    },
-    {
-      "id": "q9",
-      "type": "multi",
-      "question": "For C = ε₀εrA/d, select every change that increases the parasitic capacitance between overlapping PCB copper areas.",
-      "options": [
-        "Increasing the overlapping area A",
-        "Increasing the relative permittivity εr",
-        "Decreasing the separation distance d",
-        "Increasing the separation distance d"
-      ],
-      "answer": [
-        0,
-        1,
-        2
-      ],
-      "explanation": "C increases with εr and A, and decreases when d increases."
-    },
-    {
-      "id": "q10",
-      "type": "single",
-      "question": "A 1.6 mm two-layer PCB has two aligned 1 cm² pads with εr = 4.5. What capacitance does the chapter estimate?",
-      "options": [
-        "Approximately 0.25 pF",
-        "Approximately 2.5 pF",
-        "Approximately 25 pF",
-        "Approximately 250 pF"
-      ],
-      "answer": [
-        1
-      ],
-      "explanation": "The worked example gives approximately 2.5 pF."
+      "explanation": "The chapter explicitly says εr depends on material composition and frequency.",
+      "category": "Materials",
+      "difficulty": "standard"
     },
     {
       "id": "q11",
       "type": "single",
-      "question": "What is the main electrical purpose of a PCB via?",
+      "question": "What is a mil?",
       "options": [
-        "To connect copper layers electrically",
-        "To define the outer contour of the PCB",
-        "To print component reference designators",
-        "To protect exposed copper from oxidation"
+        "One thousandth of an inch",
+        "One hundredth of an inch",
+        "One millimeter",
+        "One micrometer"
       ],
       "answer": [
         0
       ],
-      "explanation": "A via allows signals, power, or ground to pass electrically between copper layers."
+      "explanation": "A mil is a milli-inch, i.e. one thousandth of an inch.",
+      "category": "Dimensions",
+      "difficulty": "easy"
     },
     {
       "id": "q12",
       "type": "single",
-      "question": "Which statement best describes an NPTH?",
+      "question": "What is 1 mil in micrometers?",
       "options": [
-        "A plated hole used mainly to connect copper layers",
-        "A non-plated drilled hole typically used for mechanical purposes",
-        "A blind via connecting an outer layer to an inner layer",
-        "A buried via connecting two internal layers"
+        "25.4 µm",
+        "2.54 µm",
+        "254 µm",
+        "0.254 µm"
       ],
       "answer": [
-        1
+        0
       ],
-      "explanation": "NPTH means non-plated through hole; it is typically used for mounting, alignment, tooling, or locating."
+      "explanation": "1 mil = 25.4 µm.",
+      "category": "Dimensions",
+      "difficulty": "easy"
     },
     {
       "id": "q13",
       "type": "single",
-      "question": "What is an antipad around a PTH via?",
+      "question": "Approximately how many millimeters is 6 mil?",
       "options": [
-        "A copper clearance that prevents connection to a layer",
-        "A copper spoke used to increase heat transfer",
-        "The unused length of a via barrel",
-        "The gold coating applied to a via after drilling"
+        "0.15 mm",
+        "0.6 mm",
+        "1.5 mm",
+        "0.015 mm"
       ],
       "answer": [
         0
       ],
-      "explanation": "An antipad is a clearance in copper where the via must pass without electrically connecting."
+      "explanation": "The chapter gives 6 mil ≈ 0.15 mm.",
+      "category": "Dimensions",
+      "difficulty": "easy"
     },
     {
       "id": "q14",
       "type": "single",
-      "question": "What is a via stub?",
+      "question": "What is 6 mil used as an example of in the chapter?",
       "options": [
-        "The unused portion of a via barrel beyond the last connected layer",
-        "The copper clearance around a via in an unconnected plane",
-        "A mechanical hole with no plating",
-        "A narrow copper spoke connecting a pad to a plane"
+        "Typical signal trace width / minimum clearance",
+        "Common PCB thickness",
+        "Standard header pitch",
+        "Example power trace width"
       ],
       "answer": [
         0
       ],
-      "explanation": "A via stub is the unused barrel beyond the last connected layer and can degrade high-frequency signal integrity."
+      "explanation": "6 mil is listed as a typical signal trace width or minimum clearance.",
+      "category": "Dimensions",
+      "difficulty": "easy"
     },
     {
       "id": "q15",
-      "type": "multi",
-      "question": "Select every statement that correctly describes PCB via types.",
+      "type": "single",
+      "question": "Approximately how many millimeters is 20 mil?",
       "options": [
-        "A PTH via passes through the entire PCB",
-        "A blind via connects an outer layer to one or more inner layers",
-        "A buried via connects internal layers without reaching either outer surface",
-        "Blind vias are generally cheaper to manufacture than PTH vias"
+        "0.5 mm",
+        "0.2 mm",
+        "2.0 mm",
+        "5.0 mm"
       ],
       "answer": [
-        0,
-        1,
-        2
+        0
       ],
-      "explanation": "PTH goes through the whole board; blind connects outer-to-inner; buried connects inner-to-inner. Blind and buried vias are more expensive."
+      "explanation": "The chapter gives 20 mil ≈ 0.5 mm.",
+      "category": "Dimensions",
+      "difficulty": "easy"
     },
     {
       "id": "q16",
       "type": "single",
-      "question": "Which comparison between a thermal via and a thermal relief is correct?",
+      "question": "What is 20 mil used as an example of in the chapter?",
       "options": [
-        "A thermal via enhances heat transfer; a thermal relief limits heat flow into a large plane during soldering",
-        "A thermal via limits heat flow; a thermal relief enhances heat transfer",
-        "Both are intended only to reduce electrical resistance",
-        "Both prevent all electrical connection to the copper plane"
+        "Power trace width",
+        "PCB thickness",
+        "Breadboard pitch",
+        "Via drill size"
       ],
       "answer": [
         0
       ],
-      "explanation": "Thermal vias improve heat transfer; thermal reliefs reduce heat flow into large copper planes during soldering."
+      "explanation": "20 mil is given as an example power trace width.",
+      "category": "Dimensions",
+      "difficulty": "easy"
     },
     {
       "id": "q17",
       "type": "single",
-      "question": "What are Gerber files used for?",
+      "question": "Approximately how many millimeters is 63 mil?",
       "options": [
-        "To describe fabrication-layer geometry using commands and coordinates",
-        "To store only microcontroller source code",
-        "To specify only the bill of materials",
-        "To measure completed trace resistance"
+        "1.6 mm",
+        "0.63 mm",
+        "6.3 mm",
+        "16 mm"
       ],
       "answer": [
         0
       ],
-      "explanation": "Gerber files describe the geometry of fabrication layers such as copper, solder mask, and silkscreen."
+      "explanation": "63 mil ≈ 1.6 mm.",
+      "category": "Dimensions",
+      "difficulty": "easy"
     },
     {
       "id": "q18",
-      "type": "multi",
-      "question": "Select every statement that correctly describes PCB fabrication data.",
+      "type": "single",
+      "question": "What does 63 mil represent in the chapter?",
       "options": [
-        "A separate Gerber file is generated for each copper layer",
-        "The outline layer defines the board contour used for routing or cutting",
-        "Drill data specify hole locations and diameters",
-        "The silkscreen determines copper thickness"
+        "A common PCB thickness",
+        "A standard header pitch",
+        "A typical signal trace width",
+        "A typical drill diameter"
       ],
       "answer": [
-        0,
-        1,
-        2
+        0
       ],
-      "explanation": "Copper layers, outline geometry, and drill data are distinct fabrication data. Silkscreen is for printed markings."
+      "explanation": "63 mil, about 1.6 mm, is a common PCB thickness.",
+      "category": "Dimensions",
+      "difficulty": "easy"
     },
     {
       "id": "q19",
       "type": "single",
-      "question": "Which fabrication layer defines the openings used to manufacture the stencil for SMD solder-paste application?",
+      "question": "What is 100 mil in millimeters?",
       "options": [
-        "Solder paste layer",
-        "Solder mask layer",
-        "Silkscreen layer",
-        "Board outline layer"
+        "2.54 mm",
+        "1.00 mm",
+        "25.4 mm",
+        "0.254 mm"
       ],
       "answer": [
         0
       ],
-      "explanation": "The solder paste layer defines the stencil apertures for SMD assembly."
+      "explanation": "100 mil = 2.54 mm.",
+      "category": "Dimensions",
+      "difficulty": "easy"
     },
     {
       "id": "q20",
-      "type": "tf",
-      "question": "HASL generally provides a flatter surface than ENIG and is therefore especially suitable for fine-pitch components.",
+      "type": "single",
+      "question": "What does 100 mil correspond to in the chapter?",
       "options": [
-        "True",
-        "False"
+        "Standard breadboard/header/socket pitch",
+        "Common PCB thickness",
+        "Example power trace width",
+        "Typical signal clearance"
       ],
       "answer": [
-        1
+        0
       ],
-      "explanation": "False. HASL is less flat; ENIG provides a flat, oxidation-resistant, highly solderable surface suitable for fine-pitch components."
+      "explanation": "100 mil is the standard pitch for breadboards, header pins and sockets.",
+      "category": "Dimensions",
+      "difficulty": "easy"
     },
     {
       "id": "q21",
       "type": "single",
-      "question": "Which PCB dimension corresponds to approximately 1.6 mm?",
+      "question": "What does 1000 mil equal?",
+      "options": [
+        "1 inch",
+        "10 inches",
+        "0.1 inch",
+        "25.4 inches"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "1000 mil = 1 inch = 25.4 mm.",
+      "category": "Dimensions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q22",
+      "type": "single",
+      "question": "How many mil are in 2.54 mm?",
+      "options": [
+        "100 mil",
+        "10 mil",
+        "254 mil",
+        "1000 mil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "2.54 mm equals 100 mil.",
+      "category": "Dimensions",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q23",
+      "type": "single",
+      "question": "A trace is 0.15 mm wide. Which chapter value is closest?",
       "options": [
         "6 mil",
         "20 mil",
@@ -318,61 +385,139 @@
         "100 mil"
       ],
       "answer": [
-        2
+        0
       ],
-      "explanation": "63 mil is approximately 1.6 mm, a common PCB thickness."
+      "explanation": "0.15 mm is approximately 6 mil.",
+      "category": "Dimensions",
+      "difficulty": "standard"
     },
     {
-      "id": "q22",
+      "id": "q24",
       "type": "single",
-      "question": "What does 1000 mil correspond to?",
+      "question": "A power trace is approximately 0.5 mm wide. Which chapter value is closest?",
       "options": [
-        "0.1 inch",
-        "1 inch",
-        "2.54 mm",
-        "10 inches"
+        "20 mil",
+        "6 mil",
+        "63 mil",
+        "100 mil"
       ],
       "answer": [
-        1
+        0
       ],
-      "explanation": "1000 mil = 1 inch = 25.4 mm."
+      "explanation": "0.5 mm is approximately 20 mil.",
+      "category": "Dimensions",
+      "difficulty": "standard"
     },
     {
-      "id": "q23",
+      "id": "q25",
       "type": "multi",
-      "question": "Select every correct use associated with the dimensions listed in the chapter.",
+      "question": "Which dimension associations are correct?",
       "options": [
-        "6 mil: typical signal trace width or minimum clearance",
-        "20 mil: example power trace width",
-        "100 mil: standard pitch for breadboards, headers and sockets",
-        "63 mil: standard pitch for breadboards and headers"
+        "6 mil ≈ 0.15 mm signal/clearance",
+        "20 mil ≈ 0.5 mm power trace",
+        "63 mil ≈ 1.6 mm common board thickness",
+        "100 mil ≈ 25.4 mm header pitch"
       ],
       "answer": [
         0,
         1,
         2
       ],
-      "explanation": "63 mil is a common PCB thickness; the other three associations are correct."
+      "explanation": "100 mil is 2.54 mm, not 25.4 mm. The other three associations match the chapter.",
+      "category": "Dimensions",
+      "difficulty": "standard"
     },
     {
-      "id": "q24",
+      "id": "q26",
       "type": "single",
-      "question": "Which term can refer to a company that manufactures printed circuit boards?",
+      "question": "What is a PCB manufacturer also called?",
       "options": [
-        "Fab house",
-        "Netlist",
-        "Overlay",
-        "Antipad"
+        "Fabrication house / fab house / fab",
+        "Assembly stack",
+        "Gerber house",
+        "Copper shop"
       ],
       "answer": [
         0
       ],
-      "explanation": "A PCB manufacturer may be called a fabrication house, fab house, or simply fab."
+      "explanation": "The chapter uses fabrication house, fab house, or simply fab.",
+      "category": "Manufacturing",
+      "difficulty": "easy"
     },
     {
-      "id": "q25",
-      "type": "tf",
-      "question": "A PCB with an odd number of copper layers can be manufactured, but such boards are less common and may cost more.",
+      "id": "q27",
+      "type": "single",
+      "question": "What does the number of PCB layers refer to?",
+      "options": [
+        "Number of conductive copper layers",
+        "Total physical material layers",
+        "Number of Gerber files",
+        "Number of dielectric layers"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Layer count refers to conductive copper layers.",
+      "category": "Layers",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q28",
+      "type": "single",
+      "question": "What is the simplest PCB layer count mentioned?",
+      "options": [
+        "1 copper layer",
+        "2 copper layers",
+        "3 copper layers",
+        "4 copper layers"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The simplest PCB has one copper layer.",
+      "category": "Layers",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q29",
+      "type": "single",
+      "question": "Which PCB layer count is described as very common and typically used in the course?",
+      "options": [
+        "2 layers",
+        "1 layer",
+        "3 layers",
+        "5 layers"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says 2-layer PCBs are very common and typically used in the course.",
+      "category": "Layers",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q30",
+      "type": "multi",
+      "question": "Which are common multilayer PCB counts listed in the chapter?",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "5"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The chapter lists common multilayer counts of 4, 6, 8, …",
+      "category": "Layers",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q31",
+      "type": "true",
+      "question": "Even copper-layer counts are generally preferred.",
       "options": [
         "True",
         "False"
@@ -380,73 +525,417 @@
       "answer": [
         0
       ],
-      "explanation": "Odd layer counts are possible, but even counts are generally preferred."
+      "explanation": "Even counts are generally preferred for symmetric stack-ups and easier/cheaper manufacturing.",
+      "category": "Layers",
+      "difficulty": "easy"
     },
     {
-      "id": "q26",
+      "id": "q32",
       "type": "single",
-      "question": "Using C = ε₀εrA/d, what happens if the overlapping area A is doubled while εr and d remain unchanged?",
+      "question": "Why are even layer counts generally preferred?",
       "options": [
-        "It is halved",
-        "It remains unchanged",
+        "They allow more symmetric stack-ups and are easier/cheaper to manufacture",
+        "Odd counts cannot be manufactured",
+        "Even counts eliminate dielectric material",
+        "Even counts require no Gerber files"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter cites stack-up symmetry and manufacturing simplicity/cost.",
+      "category": "Layers",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q33",
+      "type": "true",
+      "question": "A PCB with an odd number of copper layers cannot be fabricated.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Odd-layer boards can be fabricated, but they are less common and may cost more.",
+      "category": "Layers",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q34",
+      "type": "single",
+      "question": "Which statement about odd-layer PCBs matches the chapter?",
+      "options": [
+        "They can be fabricated but are less common and may cost more",
+        "They are physically impossible",
+        "They are always cheaper",
+        "They are mandatory for high-frequency design"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Odd-layer boards are possible, but less common and may cost more.",
+      "category": "Layers",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q35",
+      "type": "single",
+      "question": "Which formula models the parasitic capacitance between overlapping PCB copper areas?",
+      "options": [
+        "C = ε₀εrA/d",
+        "C = d/(ε₀εrA)",
+        "C = ε₀d/(εrA)",
+        "C = A/(ε₀εrd)"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter uses the parallel-plate approximation C = ε₀εrA/d.",
+      "category": "Capacitance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q36",
+      "type": "single",
+      "question": "In C = ε₀εrA/d, what does A represent?",
+      "options": [
+        "Overlapping copper area",
+        "Board thickness",
+        "Copper resistivity",
+        "Via diameter"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A is the overlapping area of the copper regions.",
+      "category": "Capacitance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q37",
+      "type": "single",
+      "question": "In C = ε₀εrA/d, what does d represent?",
+      "options": [
+        "Separation between the plates",
+        "Diameter of the via",
+        "Dielectric loss tangent",
+        "Copper thickness"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "d is the separation distance between the copper regions.",
+      "category": "Capacitance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q38",
+      "type": "single",
+      "question": "In C = ε₀εrA/d, what does εr represent?",
+      "options": [
+        "Relative permittivity of the dielectric",
+        "Copper resistivity",
+        "Absolute permeability",
+        "Trace width"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "εr is the dielectric's relative permittivity.",
+      "category": "Capacitance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q39",
+      "type": "single",
+      "question": "In the capacitance formula, ε₀εr represents what?",
+      "options": [
+        "Permittivity of the dielectric material",
+        "Conductivity of copper",
+        "Mechanical stiffness",
+        "Thermal conductivity"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter identifies ε₀εr as the permittivity of the dielectric material.",
+      "category": "Capacitance",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q40",
+      "type": "single",
+      "question": "If the overlap area A doubles while everything else stays constant, what happens to C?",
+      "options": [
         "It doubles",
+        "It halves",
+        "It stays unchanged",
+        "It quadruples"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "C is directly proportional to A.",
+      "category": "Capacitance",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q41",
+      "type": "single",
+      "question": "If the separation d doubles while everything else stays constant, what happens to C?",
+      "options": [
+        "It halves",
+        "It doubles",
+        "It stays unchanged",
+        "It quadruples"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "C is inversely proportional to d.",
+      "category": "Capacitance",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q42",
+      "type": "single",
+      "question": "If εr doubles while A and d remain constant, what happens to C?",
+      "options": [
+        "It doubles",
+        "It halves",
+        "It stays unchanged",
+        "It becomes zero"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "C is directly proportional to εr.",
+      "category": "Capacitance",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q43",
+      "type": "single",
+      "question": "If A doubles and d doubles at the same time, with εr unchanged, what happens to C?",
+      "options": [
+        "It stays the same",
+        "It doubles",
+        "It halves",
+        "It quadruples"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The factor of 2 in A is cancelled by the factor of 2 in d.",
+      "category": "Capacitance",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q44",
+      "type": "single",
+      "question": "If A is halved and d is doubled, with εr unchanged, what happens to C?",
+      "options": [
+        "It becomes one quarter",
+        "It doubles",
+        "It stays the same",
         "It becomes four times larger"
       ],
       "answer": [
-        2
+        0
       ],
-      "explanation": "Capacitance is directly proportional to A."
+      "explanation": "C scales as A/d, so (1/2)/(2) = 1/4.",
+      "category": "Capacitance",
+      "difficulty": "hard"
     },
     {
-      "id": "q27",
+      "id": "q45",
       "type": "single",
-      "question": "The chapter gives 2.5 pF for d = 1.6 mm. If only d is reduced to 0.8 mm, what does the same approximation predict?",
+      "question": "What parasitic capacitance is given for two 1 cm² pads on opposite sides of a 1.6 mm PCB with εr = 4.5?",
       "options": [
-        "1.25 pF",
         "2.5 pF",
-        "5 pF",
-        "10 pF"
+        "25 pF",
+        "0.25 pF",
+        "250 pF"
       ],
       "answer": [
-        2
+        0
       ],
-      "explanation": "Halving d doubles C, so 2.5 pF becomes 5 pF."
+      "explanation": "The worked example gives 2.5 pF.",
+      "category": "Capacitance",
+      "difficulty": "easy"
     },
     {
-      "id": "q28",
+      "id": "q46",
+      "type": "single",
+      "question": "In the chapter's example, if only d is halved, approximately what happens to 2.5 pF?",
+      "options": [
+        "It becomes 5 pF",
+        "It becomes 1.25 pF",
+        "It stays 2.5 pF",
+        "It becomes 10 pF"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Halving d doubles C, so 2.5 pF becomes about 5 pF.",
+      "category": "Capacitance",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q47",
+      "type": "single",
+      "question": "In the chapter's example, if only A is doubled, approximately what happens to 2.5 pF?",
+      "options": [
+        "It becomes 5 pF",
+        "It becomes 1.25 pF",
+        "It stays 2.5 pF",
+        "It becomes 10 pF"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Doubling A doubles C.",
+      "category": "Capacitance",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q48",
+      "type": "true",
+      "question": "Fringing effects are neglected in the parallel-plate capacitance approximation used in the chapter.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly says the parallel-plate model neglects fringing effects.",
+      "category": "Capacitance",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q49",
+      "type": "true",
+      "question": "A few pF of interlayer capacitance can often be neglected at low frequency for small opposite-side overlaps.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the conclusion of the chapter's 1 cm² / 1.6 mm example.",
+      "category": "Capacitance",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q50",
       "type": "multi",
-      "question": "In which situations can interlayer parasitic capacitance become more important?",
+      "question": "When may interlayer parasitic capacitance become more important?",
       "options": [
         "At high frequencies",
-        "For larger overlapping copper areas",
-        "Only when no dielectric is present",
-        "For very small overlaps at low frequency as a general rule"
+        "For larger overlapping areas",
+        "When overlap becomes smaller",
+        "When frequency becomes lower"
       ],
       "answer": [
         0,
         1
       ],
-      "explanation": "The chapter says it may matter at high frequency or for larger overlap areas."
+      "explanation": "The chapter says it may become important at high frequency or for larger overlap areas.",
+      "category": "Capacitance",
+      "difficulty": "standard"
     },
     {
-      "id": "q29",
+      "id": "q51",
       "type": "single",
-      "question": "Which description of a typical PCB via construction is correct?",
+      "question": "What does PTH stand for?",
       "options": [
-        "A hole is drilled and its wall is plated with copper to form a conductive barrel",
-        "A hole is drilled and completely filled with FR-4",
-        "Copper is removed from the hole wall to increase conductivity",
-        "A silkscreen layer is printed inside the drilled hole"
+        "Plated Through Hole",
+        "Printed Thermal Hole",
+        "Plane Transfer Hole",
+        "Plated Trace Header"
       ],
       "answer": [
         0
       ],
-      "explanation": "A typical plated via is formed by drilling and copper-plating the hole wall."
+      "explanation": "PTH means Plated Through Hole.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
     },
     {
-      "id": "q30",
+      "id": "q52",
+      "type": "single",
+      "question": "What does NPTH stand for?",
+      "options": [
+        "Non-Plated Through Hole",
+        "Nickel-Plated Thermal Hole",
+        "Non-Printed Trace Hole",
+        "No-Pad Through Hole"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "NPTH means Non-Plated Through Hole.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q53",
+      "type": "single",
+      "question": "What is the most common type of via according to the chapter?",
+      "options": [
+        "PTH via",
+        "Blind via",
+        "Buried via",
+        "NPTH"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The PTH via is stated to be the most common type.",
+      "category": "Vias",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q54",
+      "type": "single",
+      "question": "How is a typical plated via formed?",
+      "options": [
+        "By drilling a hole and copper-plating its wall",
+        "By filling a hole with FR-4",
+        "By printing silkscreen in a hole",
+        "By coating a hole only with solder mask"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A typical via is drilled and the hole wall is plated with copper to create a conductive barrel.",
+      "category": "Vias",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q55",
+      "type": "single",
+      "question": "What is the conductive wall of a plated via called?",
+      "options": [
+        "Barrel",
+        "Antipad",
+        "Spoke",
+        "Overlay"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The plated wall forms a conductive barrel.",
+      "category": "Vias",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q56",
       "type": "multi",
-      "question": "Which kinds of electrical connections can vias carry between PCB layers?",
+      "question": "What kinds of nets can vias carry between layers?",
       "options": [
         "Signals",
         "Power",
@@ -458,42 +947,31 @@
         1,
         2
       ],
-      "explanation": "Vias can carry signals, power, and ground between layers."
+      "explanation": "The chapter explicitly lists signals, power and ground.",
+      "category": "Vias",
+      "difficulty": "easy"
     },
     {
-      "id": "q31",
+      "id": "q57",
       "type": "single",
-      "question": "A PTH via passes through every copper layer physically. Does it have to be electrically connected to every copper layer?",
+      "question": "What is an NPTH typically used for?",
       "options": [
-        "Yes, because the barrel necessarily contacts all layers electrically",
-        "No, it can connect only to selected layers",
-        "Yes, unless the PCB uses ENIG",
-        "No, because PTH vias are never electrically connected"
-      ],
-      "answer": [
-        1
-      ],
-      "explanation": "A PTH via can pass through a layer without connecting to it by using an antipad."
-    },
-    {
-      "id": "q32",
-      "type": "single",
-      "question": "Why can blind and buried vias free routing space compared with a PTH via?",
-      "options": [
-        "They do not extend through the entire PCB",
-        "They contain no conductive copper",
-        "They are always smaller than every PTH via",
-        "They replace the need for copper traces"
+        "Mechanical mounting/alignment/tooling/locating",
+        "Electrical layer-to-layer connection",
+        "High-frequency impedance matching",
+        "Surface finishing"
       ],
       "answer": [
         0
       ],
-      "explanation": "Because they terminate before crossing the full board, other layers remain available for routing."
+      "explanation": "NPTHs are typically mechanical holes rather than conductive connections.",
+      "category": "Vias",
+      "difficulty": "easy"
     },
     {
-      "id": "q33",
-      "type": "tf",
-      "question": "Blind and buried vias are generally less expensive than PTH vias because they require fewer manufacturing steps.",
+      "id": "q58",
+      "type": "true",
+      "question": "An NPTH has conductive copper plating on the hole wall.",
       "options": [
         "True",
         "False"
@@ -501,42 +979,317 @@
       "answer": [
         1
       ],
-      "explanation": "False. Blind and buried vias require additional manufacturing steps and are generally more expensive."
+      "explanation": "NPTHs are non-plated; they are simply drilled holes.",
+      "category": "Vias",
+      "difficulty": "easy"
     },
     {
-      "id": "q34",
+      "id": "q59",
+      "type": "single",
+      "question": "Can a PTH via pass through the whole board but connect to only selected copper layers?",
+      "options": [
+        "Yes",
+        "No",
+        "Only on 2-layer boards",
+        "Only if it is also an NPTH"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says the plated barrel passes through the whole PCB and can connect to selected layers.",
+      "category": "Vias",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q60",
+      "type": "single",
+      "question": "What is an antipad?",
+      "options": [
+        "A clearance removing copper around a via on a layer that must not connect",
+        "A copper spoke to a plane",
+        "An unused via barrel section",
+        "A mechanical mounting hole"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "An antipad is the clearance used where no electrical connection to that layer is required.",
+      "category": "Vias",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q61",
+      "type": "single",
+      "question": "Why is an antipad used?",
+      "options": [
+        "To prevent an unwanted connection to a copper layer",
+        "To increase heat flow",
+        "To improve silkscreen visibility",
+        "To make the via longer"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The antipad removes surrounding copper so the via does not contact that layer.",
+      "category": "Vias",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q62",
+      "type": "single",
+      "question": "What is a via stub?",
+      "options": [
+        "Unused via barrel beyond the last connected layer",
+        "Copper clearance around a via",
+        "Thermal spoke to a plane",
+        "Unplated mechanical hole"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The unused barrel beyond the final connected layer forms a via stub.",
+      "category": "Vias",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q63",
+      "type": "single",
+      "question": "Why can a via stub be problematic?",
+      "options": [
+        "It can degrade signal integrity at high frequencies",
+        "It always creates a short circuit",
+        "It prevents drilling",
+        "It removes the solder mask"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter specifically notes degradation of signal integrity at high frequencies.",
+      "category": "Vias",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q64",
+      "type": "single",
+      "question": "Which via connects an outer layer to one or more inner layers without passing through the entire PCB?",
+      "options": [
+        "Blind via",
+        "Buried via",
+        "PTH via",
+        "NPTH"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A blind via starts at an outer layer and terminates internally.",
+      "category": "Vias",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q65",
+      "type": "single",
+      "question": "Which via connects internal copper layers without reaching either outer surface?",
+      "options": [
+        "Buried via",
+        "Blind via",
+        "PTH via",
+        "NPTH"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A buried via connects internal layers only.",
+      "category": "Vias",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q66",
+      "type": "true",
+      "question": "A buried via reaches one outer surface of the PCB.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "A buried via reaches neither outer surface.",
+      "category": "Vias",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q67",
+      "type": "true",
+      "question": "A blind via reaches one outer surface but does not pass through the entire board.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "That is the defining geometry of a blind via.",
+      "category": "Vias",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q68",
+      "type": "single",
+      "question": "Why can blind and buried vias leave more routing space on other layers?",
+      "options": [
+        "They do not extend through the entire board",
+        "They are not conductive",
+        "They eliminate all traces",
+        "They are always larger than PTH vias"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Because they stop before crossing every layer, they leave other layers available for routing.",
+      "category": "Vias",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q69",
+      "type": "single",
+      "question": "Why are blind and buried vias generally more expensive than PTH vias?",
+      "options": [
+        "They require additional manufacturing steps",
+        "They use no copper",
+        "They require no drilling",
+        "They are always physically larger"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter attributes their higher cost to additional manufacturing steps.",
+      "category": "Vias",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q70",
+      "type": "true",
+      "question": "Blind and buried vias are offered by every PCB fabrication process.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The chapter notes they are not offered by all fabrication processes.",
+      "category": "Vias",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q71",
+      "type": "multi",
+      "question": "Which statements about PTH vias are correct?",
+      "options": [
+        "They pass through the entire PCB",
+        "They can connect selected copper layers",
+        "Antipads can prevent connection on selected layers",
+        "They never create via stubs"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "PTH vias may leave unused barrel portions, which are via stubs.",
+      "category": "Vias",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q72",
+      "type": "multi",
+      "question": "Which via types are specifically described as more expensive than PTH vias?",
+      "options": [
+        "Blind vias",
+        "Buried vias",
+        "NPTHs",
+        "Thermal vias"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The chapter explicitly says blind and buried vias are more expensive.",
+      "category": "Vias",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q73",
+      "type": "single",
+      "question": "What is a thermal via?",
+      "options": [
+        "A via used primarily to conduct heat",
+        "A via with no copper plating",
+        "A via used only for silkscreen alignment",
+        "A via that limits heat flow"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Thermal vias are used primarily to conduct heat.",
+      "category": "Thermal",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q74",
       "type": "single",
       "question": "Where are thermal vias typically placed?",
       "options": [
-        "In clusters or arrays under or around heat-generating components",
-        "Only along the outer board contour",
-        "Only beneath silkscreen reference designators",
-        "Only in antipads"
+        "In clusters or arrays under/around heat-generating components",
+        "Only at the board edge",
+        "Only under connectors",
+        "Only in silkscreen areas"
       ],
       "answer": [
         0
       ],
-      "explanation": "Thermal vias are typically clustered under or around hot components to conduct heat."
+      "explanation": "The chapter says thermal vias are typically placed in clusters or arrays near hot components.",
+      "category": "Thermal",
+      "difficulty": "easy"
     },
     {
-      "id": "q35",
+      "id": "q75",
+      "type": "single",
+      "question": "What is the purpose of a thermal relief connection?",
+      "options": [
+        "Limit heat flow into a large copper plane while preserving electrical connection",
+        "Maximize heat flow into the plane",
+        "Prevent any electrical connection",
+        "Increase via stub length"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Thermal relief reduces heat flow during soldering while keeping electrical connectivity.",
+      "category": "Thermal",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q76",
       "type": "single",
       "question": "Why can a pad connected directly to a large copper plane be difficult to solder?",
       "options": [
-        "The plane conducts heat away from the pad too effectively",
-        "The plane prevents all electrical current from reaching the pad",
-        "The solder mask always covers the pad completely",
-        "The copper plane reduces the board thickness locally"
+        "The plane conducts heat away from the joint",
+        "The plane prevents current flow",
+        "The pad becomes electrically isolated",
+        "The solder mask becomes conductive"
       ],
       "answer": [
         0
       ],
-      "explanation": "The large copper plane acts as a heat sink and draws heat away from the joint."
+      "explanation": "The large copper plane acts as a heat sink during soldering.",
+      "category": "Thermal",
+      "difficulty": "standard"
     },
     {
-      "id": "q36",
+      "id": "q77",
       "type": "single",
-      "question": "What are the narrow copper connections in a thermal relief commonly called?",
+      "question": "What are the narrow copper connections in a thermal relief called?",
       "options": [
         "Spokes or stubs",
         "Antipads",
@@ -546,71 +1299,1633 @@
       "answer": [
         0
       ],
-      "explanation": "Thermal-relief connections use narrow copper stubs, also called spokes."
+      "explanation": "The chapter calls them narrow copper stubs, also called spokes.",
+      "category": "Thermal",
+      "difficulty": "easy"
     },
     {
-      "id": "q37",
-      "type": "multi",
-      "question": "Which features can be represented in a copper Gerber layer?",
+      "id": "q78",
+      "type": "true",
+      "question": "A thermal relief preserves electrical connectivity between pad/via and plane.",
       "options": [
-        "Traces",
-        "Pads",
-        "Copper planes or zones",
-        "Reference designator text printed in ink"
-      ],
-      "answer": [
-        0,
-        1,
-        2
-      ],
-      "explanation": "Copper Gerbers include copper features such as traces, pads, vias, and planes/zones."
-    },
-    {
-      "id": "q38",
-      "type": "single",
-      "question": "Which information belongs primarily to the silkscreen or overlay layer?",
-      "options": [
-        "Reference designators, labels, polarity marks and component outlines",
-        "Hole diameters and drill coordinates",
-        "The board contour used for cutting",
-        "Stencil apertures for depositing solder paste"
+        "True",
+        "False"
       ],
       "answer": [
         0
       ],
-      "explanation": "The silkscreen carries printed markings such as designators, labels, polarity indicators and outlines."
+      "explanation": "The relief limits heat flow but keeps the electrical connection.",
+      "category": "Thermal",
+      "difficulty": "standard"
     },
     {
-      "id": "q39",
-      "type": "multi",
-      "question": "Which functions of solder mask are stated in the chapter?",
+      "id": "q79",
+      "type": "single",
+      "question": "Which statement correctly contrasts a thermal via and a thermal relief?",
       "options": [
-        "Protect copper from oxidation and contamination",
+        "Thermal via enhances heat transfer; thermal relief limits heat flow during soldering",
+        "Both enhance heat transfer",
+        "Both limit heat transfer",
+        "Thermal via limits heat transfer; thermal relief enhances it"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The two concepts have opposite thermal purposes.",
+      "category": "Thermal",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q80",
+      "type": "true",
+      "question": "A thermal via and a thermal relief are the same thing.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "A thermal via enhances heat transfer; a thermal relief reduces heat flow into a plane during soldering.",
+      "category": "Thermal",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q81",
+      "type": "single",
+      "question": "What standard manufacturing format is used to describe PCB fabrication layers?",
+      "options": [
+        "Gerber",
+        "JPEG",
+        "CSV",
+        "MIDI"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Gerber files are the standard format discussed in the chapter.",
+      "category": "Gerber",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q82",
+      "type": "single",
+      "question": "What do Gerber files describe?",
+      "options": [
+        "Geometry of fabrication layers",
+        "Firmware source code",
+        "Component pricing",
+        "Electrical test measurements"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "They describe the geometry of fabrication layers such as copper, solder mask and silkscreen.",
+      "category": "Gerber",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q83",
+      "type": "single",
+      "question": "What does each Gerber file contain?",
+      "options": [
+        "Commands and coordinates defining features of one layer",
+        "Only a bitmap preview",
+        "Only component values",
+        "Only drill diameters"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says each Gerber file contains commands and coordinates defining one layer's features.",
+      "category": "Gerber",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q84",
+      "type": "single",
+      "question": "Who generates the Gerber files?",
+      "options": [
+        "PCB design software",
+        "The oscilloscope",
+        "The soldering iron",
+        "The assembled PCB itself"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "PCB design software generates the Gerber fabrication files.",
+      "category": "Gerber",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q85",
+      "type": "single",
+      "question": "What normally happens to the Gerber files after generation?",
+      "options": [
+        "They are uploaded to the PCB manufacturer",
+        "They are flashed into the microcontroller",
+        "They are printed as silkscreen only",
+        "They are converted into audio"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The Gerbers are uploaded to the PCB manufacturer.",
+      "category": "Gerber",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q86",
+      "type": "true",
+      "question": "Most PCB manufacturers automatically check whether required fabrication files are present and consistent.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter states this explicitly.",
+      "category": "Gerber",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q87",
+      "type": "single",
+      "question": "Which layer defines traces, pads, vias and copper planes/zones?",
+      "options": [
+        "Copper layer",
+        "Silkscreen",
+        "Outline",
+        "Solder paste"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Those are copper features.",
+      "category": "Fabrication layers",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q88",
+      "type": "true",
+      "question": "A separate Gerber file is generated for each copper layer.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter states that each copper layer has its own Gerber file.",
+      "category": "Fabrication layers",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q89",
+      "type": "single",
+      "question": "What does the outline layer define?",
+      "options": [
+        "Board contour for routing/cutting from the panel",
+        "Hole diameters",
+        "Printed labels",
+        "Stencil apertures"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The outline layer defines the board contour.",
+      "category": "Fabrication layers",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q90",
+      "type": "single",
+      "question": "What do drill data define?",
+      "options": [
+        "Hole locations and diameters",
+        "Board contour",
+        "Silkscreen labels",
+        "Copper surface finish"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Drill data define locations and diameters of vias and through-hole component holes.",
+      "category": "Fabrication layers",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q91",
+      "type": "multi",
+      "question": "Which holes are included in drill data according to the chapter?",
+      "options": [
+        "Vias",
+        "Through-hole component holes",
+        "Silkscreen marks",
+        "Solder paste openings"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Drill data include vias and through-hole component holes.",
+      "category": "Fabrication layers",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q92",
+      "type": "single",
+      "question": "What is the silkscreen also called?",
+      "options": [
+        "Overlay",
+        "Antipad",
+        "Stencil",
+        "Barrel"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter uses 'silkscreen / overlay layer'.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q93",
+      "type": "multi",
+      "question": "Which items may appear on the silkscreen/overlay layer?",
+      "options": [
+        "Reference designators",
+        "Labels",
+        "Polarity marks",
+        "Component outlines"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "The chapter lists all four types of printed markings.",
+      "category": "Fabrication layers",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q94",
+      "type": "single",
+      "question": "What does the solder paste layer define?",
+      "options": [
+        "Openings for the solder-paste stencil used in SMD assembly",
+        "Protective coating over copper",
+        "Board outline",
+        "Hole diameters"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The solder paste layer defines stencil openings for SMD assembly.",
+      "category": "Fabrication layers",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q95",
+      "type": "single",
+      "question": "What is the solder mask?",
+      "options": [
+        "Protective polymer covering most copper with openings over solderable pads",
+        "Copper plating inside vias",
+        "Gold finish on pads",
+        "Printed component labels"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Solder mask is the protective polymer layer described in the chapter.",
+      "category": "Fabrication layers",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q96",
+      "type": "multi",
+      "question": "What functions of solder mask are stated?",
+      "options": [
         "Help prevent solder bridging",
-        "Leave openings where pads must remain exposed for soldering",
-        "Define the diameter of every drilled hole"
+        "Protect copper from oxidation",
+        "Protect copper from contamination",
+        "Define drill diameters"
       ],
       "answer": [
         0,
         1,
         2
       ],
-      "explanation": "Solder mask is a protective polymer layer that covers most copper while leaving solderable pads exposed."
+      "explanation": "Drill diameters are defined by drill data, not solder mask.",
+      "category": "Fabrication layers",
+      "difficulty": "standard"
     },
     {
-      "id": "q40",
-      "type": "single",
-      "question": "Which sequence best describes the ENIG surface finish?",
+      "id": "q97",
+      "type": "true",
+      "question": "Solder mask covers every copper pad completely, including pads that must be soldered.",
       "options": [
-        "Electroless nickel on exposed copper, followed by a very thin immersion-gold layer",
-        "Molten solder coating followed by hot-air leveling",
-        "Gold directly electroplated onto FR-4 with no nickel layer",
-        "Solder mask followed by silkscreen only"
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Solder mask has openings where pads must remain exposed for soldering.",
+      "category": "Fabrication layers",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q98",
+      "type": "single",
+      "question": "Why do exposed copper pads need a surface finish?",
+      "options": [
+        "To protect from oxidation and ensure good solderability",
+        "To increase FR-4 thickness",
+        "To define the board outline",
+        "To create drill holes"
       ],
       "answer": [
         0
       ],
-      "explanation": "ENIG means electroless nickel followed by immersion gold."
+      "explanation": "The surface finish protects exposed copper and supports solderability.",
+      "category": "Surface finish",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q99",
+      "type": "single",
+      "question": "What does HASL stand for?",
+      "options": [
+        "Hot-Air Solder Leveling",
+        "High-Accuracy Surface Lamination",
+        "Heat-Assisted Solder Layer",
+        "Hot Alloy Surface Layer"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "HASL stands for Hot-Air Solder Leveling.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q100",
+      "type": "single",
+      "question": "What does ENIG stand for?",
+      "options": [
+        "Electroless Nickel Immersion Gold",
+        "Electroplated Nickel Internal Ground",
+        "Enhanced Nickel Interface Grid",
+        "Electroless Network Interconnect Gold"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "ENIG stands for Electroless Nickel Immersion Gold.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q101",
+      "type": "single",
+      "question": "How is HASL applied according to the chapter?",
+      "options": [
+        "Board is coated with molten solder, then excess is removed/leveled with hot air",
+        "Nickel then immersion gold",
+        "Solder mask then silkscreen",
+        "Copper is removed with acid"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "HASL uses molten solder followed by hot-air leveling.",
+      "category": "Surface finish",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q102",
+      "type": "single",
+      "question": "What is a main advantage of HASL stated in the chapter?",
+      "options": [
+        "It is inexpensive and widely used",
+        "It is always the flattest finish",
+        "It contains no solder",
+        "It is designed only for internal layers"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "HASL is described as inexpensive and widely used.",
+      "category": "Surface finish",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q103",
+      "type": "single",
+      "question": "What limitation of HASL is highlighted?",
+      "options": [
+        "It produces a less flat surface than some alternatives",
+        "It cannot protect copper",
+        "It is never solderable",
+        "It cannot be used on PCBs"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter specifically notes its lower flatness.",
+      "category": "Surface finish",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q104",
+      "type": "single",
+      "question": "How is ENIG formed?",
+      "options": [
+        "Electroless nickel on exposed copper followed by a very thin immersion-gold layer",
+        "Molten solder followed by hot air",
+        "Gold directly on FR-4 with no nickel",
+        "Only solder mask over copper"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "That is the ENIG stack described in the chapter.",
+      "category": "Surface finish",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q105",
+      "type": "multi",
+      "question": "Which properties of ENIG are stated?",
+      "options": [
+        "Flat surface",
+        "Oxidation resistance",
+        "High solderability",
+        "Particularly suitable for fine-pitch components"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All four are explicitly stated advantages of ENIG.",
+      "category": "Surface finish",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q106",
+      "type": "single",
+      "question": "Which finish is particularly suitable for fine-pitch components?",
+      "options": [
+        "ENIG",
+        "HASL",
+        "Bare FR-4",
+        "Silkscreen"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "ENIG is highlighted as suitable for fine-pitch components because of its flat surface.",
+      "category": "Surface finish",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q107",
+      "type": "single",
+      "question": "Which finish is less flat according to the chapter?",
+      "options": [
+        "HASL",
+        "ENIG",
+        "Both are equally flat",
+        "Neither finish affects flatness"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "HASL is described as less flat than some alternatives such as ENIG.",
+      "category": "Surface finish",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q108",
+      "type": "true",
+      "question": "ENIG uses an electroless nickel layer beneath a very thin immersion-gold layer.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "That is the process described for ENIG.",
+      "category": "Surface finish",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q109",
+      "type": "true",
+      "question": "HASL is described as more suitable than ENIG for fine-pitch components because it is flatter.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The chapter says ENIG is flatter and suitable for fine-pitch components; HASL is less flat.",
+      "category": "Surface finish",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q110",
+      "type": "single",
+      "question": "Which item is NOT itself a Gerber fabrication layer described in the chapter?",
+      "options": [
+        "PCBA",
+        "Copper",
+        "Silkscreen",
+        "Solder mask"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "PCBA is the assembled board, not a fabrication layer.",
+      "category": "Mixed review",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q111",
+      "type": "single",
+      "question": "Which term refers to a copper clearance rather than a plated structure?",
+      "options": [
+        "Antipad",
+        "Barrel",
+        "Thermal via",
+        "PTH"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "An antipad is a clearance in copper.",
+      "category": "Mixed review",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q112",
+      "type": "single",
+      "question": "Which term refers to unused conductive geometry rather than a clearance?",
+      "options": [
+        "Via stub",
+        "Antipad",
+        "NPTH",
+        "Outline"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A via stub is unused barrel length beyond the last connected layer.",
+      "category": "Mixed review",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q113",
+      "type": "single",
+      "question": "Which of these is primarily mechanical rather than electrical?",
+      "options": [
+        "NPTH",
+        "PTH via",
+        "Blind via",
+        "Buried via"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "NPTHs are typically mechanical holes without conductive plating.",
+      "category": "Mixed review",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q114",
+      "type": "single",
+      "question": "Which feature is intended to make soldering easier without breaking the electrical connection?",
+      "options": [
+        "Thermal relief",
+        "Antipad",
+        "Via stub",
+        "Buried via"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Thermal relief limits heat flow while preserving electrical connection.",
+      "category": "Mixed review",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q115",
+      "type": "single",
+      "question": "Which feature is intended to improve heat transfer away from a component?",
+      "options": [
+        "Thermal via",
+        "Thermal relief",
+        "Antipad",
+        "Silkscreen"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Thermal vias enhance heat transfer.",
+      "category": "Mixed review",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q116",
+      "type": "single",
+      "question": "Which fabrication data would you check to verify a 1 mm mounting hole exists?",
+      "options": [
+        "Drill data",
+        "Silkscreen",
+        "Solder paste",
+        "ENIG"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Hole locations and diameters are specified in drill data.",
+      "category": "Mixed review",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q117",
+      "type": "single",
+      "question": "Which fabrication data would you check to verify a polarity symbol is printed?",
+      "options": [
+        "Silkscreen / overlay",
+        "Drill data",
+        "Outline",
+        "Solder paste"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Polarity marks are silkscreen features.",
+      "category": "Mixed review",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q118",
+      "type": "single",
+      "question": "Which fabrication data would you check to verify the board shape?",
+      "options": [
+        "Outline layer",
+        "Solder mask",
+        "Solder paste",
+        "Copper finish"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The outline layer defines the board contour.",
+      "category": "Mixed review",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q119",
+      "type": "single",
+      "question": "Which fabrication data would you check to verify the stencil aperture for an SMD pad?",
+      "options": [
+        "Solder paste layer",
+        "Silkscreen",
+        "Outline",
+        "Drill data"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Stencil openings are defined by the solder paste layer.",
+      "category": "Mixed review",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q120",
+      "type": "single",
+      "question": "Which layer mainly prevents solder bridging?",
+      "options": [
+        "Solder mask",
+        "Silkscreen",
+        "Outline",
+        "Drill data"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Solder mask helps prevent solder bridging.",
+      "category": "Mixed review",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q121",
+      "type": "single",
+      "question": "Which finish involves hot air?",
+      "options": [
+        "HASL",
+        "ENIG",
+        "FR-4",
+        "NPTH"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "HASL is Hot-Air Solder Leveling.",
+      "category": "Mixed review",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q122",
+      "type": "single",
+      "question": "Which finish involves nickel and gold?",
+      "options": [
+        "ENIG",
+        "HASL",
+        "Solder mask",
+        "Silkscreen"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "ENIG uses electroless nickel and immersion gold.",
+      "category": "Mixed review",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q123",
+      "type": "multi",
+      "question": "Which abbreviations are explicitly used in the chapter?",
+      "options": [
+        "PCB",
+        "PCBA",
+        "PCA",
+        "PTH"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All four abbreviations appear in the chapter.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q124",
+      "type": "multi",
+      "question": "Which additional abbreviations are explicitly used in the chapter?",
+      "options": [
+        "NPTH",
+        "HASL",
+        "ENIG",
+        "SMD"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All four appear in the chapter.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q125",
+      "type": "true",
+      "question": "Copper, solder mask, silkscreen and board-outline information are commonly provided as Gerber files.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly lists these fabrication data as commonly provided in Gerber form.",
+      "category": "Gerber",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q126",
+      "type": "single",
+      "question": "Which of the following best describes the relationship between Gerber files and fabrication layers?",
+      "options": [
+        "Each file describes the geometry of one fabrication layer",
+        "One Gerber file always contains every PCB layer",
+        "Gerbers only contain drill data",
+        "Gerbers are used only after components are mounted"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Each Gerber file contains commands and coordinates defining one layer.",
+      "category": "Gerber",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q127",
+      "type": "true",
+      "question": "Copper planes/zones are represented in copper-layer Gerbers.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Copper layers include traces, pads, vias and copper planes/zones.",
+      "category": "Gerber",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q128",
+      "type": "true",
+      "question": "Drill data include through-hole component holes as well as vias.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Both are listed explicitly in the chapter.",
+      "category": "Fabrication layers",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q129",
+      "type": "true",
+      "question": "Silkscreen may exist on the top and/or bottom of a PCB.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says silkscreen markings can be on the top and/or bottom.",
+      "category": "Fabrication layers",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q130",
+      "type": "single",
+      "question": "Which feature does NOT belong to the silkscreen layer?",
+      "options": [
+        "Copper plane",
+        "Reference designator",
+        "Polarity mark",
+        "Printed outline"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A copper plane belongs to a copper layer, not silkscreen.",
+      "category": "Fabrication layers",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q131",
+      "type": "single",
+      "question": "Which layer is a polymer rather than a conductive metal layer?",
+      "options": [
+        "Solder mask",
+        "Copper layer",
+        "ENIG nickel layer",
+        "HASL solder coating"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter defines solder mask as a protective polymer.",
+      "category": "Fabrication layers",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q132",
+      "type": "single",
+      "question": "Which item is described as a surface finish rather than a fabrication layer?",
+      "options": [
+        "ENIG",
+        "Silkscreen",
+        "Outline",
+        "Solder paste"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "ENIG is a surface finish applied to exposed copper pads.",
+      "category": "Surface finish",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q133",
+      "type": "single",
+      "question": "Which item is described as a surface finish rather than a fabrication layer?",
+      "options": [
+        "HASL",
+        "Drill data",
+        "Copper layer",
+        "Solder mask"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "HASL is a surface finish.",
+      "category": "Surface finish",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q134",
+      "type": "single",
+      "question": "What is the purpose of leaving openings in solder mask?",
+      "options": [
+        "To keep pads exposed for soldering",
+        "To increase board thickness",
+        "To create via barrels",
+        "To define the board contour"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Pads that must be soldered need to remain exposed.",
+      "category": "Fabrication layers",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q135",
+      "type": "single",
+      "question": "Why does ENIG resist oxidation?",
+      "options": [
+        "It provides a nickel/gold finish over exposed copper",
+        "It removes all exposed copper",
+        "It replaces FR-4 with gold",
+        "It uses only solder mask"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter describes ENIG as oxidation-resistant due to its nickel/gold surface finish.",
+      "category": "Surface finish",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q136",
+      "type": "single",
+      "question": "What is the manufacturing consequence of a blind via ending before the far side of the board?",
+      "options": [
+        "Layers beyond the via end remain available for routing",
+        "It becomes nonconductive",
+        "It becomes a solder-mask opening",
+        "It becomes a board outline"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly states this routing-space advantage.",
+      "category": "Vias",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q137",
+      "type": "single",
+      "question": "What is the manufacturing consequence of a buried via not reaching either outer surface?",
+      "options": [
+        "It leaves routing space on other layers",
+        "It cannot connect internal layers",
+        "It must be non-plated",
+        "It becomes a thermal relief"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Not traversing the full board leaves other layers freer for routing.",
+      "category": "Vias",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q138",
+      "type": "single",
+      "question": "A via passes through an internal plane but must not connect to it. What feature should surround the via on that plane?",
+      "options": [
+        "Antipad",
+        "Thermal relief",
+        "Silkscreen",
+        "Solder paste"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "An antipad creates the necessary copper clearance.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q139",
+      "type": "single",
+      "question": "A power component needs heat conducted through the board. Which feature is most directly intended for this?",
+      "options": [
+        "Thermal vias",
+        "Thermal relief spokes",
+        "NPTHs",
+        "Silkscreen openings"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Thermal vias are designed to enhance heat transfer.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q140",
+      "type": "single",
+      "question": "A plane-connected through-hole pad is difficult to solder because heat escapes into the plane. Which feature addresses this?",
+      "options": [
+        "Thermal relief",
+        "Blind via",
+        "Antipad",
+        "ENIG"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Thermal relief limits heat flow to the large copper plane while preserving electrical connection.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q141",
+      "type": "single",
+      "question": "A fine-pitch component needs a flat, oxidation-resistant surface finish. Which finish best matches the chapter?",
+      "options": [
+        "ENIG",
+        "HASL",
+        "Bare copper",
+        "Solder mask"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "ENIG is described as flat, oxidation-resistant, highly solderable and suitable for fine pitch.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q142",
+      "type": "single",
+      "question": "A low-cost, widely used finish is needed and perfect flatness is not the priority. Which finish matches the chapter?",
+      "options": [
+        "HASL",
+        "ENIG",
+        "FR-4",
+        "Silkscreen"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "HASL is described as inexpensive and widely used, though less flat.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q143",
+      "type": "single",
+      "question": "You need the physical board contour for panel routing. Which fabrication layer is relevant?",
+      "options": [
+        "Outline layer",
+        "Solder paste layer",
+        "Silkscreen",
+        "Copper plane"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The outline layer defines the contour used to route or cut the board.",
+      "category": "Application",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q144",
+      "type": "single",
+      "question": "You need a manufacturing file for top-layer copper traces. What kind of file is required?",
+      "options": [
+        "A copper Gerber for that layer",
+        "A silkscreen file",
+        "A drill file only",
+        "A solder paste file only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A separate Gerber is generated for each copper layer.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q145",
+      "type": "single",
+      "question": "You need to know where a via hole is drilled and its diameter. Which data do you inspect?",
+      "options": [
+        "Drill data",
+        "Outline",
+        "Silkscreen",
+        "Solder mask"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Drill data define hole locations and diameters.",
+      "category": "Application",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q146",
+      "type": "single",
+      "question": "If εr increases by 20% with A and d unchanged, by what percentage does C change?",
+      "options": [
+        "It increases by 20%",
+        "It decreases by 20%",
+        "It increases by 40%",
+        "It does not change"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "C is directly proportional to εr.",
+      "category": "Capacitance",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q147",
+      "type": "single",
+      "question": "If d decreases by 20% while εr and A stay constant, is C larger or smaller?",
+      "options": [
+        "Larger",
+        "Smaller",
+        "Unchanged",
+        "Zero"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Because C is inversely proportional to d, reducing d increases C.",
+      "category": "Capacitance",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q148",
+      "type": "single",
+      "question": "If the overlap area is reduced to one third, with εr and d unchanged, what happens to C?",
+      "options": [
+        "It becomes one third",
+        "It triples",
+        "It stays the same",
+        "It becomes nine times smaller"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "C is directly proportional to A.",
+      "category": "Capacitance",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q149",
+      "type": "single",
+      "question": "If the board separation between two pads is increased from 1.6 mm to 3.2 mm, what happens to the approximate 2.5 pF capacitance?",
+      "options": [
+        "It falls to about 1.25 pF",
+        "It rises to about 5 pF",
+        "It stays at 2.5 pF",
+        "It rises to about 10 pF"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Doubling d halves C.",
+      "category": "Capacitance",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q150",
+      "type": "single",
+      "question": "If the overlap area in the 2.5 pF example is quadrupled, with εr and d unchanged, what is the new approximate capacitance?",
+      "options": [
+        "10 pF",
+        "5 pF",
+        "1.25 pF",
+        "2.5 pF"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Quadrupling area quadruples capacitance.",
+      "category": "Capacitance",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q151",
+      "type": "single",
+      "question": "If both εr and A double while d stays constant, what happens to C?",
+      "options": [
+        "It becomes four times larger",
+        "It doubles",
+        "It halves",
+        "It stays unchanged"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "C is proportional to εrA, so doubling both gives a factor of 4.",
+      "category": "Capacitance",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q152",
+      "type": "single",
+      "question": "If εr doubles and d doubles while A stays constant, what happens to C?",
+      "options": [
+        "It stays the same",
+        "It doubles",
+        "It halves",
+        "It quadruples"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The factor of 2 in εr is cancelled by the factor of 2 in d.",
+      "category": "Capacitance",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q153",
+      "type": "multi",
+      "question": "Which items are dielectric/conductive structural elements explicitly mentioned?",
+      "options": [
+        "FR-4 dielectric",
+        "Copper foil conductors",
+        "Solder mask polymer",
+        "Gold as the main PCB dielectric"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "FR-4 is the dielectric, copper foil is conductive, and solder mask is a protective polymer. Gold is part of ENIG, not the main dielectric.",
+      "category": "Mixed review",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q154",
+      "type": "single",
+      "question": "Which phrase best describes PCBs in electronic systems according to the chapter?",
+      "options": [
+        "They are the standard technology for constructing electronic systems",
+        "They are used only for RF systems",
+        "They are obsolete compared with breadboards",
+        "They are used only for mechanical support"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter calls PCBs the standard technology for constructing electronic systems.",
+      "category": "Basics",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q155",
+      "type": "single",
+      "question": "What changes when a bare PCB becomes a PCBA?",
+      "options": [
+        "Components have been mounted",
+        "The copper is removed",
+        "The FR-4 is replaced",
+        "The Gerber files are deleted"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "PCBA refers to the board after components are mounted.",
+      "category": "Basics",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q156",
+      "type": "single",
+      "question": "Which factor is NOT listed as affecting FR-4 εr?",
+      "options": [
+        "Board color",
+        "Material composition",
+        "Frequency",
+        "Both composition and frequency are listed"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter states composition and frequency; board color is not listed.",
+      "category": "Materials",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q157",
+      "type": "single",
+      "question": "Which item is NOT one of the three outline topics on page 2?",
+      "options": [
+        "Soldering technique",
+        "PCB technology",
+        "Vias",
+        "PCB fabrication layers"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The outline lists PCB technology, vias and PCB fabrication layers.",
+      "category": "Basics",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q158",
+      "type": "multi",
+      "question": "Which statements about a PTH via and an NPTH are correct?",
+      "options": [
+        "PTH has a conductive plated barrel",
+        "NPTH has no conductive wall plating",
+        "PTH can connect selected layers",
+        "NPTH is typically mechanical"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All four statements match the chapter.",
+      "category": "Vias",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q159",
+      "type": "single",
+      "question": "Which one is not a via type described in the chapter?",
+      "options": [
+        "Overlay via",
+        "PTH via",
+        "Blind via",
+        "Buried via"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Overlay refers to silkscreen, not a via type.",
+      "category": "Vias",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q160",
+      "type": "single",
+      "question": "Which combination is correctly matched?",
+      "options": [
+        "Blind via — outer to inner layer",
+        "Buried via — outer to outer only",
+        "NPTH — conductive barrel",
+        "PTH — does not pass through board"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A blind via connects an outer layer to one or more inner layers.",
+      "category": "Vias",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q161",
+      "type": "single",
+      "question": "Which combination is correctly matched?",
+      "options": [
+        "Buried via — internal to internal layers",
+        "Blind via — never touches an outer layer",
+        "NPTH — plated barrel",
+        "PTH — mechanical only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A buried via connects internal copper layers without reaching an outer surface.",
+      "category": "Vias",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q162",
+      "type": "single",
+      "question": "Which combination is correctly matched?",
+      "options": [
+        "Solder paste — stencil openings",
+        "Silkscreen — drill diameter",
+        "Outline — copper finish",
+        "Solder mask — board contour"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The solder paste layer defines stencil openings.",
+      "category": "Fabrication layers",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q163",
+      "type": "single",
+      "question": "Which combination is correctly matched?",
+      "options": [
+        "Silkscreen — reference designators",
+        "Outline — solder stencil",
+        "Drill data — board color",
+        "Copper layer — only labels"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Reference designators belong to the silkscreen/overlay layer.",
+      "category": "Fabrication layers",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q164",
+      "type": "single",
+      "question": "Which combination is correctly matched?",
+      "options": [
+        "Drill data — hole diameters",
+        "Solder mask — hole positions",
+        "ENIG — board contour",
+        "HASL — silkscreen"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Drill data define hole locations and diameters.",
+      "category": "Fabrication layers",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q165",
+      "type": "single",
+      "question": "Which combination is correctly matched?",
+      "options": [
+        "HASL — molten solder + hot air",
+        "ENIG — molten solder + hot air",
+        "Solder mask — nickel + gold",
+        "FR-4 — molten solder finish"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "HASL is Hot-Air Solder Leveling.",
+      "category": "Surface finish",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q166",
+      "type": "single",
+      "question": "Which combination is correctly matched?",
+      "options": [
+        "ENIG — nickel + immersion gold",
+        "HASL — nickel + immersion gold",
+        "FR-4 — gold finish",
+        "NPTH — immersion gold"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "ENIG uses electroless nickel followed by immersion gold.",
+      "category": "Surface finish",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q167",
+      "type": "true",
+      "question": "The gold layer in ENIG is described as very thin.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly says the immersion-gold layer is very thin.",
+      "category": "Surface finish",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q168",
+      "type": "true",
+      "question": "HASL is described as oxidation-resistant and highly solderable in exactly the same terms as ENIG.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Those specific descriptors are stated for ENIG; HASL is described as inexpensive, widely used, but less flat.",
+      "category": "Surface finish",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q169",
+      "type": "true",
+      "question": "The copper features represented in Gerber files can include vias.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter includes vias among copper-layer features.",
+      "category": "Gerber",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q170",
+      "type": "single",
+      "question": "What is the key difference between a blind via and a PTH via?",
+      "options": [
+        "Blind via does not pass through the entire PCB; PTH does",
+        "Blind via is non-plated; PTH is plated",
+        "Blind via is mechanical only",
+        "PTH never connects copper layers"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter distinguishes them primarily by how far through the board they extend.",
+      "category": "Vias",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q171",
+      "type": "single",
+      "question": "What is the key difference between a buried via and a blind via?",
+      "options": [
+        "Buried reaches no outer surface; blind reaches one outer surface",
+        "Buried is nonconductive",
+        "Blind is always through-hole",
+        "Buried is always cheaper"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Buried vias stay internal; blind vias connect from an outer layer inward.",
+      "category": "Vias",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q172",
+      "type": "single",
+      "question": "Which feature may directly degrade high-frequency signal integrity?",
+      "options": [
+        "Via stub",
+        "Silkscreen label",
+        "Board outline",
+        "Solder mask color"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly identifies via stubs as a high-frequency signal-integrity concern.",
+      "category": "Vias",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q173",
+      "type": "single",
+      "question": "Which two fabrication outputs are both explicitly associated with assembly rather than routing geometry?",
+      "options": [
+        "Silkscreen and solder paste",
+        "Outline and drill data",
+        "Copper and outline",
+        "Antipad and via stub"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Silkscreen carries assembly markings and solder paste defines stencil openings for assembly.",
+      "category": "Fabrication layers",
+      "difficulty": "hard"
     }
   ]
 }
