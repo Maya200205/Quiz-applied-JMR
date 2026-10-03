@@ -2,7 +2,7 @@
   "id": "chapter1",
   "title": "Chapter 1 — Introduction to PCB Technology",
   "source": "01 - An introduction to PCB technology.pdf",
-  "question_count": 173,
+  "question_count": 172,
   "questions": [
     {
       "id": "q1",
@@ -2640,23 +2640,6 @@
       "explanation": "The chapter states composition and frequency; board color is not listed.",
       "category": "Materials",
       "difficulty": "standard"
-    },
-    {
-      "id": "q157",
-      "type": "single",
-      "question": "Which item is NOT one of the three outline topics on page 2?",
-      "options": [
-        "Soldering technique",
-        "PCB technology",
-        "Vias",
-        "PCB fabrication layers"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The outline lists PCB technology, vias and PCB fabrication layers.",
-      "category": "Basics",
-      "difficulty": "easy"
     },
     {
       "id": "q158",
