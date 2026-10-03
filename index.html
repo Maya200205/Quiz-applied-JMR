@@ -50,7 +50,7 @@
             <input id="nickname" maxlength="24" placeholder="e.g. Maya" autocomplete="nickname">
             <button id="saveNickname" class="btn">Save</button>
           </div>
-          <p class="muted tiny">For now, stats and rankings are saved only on this device.</p>
+          <p class="muted tiny">Your personal progress stays on this device. Shared leaderboard results are stored online.</p>
         </div>
       </section>
 
@@ -147,10 +147,10 @@
         <article class="card section-card">
           <div class="card-title-row">
             <div>
-              <p class="kicker">LOCAL LEADERBOARD</p>
-              <h2>Best sessions on this device</h2>
+              <p class="kicker">GLOBAL LEADERBOARD</p>
+              <h2>Best scores from everyone</h2>
             </div>
-            <span class="coming-soon">Global in Step 2</span>
+            <span class="coming-soon">Live</span>
           </div>
           <div id="scoreLeaderboard" class="leaderboard"></div>
         </article>
@@ -161,7 +161,7 @@
           <div class="card-title-row">
             <div>
               <p class="kicker">STUDY TIME</p>
-              <h2>Most active local profiles</h2>
+              <h2>Most active students</h2>
             </div>
           </div>
           <div id="timeLeaderboard" class="leaderboard"></div>
@@ -249,6 +249,7 @@
     </footer>
   </main>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="app.js"></script>
 </body>
 </html>

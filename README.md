@@ -53,3 +53,26 @@ The practice readiness indicator is a heuristic based on:
 - 10% practice consistency
 
 It is a revision indicator, **not a prediction of the exam grade**.
+
+
+## Step 2 — shared global leaderboard
+
+This version is connected to Supabase.
+
+When a quiz session is completed, the site submits:
+- nickname
+- chapter
+- score
+- total number of questions
+- percentage
+- active quiz time
+- timestamp
+
+Personal progress, mistakes, streaks and readiness still remain in the user's browser.
+
+Only the Supabase publishable key is used in the browser. Never add a service-role or secret key to GitHub.
+
+
+## Answer randomization
+
+The visible answer positions are shuffled every time a question is displayed, while the original answer keys are preserved internally. This prevents memorizing A/B/C/D positions instead of the course content.

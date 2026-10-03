@@ -1,3 +1,9 @@
+const SUPABASE_URL = "https://jjrfduoqpaesnuzxomze.supabase.co";
+const SUPABASE_KEY = "sb_publishable_1LVqf-8DBD49prvj7hGvDw_lTyA46PF";
+const supabaseClient = window.supabase
+  ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY)
+  : null;
+
 
 let bank = [];
 let session = [];
@@ -146,19 +152,26 @@ function renderDashboard(){
 }
 
 function renderLeaderboards(s){
+  renderLocalFallbackLeaderboards(s);
+  loadGlobalLeaderboards();
+}
+
+function renderLocalFallbackLeaderboards(s){
   const sessions=[...(s.sessions||[])];
   const scoreEl=$("scoreLeaderboard");
   if(!sessions.length){
-    scoreEl.innerHTML='<div class="empty-state">Finish a quiz session and your best results will appear here.</div>';
-  } else {
+    scoreEl.innerHTML='<div class="empty-state">No leaderboard results yet. Finish a quiz to add the first one.</div>';
+  }else{
     const ranked=sessions
       .sort((a,b)=>b.percentage-a.percentage || b.questions-a.questions || a.seconds-b.seconds)
       .slice(0,5);
     scoreEl.innerHTML=ranked.map((x,i)=>`
       <div class="leader-row">
         <div class="rank ${i===0?"top":""}">${i+1}</div>
-        <div><div class="leader-name">${escapeHtml(x.nickname||"Anonymous")}</div>
-        <div class="leader-meta">${x.correct}/${x.questions} · ${fmtDuration(x.seconds)} · ${new Date(x.date).toLocaleDateString()}</div></div>
+        <div>
+          <div class="leader-name">${escapeHtml(x.nickname||"Anonymous")}</div>
+          <div class="leader-meta">${x.correct}/${x.questions} · ${fmtDuration(x.seconds)} · local fallback</div>
+        </div>
         <div class="leader-score">${x.percentage}%</div>
       </div>`).join("");
   }
@@ -171,20 +184,120 @@ function renderLeaderboards(s){
     profiles[n].sessions++;
     profiles[n].questions+=x.questions||0;
   });
-  const timeEl=$("timeLeaderboard");
+
   const rows=Object.entries(profiles).sort((a,b)=>b[1].seconds-a[1].seconds).slice(0,5);
+  const timeEl=$("timeLeaderboard");
   if(!rows.length){
-    timeEl.innerHTML='<div class="empty-state">Active study time will appear here after completed quiz sessions.</div>';
-  } else {
+    timeEl.innerHTML='<div class="empty-state">No study-time results yet.</div>';
+  }else{
     timeEl.innerHTML=rows.map(([name,v],i)=>`
       <div class="leader-row">
         <div class="rank ${i===0?"top":""}">${i+1}</div>
-        <div><div class="leader-name">${escapeHtml(name)}</div>
-        <div class="leader-meta">${v.sessions} session${v.sessions===1?"":"s"} · ${v.questions} questions</div></div>
+        <div>
+          <div class="leader-name">${escapeHtml(name)}</div>
+          <div class="leader-meta">${v.sessions} session${v.sessions===1?"":"s"} · ${v.questions} questions</div>
+        </div>
         <div class="leader-score">${fmtDuration(v.seconds)}</div>
       </div>`).join("");
   }
 }
+
+async function submitGlobalResult(result){
+  if(!supabaseClient) return;
+  try{
+    const { error } = await supabaseClient.from("quiz_results").insert({
+      nickname: result.nickname,
+      chapter: "chapter1",
+      score: result.correct,
+      total_questions: result.questions,
+      percentage: result.percentage,
+      active_seconds: result.seconds
+    });
+    if(error) console.error("Supabase insert error:", error);
+  }catch(err){
+    console.error("Could not submit global result:", err);
+  }
+}
+
+async function loadGlobalLeaderboards(){
+  if(!supabaseClient) return;
+
+  try{
+    const { data, error } = await supabaseClient
+      .from("quiz_results")
+      .select("nickname,score,total_questions,percentage,active_seconds,created_at")
+      .eq("chapter","chapter1")
+      .order("created_at",{ascending:false})
+      .limit(1000);
+
+    if(error) throw error;
+    const rows=Array.isArray(data)?data:[];
+
+    const bestByName={};
+    rows.forEach(r=>{
+      const name=(r.nickname||"Anonymous").trim()||"Anonymous";
+      const prev=bestByName[name];
+      if(
+        !prev ||
+        r.percentage>prev.percentage ||
+        (r.percentage===prev.percentage && r.total_questions>prev.total_questions) ||
+        (r.percentage===prev.percentage && r.total_questions===prev.total_questions &&
+         new Date(r.created_at)>new Date(prev.created_at))
+      ){
+        bestByName[name]=r;
+      }
+    });
+
+    const best=Object.entries(bestByName)
+      .map(([nickname,r])=>({nickname,...r}))
+      .sort((a,b)=>b.percentage-a.percentage || b.total_questions-a.total_questions || b.score-a.score)
+      .slice(0,10);
+
+    const scoreEl=$("scoreLeaderboard");
+    scoreEl.innerHTML=best.length
+      ? best.map((x,i)=>`
+          <div class="leader-row">
+            <div class="rank ${i===0?"top":""}">${i+1}</div>
+            <div>
+              <div class="leader-name">${escapeHtml(x.nickname)}</div>
+              <div class="leader-meta">${x.score}/${x.total_questions} · best submitted result</div>
+            </div>
+            <div class="leader-score">${x.percentage}%</div>
+          </div>`).join("")
+      : '<div class="empty-state">No global scores yet. Be the first!</div>';
+
+    const timeByName={};
+    rows.forEach(r=>{
+      const name=(r.nickname||"Anonymous").trim()||"Anonymous";
+      if(!timeByName[name]) timeByName[name]={seconds:0,sessions:0,questions:0};
+      timeByName[name].seconds += Number(r.active_seconds)||0;
+      timeByName[name].sessions += 1;
+      timeByName[name].questions += Number(r.total_questions)||0;
+    });
+
+    const timeRows=Object.entries(timeByName)
+      .map(([nickname,v])=>({nickname,...v}))
+      .sort((a,b)=>b.seconds-a.seconds)
+      .slice(0,10);
+
+    const timeEl=$("timeLeaderboard");
+    timeEl.innerHTML=timeRows.length
+      ? timeRows.map((x,i)=>`
+          <div class="leader-row">
+            <div class="rank ${i===0?"top":""}">${i+1}</div>
+            <div>
+              <div class="leader-name">${escapeHtml(x.nickname)}</div>
+              <div class="leader-meta">${x.sessions} session${x.sessions===1?"":"s"} · ${x.questions} questions</div>
+            </div>
+            <div class="leader-score">${fmtDuration(x.seconds)}</div>
+          </div>`).join("")
+      : '<div class="empty-state">No global study-time data yet.</div>';
+
+  }catch(err){
+    console.error("Could not load global leaderboards:", err);
+  }
+}
+
 function escapeHtml(s){
   return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 }
@@ -250,22 +363,32 @@ function renderQuestion(){
 
   const answers=$("answers");
   answers.innerHTML="";
-  q.options.forEach((opt,idx)=>{
+
+  // Shuffle the visible answer positions every time the question is shown.
+  // We keep each option's original index so correctness is still checked properly.
+  const shuffledOptions = shuffle(
+    q.options.map((text, originalIndex) => ({ text, originalIndex }))
+  );
+
+  shuffledOptions.forEach((item)=>{
     const label=document.createElement("label");
     label.className="answer";
     const input=document.createElement("input");
     input.type=q.type==="multi"?"checkbox":"radio";
     input.name="answer";
-    input.value=idx;
+    input.value=item.originalIndex;
+    input.dataset.originalIndex=item.originalIndex;
     const span=document.createElement("span");
-    span.textContent=opt;
+    span.textContent=item.text;
     label.append(input,span);
     answers.appendChild(label);
   });
 }
 
 function selectedIndices(){
-  return [...document.querySelectorAll("#answers input:checked")].map(x=>Number(x.value)).sort((a,b)=>a-b);
+  return [...document.querySelectorAll("#answers input:checked")]
+    .map(x=>Number(x.dataset.originalIndex ?? x.value))
+    .sort((a,b)=>a-b);
 }
 function same(a,b){ return a.length===b.length && a.every((v,i)=>v===b[i]); }
 
@@ -294,12 +417,14 @@ function check(){
   saveState(state);
   sessionAnswers.push({q,ok,sel});
 
-  document.querySelectorAll(".answer").forEach((el,idx)=>{
-    const isCorrect=expected.includes(idx);
-    const isSelected=sel.includes(idx);
+  document.querySelectorAll(".answer").forEach((el)=>{
+    const input=el.querySelector("input");
+    const originalIndex=Number(input.dataset.originalIndex ?? input.value);
+    const isCorrect=expected.includes(originalIndex);
+    const isSelected=sel.includes(originalIndex);
     if(isCorrect) el.classList.add("correct");
     else if(isSelected) el.classList.add("wrong");
-    el.querySelector("input").disabled=true;
+    input.disabled=true;
   });
 
   $("feedback").textContent=(ok?"Nice — ":"Not quite — ")+q.explanation;
@@ -337,6 +462,14 @@ function finish(){
   });
   state.sessions=state.sessions.slice(-100);
   saveState(state);
+
+  submitGlobalResult({
+    nickname:nick,
+    correct:sessionCorrect,
+    questions:session.length,
+    percentage:pct,
+    seconds:sessionActiveSeconds
+  }).then(()=>loadGlobalLeaderboards());
 
   const ready=readiness(state);
   $("score").textContent=`${pct}%`;
