@@ -23,7 +23,7 @@ function shuffle(arr){
 }
 
 async function init(){
-  const res = await fetch("data/chapter1.json");
+  const res = await fetch("chapter1.json");
   const data = await res.json();
   bank = data.questions;
   renderStats();
