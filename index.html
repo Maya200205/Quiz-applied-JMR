@@ -3,53 +3,252 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PCB Quiz</title>
+  <meta name="description" content="Applied Electricity & Electronics revision quiz">
+  <title>Applied Electricity & Electronics Quiz</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="app">
-    <header>
-      <div>
-        <p class="eyebrow">Applied Electricity and Electronics</p>
-        <h1>PCB Quiz</h1>
-        <p class="sub">Chapter-based revision with mistake tracking.</p>
+  <div class="bg-orb orb-a"></div>
+  <div class="bg-orb orb-b"></div>
+
+  <main class="shell">
+    <header class="topbar">
+      <button id="brandHome" class="brand" aria-label="Home">
+        <span class="brand-mark">AE</span>
+        <span>
+          <strong>Applied Electricity & Electronics</strong>
+          <small>Revision Quiz</small>
+        </span>
+      </button>
+      <div class="top-actions">
+        <div class="pill" id="liveTimePill">⏱ 0m active</div>
+        <button id="resetProgress" class="btn btn-ghost btn-small">Reset my data</button>
       </div>
-      <button id="resetProgress" class="ghost">Reset progress</button>
     </header>
 
-    <section id="home" class="panel">
-      <h2>Choose a mode</h2>
-      <div class="mode-grid">
-        <button data-mode="all">All Chapter 1 questions</button>
-        <button data-mode="random20">20 random questions</button>
-        <button data-mode="mistakes">Review mistakes</button>
-      </div>
-      <div id="stats" class="stats"></div>
+    <section id="homeView">
+      <section class="hero card">
+        <div class="hero-copy">
+          <p class="kicker">REVISION, BUT MAKE IT LESS PAINFUL</p>
+          <h1>Ready to test what you really know?</h1>
+          <p class="hero-text">
+            Practice chapter by chapter, review your mistakes, track your progress
+            and build confidence before the exam.
+          </p>
+          <div class="welcome-note">
+            <span class="heart">♡</span>
+            <div>
+              <strong>Made by Maya Pette</strong>
+              <p>Have fun revising, and good luck for the exam! 🍀</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <label for="nickname">Your nickname</label>
+          <div class="nickname-row">
+            <input id="nickname" maxlength="24" placeholder="e.g. Maya" autocomplete="nickname">
+            <button id="saveNickname" class="btn">Save</button>
+          </div>
+          <p class="muted tiny">For now, stats and rankings are saved only on this device.</p>
+        </div>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="metric-card card accent-card">
+          <div class="metric-head">
+            <span>Exam readiness</span>
+            <span class="info-dot" title="A practice estimate based on quiz accuracy, coverage, mastery and consistency.">i</span>
+          </div>
+          <div class="readiness-wrap">
+            <div class="readiness-ring" id="readinessRing">
+              <div>
+                <strong id="readinessValue">0%</strong>
+                <small>practice estimate</small>
+              </div>
+            </div>
+            <div>
+              <h3 id="readinessLabel">Start practising</h3>
+              <p id="readinessText" class="muted">Answer questions to build your estimate.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="metric-card card">
+          <span class="metric-label">Accuracy</span>
+          <strong class="metric-number" id="accuracyStat">—</strong>
+          <span class="metric-caption" id="accuracyCaption">No answers yet</span>
+        </article>
+
+        <article class="metric-card card">
+          <span class="metric-label">Coverage</span>
+          <strong class="metric-number" id="coverageStat">0%</strong>
+          <span class="metric-caption" id="coverageCaption">0 questions seen</span>
+        </article>
+
+        <article class="metric-card card">
+          <span class="metric-label">Active study time</span>
+          <strong class="metric-number" id="studyTimeStat">0m</strong>
+          <span class="metric-caption">Counts active quiz time only</span>
+        </article>
+
+        <article class="metric-card card">
+          <span class="metric-label">Best streak</span>
+          <strong class="metric-number" id="streakStat">0</strong>
+          <span class="metric-caption">Correct answers in a row</span>
+        </article>
+      </section>
+
+      <section class="section-head">
+        <div>
+          <p class="kicker">CHAPTERS</p>
+          <h2>Choose what you want to revise</h2>
+        </div>
+      </section>
+
+      <section class="chapter-card card">
+        <div class="chapter-number">01</div>
+        <div class="chapter-main">
+          <div class="chapter-title-row">
+            <div>
+              <h3>Introduction to PCB Technology</h3>
+              <p>FR-4 · mils · layers · parasitic capacitance · vias · Gerbers · HASL · ENIG</p>
+            </div>
+            <span class="question-count" id="chapterCount">0 questions</span>
+          </div>
+
+          <div class="chapter-progress">
+            <div class="progress-labels">
+              <span>Chapter coverage</span>
+              <strong id="chapterCoverageText">0%</strong>
+            </div>
+            <div class="progress-track"><div id="chapterCoverageBar" class="progress-fill"></div></div>
+          </div>
+
+          <div class="chapter-actions">
+            <button class="btn" data-mode="all">Study all questions</button>
+            <button class="btn btn-secondary" data-mode="random20">20 random questions</button>
+            <button class="btn btn-soft" data-mode="mistakes">Review mistakes <span id="mistakeBadge" class="badge">0</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="split-grid">
+        <article class="card section-card">
+          <div class="card-title-row">
+            <div>
+              <p class="kicker">MY PROGRESS</p>
+              <h2>Your revision snapshot</h2>
+            </div>
+          </div>
+          <div class="progress-list" id="progressBreakdown"></div>
+        </article>
+
+        <article class="card section-card">
+          <div class="card-title-row">
+            <div>
+              <p class="kicker">LOCAL LEADERBOARD</p>
+              <h2>Best sessions on this device</h2>
+            </div>
+            <span class="coming-soon">Global in Step 2</span>
+          </div>
+          <div id="scoreLeaderboard" class="leaderboard"></div>
+        </article>
+      </section>
+
+      <section class="split-grid">
+        <article class="card section-card">
+          <div class="card-title-row">
+            <div>
+              <p class="kicker">STUDY TIME</p>
+              <h2>Most active local profiles</h2>
+            </div>
+          </div>
+          <div id="timeLeaderboard" class="leaderboard"></div>
+        </article>
+
+        <article class="card section-card tip-card">
+          <p class="kicker">A QUICK REMINDER</p>
+          <h2>A high score is useful, but coverage matters too.</h2>
+          <p>
+            Your readiness estimate rewards both correct answers and seeing more of the chapter,
+            so repeating only easy questions will not inflate it too much.
+          </p>
+          <p class="tiny muted">This is a revision indicator, not a prediction of your exam grade.</p>
+        </article>
+      </section>
     </section>
 
-    <section id="quiz" class="panel hidden">
-      <div class="quiz-top">
-        <button id="back" class="ghost">← Back</button>
-        <div id="progressText"></div>
-      </div>
-      <div class="progress"><div id="progressBar"></div></div>
-      <h2 id="question"></h2>
-      <p id="typeHint" class="type-hint"></p>
-      <div id="answers" class="answers"></div>
-      <div id="feedback" class="feedback hidden"></div>
-      <div class="actions">
-        <button id="check">Check answer</button>
-        <button id="next" class="hidden">Next</button>
+    <section id="quizView" class="hidden">
+      <div class="quiz-layout">
+        <aside class="quiz-side card">
+          <button id="backHome" class="btn btn-ghost btn-full">← Back to dashboard</button>
+          <div class="session-stat">
+            <span>Session</span>
+            <strong id="sessionMode">Quiz</strong>
+          </div>
+          <div class="session-stat">
+            <span>Score</span>
+            <strong id="sessionScore">0 / 0</strong>
+          </div>
+          <div class="session-stat">
+            <span>Current streak</span>
+            <strong id="currentStreak">0</strong>
+          </div>
+          <div class="session-stat">
+            <span>Active time</span>
+            <strong id="sessionTime">0:00</strong>
+          </div>
+        </aside>
+
+        <section class="quiz-card card">
+          <div class="quiz-meta">
+            <span id="progressText">Question 1</span>
+            <span id="questionType" class="question-type">Single choice</span>
+          </div>
+          <div class="progress-track big"><div id="progressBar" class="progress-fill"></div></div>
+          <h2 id="question"></h2>
+          <p id="typeHint" class="muted"></p>
+          <div id="answers" class="answers"></div>
+          <div id="feedback" class="feedback hidden"></div>
+          <div class="quiz-actions">
+            <button id="check" class="btn">Check answer</button>
+            <button id="next" class="btn hidden">Next question →</button>
+          </div>
+        </section>
       </div>
     </section>
 
-    <section id="result" class="panel hidden">
-      <h2>Session complete</h2>
-      <p id="score" class="score"></p>
-      <div id="resultDetails"></div>
-      <button id="again">Back to modes</button>
+    <section id="resultView" class="hidden">
+      <section class="result-hero card">
+        <p class="kicker">SESSION COMPLETE</p>
+        <h1 id="resultHeadline">Nice work!</h1>
+        <div class="result-score" id="score">0%</div>
+        <p id="resultSub" class="muted"></p>
+        <div class="result-metrics">
+          <div><span>Correct</span><strong id="resultCorrect">0</strong></div>
+          <div><span>Questions</span><strong id="resultQuestions">0</strong></div>
+          <div><span>Active time</span><strong id="resultTime">0m</strong></div>
+          <div><span>Readiness</span><strong id="resultReadiness">0%</strong></div>
+        </div>
+        <div class="result-actions">
+          <button id="again" class="btn">Back to dashboard</button>
+          <button id="retryMistakes" class="btn btn-secondary">Review my mistakes</button>
+        </div>
+      </section>
+
+      <section class="card section-card">
+        <h2>Question review</h2>
+        <div id="resultDetails" class="result-list"></div>
+      </section>
     </section>
+
+    <footer>
+      <strong>Made by Maya Pette ♡</strong>
+      <span>Have fun revising and good luck for the exam! 🍀</span>
+    </footer>
   </main>
+
   <script src="app.js"></script>
 </body>
 </html>

@@ -1,72 +1,55 @@
-# PCB Quiz
+# Applied Electricity & Electronics Quiz
 
-Static browser quiz for **Chapter 1 — Introduction to PCB Technology**.
+A static revision website made for the Applied Electricity & Electronics course.
 
-## Features
+**Made by Maya Pette ♡**  
+Have fun revising and good luck for the exam! 🍀
 
-- 40 Chapter 1 questions
-- Single-answer, multiple-answer and true/false questions
-- Immediate correction and explanation
-- Random 20-question mode
+## Step 1 features
+
+- Chapter 1 question bank (40 questions)
 - Full-chapter mode
+- Random 20-question mode
 - Mistake-review mode
-- Progress stored locally in the browser with `localStorage`
-- No backend or database required
+- Local nickname
+- Accuracy, chapter coverage and mastered-question tracking
+- Active study-time tracking
+- Best correct-answer streak
+- Practice "Exam Readiness" estimate
+- Local best-session leaderboard
+- Local study-time leaderboard
+- Responsive mobile-friendly design
+- Data stored with browser `localStorage`
 
-## Run locally
+> The leaderboard is local to each browser/device for now. A shared online leaderboard can be added later with a backend such as Supabase.
 
-Because the quiz loads its JSON question bank with `fetch()`, open it through a small local web server rather than double-clicking `index.html`.
+## GitHub Pages
 
-With Python:
-
-```bash
-python -m http.server 8000
-```
-
-Then open:
+Upload these files to the repository root:
 
 ```text
-http://localhost:8000
+index.html
+style.css
+app.js
+chapter1.json
+README.md
 ```
 
-## Put it on GitHub
+The JavaScript supports both `chapter1.json` in the repository root and `data/chapter1.json`.
 
-1. Create a new GitHub repository.
-2. Upload all files from this folder to the repository root.
-3. Commit and push.
-4. Open **Settings → Pages**.
-5. Under **Build and deployment**, choose **Deploy from a branch**.
-6. Select your main branch and the `/ (root)` folder.
-7. Save. GitHub Pages will provide the public quiz URL.
+In GitHub:
+1. Go to **Settings → Pages**
+2. Source: **Deploy from a branch**
+3. Branch: **main**
+4. Folder: **/ (root)**
+5. Save
 
-## Add future chapters
+## Readiness score
 
-Create another JSON file in `data/` using the same structure as `chapter1.json`.
+The practice readiness indicator is a heuristic based on:
+- 45% overall quiz accuracy
+- 25% chapter coverage
+- 20% mastered-question coverage
+- 10% practice consistency
 
-Each question uses:
-
-```json
-{
-  "id": "q1",
-  "type": "single",
-  "question": "Question text",
-  "options": ["A", "B", "C", "D"],
-  "answer": [0],
-  "explanation": "Why the answer is correct."
-}
-```
-
-Types:
-- `single`: one correct option
-- `multi`: several correct options
-- `tf`: true / false
-
-The current interface is wired to Chapter 1 only. It can be extended later with a chapter-selection screen.
-
-## Source
-
-The question bank was created from the uploaded course file:
-
-`01 - An introduction to PCB technology.pdf`
-
-It intentionally stays within that chapter's material.
+It is a revision indicator, **not a prediction of the exam grade**.
