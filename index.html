@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PCB Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div>
+        <p class="eyebrow">Applied Electricity and Electronics</p>
+        <h1>PCB Quiz</h1>
+        <p class="sub">Chapter-based revision with mistake tracking.</p>
+      </div>
+      <button id="resetProgress" class="ghost">Reset progress</button>
+    </header>
+
+    <section id="home" class="panel">
+      <h2>Choose a mode</h2>
+      <div class="mode-grid">
+        <button data-mode="all">All Chapter 1 questions</button>
+        <button data-mode="random20">20 random questions</button>
+        <button data-mode="mistakes">Review mistakes</button>
+      </div>
+      <div id="stats" class="stats"></div>
+    </section>
+
+    <section id="quiz" class="panel hidden">
+      <div class="quiz-top">
+        <button id="back" class="ghost">← Back</button>
+        <div id="progressText"></div>
+      </div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <h2 id="question"></h2>
+      <p id="typeHint" class="type-hint"></p>
+      <div id="answers" class="answers"></div>
+      <div id="feedback" class="feedback hidden"></div>
+      <div class="actions">
+        <button id="check">Check answer</button>
+        <button id="next" class="hidden">Next</button>
+      </div>
+    </section>
+
+    <section id="result" class="panel hidden">
+      <h2>Session complete</h2>
+      <p id="score" class="score"></p>
+      <div id="resultDetails"></div>
+      <button id="again">Back to modes</button>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
