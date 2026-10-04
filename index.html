@@ -32,7 +32,7 @@
           <p class="kicker">REVISION, BUT MAKE IT LESS PAINFUL</p>
           <h1>Ready to test what you really know?</h1>
           <p class="hero-text">
-            Practice chapter by chapter, review your mistakes, track your progress
+            Practice chapter by chapter or mix everything together in mock-exam mode, review your mistakes, track your progress
             and build confidence before the exam.
           </p>
           <div class="welcome-note">
@@ -106,30 +106,20 @@
         </div>
       </section>
 
-      <section class="chapter-card card">
-        <div class="chapter-number">01</div>
-        <div class="chapter-main">
-          <div class="chapter-title-row">
-            <div>
-              <h3>Introduction to PCB Technology</h3>
-              <p>FR-4 · mils · layers · parasitic capacitance · vias · Gerbers · HASL · ENIG</p>
-            </div>
-            <span class="question-count" id="chapterCount">0 questions</span>
-          </div>
+      <div id="chapterList" class="chapter-list"></div>
 
-          <div class="chapter-progress">
-            <div class="progress-labels">
-              <span>Chapter coverage</span>
-              <strong id="chapterCoverageText">0%</strong>
-            </div>
-            <div class="progress-track"><div id="chapterCoverageBar" class="progress-fill"></div></div>
-          </div>
-
+      <section class="exam-card card">
+        <div class="exam-icon">🎓</div>
+        <div class="exam-main">
+          <p class="kicker">ALL CHAPTERS</p>
+          <h3>Mock exam mode</h3>
+          <p>Mix questions from every available chapter, just like a real exam revision session.</p>
           <div class="chapter-actions">
-            <button class="btn" data-mode="all">Study all questions</button>
-            <button class="btn btn-secondary" data-mode="random20">20 random questions</button>
-            <button class="btn btn-soft" data-mode="mistakes">Review mistakes <span id="mistakeBadge" class="badge">0</span></button>
+            <button class="btn" data-exam-mode="mock40">Mock exam · 40 mixed questions</button>
+            <button class="btn btn-secondary" data-exam-mode="mixedAll">All questions · mixed</button>
+            <button class="btn btn-soft" data-exam-mode="mistakesAll">Review all mistakes <span id="allMistakeBadge" class="badge">0</span></button>
           </div>
+          <p class="tiny muted" id="examBankInfo">Loading all chapters…</p>
         </div>
       </section>
 
@@ -150,7 +140,14 @@
               <p class="kicker">GLOBAL LEADERBOARD</p>
               <h2>Best scores from everyone</h2>
             </div>
-            <span class="coming-soon">Live</span>
+            <div class="leader-controls">
+              <select id="leaderboardScope" aria-label="Leaderboard scope">
+                <option value="exam">Mock exam</option>
+                <option value="chapter1">Chapter 1</option>
+                <option value="chapter2">Chapter 2</option>
+              </select>
+              <span class="coming-soon">Live</span>
+            </div>
           </div>
           <div id="scoreLeaderboard" class="leaderboard"></div>
         </article>
