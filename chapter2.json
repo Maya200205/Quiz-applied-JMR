@@ -1,0 +1,2814 @@
+{
+  "id": "chapter2",
+  "title": "Chapter 2 — Soldering",
+  "source": "02 - Soldering.pdf",
+  "question_count": 166,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "question": "What is electrical soldering?",
+      "options": [
+        "Joining electrical components by melting a solder alloy at the connection point",
+        "Melting the joined materials themselves",
+        "Joining components only with mechanical pressure",
+        "Applying solder mask"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The solder alloy melts; the joined materials themselves do not.",
+      "category": "Introduction",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "question": "What is the key difference between soldering and welding?",
+      "options": [
+        "In soldering the joined materials are not melted; in welding they are",
+        "Soldering uses no metal",
+        "Welding uses flux but soldering does not",
+        "There is no difference"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly contrasts soldering with welding this way.",
+      "category": "Introduction",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "tf",
+      "question": "In soldering, the materials being joined are intentionally melted.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The solder melts, not the joined materials.",
+      "category": "Introduction",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "question": "A reliable solder joint depends on which processes?",
+      "options": [
+        "Chemical and thermal processes",
+        "Only mechanical processes",
+        "Only optical processes",
+        "Only magnetic processes"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says reliable joints depend on several chemical and thermal processes.",
+      "category": "Introduction",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "question": "What is solder?",
+      "options": [
+        "A low-melting-point metal alloy, usually based on tin",
+        "A polymer coating",
+        "A PCB dielectric",
+        "A copper-only conductor"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter's definition.",
+      "category": "Introduction",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "single",
+      "question": "Traditional solder commonly contained which metal?",
+      "options": [
+        "Lead",
+        "Gold",
+        "Aluminum",
+        "Iron"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Traditional solder contained lead.",
+      "category": "Introduction",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "single",
+      "question": "Modern electronics generally use what kind of solder alloys?",
+      "options": [
+        "Lead-free alloys",
+        "Pure lead only",
+        "Pure copper only",
+        "Iron-based alloys"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says modern electronics generally use lead-free alloys.",
+      "category": "Introduction",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "single",
+      "question": "What does wetting describe?",
+      "options": [
+        "How well molten solder spreads over and adheres to a metal surface",
+        "How much water is used",
+        "How fast the iron heats",
+        "PCB thickness"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Good wetting means spreading and adhesion rather than remaining as a droplet.",
+      "category": "Wetting",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "tf",
+      "question": "Good wetting means molten solder spreads and adheres instead of staying as a droplet.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "That is the definition given.",
+      "category": "Wetting",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "single",
+      "question": "After molten solder cools and solidifies, what does it form?",
+      "options": [
+        "A mechanical and electrical connection",
+        "Only a cosmetic coating",
+        "Only a thermal insulator",
+        "A nonconductive joint"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The solidified solder forms both mechanical and electrical connection.",
+      "category": "Introduction",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "single",
+      "question": "What solder-wire diameter range is typical for electronics?",
+      "options": [
+        "Approximately 0.4–1.0 mm",
+        "4–10 mm",
+        "0.04–0.10 mm",
+        "1.5–3.0 mm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives approximately 0.4–1.0 mm.",
+      "category": "Solder wire",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "multi",
+      "question": "A good solder joint should:",
+      "options": [
+        "Provide reliable electrical connection",
+        "Provide sufficient mechanical strength",
+        "Remain reliable over time",
+        "Resist oxidation and corrosion"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All four requirements are listed.",
+      "category": "Solder joints",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "tf",
+      "question": "Mechanical strength is one requirement of a good solder joint.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The joint should provide sufficient mechanical strength.",
+      "category": "Solder joints",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q14",
+      "type": "tf",
+      "question": "A good solder joint should remain reliable over time and resist oxidation and corrosion.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly listed.",
+      "category": "Solder joints",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q15",
+      "type": "single",
+      "question": "What soldering method is the chapter mainly focused on?",
+      "options": [
+        "Manual soldering of electronic components",
+        "Industrial welding",
+        "Laser cutting",
+        "Wave soldering only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter states this focus.",
+      "category": "Introduction",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q16",
+      "type": "single",
+      "question": "What rule of thumb is given for tip temperature?",
+      "options": [
+        "Tip temperature ≈ solder melting temperature + 120 °C",
+        "Tip temperature ≈ melting temperature − 120 °C",
+        "Tip temperature = 120 °C",
+        "Tip temperature = 2 × melting temperature"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives melting temperature + about 120 °C.",
+      "category": "Temperature",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q17",
+      "type": "single",
+      "question": "If solder melts at 217 °C, what tip temperature follows the rule?",
+      "options": [
+        "About 337 °C",
+        "217 °C",
+        "120 °C",
+        "437 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "217 + 120 = 337 °C.",
+      "category": "Temperature",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q18",
+      "type": "single",
+      "question": "If solder melts at 227 °C, what tip temperature follows the rule?",
+      "options": [
+        "About 347 °C",
+        "227 °C",
+        "107 °C",
+        "447 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "227 + 120 = 347 °C.",
+      "category": "Temperature",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q19",
+      "type": "single",
+      "question": "If solder melts near 180 °C, what tip temperature follows the rule?",
+      "options": [
+        "About 300 °C",
+        "180 °C",
+        "120 °C",
+        "420 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "180 + 120 = 300 °C.",
+      "category": "Temperature",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q20",
+      "type": "single",
+      "question": "If solder melts near 190 °C, what tip temperature follows the rule?",
+      "options": [
+        "About 310 °C",
+        "190 °C",
+        "70 °C",
+        "430 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "190 + 120 = 310 °C.",
+      "category": "Temperature",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q21",
+      "type": "tf",
+      "question": "The +120 °C rule is presented as a rule of thumb rather than an exact universal law.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The slide calls it a useful rule of thumb.",
+      "category": "Temperature",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q22",
+      "type": "single",
+      "question": "What common lead-based alloy is given?",
+      "options": [
+        "Sn60Pb40",
+        "Sn95.5Ag3.8Cu0.7",
+        "Sn99.3Cu0.7",
+        "Pure tin"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives 60% tin / 40% lead.",
+      "category": "Lead-based solder",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q23",
+      "type": "single",
+      "question": "What does Sn60Pb40 contain?",
+      "options": [
+        "60% tin and 40% lead",
+        "60% lead and 40% tin",
+        "60% tin and 40% copper",
+        "60% silver and 40% copper"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Sn60Pb40 is 60% Sn and 40% Pb.",
+      "category": "Lead-based solder",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q24",
+      "type": "single",
+      "question": "How is Sn60Pb40 often labelled on solder spools?",
+      "options": [
+        "60/40",
+        "40/60",
+        "95/5",
+        "63/37"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says it is often labelled 60/40.",
+      "category": "Lead-based solder",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q25",
+      "type": "single",
+      "question": "What melting range is given for 60/40 solder?",
+      "options": [
+        "Approximately 180–190 °C",
+        "217–227 °C",
+        "232–242 °C",
+        "100–120 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives approximately 180–190 °C.",
+      "category": "Lead-based solder",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q26",
+      "type": "multi",
+      "question": "Compared with common lead-free solder, lead-based solder generally offers:",
+      "options": [
+        "Good wetting",
+        "Lower soldering temperature",
+        "Higher melting temperature",
+        "Poorer wetting"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The chapter highlights good wetting and lower soldering temperature.",
+      "category": "Lead-based solder",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q27",
+      "type": "tf",
+      "question": "Lead-based solder was the standard in electronics for many years.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is directly stated.",
+      "category": "Lead-based solder",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q28",
+      "type": "single",
+      "question": "What melting point is given for pure tin?",
+      "options": [
+        "232 °C",
+        "217 °C",
+        "190 °C",
+        "120 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Pure tin is stated at 232 °C.",
+      "category": "Lead-based solder",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q29",
+      "type": "single",
+      "question": "What does alloying tin with lead do to the melting range?",
+      "options": [
+        "It lowers it",
+        "It raises it above 300 °C",
+        "It has no effect",
+        "It makes the alloy nonmetallic"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "It lowers the range from 232 °C for pure tin to about 180–190 °C.",
+      "category": "Lead-based solder",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q30",
+      "type": "single",
+      "question": "About how much lower is 180 °C than pure tin's 232 °C?",
+      "options": [
+        "52 °C",
+        "15 °C",
+        "42 °C",
+        "120 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "232 − 180 = 52 °C.",
+      "category": "Temperature",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q31",
+      "type": "single",
+      "question": "About how much lower is 190 °C than pure tin's 232 °C?",
+      "options": [
+        "42 °C",
+        "5 °C",
+        "15 °C",
+        "120 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "232 − 190 = 42 °C.",
+      "category": "Temperature",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q32",
+      "type": "single",
+      "question": "What is flux?",
+      "options": [
+        "A chemical agent used during soldering",
+        "A PCB dielectric",
+        "A mechanical clamp",
+        "A copper plating process"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Flux is a chemical agent.",
+      "category": "Flux",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q33",
+      "type": "multi",
+      "question": "What are functions of flux?",
+      "options": [
+        "Remove oxide layers",
+        "Protect heated surfaces from further oxidation",
+        "Promote wetting",
+        "Increase PCB thickness"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three are explicitly listed.",
+      "category": "Flux",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q34",
+      "type": "tf",
+      "question": "Flux helps protect heated surfaces from further oxidation.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is one of its listed functions.",
+      "category": "Flux",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q35",
+      "type": "tf",
+      "question": "Flux promotes wetting of metal surfaces by molten solder.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly listed.",
+      "category": "Flux",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q36",
+      "type": "single",
+      "question": "Where is flux often found in electronics solder wire?",
+      "options": [
+        "In a flux core inside the wire",
+        "Only on the PCB substrate",
+        "Inside the iron handle",
+        "Only in solder mask"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Electronics solder wire often contains a flux core.",
+      "category": "Flux",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q37",
+      "type": "single",
+      "question": "What is rosin obtained from?",
+      "options": [
+        "Pine resin",
+        "Copper oxide",
+        "Lead ore",
+        "Polyimide film"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Rosin is obtained from pine resin.",
+      "category": "Rosin flux",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q38",
+      "type": "single",
+      "question": "When does rosin flux become active?",
+      "options": [
+        "When heated",
+        "Only after cooling",
+        "Only in water",
+        "Only under vacuum"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Rosin becomes active when heated.",
+      "category": "Rosin flux",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q39",
+      "type": "single",
+      "question": "How is rosin described when hot?",
+      "options": [
+        "Mildly acidic",
+        "Strongly alkaline",
+        "Completely inert",
+        "Metallic"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "It is mildly acidic when hot.",
+      "category": "Rosin flux",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q40",
+      "type": "single",
+      "question": "What does hot rosin flux remove?",
+      "options": [
+        "Thin oxide layers",
+        "Copper traces",
+        "Solder mask",
+        "Component labels"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "It removes thin oxides and promotes wetting.",
+      "category": "Rosin flux",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q41",
+      "type": "single",
+      "question": "How is rosin residue described after cooling?",
+      "options": [
+        "Relatively non-corrosive",
+        "Strongly corrosive",
+        "Always electrically conductive",
+        "Impossible to clean"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter describes it as relatively non-corrosive.",
+      "category": "Rosin flux",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q42",
+      "type": "multi",
+      "question": "Rosin flux can be available as:",
+      "options": [
+        "Flux-cored solder wire",
+        "Liquid flux",
+        "Tacky paste",
+        "Flux component of solder paste"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All four forms are listed.",
+      "category": "Rosin flux",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q43",
+      "type": "single",
+      "question": "Strongly active acidic fluxes are commonly used for:",
+      "options": [
+        "Plumbing and metalwork",
+        "Fine-pitch electronics only",
+        "Silkscreen printing",
+        "PCB drilling"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter associates them with plumbing and metalwork.",
+      "category": "Acidic flux",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q44",
+      "type": "multi",
+      "question": "Strongly active fluxes may contain:",
+      "options": [
+        "Zinc chloride",
+        "Ammonium chloride",
+        "Acids",
+        "FR-4"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three are listed examples.",
+      "category": "Acidic flux",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q45",
+      "type": "multi",
+      "question": "Residues from plumbing/acid flux can:",
+      "options": [
+        "Remain corrosive",
+        "Remain electrically conductive",
+        "Require thorough removal",
+        "Always be harmless"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The chapter gives all three hazards/requirements.",
+      "category": "Acidic flux",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q46",
+      "type": "tf",
+      "question": "Plumbing/acid flux should never be used for soldering electronic circuits.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This warning is explicit.",
+      "category": "Acidic flux",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q47",
+      "type": "single",
+      "question": "What happens to flux before solder melts in flux-cored wire?",
+      "options": [
+        "It softens and becomes active",
+        "It freezes",
+        "It turns to copper",
+        "It becomes permanently inert"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Flux activates before solder melts.",
+      "category": "Flux-cored wire",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q48",
+      "type": "single",
+      "question": "Why is activation before solder melting useful?",
+      "options": [
+        "Surfaces are cleaned and protected before solder becomes liquid",
+        "The component body melts first",
+        "The PCB becomes thicker",
+        "The solder mask dissolves"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This prepares the surfaces for wetting.",
+      "category": "Flux-cored wire",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q49",
+      "type": "multi",
+      "question": "Activated flux:",
+      "options": [
+        "Removes thin oxide layers",
+        "Promotes wetting and spreading",
+        "Helps solder flow by capillary action",
+        "Stops heat transfer"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three are listed functions.",
+      "category": "Flux-cored wire",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q50",
+      "type": "single",
+      "question": "What helps molten solder flow into the joint?",
+      "options": [
+        "Capillary action",
+        "Magnetic induction",
+        "Electrostatic repulsion",
+        "Diffraction"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly mentions capillary action.",
+      "category": "Flux-cored wire",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q51",
+      "type": "single",
+      "question": "Why can good wetting reduce thermal stress?",
+      "options": [
+        "The joint can be made quickly",
+        "It eliminates all heating",
+        "It cools the iron automatically",
+        "It makes solder nonconductive"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Quicker joint formation reduces heating time.",
+      "category": "Wetting",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q52",
+      "type": "single",
+      "question": "With flux-cored solder wire, is extra flux usually needed?",
+      "options": [
+        "Usually no",
+        "Always yes",
+        "Never under any circumstance",
+        "Only with leaded solder"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Usually no, though it can help in some cases.",
+      "category": "Flux cleaning",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q53",
+      "type": "multi",
+      "question": "Additional flux can help with:",
+      "options": [
+        "Oxidized surfaces",
+        "Fine-pitch components",
+        "Rework",
+        "Only new large clean pads"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "These three cases are explicitly listed.",
+      "category": "Flux cleaning",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q54",
+      "type": "single",
+      "question": "Does no-clean flux usually need removal?",
+      "options": [
+        "Usually no",
+        "Always yes",
+        "Only with water",
+        "Only before soldering"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "No-clean flux usually does not need removal.",
+      "category": "Flux cleaning",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q55",
+      "type": "single",
+      "question": "How are rosin residues generally described?",
+      "options": [
+        "Generally non-corrosive",
+        "Always strongly corrosive",
+        "Always conductive",
+        "Impossible to remove"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says they are generally non-corrosive.",
+      "category": "Flux cleaning",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q56",
+      "type": "multi",
+      "question": "Why might rosin residue still be removed?",
+      "options": [
+        "For cleanliness",
+        "For high-impedance circuits",
+        "Because it is always strongly corrosive",
+        "Because it always shorts pads"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Cleanliness and high-impedance circuits are listed reasons.",
+      "category": "Flux cleaning",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q57",
+      "type": "single",
+      "question": "What should be done with water-soluble / active flux residues?",
+      "options": [
+        "They must be removed",
+        "They should always remain",
+        "Cover them with solder",
+        "Heat them until black"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says they must be removed.",
+      "category": "Flux cleaning",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q58",
+      "type": "single",
+      "question": "What should determine the cleaning method?",
+      "options": [
+        "The flux manufacturer's recommendation",
+        "PCB color",
+        "Iron brand",
+        "Component package size only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Use the cleaning method recommended by the manufacturer.",
+      "category": "Flux cleaning",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q59",
+      "type": "single",
+      "question": "What does IPA stand for here?",
+      "options": [
+        "Isopropyl alcohol",
+        "Immersion plating agent",
+        "Internal pad alloy",
+        "Iron protection additive"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "IPA means isopropyl alcohol.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q60",
+      "type": "single",
+      "question": "What cleaner is commonly used for many rosin-based fluxes?",
+      "options": [
+        "Isopropyl alcohol (IPA)",
+        "Engine oil",
+        "Acid flux",
+        "Molten solder"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "IPA is commonly used for many rosin-based fluxes.",
+      "category": "Flux cleaning",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q61",
+      "type": "tf",
+      "question": "Some fluxes require water or a dedicated flux remover.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly says so.",
+      "category": "Flux cleaning",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q62",
+      "type": "multi",
+      "question": "Suggested tools for cleaning the soldering tip include:",
+      "options": [
+        "Brass-wire cleaner",
+        "Damp sponge",
+        "Steel drill bit",
+        "Acid bath"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The chapter suggests brass wire or a damp sponge.",
+      "category": "Tip care",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q63",
+      "type": "single",
+      "question": "After cleaning the tip, what should you do?",
+      "options": [
+        "Apply a small amount of fresh solder",
+        "Leave it bare",
+        "Dip it in acid",
+        "File off the plating"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This keeps the tip tinned.",
+      "category": "Tip care",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q64",
+      "type": "single",
+      "question": "What is a cold solder joint?",
+      "options": [
+        "A defective joint caused by insufficient heating or movement during solidification",
+        "Any joint made below room temperature",
+        "Any lead-free joint",
+        "A joint with too much flux only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "These are the two causes listed.",
+      "category": "Soldering defects",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q65",
+      "type": "multi",
+      "question": "What can cause a cold solder joint?",
+      "options": [
+        "Insufficient heating",
+        "Movement while solder solidifies",
+        "Perfect wetting",
+        "Correct heating with no movement"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The first two are listed causes.",
+      "category": "Soldering defects",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q66",
+      "type": "single",
+      "question": "What interface problem results from a cold joint?",
+      "options": [
+        "Poor wetting and weak bonding",
+        "Perfect wetting",
+        "Higher pad thickness",
+        "Improved corrosion resistance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Soldering defects",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q67",
+      "type": "multi",
+      "question": "Cold joints may cause:",
+      "options": [
+        "Higher resistance",
+        "Unstable resistance",
+        "Intermittent connections",
+        "Guaranteed lower resistance"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "All three problems are listed.",
+      "category": "Soldering defects",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q68",
+      "type": "tf",
+      "question": "Cold solder joints can create long-term reliability problems.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Soldering defects",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q69",
+      "type": "single",
+      "question": "With leaded solder, cold joints often look:",
+      "options": [
+        "Dull or grainy",
+        "Always mirror-shiny",
+        "Transparent",
+        "Blue"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the visual cue given.",
+      "category": "Soldering defects",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q70",
+      "type": "single",
+      "question": "With leaded solder, good joints are usually:",
+      "options": [
+        "Smooth and shiny",
+        "Dull and grainy",
+        "Cracked and powdery",
+        "Black and porous"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the visual cue given.",
+      "category": "Soldering defects",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q71",
+      "type": "tf",
+      "question": "The shiny/dull visual rule is less reliable with lead-free solder.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly warns this.",
+      "category": "Soldering defects",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q72",
+      "type": "single",
+      "question": "How should excess solder be corrected?",
+      "options": [
+        "Reheat the joint and remove the excess",
+        "Add even more solder",
+        "Pull the component cold",
+        "Scratch away the pad"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the stated correction.",
+      "category": "Soldering defects",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q73",
+      "type": "single",
+      "question": "What shape should the final joint form around the lead?",
+      "options": [
+        "A smooth, concave fillet",
+        "A large spherical blob",
+        "A sharp spike",
+        "A dry flat ring"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter specifies a smooth concave fillet.",
+      "category": "Soldering defects",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q74",
+      "type": "single",
+      "question": "What does RoHS stand for?",
+      "options": [
+        "Restriction of Hazardous Substances",
+        "Reduction of Heat in Solder",
+        "Regulation of High-temperature Solder",
+        "Restriction of Hot Surfaces"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This expansion is given in the chapter.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q75",
+      "type": "single",
+      "question": "For equipment within RoHS scope, lead is generally limited to:",
+      "options": [
+        "0.1% by weight in homogeneous materials",
+        "1%",
+        "10%",
+        "0.01%"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives 0.1%, subject to exemptions.",
+      "category": "RoHS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q76",
+      "type": "tf",
+      "question": "The stated 0.1% RoHS lead limit is subject to specific exemptions.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says so explicitly.",
+      "category": "RoHS",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q77",
+      "type": "single",
+      "question": "RoHS mainly concerns:",
+      "options": [
+        "Electrical and electronic equipment placed on the EU market",
+        "All metalwork worldwide",
+        "Only plumbing",
+        "Only hobby prototypes"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This scope is stated in the chapter.",
+      "category": "RoHS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q78",
+      "type": "multi",
+      "question": "Leaded solder may still be used for:",
+      "options": [
+        "Prototyping",
+        "Repair",
+        "Hobby work",
+        "Applications covered by exemptions"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All four are explicitly listed.",
+      "category": "RoHS",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q79",
+      "type": "single",
+      "question": "What is identified as the principal lead hazard during hand soldering?",
+      "options": [
+        "Hand contamination followed by ingestion",
+        "Instant vaporization of all lead",
+        "Radioactivity",
+        "X-ray emission"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the principal hazard identified in the chapter.",
+      "category": "Lead safety",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q80",
+      "type": "single",
+      "question": "What hygiene action is emphasized after lead soldering?",
+      "options": [
+        "Wash your hands",
+        "Use acid flux on skin",
+        "Do nothing",
+        "Cool hands with solder paste"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Hand washing is explicitly emphasized.",
+      "category": "Lead safety",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q81",
+      "type": "single",
+      "question": "Why is lead-free solder generally harder to hand-solder?",
+      "options": [
+        "Higher melting temperature and poorer wetting",
+        "Lower melting temperature and better wetting",
+        "No tin content",
+        "No electrical conductivity"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "These are the main reasons given.",
+      "category": "Lead-free solder",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q82",
+      "type": "single",
+      "question": "What melting range is typical for common lead-free solders?",
+      "options": [
+        "Approximately 217–227 °C",
+        "180–190 °C",
+        "100–120 °C",
+        "232–242 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives approximately 217–227 °C.",
+      "category": "Lead-free solder",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q83",
+      "type": "tf",
+      "question": "Common lead-free solders contain mostly tin.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Lead-free solder",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q84",
+      "type": "multi",
+      "question": "Lead-free hand soldering is less forgiving because of:",
+      "options": [
+        "Poorer wetting",
+        "Greater thermal stress",
+        "Risk of lifting pads if heated too long",
+        "Faster tip oxidation and wear"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All four are listed.",
+      "category": "Lead-free solder",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q85",
+      "type": "tf",
+      "question": "Lead-free solder works well but requires better temperature control and technique.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter's conclusion.",
+      "category": "Lead-free solder",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q86",
+      "type": "single",
+      "question": "What should you NOT do to compensate for lead-free solder's higher melting point?",
+      "options": [
+        "Excessively increase tip temperature",
+        "Allow enough heating time",
+        "Use suitable flux",
+        "Control temperature carefully"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter warns against excessive temperature.",
+      "category": "Lead-free solder",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q87",
+      "type": "single",
+      "question": "What should you do instead?",
+      "options": [
+        "Allow sufficient time for the joint to heat properly",
+        "Pull the component cold",
+        "Use plumbing acid flux",
+        "Never clean the tip"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the stated advice.",
+      "category": "Lead-free solder",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q88",
+      "type": "tf",
+      "question": "Lead-free solder can be more expensive, especially if it contains silver.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Lead-free solder",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q89",
+      "type": "single",
+      "question": "What alloy is SAC387?",
+      "options": [
+        "Sn95.5Ag3.8Cu0.7",
+        "Sn99.3Cu0.7",
+        "Sn60Pb40",
+        "Pure tin"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter identifies SAC387 this way.",
+      "category": "Lead-free alloys",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q90",
+      "type": "single",
+      "question": "What is the tin content of SAC387?",
+      "options": [
+        "95.5%",
+        "3.8%",
+        "0.7%",
+        "60%"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Sn95.5 indicates 95.5% tin.",
+      "category": "Lead-free alloys",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q91",
+      "type": "single",
+      "question": "What is the silver content of SAC387?",
+      "options": [
+        "3.8%",
+        "95.5%",
+        "0.7%",
+        "40%"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Ag3.8 indicates 3.8% silver.",
+      "category": "Lead-free alloys",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q92",
+      "type": "single",
+      "question": "What is the copper content of SAC387?",
+      "options": [
+        "0.7%",
+        "3.8%",
+        "95.5%",
+        "40%"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Cu0.7 indicates 0.7% copper.",
+      "category": "Lead-free alloys",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q93",
+      "type": "single",
+      "question": "At about what temperature does SAC387 melt?",
+      "options": [
+        "217 °C",
+        "227 °C",
+        "190 °C",
+        "232 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives about 217 °C.",
+      "category": "Lead-free alloys",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q94",
+      "type": "single",
+      "question": "Which lead-free alloy is silver-free?",
+      "options": [
+        "Sn99.3Cu0.7",
+        "SAC387",
+        "Sn60Pb40",
+        "Sn95.5Ag3.8Cu0.7"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Sn99.3Cu0.7 is explicitly described as silver-free.",
+      "category": "Lead-free alloys",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q95",
+      "type": "single",
+      "question": "At about what temperature does Sn99.3Cu0.7 melt?",
+      "options": [
+        "227 °C",
+        "217 °C",
+        "190 °C",
+        "180 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives about 227 °C.",
+      "category": "Lead-free alloys",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q96",
+      "type": "single",
+      "question": "Which of the two named lead-free alloys is cheaper?",
+      "options": [
+        "Sn99.3Cu0.7",
+        "SAC387",
+        "They are stated to cost exactly the same",
+        "Neither"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The silver-free alloy is described as cheaper.",
+      "category": "Lead-free alloys",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q97",
+      "type": "single",
+      "question": "Which named lead-free alloy melts lower?",
+      "options": [
+        "SAC387 at about 217 °C",
+        "Sn99.3Cu0.7 at about 227 °C",
+        "They melt at the same temperature",
+        "Neither melts below 300 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "217 °C is lower than 227 °C.",
+      "category": "Lead-free alloys",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q98",
+      "type": "single",
+      "question": "What is the melting-temperature difference between SAC387 and Sn99.3Cu0.7?",
+      "options": [
+        "10 °C",
+        "1 °C",
+        "40 °C",
+        "120 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "227 − 217 = 10 °C.",
+      "category": "Temperature",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q99",
+      "type": "multi",
+      "question": "Which elements are in SAC387?",
+      "options": [
+        "Tin",
+        "Silver",
+        "Copper",
+        "Lead"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "SAC387 is a tin-silver-copper alloy.",
+      "category": "Lead-free alloys",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q100",
+      "type": "multi",
+      "question": "Which elements are in Sn99.3Cu0.7?",
+      "options": [
+        "Tin",
+        "Copper",
+        "Silver",
+        "Lead"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The notation contains tin and copper.",
+      "category": "Lead-free alloys",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q101",
+      "type": "single",
+      "question": "Lead-free solder requires what kind of flux?",
+      "options": [
+        "Flux suited to its higher temperature and wetting characteristics",
+        "Any plumbing acid flux",
+        "No flux at all",
+        "Only water"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly states this.",
+      "category": "Lead-free solder",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q102",
+      "type": "single",
+      "question": "What is the temperature difference between pure tin (232 °C) and SAC387 (217 °C)?",
+      "options": [
+        "15 °C",
+        "5 °C",
+        "10 °C",
+        "42 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "232 − 217 = 15 °C.",
+      "category": "Temperature",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q103",
+      "type": "single",
+      "question": "What is the temperature difference between pure tin (232 °C) and Sn99.3Cu0.7 (227 °C)?",
+      "options": [
+        "5 °C",
+        "15 °C",
+        "10 °C",
+        "52 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "232 − 227 = 5 °C.",
+      "category": "Temperature",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q104",
+      "type": "single",
+      "question": "What happens to a tip at high temperature?",
+      "options": [
+        "It oxidizes rapidly",
+        "It becomes immune to oxidation",
+        "It turns into FR-4",
+        "Its copper cannot erode"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "High temperature accelerates oxidation.",
+      "category": "Tip care",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q105",
+      "type": "single",
+      "question": "What happens after protective iron plating is damaged?",
+      "options": [
+        "The underlying copper erodes quickly",
+        "The tip becomes stronger",
+        "Oxidation stops",
+        "The tip becomes gold-plated"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Tip care",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q106",
+      "type": "multi",
+      "question": "Golden rules for preserving the tip include:",
+      "options": [
+        "Turn the iron off when not in use",
+        "Use the lowest practical temperature",
+        "Keep the tip clean and tinned",
+        "Coat it with fresh solder before switching off"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All four are listed.",
+      "category": "Tip care",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q107",
+      "type": "single",
+      "question": "What should you do when the iron is not in use?",
+      "options": [
+        "Turn it off",
+        "Leave it at maximum temperature",
+        "Dip it in water",
+        "Heat it dry"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is a golden rule.",
+      "category": "Tip care",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q108",
+      "type": "single",
+      "question": "What temperature strategy helps preserve the tip?",
+      "options": [
+        "Use the lowest practical temperature",
+        "Always use maximum temperature",
+        "Always add 300 °C",
+        "Use no control"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly recommended.",
+      "category": "Tip care",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q109",
+      "type": "single",
+      "question": "Before switching off, what should cover the tip?",
+      "options": [
+        "A thin layer of fresh solder",
+        "Acid flux",
+        "Bare oxidized metal",
+        "Solder mask"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter recommends this protective coating.",
+      "category": "Tip care",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q110",
+      "type": "single",
+      "question": "What greatly accelerates tip wear?",
+      "options": [
+        "Excessive heat and oxidation",
+        "Tinning and low temperature",
+        "Turning off when idle",
+        "Fresh solder coating"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "These two factors are explicitly named.",
+      "category": "Tip care",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q111",
+      "type": "single",
+      "question": "What should be heated during proper hand soldering?",
+      "options": [
+        "The joint: both pad and component lead",
+        "Only the solder wire",
+        "Only the component body",
+        "Only the iron stand"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Heat the joint, not the solder.",
+      "category": "Hand soldering",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q112",
+      "type": "single",
+      "question": "How should the iron contact the joint?",
+      "options": [
+        "So it heats both pad and component lead",
+        "Only the solder wire",
+        "Only the PCB substrate",
+        "It should never touch the joint"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Both surfaces should be heated.",
+      "category": "Hand soldering",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q113",
+      "type": "single",
+      "question": "Where should solder be fed?",
+      "options": [
+        "Into the heated joint",
+        "Only onto a cold tip",
+        "Onto the component body",
+        "Far from the joint"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says to feed solder into the heated joint.",
+      "category": "Hand soldering",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q114",
+      "type": "tf",
+      "question": "A recommended technique is to transfer a blob from the iron to a cold joint.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The chapter says to heat the joint, not the solder.",
+      "category": "Hand soldering",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q115",
+      "type": "single",
+      "question": "Why avoid too much solder?",
+      "options": [
+        "It can hide poor wetting or create bridges",
+        "It always improves inspection",
+        "It prevents all shorts",
+        "It reduces metal"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Both problems are explicitly mentioned.",
+      "category": "Hand soldering",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q116",
+      "type": "single",
+      "question": "What can excess solder create between adjacent pads?",
+      "options": [
+        "Solder bridges",
+        "Antipads",
+        "Thermal vias",
+        "Silkscreen labels"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter warns about bridges.",
+      "category": "Hand soldering",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q117",
+      "type": "single",
+      "question": "Why start with less solder?",
+      "options": [
+        "It is easier to add a little later than remove excess",
+        "Removing solder is impossible",
+        "Less solder guarantees perfection",
+        "More solder cannot melt"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicit practical advice.",
+      "category": "Hand soldering",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q118",
+      "type": "multi",
+      "question": "Two common desoldering tools are:",
+      "options": [
+        "Desoldering pump",
+        "Desoldering braid",
+        "Squeegee",
+        "Stencil"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The first two are listed.",
+      "category": "Desoldering",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q119",
+      "type": "single",
+      "question": "Before using a desoldering pump, the solder should be:",
+      "options": [
+        "Fully molten",
+        "Completely cold",
+        "Covered with mask",
+        "Mechanically broken while solid"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Heat until fully molten.",
+      "category": "Desoldering",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q120",
+      "type": "single",
+      "question": "Where should the pump nozzle be placed?",
+      "options": [
+        "Close to the molten solder",
+        "On the component body far away",
+        "On the iron handle",
+        "Under the board without heating"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the stated technique.",
+      "category": "Desoldering",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q121",
+      "type": "single",
+      "question": "How does a desoldering pump remove solder?",
+      "options": [
+        "It sucks molten solder away",
+        "It dissolves solder chemically",
+        "It freezes it",
+        "It cuts the pad"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The pump removes molten solder by suction.",
+      "category": "Desoldering",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q122",
+      "type": "single",
+      "question": "How is desoldering braid used?",
+      "options": [
+        "Place it on the joint and heat the braid with the iron",
+        "Wrap it around the iron handle",
+        "Use it only cold",
+        "Insert it into FR-4"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the stated method.",
+      "category": "Desoldering",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q123",
+      "type": "single",
+      "question": "What draws molten solder into desoldering braid?",
+      "options": [
+        "Capillary action",
+        "Gravity only",
+        "Magnetism",
+        "Electrostatic discharge"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly states capillary action.",
+      "category": "Desoldering",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q124",
+      "type": "single",
+      "question": "When should a component be removed?",
+      "options": [
+        "Only when its leads are completely free of solder",
+        "While solder is solid",
+        "Before heating",
+        "As soon as one lead is partly free"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This prevents damage.",
+      "category": "Desoldering",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q125",
+      "type": "tf",
+      "question": "Pulling a component while solder is still solid can damage a pad or plated-through hole.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This warning is explicit.",
+      "category": "Desoldering",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q126",
+      "type": "multi",
+      "question": "Pulling a component while solder is still solid may damage:",
+      "options": [
+        "The PCB pad",
+        "The plated-through hole",
+        "Only the silkscreen",
+        "Only the iron stand"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Both the pad and plated-through hole are named.",
+      "category": "Desoldering",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q127",
+      "type": "single",
+      "question": "What tool is useful for remaining solder after pumping?",
+      "options": [
+        "Desoldering braid",
+        "Stencil",
+        "Squeegee",
+        "Damp sponge"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter specifically mentions braid for remaining solder.",
+      "category": "Desoldering",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q128",
+      "type": "single",
+      "question": "What is reflow soldering?",
+      "options": [
+        "Heating solder paste until it melts and forms joints between terminals and PCB pads",
+        "Welding component bodies",
+        "Removing solder with braid",
+        "Applying solder mask"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter's definition.",
+      "category": "Reflow",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q129",
+      "type": "single",
+      "question": "Reflow is widely used for:",
+      "options": [
+        "Small SMD components",
+        "Only large transformers",
+        "Mechanical fasteners",
+        "Bare wires only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says small SMD components.",
+      "category": "Reflow",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q130",
+      "type": "single",
+      "question": "What is solder paste made of?",
+      "options": [
+        "Fine solder particles mixed with flux",
+        "Pure liquid flux",
+        "Solder mask and copper powder",
+        "Solid tin wire only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the stated composition.",
+      "category": "Reflow",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q131",
+      "type": "single",
+      "question": "Why is solder paste tackiness useful?",
+      "options": [
+        "It helps hold components in place before reflow",
+        "It dissolves the PCB",
+        "It permanently glues parts",
+        "It increases drill size"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Its tackiness helps placement stability.",
+      "category": "Reflow",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q132",
+      "type": "multi",
+      "question": "How can the PCB be heated for reflow?",
+      "options": [
+        "Reflow oven",
+        "Hot air",
+        "Damp sponge",
+        "Desoldering pump"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The chapter lists oven or hot air.",
+      "category": "Reflow",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q133",
+      "type": "single",
+      "question": "What is the purpose of a PCB stencil?",
+      "options": [
+        "Deposit a controlled amount of solder paste precisely on pads",
+        "Drill vias",
+        "Print only silkscreen",
+        "Remove solder"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Stencil openings align with pads for controlled deposition.",
+      "category": "Reflow",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q134",
+      "type": "single",
+      "question": "Stencil openings are aligned with:",
+      "options": [
+        "PCB pads",
+        "Random board locations",
+        "Only mounting holes",
+        "Only the outline"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The openings align with pads.",
+      "category": "Reflow",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q135",
+      "type": "single",
+      "question": "What tool spreads solder paste across a stencil?",
+      "options": [
+        "Squeegee",
+        "Desoldering pump",
+        "Brass-wire cleaner",
+        "Damp sponge"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A squeegee is used.",
+      "category": "Reflow",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q136",
+      "type": "multi",
+      "question": "Common stencil materials include:",
+      "options": [
+        "Stainless steel",
+        "Polyimide film",
+        "Lead sheet",
+        "FR-4 only"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Both are listed.",
+      "category": "Reflow",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q137",
+      "type": "single",
+      "question": "Which stencil material is described as cheaper?",
+      "options": [
+        "Polyimide film",
+        "Stainless steel",
+        "Gold",
+        "Copper"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Polyimide is explicitly described as cheaper.",
+      "category": "Reflow",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q138",
+      "type": "single",
+      "question": "What is the first stencil-process step?",
+      "options": [
+        "Align the stencil with the PCB",
+        "Place components",
+        "Reflow PCB",
+        "Remove stencil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Alignment comes first.",
+      "category": "Reflow process",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q139",
+      "type": "single",
+      "question": "What follows stencil alignment?",
+      "options": [
+        "Spread solder paste with a squeegee",
+        "Immediate reflow",
+        "Remove all pads",
+        "Desolder parts"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Paste spreading is next.",
+      "category": "Reflow process",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q140",
+      "type": "single",
+      "question": "What follows spreading the solder paste?",
+      "options": [
+        "Remove the stencil",
+        "Reflow before removal",
+        "Wash the PCB",
+        "Drill the board"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The stencil is removed next.",
+      "category": "Reflow process",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q141",
+      "type": "single",
+      "question": "What follows stencil removal?",
+      "options": [
+        "Place the components",
+        "Reflow before placement",
+        "Desolder the board",
+        "Apply solder mask"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Components are placed next.",
+      "category": "Reflow process",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q142",
+      "type": "single",
+      "question": "What is the final listed step?",
+      "options": [
+        "Reflow the PCB",
+        "Align stencil",
+        "Spread paste",
+        "Remove stencil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Reflow is the final step.",
+      "category": "Reflow process",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q143",
+      "type": "single",
+      "question": "For prototypes or very small quantities, paste can be applied without a stencil using:",
+      "options": [
+        "A syringe",
+        "A desoldering pump",
+        "A damp sponge",
+        "A drill bit"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter allows direct syringe dispensing.",
+      "category": "Reflow",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q144",
+      "type": "single",
+      "question": "A joint has oxide-related poor wetting. What material is intended to help?",
+      "options": [
+        "Flux",
+        "Solder mask",
+        "FR-4",
+        "Stencil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Flux removes oxides and promotes wetting.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q145",
+      "type": "single",
+      "question": "A joint moved while cooling and now has unstable resistance. What defect is likely?",
+      "options": [
+        "Cold solder joint",
+        "Perfect reflow joint",
+        "Thermal relief",
+        "Solder mask defect"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Movement during solidification is a cold-joint cause.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q146",
+      "type": "single",
+      "question": "A leaded joint looks dull and grainy. What should this suggest?",
+      "options": [
+        "It may be a cold solder joint",
+        "It is certainly perfect",
+        "It is ENIG",
+        "It proves excess flux"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This appearance is a common warning sign with leaded solder.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q147",
+      "type": "single",
+      "question": "Why must appearance be interpreted more cautiously with lead-free solder?",
+      "options": [
+        "The shiny/dull rule is less reliable",
+        "Lead-free solder is transparent",
+        "It never solidifies",
+        "It contains no metal"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly says so.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q148",
+      "type": "single",
+      "question": "What approximate tip temperature follows the rule for SAC387 at 217 °C?",
+      "options": [
+        "337 °C",
+        "217 °C",
+        "297 °C",
+        "437 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "217 + 120 = 337 °C.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q149",
+      "type": "single",
+      "question": "What approximate tip temperature follows the rule for Sn99.3Cu0.7 at 227 °C?",
+      "options": [
+        "347 °C",
+        "227 °C",
+        "327 °C",
+        "447 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "227 + 120 = 347 °C.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q150",
+      "type": "single",
+      "question": "For 60/40 solder melting at 180–190 °C, the rule suggests approximately:",
+      "options": [
+        "300–310 °C",
+        "180–190 °C",
+        "217–227 °C",
+        "420–430 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Adding 120 °C gives about 300–310 °C.",
+      "category": "Application",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q151",
+      "type": "single",
+      "question": "A tip wears quickly because it stays extremely hot while idle. Best advice?",
+      "options": [
+        "Use the lowest practical temperature and turn it off when not in use",
+        "Use plumbing acid flux",
+        "Remove all solder before shutdown",
+        "Increase temperature further"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Both recommendations are golden rules.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q152",
+      "type": "single",
+      "question": "During oxidized fine-pitch rework, what may help even with flux-cored wire?",
+      "options": [
+        "Additional flux",
+        "No flux ever",
+        "Plumbing acid flux",
+        "Only a dry tip"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "All three conditions are listed as cases where extra flux may help.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q153",
+      "type": "single",
+      "question": "Which statement best compares SAC387 and Sn99.3Cu0.7?",
+      "options": [
+        "SAC387 contains silver and melts lower; Sn99.3Cu0.7 is silver-free and cheaper",
+        "Both are leaded",
+        "Sn99.3Cu0.7 contains more silver",
+        "SAC387 melts at 227 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This matches the chapter.",
+      "category": "Mixed review",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q154",
+      "type": "single",
+      "question": "Which named material has the highest stated melting temperature?",
+      "options": [
+        "Pure tin at 232 °C",
+        "Sn99.3Cu0.7 at 227 °C",
+        "SAC387 at 217 °C",
+        "Sn60Pb40 at 180–190 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "232 °C is the highest stated value.",
+      "category": "Mixed review",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q155",
+      "type": "single",
+      "question": "Which named solder alloy has the lowest stated melting range?",
+      "options": [
+        "Sn60Pb40 at about 180–190 °C",
+        "SAC387 at 217 °C",
+        "Sn99.3Cu0.7 at 227 °C",
+        "Pure tin at 232 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "60/40 has the lowest stated range.",
+      "category": "Mixed review",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q156",
+      "type": "single",
+      "question": "Which concept appears in both flux-assisted solder flow and desoldering braid?",
+      "options": [
+        "Capillary action",
+        "Welding",
+        "RoHS",
+        "Solder mask"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Capillary action appears in both contexts.",
+      "category": "Mixed review",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q157",
+      "type": "tf",
+      "question": "A stencil is mandatory for every prototype reflow job.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Paste may be dispensed by syringe for prototypes or very small quantities.",
+      "category": "Reflow",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q158",
+      "type": "tf",
+      "question": "Polyimide film is stated to be cheaper than stainless steel for stencils.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Reflow",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q159",
+      "type": "tf",
+      "question": "Excess solder can hide poor wetting.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly warns about this.",
+      "category": "Hand soldering",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q160",
+      "type": "tf",
+      "question": "Excess solder can create bridges between adjacent pads.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly warns about this.",
+      "category": "Hand soldering",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q161",
+      "type": "tf",
+      "question": "A desoldering braid relies on capillary action.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Molten solder is drawn into the braid by capillary action.",
+      "category": "Desoldering",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q162",
+      "type": "tf",
+      "question": "Solder paste tackiness helps hold SMD components before reflow.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Reflow",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q163",
+      "type": "tf",
+      "question": "The chapter recommends the maximum practical tip temperature to preserve the tip.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "It recommends the lowest practical temperature.",
+      "category": "Tip care",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q164",
+      "type": "tf",
+      "question": "The protective iron plating on the tip protects underlying copper.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Once it is damaged, the copper erodes quickly.",
+      "category": "Tip care",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q165",
+      "type": "tf",
+      "question": "Lead-free solder's higher melting point is the only reason it is less forgiving.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Poorer wetting, thermal stress, pad-damage risk, and tip wear are also listed.",
+      "category": "Lead-free solder",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q166",
+      "type": "single",
+      "question": "Which statement best summarizes lead-free hand soldering?",
+      "options": [
+        "It works well but requires better temperature control and technique",
+        "It should never be used",
+        "It requires no flux",
+        "It is always easier than leaded solder"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter's stated conclusion.",
+      "category": "Lead-free solder",
+      "difficulty": "easy"
+    }
+  ]
+}
