@@ -1,0 +1,4603 @@
+{
+  "id": "chapter4",
+  "title": "Chapter 4 — PCB Interconnects: Electrical Properties, Noise and Return Path Routing",
+  "source": "04 - PCB interconnects(1).pdf",
+  "question_count": 275,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "question": "What is an interconnect on a PCB?",
+      "options": [
+        "A conductive path that electrically connects components or circuit elements",
+        "A mechanical mounting hole",
+        "A solder-mask opening",
+        "A thermal pad"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Interconnects are conductive paths establishing electrical connections.",
+      "category": "Interconnects",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "question": "What forms a net?",
+      "options": [
+        "A group of electrically connected pins, pads, vias, and traces",
+        "Only vias",
+        "Only component pins",
+        "Only ground planes"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter defines a net this way.",
+      "category": "Interconnects",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "question": "What is the complete set of nets in a circuit called?",
+      "options": [
+        "The netlist",
+        "The stack-up",
+        "The Gerber set",
+        "The BOM"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The complete set of nets is the netlist.",
+      "category": "Interconnects",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "tf",
+      "question": "A net may include pins, pads, vias, and traces.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "All are explicitly included in the definition of a net.",
+      "category": "Interconnects",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "question": "When is an interconnect considered transparent?",
+      "options": [
+        "When its electrical properties have a negligible effect on the transmitted signal",
+        "When it is physically invisible",
+        "When it has zero length",
+        "Only when it is on a breadboard"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Transparency means negligible effect on the signal.",
+      "category": "Transparency",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "multi",
+      "question": "Which effects should remain sufficiently small for an interconnect to be considered transparent?",
+      "options": [
+        "Noise",
+        "Distortion",
+        "Delay",
+        "Crosstalk"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "These are among the effects explicitly listed.",
+      "category": "Transparency",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "tf",
+      "question": "A circuit that works reliably on a breadboard with long loose wires will often also work on a PCB without special SI measures.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives this as an example of likely-transparent interconnects.",
+      "category": "Transparency",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "single",
+      "question": "In an ideal schematic, wires are assumed to have:",
+      "options": [
+        "Zero resistance, zero propagation delay, and no parasitic capacitance or inductance",
+        "Finite resistance only",
+        "Only parasitic capacitance",
+        "Only propagation delay"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Schematic wires are ideal electrical connections.",
+      "category": "Ideal vs physical interconnects",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "tf",
+      "question": "Ideal schematic wires introduce no noise, distortion, crosstalk, or reflections.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This follows from their ideal properties.",
+      "category": "Ideal vs physical interconnects",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "tf",
+      "question": "Physical PCB traces are always perfectly equivalent to schematic wires.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Physical traces can have non-ideal electrical properties.",
+      "category": "Ideal vs physical interconnects",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "single",
+      "question": "What does signal integrity (SI) describe?",
+      "options": [
+        "How well a signal preserves its intended shape and timing from transmitter to receiver",
+        "How much current a PCB can carry",
+        "How mechanically strong a connector is",
+        "How thick the copper is"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter's definition of SI.",
+      "category": "Signal integrity",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "single",
+      "question": "Good signal integrity means the received signal can still be:",
+      "options": [
+        "Correctly interpreted despite non-ideal interconnect properties",
+        "Measured only with a DC voltmeter",
+        "Assumed perfect",
+        "Ignored"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The receiver must still interpret the signal correctly.",
+      "category": "Signal integrity",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "multi",
+      "question": "Which are typical signal-integrity problems listed in the chapter?",
+      "options": [
+        "Noise",
+        "Reflections",
+        "Ringing",
+        "Crosstalk"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All are explicitly listed.",
+      "category": "Signal integrity",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q14",
+      "type": "multi",
+      "question": "Which additional SI problems are listed?",
+      "options": [
+        "Attenuation",
+        "Timing errors",
+        "Noise",
+        "Reflections"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All appear in the list of typical SI problems.",
+      "category": "Signal integrity",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q15",
+      "type": "single",
+      "question": "Signal integrity in PCB design includes preserving intended:",
+      "options": [
+        "Shape, amplitude, and timing",
+        "Only DC resistance",
+        "Only timing",
+        "Only amplitude"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly lists shape, amplitude, and timing.",
+      "category": "Signal integrity",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q16",
+      "type": "multi",
+      "question": "Signal-integrity analysis considers parasitic:",
+      "options": [
+        "Resistance",
+        "Capacitance",
+        "Inductance",
+        "Only temperature"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The chapter explicitly lists R, C, and L.",
+      "category": "Signal integrity",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q17",
+      "type": "tf",
+      "question": "An interconnect is non-transparent when its electrical properties significantly affect the signal it carries.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "That is the definition given.",
+      "category": "Transparency",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q18",
+      "type": "single",
+      "question": "Many SI problems become more severe as:",
+      "options": [
+        "Rise time decreases and interconnect length increases",
+        "Rise time increases and interconnect length decreases",
+        "Both become smaller",
+        "Clock frequency decreases only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Fast edges and long interconnects are the key warning signs.",
+      "category": "Signal integrity",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q19",
+      "type": "tf",
+      "question": "The same physical interconnect can be transparent for a slow signal but non-transparent for a fast signal.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter states this explicitly.",
+      "category": "Transparency",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q20",
+      "type": "single",
+      "question": "What is ground bounce?",
+      "options": [
+        "A temporary deviation of local ground voltage during switching",
+        "A reflection from the receiver only",
+        "A DC power drop only",
+        "A mechanical vibration"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter defines ground bounce this way.",
+      "category": "Switching noise",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q21",
+      "type": "single",
+      "question": "Ground bounce is mainly caused by:",
+      "options": [
+        "Rapidly changing return currents through parasitic inductance of the ground/return path",
+        "Only DC resistance",
+        "Only mutual capacitance",
+        "Only thermal noise"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the mechanism given.",
+      "category": "Switching noise",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q22",
+      "type": "single",
+      "question": "For an interconnect, inductive noise voltage is proportional to:",
+      "options": [
+        "Inductance, current change, and inverse rise time",
+        "Only resistance",
+        "Only frequency",
+        "Only capacitance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "ΔV grows with L and ΔI and as RT decreases.",
+      "category": "Transparent interconnects",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q23",
+      "type": "single",
+      "question": "What does LLen represent?",
+      "options": [
+        "Inductance per unit length",
+        "Total resistance",
+        "Load capacitance",
+        "Propagation velocity"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "LLen is inductance per unit length.",
+      "category": "Transparent interconnects",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q24",
+      "type": "single",
+      "question": "What does Len represent?",
+      "options": [
+        "Interconnect length",
+        "Rise time",
+        "Current change",
+        "Noise voltage"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Len is interconnect length.",
+      "category": "Transparent interconnects",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q25",
+      "type": "single",
+      "question": "What does ΔI represent?",
+      "options": [
+        "Change in current",
+        "Change in voltage",
+        "Rise time",
+        "Inductance per length"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "ΔI is current change.",
+      "category": "Transparent interconnects",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q26",
+      "type": "single",
+      "question": "What does RT represent?",
+      "options": [
+        "10%-90% rise time of the changing current",
+        "Round-trip delay",
+        "Resistance time constant",
+        "Receiver threshold"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "RT is the 10%-90% rise time.",
+      "category": "Transparent interconnects",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q27",
+      "type": "single",
+      "question": "What does ΔV represent in the interconnect-noise equation?",
+      "options": [
+        "Voltage change across the interconnect",
+        "Current change",
+        "Propagation velocity",
+        "Capacitance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "ΔV is voltage change across the interconnect.",
+      "category": "Transparent interconnects",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q28",
+      "type": "single",
+      "question": "What rule of thumb is used for interconnect inductance per unit length?",
+      "options": [
+        "LLen ≈ 1 nH/mm",
+        "1 pH/mm",
+        "10 nH/mm",
+        "1 µH/mm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The course uses 1 nH/mm.",
+      "category": "Rules of thumb",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q29",
+      "type": "tf",
+      "question": "A larger current change ΔI requires a shorter interconnect to remain equally transparent.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly notes this trade-off.",
+      "category": "Transparent interconnects",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q30",
+      "type": "tf",
+      "question": "As rise time decreases, generated inductive noise increases.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Faster transitions increase dI/dt.",
+      "category": "Transparent interconnects",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q31",
+      "type": "single",
+      "question": "Why is the fastest rise time in the circuit important?",
+      "options": [
+        "It helps determine whether an interconnect can be considered transparent",
+        "It determines PCB color",
+        "It determines via drill size",
+        "It determines solder-mask thickness"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The shortest RT gives the strongest inductive-noise concern.",
+      "category": "Transparent interconnects",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q32",
+      "type": "single",
+      "question": "Using LLen=1 nH/mm, ΔVmax=50 mV, ΔI=50 mA and RT=100 ns, what transparent length is given?",
+      "options": [
+        "10 cm",
+        "1 cm",
+        "100 cm",
+        "43 cm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter states interconnects shorter than 10 cm look transparent.",
+      "category": "Transparent interconnects",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q33",
+      "type": "single",
+      "question": "For fixed ΔVmax, RT and LLen, what happens to maximum transparent length if ΔI doubles?",
+      "options": [
+        "It halves",
+        "It doubles",
+        "It is unchanged",
+        "It quadruples"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Ltransparent is inversely proportional to ΔI.",
+      "category": "Transparent interconnects",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q34",
+      "type": "single",
+      "question": "For fixed ΔVmax, ΔI and LLen, what happens if RT doubles?",
+      "options": [
+        "Maximum transparent length doubles",
+        "It halves",
+        "It is unchanged",
+        "It becomes one quarter"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Ltransparent is proportional to RT.",
+      "category": "Transparent interconnects",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q35",
+      "type": "single",
+      "question": "For fixed RT, ΔI and LLen, what happens if ΔVmax doubles?",
+      "options": [
+        "Maximum transparent length doubles",
+        "It halves",
+        "It is unchanged",
+        "It becomes one quarter"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "More allowable noise permits a longer transparent interconnect.",
+      "category": "Transparent interconnects",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q36",
+      "type": "single",
+      "question": "For fixed RT, ΔI and ΔVmax, what happens if LLen doubles?",
+      "options": [
+        "Maximum transparent length halves",
+        "It doubles",
+        "It is unchanged",
+        "It quadruples"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Ltransparent is inversely proportional to LLen.",
+      "category": "Transparent interconnects",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q37",
+      "type": "single",
+      "question": "What first-order rule of thumb estimates rise time from frequency?",
+      "options": [
+        "RT ≈ 0.35/f",
+        "RT ≈ f/0.35",
+        "RT ≈ 1/f²",
+        "RT ≈ 2πf"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter uses RT≈0.35/f.",
+      "category": "Rise time",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q38",
+      "type": "single",
+      "question": "For a 16 MHz Atmega328 clock, the rule-of-thumb rise time is about:",
+      "options": [
+        "22 ns",
+        "5 ns",
+        "100 ns",
+        "2.2 ns"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "0.35/16 MHz ≈21.9 ns.",
+      "category": "Rise time",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q39",
+      "type": "single",
+      "question": "What measured rise-time range is given for the Atmega328 example?",
+      "options": [
+        "5–10 ns",
+        "20–30 ns",
+        "50–100 ns",
+        "1–2 ns"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Measurements are stated as 5 to 10 ns.",
+      "category": "Rise time",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q40",
+      "type": "tf",
+      "question": "The RT ≈ 0.35/f estimate is only a coarse approximation.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly warns this.",
+      "category": "Rise time",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q41",
+      "type": "multi",
+      "question": "Actual digital rise time depends strongly on:",
+      "options": [
+        "Output driver",
+        "Load capacitance",
+        "Interconnect",
+        "Connected circuitry"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "These dependencies are discussed in the chapter.",
+      "category": "Rise time",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q42",
+      "type": "single",
+      "question": "When can a physical interconnect be modeled with lumped elements?",
+      "options": [
+        "When it is electrically short",
+        "Only when physically straight",
+        "Only below 1 MHz",
+        "Only on a breadboard"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Lumped models apply when propagation effects are negligible.",
+      "category": "Electrical length",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q43",
+      "type": "single",
+      "question": "What criterion defines an electrically short interconnect?",
+      "options": [
+        "L < λ/10",
+        "L > λ",
+        "L = λ/2",
+        "L > 10λ"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter uses L<λ/10.",
+      "category": "Electrical length",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q44",
+      "type": "single",
+      "question": "What model is required when L > λ/10?",
+      "options": [
+        "A transmission-line model",
+        "Only a resistor",
+        "A thermal model",
+        "No model"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Propagation delay can no longer be neglected.",
+      "category": "Electrical length",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q45",
+      "type": "multi",
+      "question": "A lumped interconnect model may include:",
+      "options": [
+        "Resistance R",
+        "Capacitance C",
+        "Inductance L",
+        "Mutual inductance M"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All four are listed.",
+      "category": "Lumped models",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q46",
+      "type": "tf",
+      "question": "For digital signals, electrical length depends primarily on rise time rather than just clock frequency.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "High-frequency components are set by edge speed.",
+      "category": "Electrical length",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q47",
+      "type": "single",
+      "question": "Over an electrically short interconnect, voltage/current distribution:",
+      "options": [
+        "Changes only slightly along the length",
+        "Changes dramatically",
+        "Is always zero",
+        "Depends only on DC resistance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Small variation lets propagation effects be neglected.",
+      "category": "Electrical length",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q48",
+      "type": "single",
+      "question": "Over an electrically long interconnect, the signal:",
+      "options": [
+        "Varies significantly along the length",
+        "Is identical everywhere",
+        "Has no delay",
+        "Has no reflections"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Transmission-line effects must be considered.",
+      "category": "Electrical length",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q49",
+      "type": "single",
+      "question": "What is wavelength λ in terms of propagation velocity and frequency?",
+      "options": [
+        "λ = vp/f",
+        "λ = f/vp",
+        "λ = vp·f²",
+        "λ = 1/(vp f)"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter states λ=vp/f.",
+      "category": "Electrical length",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q50",
+      "type": "single",
+      "question": "For baseband digital signals, wavelength can be approximated by:",
+      "options": [
+        "λ = vp/BW",
+        "λ = BW/vp",
+        "λ = vp·BW",
+        "λ = RT/BW"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Highest significant frequency is approximated by bandwidth.",
+      "category": "Electrical length",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q51",
+      "type": "single",
+      "question": "What bandwidth rule of thumb is used?",
+      "options": [
+        "BW = 0.35/RT",
+        "BW = RT/0.35",
+        "BW = 1/RT²",
+        "BW = 2πRT"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives BW=0.35/RT.",
+      "category": "Electrical length",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q52",
+      "type": "single",
+      "question": "What propagation velocity is used for a trace on FR4?",
+      "options": [
+        "Approximately 15 cm/ns",
+        "3 cm/ns",
+        "30 cm/ns",
+        "1.5 cm/ns"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter uses ~15 cm/ns.",
+      "category": "Electrical length",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q53",
+      "type": "single",
+      "question": "What course approximation defines electrically short interconnects?",
+      "options": [
+        "Len [cm] < 4.3 × RT [ns]",
+        "Len [cm] < RT/4.3",
+        "Len [cm] > 4.3 × RT [ns]",
+        "Len [mm] < RT [ns]"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the highlighted rule.",
+      "category": "Electrical length",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q54",
+      "type": "single",
+      "question": "What course approximation defines electrically long interconnects?",
+      "options": [
+        "Len [cm] > 4.3 × RT [ns]",
+        "Len [cm] < 4.3 × RT [ns]",
+        "Len [cm] > RT/4.3",
+        "Len [mm] < RT [ns]"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the highlighted rule.",
+      "category": "Electrical length",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q55",
+      "type": "single",
+      "question": "For RT=10 ns, what is the electrically-short threshold?",
+      "options": [
+        "About 43 cm",
+        "4.3 cm",
+        "10 cm",
+        "430 cm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "4.3×10=43 cm.",
+      "category": "Electrical length",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q56",
+      "type": "single",
+      "question": "For RT=5 ns, the electrically-short limit is about:",
+      "options": [
+        "21.5 cm",
+        "4.3 cm",
+        "5 cm",
+        "43 cm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "4.3×5=21.5 cm.",
+      "category": "Electrical length",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q57",
+      "type": "single",
+      "question": "For RT=25 ns, the electrically-short limit is about:",
+      "options": [
+        "107.5 cm",
+        "25 cm",
+        "43 cm",
+        "10.75 cm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "4.3×25=107.5 cm.",
+      "category": "Electrical length",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q58",
+      "type": "tf",
+      "question": "An electrically long interconnect is automatically unusable.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "It only means transmission-line effects cannot be neglected.",
+      "category": "Electrical length",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q59",
+      "type": "single",
+      "question": "What happens if the receiver impedance does not match Z0?",
+      "options": [
+        "Part of the signal is reflected",
+        "The signal disappears",
+        "Only DC resistance changes",
+        "The line becomes electrically short"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Mismatch at RX causes reflection.",
+      "category": "Reflections",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q60",
+      "type": "single",
+      "question": "What is Z0?",
+      "options": [
+        "Characteristic impedance of the transmission line",
+        "DC source resistance",
+        "Load capacitance",
+        "Ground resistance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Z0 is characteristic impedance.",
+      "category": "Reflections",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q61",
+      "type": "single",
+      "question": "What can happen when a reflected wave returns to a mismatched transmitter?",
+      "options": [
+        "Part of it reflects again toward the receiver",
+        "It must be fully absorbed",
+        "It becomes DC",
+        "It eliminates ringing"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Repeated reflections can occur.",
+      "category": "Reflections",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q62",
+      "type": "multi",
+      "question": "Repeated reflections may produce:",
+      "options": [
+        "Overshoot",
+        "Undershoot",
+        "Ringing",
+        "Only thermal noise"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three are listed.",
+      "category": "Reflections",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q63",
+      "type": "single",
+      "question": "What is TD?",
+      "options": [
+        "Propagation delay from TX to RX",
+        "Rise time",
+        "Clock period",
+        "Mutual inductance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "TD is one-way signal travel time.",
+      "category": "Propagation delay",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q64",
+      "type": "single",
+      "question": "How is TD calculated?",
+      "options": [
+        "TD = Len/vp",
+        "TD = vp/Len",
+        "TD = Len·vp",
+        "TD = RT/Len"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives TD=Len/vp.",
+      "category": "Propagation delay",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q65",
+      "type": "single",
+      "question": "When are transmission-line properties considered negligible in the slide-25 rule?",
+      "options": [
+        "When RT > 4TD",
+        "When RT < TD",
+        "When RT=0",
+        "When Len>λ"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The slide states RT larger than 4TD.",
+      "category": "Propagation delay",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q66",
+      "type": "single",
+      "question": "Using vp=15 cm/ns, RT>4TD yields approximately:",
+      "options": [
+        "Len [cm] < 3.75 × RT [ns]",
+        "Len < 15×RT",
+        "Len > 3.75×RT",
+        "Len < RT/15"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the derivation on slide 25.",
+      "category": "Propagation delay",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q67",
+      "type": "tf",
+      "question": "The 3.75×RT estimate is close to the earlier 4.3×RT guideline.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly observes this.",
+      "category": "Propagation delay",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q68",
+      "type": "multi",
+      "question": "Strategies for electrically long interconnects include:",
+      "options": [
+        "Controlled characteristic impedance",
+        "Appropriate termination",
+        "Shortening the interconnect",
+        "Ignoring reflections"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three are listed.",
+      "category": "Reflections",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q69",
+      "type": "single",
+      "question": "What is Step 1 of the practical interconnect decision process?",
+      "options": [
+        "Ask whether the interconnect is transparent",
+        "Immediately use a transmission line",
+        "Always use lumped model",
+        "Always shorten it"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The course starts with transparency.",
+      "category": "Decision process",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q70",
+      "type": "single",
+      "question": "If an interconnect is transparent, what does the slide jokingly recommend?",
+      "options": [
+        "Have a coffee",
+        "Use a field solver",
+        "Split ground plane",
+        "Add termination"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The slide says 'If yes: have a coffee'.",
+      "category": "Decision process",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q71",
+      "type": "single",
+      "question": "If an interconnect is not transparent but is electrically short, use:",
+      "options": [
+        "A lumped-element model and circuit theory",
+        "A transmission line only",
+        "No model",
+        "Only thermal analysis"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is Step 2.",
+      "category": "Decision process",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q72",
+      "type": "single",
+      "question": "If an interconnect is electrically long, use:",
+      "options": [
+        "A transmission-line model",
+        "Only a DC resistor",
+        "No model",
+        "Only mutual capacitance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Propagation and EM effects must be considered.",
+      "category": "Decision process",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q73",
+      "type": "single",
+      "question": "What STM32 GPIO rise-time ballpark is assumed?",
+      "options": [
+        "About 5–25 ns",
+        "0.1–1 ns",
+        "100–500 ns",
+        "1–5 µs"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The example uses ~5–25 ns.",
+      "category": "Practical example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q74",
+      "type": "single",
+      "question": "What conservative GPIO current change is assumed?",
+      "options": [
+        "ΔI ≈ 25 mA",
+        "2.5 mA",
+        "250 mA",
+        "1 A"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The example uses 25 mA.",
+      "category": "Practical example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q75",
+      "type": "single",
+      "question": "What maximum tolerable noise is assumed?",
+      "options": [
+        "ΔV ≈ 50 mV",
+        "5 V",
+        "500 mV",
+        "5 mV"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The example assumes 50 mV.",
+      "category": "Practical example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q76",
+      "type": "single",
+      "question": "With ΔVmax=50 mV, ΔI=25 mA, LLen=1 nH/mm, what relation is obtained?",
+      "options": [
+        "Ltransparent [mm] ≈ 2 × RT [ns]",
+        "Ltransparent ≈ 20×RT",
+        "Ltransparent ≈ RT/2",
+        "Ltransparent ≈ 4.3×RT mm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter derives 2 mm per ns.",
+      "category": "Practical example",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q77",
+      "type": "single",
+      "question": "For RT=5 ns under those assumptions, transparent length is about:",
+      "options": [
+        "10 mm = 1 cm",
+        "5 cm",
+        "10 cm",
+        "43 cm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "2×5=10 mm.",
+      "category": "Practical example",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q78",
+      "type": "single",
+      "question": "For RT=25 ns under those assumptions, transparent length is about:",
+      "options": [
+        "50 mm = 5 cm",
+        "25 cm",
+        "50 cm",
+        "10 cm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "2×25=50 mm.",
+      "category": "Practical example",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q79",
+      "type": "single",
+      "question": "In Case 1, what is the STM32 driving?",
+      "options": [
+        "A digital input",
+        "A stepper motor directly",
+        "A power rail",
+        "An analog sensor only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Case 1 is a lightly loaded digital input.",
+      "category": "Practical example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q80",
+      "type": "single",
+      "question": "What VDD is used in the STM32 cases?",
+      "options": [
+        "3.3 V",
+        "5 V",
+        "1.2 V",
+        "12 V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The examples use 3.3 V.",
+      "category": "Practical example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q81",
+      "type": "single",
+      "question": "What load capacitance is used in Case 1?",
+      "options": [
+        "Approximately 5 pF",
+        "75 pF",
+        "500 pF",
+        "0.5 pF"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Case 1 uses ~5 pF.",
+      "category": "Practical example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q82",
+      "type": "single",
+      "question": "What rise time is used in Case 1?",
+      "options": [
+        "Approximately 5 ns",
+        "10 ns",
+        "25 ns",
+        "100 ns"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Case 1 uses ~5 ns.",
+      "category": "Practical example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q83",
+      "type": "single",
+      "question": "What current change is estimated in Case 1?",
+      "options": [
+        "Approximately 3.3 mA",
+        "25 mA",
+        "33 mA",
+        "0.33 mA"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Cload·VDD/RT≈3.3 mA.",
+      "category": "Practical example",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q84",
+      "type": "single",
+      "question": "What electrically-short limit is found in Case 1?",
+      "options": [
+        "Approximately 21.5 cm",
+        "7.6 cm",
+        "43 cm",
+        "1 cm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "4.3×5=21.5 cm.",
+      "category": "Practical example",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q85",
+      "type": "single",
+      "question": "What transparent-length limit is found in Case 1?",
+      "options": [
+        "Approximately 7.6 cm",
+        "21.5 cm",
+        "43 cm",
+        "2 cm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The slide computes ~7.6 cm.",
+      "category": "Practical example",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q86",
+      "type": "single",
+      "question": "In Case 2, what is the STM32 driving?",
+      "options": [
+        "A stepper motor driver input",
+        "A bare LED only",
+        "A crystal",
+        "A ground plane"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Case 2 is a larger capacitive load.",
+      "category": "Practical example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q87",
+      "type": "single",
+      "question": "What load capacitance is used in Case 2?",
+      "options": [
+        "Approximately 75 pF",
+        "5 pF",
+        "7.5 pF",
+        "750 pF"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Case 2 uses ~75 pF.",
+      "category": "Practical example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q88",
+      "type": "single",
+      "question": "What rise time is used in Case 2?",
+      "options": [
+        "Approximately 10 ns",
+        "5 ns",
+        "25 ns",
+        "100 ns"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Case 2 uses ~10 ns.",
+      "category": "Practical example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q89",
+      "type": "single",
+      "question": "What current change is estimated in Case 2?",
+      "options": [
+        "Approximately 25 mA",
+        "3.3 mA",
+        "2.5 mA",
+        "250 mA"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The slide computes ~25 mA.",
+      "category": "Practical example",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q90",
+      "type": "single",
+      "question": "What electrically-short limit is found in Case 2?",
+      "options": [
+        "Approximately 43 cm",
+        "2 cm",
+        "7.6 cm",
+        "21.5 cm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "4.3×10=43 cm.",
+      "category": "Practical example",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q91",
+      "type": "single",
+      "question": "What transparent-length limit is found in Case 2?",
+      "options": [
+        "Approximately 2 cm",
+        "43 cm",
+        "21.5 cm",
+        "7.6 cm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The slide computes ~2 cm.",
+      "category": "Practical example",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q92",
+      "type": "tf",
+      "question": "An interconnect can be electrically short yet not transparent.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The practical cases show these are different criteria.",
+      "category": "Practical example",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q93",
+      "type": "single",
+      "question": "In this chapter, what is called noise?",
+      "options": [
+        "Interference caused when part of one signal couples into another interconnect",
+        "Only thermal noise",
+        "Only ADC quantization noise",
+        "Only supply ripple"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter uses 'noise' for interference/coupling.",
+      "category": "Noise",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q94",
+      "type": "single",
+      "question": "What is the signal causing interference called?",
+      "options": [
+        "The aggressor",
+        "The victim",
+        "The receiver",
+        "The return"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The aggressor causes interference.",
+      "category": "Noise",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q95",
+      "type": "single",
+      "question": "What is the affected signal called?",
+      "options": [
+        "The victim",
+        "The aggressor",
+        "The transmitter",
+        "The driver"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The victim is the affected signal.",
+      "category": "Noise",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q96",
+      "type": "tf",
+      "question": "The chapter's use of 'noise' differs from thermal noise.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "It explicitly says interference would be a more precise term.",
+      "category": "Noise",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q97",
+      "type": "multi",
+      "question": "Good PCB layout practices to reduce noise include:",
+      "options": [
+        "Keep signal and return paths close",
+        "Use a continuous ground plane",
+        "Minimize loop area",
+        "Avoid unnecessary long parallel routing"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All four are listed.",
+      "category": "Noise reduction",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q98",
+      "type": "single",
+      "question": "What is self-aggression noise?",
+      "options": [
+        "Distortion caused by an interconnect's own electrical properties on its own signal",
+        "Noise from another trace only",
+        "Thermal noise",
+        "Power ripple only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the definition given.",
+      "category": "Noise",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q99",
+      "type": "single",
+      "question": "What is crosstalk?",
+      "options": [
+        "Interference due to electric and/or magnetic coupling from an aggressor to a victim interconnect",
+        "Only self-induced ringing",
+        "Only DC voltage drop",
+        "Only rail collapse"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter's definition.",
+      "category": "Crosstalk",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q100",
+      "type": "single",
+      "question": "Electric-field coupling is represented by:",
+      "options": [
+        "Mutual capacitance Cm",
+        "Mutual inductance Lm",
+        "Series resistance",
+        "Ground resistance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Electric coupling is represented by mutual capacitance.",
+      "category": "Crosstalk",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q101",
+      "type": "single",
+      "question": "Magnetic-field coupling is represented by:",
+      "options": [
+        "Mutual inductance Lm",
+        "Mutual capacitance Cm",
+        "Only resistance",
+        "Only conductance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Magnetic coupling is represented by mutual inductance.",
+      "category": "Crosstalk",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q102",
+      "type": "multi",
+      "question": "Crosstalk tends to increase when traces:",
+      "options": [
+        "Are close together",
+        "Run in parallel for a long distance",
+        "Carry fast-changing signals",
+        "Are widely separated"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three increase coupling.",
+      "category": "Crosstalk",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q103",
+      "type": "single",
+      "question": "Reflection noise is caused by:",
+      "options": [
+        "Impedance mismatches on electrically long interconnects",
+        "Only thermal noise",
+        "Only low DC resistance",
+        "Only capacitive loads"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter's definition.",
+      "category": "Noise sources",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q104",
+      "type": "multi",
+      "question": "Reflection noise can produce:",
+      "options": [
+        "Ringing",
+        "Overshoot",
+        "Undershoot",
+        "Only DC offset"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "These effects are listed.",
+      "category": "Noise sources",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q105",
+      "type": "single",
+      "question": "Rise-time degradation is caused by:",
+      "options": [
+        "Frequency-dependent losses attenuating high-frequency components",
+        "Only DC resistance",
+        "Grounding to earth",
+        "Solder mask"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This makes edges slower.",
+      "category": "Noise sources",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q106",
+      "type": "tf",
+      "question": "Rise-time degradation causes signal edges to become slower from TX to RX.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "That is the stated effect.",
+      "category": "Noise sources",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q107",
+      "type": "single",
+      "question": "When does switching noise occur?",
+      "options": [
+        "When a digital signal transitions between logic states",
+        "Only when powered off",
+        "Only at DC",
+        "Only in analog circuits"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Transitions create rapid current changes.",
+      "category": "Switching noise",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q108",
+      "type": "single",
+      "question": "What causes switching-noise voltage disturbances?",
+      "options": [
+        "Rapid current change through parasitic resistance and inductance",
+        "Only parasitic capacitance",
+        "Only thermal noise",
+        "Only earth ground"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter states parasitic R and L.",
+      "category": "Switching noise",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q109",
+      "type": "single",
+      "question": "What does SSN stand for?",
+      "options": [
+        "Simultaneous Switching Noise",
+        "Single Signal Noise",
+        "Series Supply Network",
+        "Signal Switching Node"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter expands SSN.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q110",
+      "type": "single",
+      "question": "What is simultaneous switching noise?",
+      "options": [
+        "Noise when several digital outputs switch at approximately the same time",
+        "Noise only on one static pin",
+        "Thermal noise",
+        "Reflection from one receiver"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Their transient currents add.",
+      "category": "Switching noise",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q111",
+      "type": "tf",
+      "question": "SSN can produce larger disturbances because transient currents add together.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Switching noise",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q112",
+      "type": "single",
+      "question": "Ground bounce is a form of:",
+      "options": [
+        "Simultaneous switching noise",
+        "Thermal noise",
+        "Reflection noise",
+        "Capacitive crosstalk only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter defines it this way.",
+      "category": "Ground bounce",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q113",
+      "type": "single",
+      "question": "Ground bounce means local IC ground:",
+      "options": [
+        "Momentarily shifts relative to PCB ground",
+        "Remains perfectly fixed",
+        "Disconnects permanently",
+        "Becomes earth ground"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Local ground is not perfectly fixed at 0 V.",
+      "category": "Ground bounce",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q114",
+      "type": "single",
+      "question": "What formula describes ground bounce?",
+      "options": [
+        "Vbounce = Lreturn · di/dt",
+        "Vbounce = C·dv/dt",
+        "Vbounce = R/I",
+        "Vbounce = TD/RT"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The slide gives Vbounce=Lreturn di/dt.",
+      "category": "Ground bounce",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q115",
+      "type": "single",
+      "question": "With a continuous return plane, measured bounce remains below about:",
+      "options": [
+        "20 mV",
+        "200 mV",
+        "600 mV",
+        "2 V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The slide states below 20 mV.",
+      "category": "Ground bounce",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q116",
+      "type": "single",
+      "question": "Without a continuous return plane, the measured bounce swings below about:",
+      "options": [
+        "−600 mV",
+        "−20 mV",
+        "−60 mV",
+        "−6 mV"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The slide states below −600 mV.",
+      "category": "Ground bounce",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q117",
+      "type": "single",
+      "question": "What is power rail collapse?",
+      "options": [
+        "A temporary supply-voltage drop caused by switching current through power-delivery impedance",
+        "A permanent short",
+        "Only reflection at RX",
+        "Only a ground-reference rise"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the definition given.",
+      "category": "Power rail collapse",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q118",
+      "type": "single",
+      "question": "What often dominates power-delivery-path impedance here?",
+      "options": [
+        "Inductance of the power interconnects",
+        "Solder mask",
+        "Only capacitance",
+        "Only copper thickness"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says inductance often dominates.",
+      "category": "Power rail collapse",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q119",
+      "type": "single",
+      "question": "What formula is shown for rail collapse?",
+      "options": [
+        "Vrail = Lpower · di/dt",
+        "Vrail = C·dv/dt",
+        "Vrail = R/C",
+        "Vrail = TD/RT"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The slide gives this relation.",
+      "category": "Power rail collapse",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q120",
+      "type": "tf",
+      "question": "Power rail collapse can be particularly severe during simultaneous switching.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Power rail collapse",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q121",
+      "type": "tf",
+      "question": "Different noise sources can combine.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly says so.",
+      "category": "Noise",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q122",
+      "type": "tf",
+      "question": "Switching noise becomes more severe as rise and fall times decrease.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Faster changes make parasitics more important.",
+      "category": "Switching noise",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q123",
+      "type": "single",
+      "question": "Switching noise can occur in:",
+      "options": [
+        "Both signal paths and power/return paths",
+        "Only signal paths",
+        "Only power paths",
+        "Only earth ground"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly states both.",
+      "category": "Switching noise",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q124",
+      "type": "tf",
+      "question": "Careful layout can greatly reduce coupling of switching noise into neighboring interconnects.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is a central layout message.",
+      "category": "Crosstalk",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q125",
+      "type": "single",
+      "question": "Why is there a practical limit to breadboard performance?",
+      "options": [
+        "Controlled routing and return paths are limited",
+        "Breadboards have no conductors",
+        "Breadboards have infinite bandwidth",
+        "Breadboards eliminate crosstalk"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Beyond a point a PCB is needed.",
+      "category": "Breadboards vs PCB",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q126",
+      "type": "single",
+      "question": "In the Bogatin example, measured noise increases as:",
+      "options": [
+        "More I/O pins switch simultaneously",
+        "Fewer pins switch",
+        "Rise time slows only",
+        "The quiet line disconnects"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The measured noise increases with 1 to 4 I/O switching.",
+      "category": "Switching noise",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q127",
+      "type": "single",
+      "question": "On SPI or I²C, coupled noise is especially risky when:",
+      "options": [
+        "The receiver is deciding whether data/clock is logic 1 or 0",
+        "All signals are static",
+        "Board is unpowered",
+        "Only analog ground is used"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This can cause bit interpretation errors.",
+      "category": "Crosstalk",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q128",
+      "type": "tf",
+      "question": "Crosstalk errors can be difficult to diagnose when pattern-dependent.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly warns this.",
+      "category": "Crosstalk",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q129",
+      "type": "single",
+      "question": "For electrically short interconnects, near-field coupling can be approximated using:",
+      "options": [
+        "Lumped capacitance and mutual inductance",
+        "Only transmission-line equations",
+        "Only thermal models",
+        "Only DC resistors"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter uses lumped capacitive and inductive coupling models.",
+      "category": "Crosstalk",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q130",
+      "type": "tf",
+      "question": "Some coupling between switching aggressor and victim interconnects is practically unavoidable.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter calls this the bad news.",
+      "category": "Crosstalk",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q131",
+      "type": "tf",
+      "question": "Good PCB layout can dramatically reduce crosstalk.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter calls this the good news.",
+      "category": "Crosstalk",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q132",
+      "type": "single",
+      "question": "Inductive coupling between two interconnects is described by:",
+      "options": [
+        "Mutual inductance M",
+        "Mutual capacitance only",
+        "Ground resistance",
+        "Characteristic impedance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter uses M.",
+      "category": "Inductive coupling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q133",
+      "type": "single",
+      "question": "Each interconnect plus its return path forms a:",
+      "options": [
+        "Current loop",
+        "Termination only",
+        "Ground symbol",
+        "Capacitor only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter represents each as a loop.",
+      "category": "Inductive coupling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q134",
+      "type": "single",
+      "question": "A changing aggressor current produces through the victim loop:",
+      "options": [
+        "Changing magnetic flux",
+        "Only DC voltage",
+        "Only electric-field coupling",
+        "No effect"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This flux induces victim voltage.",
+      "category": "Inductive coupling",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q135",
+      "type": "single",
+      "question": "What formula describes inductive crosstalk voltage?",
+      "options": [
+        "v2 = −M · di1/dt",
+        "v2 = C·dv/dt",
+        "v2 = iR only",
+        "v2 = M/i"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The slide gives v2=-M di1/dt.",
+      "category": "Inductive coupling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q136",
+      "type": "single",
+      "question": "How is mutual inductance expressed using flux linkage?",
+      "options": [
+        "M = N2Φ12 / i1",
+        "M = i1/(N2Φ12)",
+        "M = L1+L2",
+        "M = C·V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This formula is shown.",
+      "category": "Inductive coupling",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q137",
+      "type": "single",
+      "question": "What range does coupling factor k have?",
+      "options": [
+        "0 to 1",
+        "−10 to 10",
+        "1 to 100",
+        "0 to infinity only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The slide states k is between 0 and 1.",
+      "category": "Inductive coupling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q138",
+      "type": "single",
+      "question": "What is the coupling-factor formula?",
+      "options": [
+        "k = M/√(L1L2)",
+        "k = M(L1+L2)",
+        "k = L1/L2",
+        "k = C/M"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is shown explicitly.",
+      "category": "Inductive coupling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q139",
+      "type": "single",
+      "question": "Equivalent expression for M is:",
+      "options": [
+        "M = k√(L1L2)",
+        "M = k(L1+L2)",
+        "M = k/L1L2",
+        "M = √k/(L1L2)"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is shown explicitly.",
+      "category": "Inductive coupling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q140",
+      "type": "tf",
+      "question": "Higher k, L1 and L2 tend to produce higher M.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the slide's bottom line.",
+      "category": "Inductive coupling",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q141",
+      "type": "tf",
+      "question": "Higher M and higher di/dt produce more inductive crosstalk.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter states this explicitly.",
+      "category": "Inductive coupling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q142",
+      "type": "single",
+      "question": "For M=5 nH and ΔI=20 mA over 5 ns, induced voltage magnitude is:",
+      "options": [
+        "20 mV",
+        "2 mV",
+        "200 mV",
+        "50 mV"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "5 nH × 20 mA/5 ns =20 mV.",
+      "category": "Inductive coupling",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q143",
+      "type": "tf",
+      "question": "A few nH of mutual inductance can create tens of millivolts of crosstalk for fast transitions.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the conclusion of the example.",
+      "category": "Inductive coupling",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q144",
+      "type": "multi",
+      "question": "Mutual inductance M increases when:",
+      "options": [
+        "Signal-return loop area increases",
+        "Loops are brought closer",
+        "Return paths are shared",
+        "Loops are moved farther apart"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three are listed.",
+      "category": "Inductive coupling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q145",
+      "type": "tf",
+      "question": "Mutual inductance is inevitable in PCB design but can be minimized.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Inductive coupling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q146",
+      "type": "single",
+      "question": "A shared return path means:",
+      "options": [
+        "Aggressor and victim return currents flow through the same physical conductor",
+        "Signals share the same transmitter",
+        "Traces are always parallel",
+        "Ground is earth ground"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the definition given.",
+      "category": "Shared return path",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q147",
+      "type": "single",
+      "question": "What is common to both circuits with a shared return?",
+      "options": [
+        "Parasitic resistance and inductance of the shared conductor",
+        "Only load capacitance",
+        "Only source voltage",
+        "Only clock frequency"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The shared conductor's R and L affect both.",
+      "category": "Shared return path",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q148",
+      "type": "single",
+      "question": "A changing aggressor return current through shared impedance changes the victim's:",
+      "options": [
+        "Local reference voltage",
+        "Clock frequency",
+        "Copper thickness",
+        "Solder finish"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This creates noise on the victim.",
+      "category": "Shared return path",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q149",
+      "type": "single",
+      "question": "What is this effect called?",
+      "options": [
+        "Common-impedance coupling",
+        "Reflection loss",
+        "Skin effect",
+        "Rise-time degradation"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter names it common-impedance coupling.",
+      "category": "Shared return path",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q150",
+      "type": "tf",
+      "question": "Common-impedance coupling contributes to ground bounce.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly says so.",
+      "category": "Shared return path",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q151",
+      "type": "tf",
+      "question": "Shared return paths also increase magnetic coupling between loops.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This contributes to crosstalk.",
+      "category": "Shared return path",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q152",
+      "type": "multi",
+      "question": "To reduce mutual inductance between two loops:",
+      "options": [
+        "Bring each signal closer to its own return",
+        "Increase spacing between loops",
+        "Avoid shared return paths",
+        "Increase loop area"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three are listed.",
+      "category": "Noise reduction",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q153",
+      "type": "single",
+      "question": "For separate return paths with comparable spacing, what k rule of thumb is given?",
+      "options": [
+        "k ≈ 0.1",
+        "k ≈ 0.5",
+        "k ≈ 1",
+        "k ≈ 0"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives ~0.1.",
+      "category": "Rules of thumb",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q154",
+      "type": "single",
+      "question": "For a shared return path under the stated geometry, what k rule of thumb is given?",
+      "options": [
+        "k ≈ 0.5",
+        "k ≈ 0.1",
+        "k ≈ 0.01",
+        "k ≈ 1.5"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives ~0.5.",
+      "category": "Rules of thumb",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q155",
+      "type": "single",
+      "question": "With separate returns and comparable loop dimensions, estimate M as about:",
+      "options": [
+        "10% of either loop's self-inductance",
+        "100%",
+        "50%",
+        "1%"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the practical rule.",
+      "category": "Rules of thumb",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q156",
+      "type": "single",
+      "question": "With a shared return path, estimate M as approximately:",
+      "options": [
+        "The self-inductance of the shared return path",
+        "Zero",
+        "10% of trace resistance",
+        "Twice load capacitance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the practical estimate.",
+      "category": "Rules of thumb",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q157",
+      "type": "tf",
+      "question": "Mutual inductance depends on aggressor current magnitude.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "It is determined by geometry, not current magnitude.",
+      "category": "Inductive coupling",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q158",
+      "type": "single",
+      "question": "For a 5 cm loop at 1 nH/mm, self-inductance is about:",
+      "options": [
+        "50 nH",
+        "5 nH",
+        "500 nH",
+        "0.5 nH"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "50 mm×1 nH/mm=50 nH.",
+      "category": "Inductive coupling",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q159",
+      "type": "single",
+      "question": "For that 5 cm example with separate returns, M is about:",
+      "options": [
+        "5 nH",
+        "50 nH",
+        "0.5 nH",
+        "25 nH"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "10% of 50 nH=5 nH.",
+      "category": "Inductive coupling",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q160",
+      "type": "single",
+      "question": "With M≈5 nH and ΔI=20 mA in 5 ns, victim noise is:",
+      "options": [
+        "About 20 mV",
+        "2 mV",
+        "200 mV",
+        "5 mV"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The example computes 20 mV.",
+      "category": "Inductive coupling",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q161",
+      "type": "tf",
+      "question": "Capacitive crosstalk is especially important for high-impedance victim inputs.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Capacitive coupling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q162",
+      "type": "single",
+      "question": "What formula is shown for inductive crosstalk magnitude?",
+      "options": [
+        "Vnoise = M · dIaggressor/dt",
+        "Vnoise = Ccoupling·dV/dt",
+        "Vnoise = R/I",
+        "Vnoise = M/I"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Slide 62 shows this relation.",
+      "category": "Crosstalk formulas",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q163",
+      "type": "single",
+      "question": "What formula is shown for capacitive crosstalk current?",
+      "options": [
+        "Inoise = Ccoupling · dVaggressor/dt",
+        "Inoise = M·dI/dt",
+        "Inoise = V/R only",
+        "Inoise = C/V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Slide 62 shows this relation.",
+      "category": "Crosstalk formulas",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q164",
+      "type": "single",
+      "question": "What does Ccoupling represent?",
+      "options": [
+        "Coupling capacitance between aggressor and victim interconnects",
+        "Load capacitance only",
+        "Power decoupling capacitance",
+        "Ground capacitance only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the definition on slide 62.",
+      "category": "Capacitive coupling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q165",
+      "type": "single",
+      "question": "How can Vnoise and Inoise be reduced?",
+      "options": [
+        "Reduce aggressor slew rate and/or reduce M and Ccoupling",
+        "Increase M and Ccoupling",
+        "Increase loop area",
+        "Share more return path"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter lists these approaches.",
+      "category": "Noise reduction",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q166",
+      "type": "single",
+      "question": "What PCB-design variable is often more controllable than aggressor di/dt or dv/dt?",
+      "options": [
+        "Interconnect geometry that reduces M and Ccoupling",
+        "Driver internal slew only",
+        "Clock frequency always",
+        "Supply voltage only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Geometry is something layout can improve.",
+      "category": "Noise reduction",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q167",
+      "type": "single",
+      "question": "Why does a high-impedance victim input show a large capacitive-coupling voltage spike?",
+      "options": [
+        "The coupled current flows through a large input resistance",
+        "The current disappears",
+        "There is no coupling capacitance",
+        "The input is shorted"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "High impedance converts coupled current into larger voltage.",
+      "category": "Capacitive coupling",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q168",
+      "type": "single",
+      "question": "What happens when a 1 MΩ input is shunted to about 1 kΩ in the example?",
+      "options": [
+        "Noise voltage decreases while parasitic current is essentially unchanged",
+        "Parasitic current becomes zero",
+        "Noise voltage increases",
+        "Mutual inductance doubles"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter makes this exact point.",
+      "category": "Capacitive coupling",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q169",
+      "type": "multi",
+      "question": "Techniques for reducing capacitive and inductive coupling include:",
+      "options": [
+        "Increase aggressor-victim spacing",
+        "Keep signal-return loop areas small",
+        "Use a wide continuous return plane under traces",
+        "Create gaps in the return plane"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three are recommended.",
+      "category": "Noise reduction",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q170",
+      "type": "single",
+      "question": "Why does a continuous return plane reduce inductive crosstalk?",
+      "options": [
+        "It reduces loop inductance and mutual inductance by keeping return current close",
+        "It increases loop area",
+        "It forces narrow shared returns",
+        "It removes all capacitance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The plane keeps loops compact.",
+      "category": "Noise reduction",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q171",
+      "type": "tf",
+      "question": "Gaps in the return plane can increase loop area and inductive crosstalk.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter emphasizes this.",
+      "category": "Return paths",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q172",
+      "type": "single",
+      "question": "What does a schematic ground symbol fail to show?",
+      "options": [
+        "The physical return-current path",
+        "Component values",
+        "Supply voltage",
+        "Trace width"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Schematics do not show the actual physical return route.",
+      "category": "Return paths",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q173",
+      "type": "tf",
+      "question": "Every signal current must return to its source through a physical path.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Return paths",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q174",
+      "type": "multi",
+      "question": "To minimize inductive crosstalk, return-path routing should:",
+      "options": [
+        "Keep loop areas small",
+        "Keep aggressor and victim loops far apart",
+        "Keep return paths separate",
+        "Force both currents through one narrow shared return"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three are stated goals.",
+      "category": "Return paths",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q175",
+      "type": "single",
+      "question": "On a PCB, the best general way to keep return paths effectively separate is:",
+      "options": [
+        "Use a continuous or nearly continuous ground plane",
+        "Use one narrow shared trace",
+        "Split the plane everywhere",
+        "Avoid ground copper"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the recommendation given.",
+      "category": "Return paths",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q176",
+      "type": "tf",
+      "question": "A shared conductor necessarily implies a shared current path.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "A ground plane can be shared while currents occupy different regions.",
+      "category": "Ground plane",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q177",
+      "type": "single",
+      "question": "For a ground plane, what determines return-current distribution?",
+      "options": [
+        "Signal frequency content",
+        "PCB color",
+        "Board thickness only",
+        "Clock label"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly states frequency dependence.",
+      "category": "Ground plane",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q178",
+      "type": "single",
+      "question": "At low frequencies on common PCBs, below roughly what frequency does resistance dominate?",
+      "options": [
+        "About 100 kHz",
+        "100 Hz",
+        "10 MHz",
+        "1 GHz"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter uses ~100 kHz.",
+      "category": "Ground plane",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q179",
+      "type": "single",
+      "question": "At low frequencies, return current on a ground plane tends to:",
+      "options": [
+        "Spread out and choose paths minimizing total resistance",
+        "Concentrate directly under signal only",
+        "Flow only at edge",
+        "Stop flowing"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Resistance dominates at low frequency.",
+      "category": "Ground plane",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q180",
+      "type": "single",
+      "question": "At higher frequencies, return current tends to minimize:",
+      "options": [
+        "Total signal-return loop inductance",
+        "Only DC resistance",
+        "Only capacitance",
+        "Only trace width"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Inductive reactance becomes important.",
+      "category": "Ground plane",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q181",
+      "type": "single",
+      "question": "Why does minimizing loop inductance favor current directly under the signal trace?",
+      "options": [
+        "It minimizes loop area",
+        "It maximizes loop area",
+        "It maximizes resistance",
+        "It eliminates current"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Loop inductance rises with loop area.",
+      "category": "Ground plane",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q182",
+      "type": "tf",
+      "question": "At higher frequencies, return current tends to concentrate underneath the signal trace.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is a central rule of thumb.",
+      "category": "Ground plane",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q183",
+      "type": "single",
+      "question": "What high-frequency effect confines current near conductor surfaces?",
+      "options": [
+        "Skin effect",
+        "Hall effect",
+        "Photoelectric effect",
+        "Thermal runaway"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter notes skin effect.",
+      "category": "Ground plane",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q184",
+      "type": "single",
+      "question": "Above about 100 kHz, most return current in a ground plane flows:",
+      "options": [
+        "Near the signal path",
+        "Uniformly over the whole plane",
+        "Only at board edge",
+        "Only through vias"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter states this directly.",
+      "category": "Ground plane",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q185",
+      "type": "single",
+      "question": "When adjacent traces are separated by about three trace widths, their return-current distributions are:",
+      "options": [
+        "Largely separated above about 100 kHz",
+        "Always identical",
+        "Always fully overlapping",
+        "Separated only below 100 Hz"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the simulation rule of thumb.",
+      "category": "Ground plane",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q186",
+      "type": "single",
+      "question": "What spacing rule is shown?",
+      "options": [
+        "s ≈ 3w",
+        "s ≈ w/3",
+        "s ≈ 10w",
+        "s = 0"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The figure labels spacing as 3 trace widths.",
+      "category": "Ground plane",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q187",
+      "type": "tf",
+      "question": "Some inductive crosstalk remains even with largely separated return-current distributions.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly says so.",
+      "category": "Ground plane",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q188",
+      "type": "single",
+      "question": "What is ground in the basic circuit-reference sense?",
+      "options": [
+        "The reference node from which voltages are defined or measured",
+        "Always earth itself",
+        "Always chassis metal",
+        "Only a safety conductor"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is one chapter definition.",
+      "category": "Ground",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q189",
+      "type": "tf",
+      "question": "Different points on the same ground net are always at exactly the same voltage.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Finite resistance and inductance create differences.",
+      "category": "Ground",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q190",
+      "type": "single",
+      "question": "What does 'local ground' mean?",
+      "options": [
+        "Ground potential near the signal/circuit node being considered",
+        "Earth potential only",
+        "Chassis voltage only",
+        "Average of all grounds"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter defines local ground this way.",
+      "category": "Ground",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q191",
+      "type": "single",
+      "question": "What creates voltage differences between local grounds?",
+      "options": [
+        "Ground bounce",
+        "Solder mask",
+        "PCB outline",
+        "Silkscreen"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Ground bounce creates local-ground differences.",
+      "category": "Ground",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q192",
+      "type": "single",
+      "question": "Another meaning of ground is:",
+      "options": [
+        "The conductor or plane carrying return current for signals and power",
+        "Only earth electrode",
+        "Only chassis",
+        "Only ADC reference"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly listed.",
+      "category": "Ground",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q193",
+      "type": "single",
+      "question": "What is earth ground?",
+      "options": [
+        "A conductor connected through a low-impedance path to earth",
+        "Any signal return trace",
+        "Local IC ground only",
+        "PCB solder mask"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter definition.",
+      "category": "Ground",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q194",
+      "type": "single",
+      "question": "What mains-plug contact connects to earth grounding?",
+      "options": [
+        "Protective earth",
+        "Neutral only",
+        "Live only",
+        "Signal return"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The protective-earth contact is connected to earth ground.",
+      "category": "Ground",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q195",
+      "type": "single",
+      "question": "What is chassis ground?",
+      "options": [
+        "Connection to the metal enclosure or chassis",
+        "Rise-time parameter",
+        "Via type",
+        "Mutual inductance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter definition.",
+      "category": "Ground",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q196",
+      "type": "single",
+      "question": "What does digital ground carry?",
+      "options": [
+        "Return currents of switching digital signals",
+        "Only analog sensor current",
+        "Only earth leakage",
+        "No current"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Analog vs digital ground",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q197",
+      "type": "single",
+      "question": "What is analog ground used for?",
+      "options": [
+        "Return path and voltage reference for analog signals",
+        "Only digital switching return",
+        "Only chassis bonding",
+        "Only mains safety"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Analog vs digital ground",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q198",
+      "type": "tf",
+      "question": "Analog circuits usually generate less ground-bounce noise because they involve less fast switching current.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says this generally.",
+      "category": "Analog vs digital ground",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q199",
+      "type": "tf",
+      "question": "Analog signals are often more sensitive to small ground-voltage disturbances.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The ADC example is given.",
+      "category": "Analog vs digital ground",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q200",
+      "type": "single",
+      "question": "What is generally the best way to keep noisy digital returns from disturbing analog references?",
+      "options": [
+        "Separate analog and digital signal routing while using the same continuous ground plane",
+        "Always split the plane",
+        "Route everything together",
+        "Use no ground plane"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter's recommendation.",
+      "category": "Analog vs digital ground",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q201",
+      "type": "single",
+      "question": "Why can one continuous plane still keep analog and digital returns largely separated at high frequency?",
+      "options": [
+        "Return currents concentrate near their corresponding signal traces",
+        "All currents spread uniformly",
+        "The plane has infinite resistance",
+        "The plane blocks digital current"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "High-frequency return current follows signal paths.",
+      "category": "Analog vs digital ground",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q202",
+      "type": "tf",
+      "question": "Splitting the ground plane is always the safest default.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The chapter warns to be very careful with split planes.",
+      "category": "Analog vs digital ground",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q203",
+      "type": "single",
+      "question": "What happens when a signal crosses a gap in the ground plane?",
+      "options": [
+        "Its return current detours around the gap",
+        "It returns directly underneath",
+        "Current becomes zero",
+        "It becomes transparent"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The gap blocks the direct path.",
+      "category": "Ground-plane gaps",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q204",
+      "type": "single",
+      "question": "What happens to loop area when return current detours around a gap?",
+      "options": [
+        "It increases",
+        "It decreases",
+        "It is unchanged",
+        "It becomes zero"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The detour enlarges the loop.",
+      "category": "Ground-plane gaps",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q205",
+      "type": "single",
+      "question": "What can this larger loop area cause?",
+      "options": [
+        "Additional noise and crosstalk",
+        "Less inductance always",
+        "Zero ground bounce",
+        "Perfect transparency"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly warns of this.",
+      "category": "Ground-plane gaps",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q206",
+      "type": "single",
+      "question": "What is a cross-under in this chapter?",
+      "options": [
+        "A signal routed on the ground-plane layer, creating a gap in the ground plane",
+        "A via under a component",
+        "A thermal relief",
+        "A solder bridge"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter uses this term for signal routing that interrupts the plane.",
+      "category": "Cross-unders",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q207",
+      "type": "tf",
+      "question": "As a general rule, ground-plane gaps should be avoided.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Cross-unders",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q208",
+      "type": "single",
+      "question": "When trace A crosses a ground-plane gap, its return current:",
+      "options": [
+        "Cannot flow directly underneath and must go around the gap",
+        "Takes a shorter path",
+        "Disappears",
+        "Flows through solder mask"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the described mechanism.",
+      "category": "Cross-unders",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q209",
+      "type": "single",
+      "question": "What happens to loop self-inductance when return current detours around a gap?",
+      "options": [
+        "It increases",
+        "It decreases",
+        "It becomes zero",
+        "It is unaffected"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Increased loop area raises self-inductance.",
+      "category": "Cross-unders",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q210",
+      "type": "single",
+      "question": "If neighboring trace B crosses the same gap, the two return paths may:",
+      "options": [
+        "Overlap more",
+        "Become perfectly separated",
+        "Vanish",
+        "Become DC-only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The similar detour increases overlap.",
+      "category": "Cross-unders",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q211",
+      "type": "single",
+      "question": "What happens to mutual inductance when both return paths overlap more?",
+      "options": [
+        "It increases",
+        "It decreases to zero",
+        "It is unchanged",
+        "It becomes capacitance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly says it increases.",
+      "category": "Cross-unders",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q212",
+      "type": "single",
+      "question": "What layout recommendation is given for cross-unders?",
+      "options": [
+        "Use several short cross-unders rather than one long one",
+        "Use one very long cross-under",
+        "Make the gap long",
+        "Avoid top-layer traces"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Short cross-unders minimize long gaps.",
+      "category": "Cross-unders",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q213",
+      "type": "single",
+      "question": "If a long cross-under is unavoidable, add:",
+      "options": [
+        "A return strap",
+        "A solder bridge",
+        "A thermal via",
+        "An antipad"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter recommends a return strap.",
+      "category": "Return strap",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q214",
+      "type": "single",
+      "question": "What is a return strap?",
+      "options": [
+        "A short trace connecting ground plane on both sides of a gap, often via the top layer",
+        "A resistor across a signal",
+        "A via stub",
+        "A silkscreen mark"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter definition.",
+      "category": "Return strap",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q215",
+      "type": "single",
+      "question": "What does a return strap reduce?",
+      "options": [
+        "Return-path length, loop area, mutual inductance, and crosstalk",
+        "Only trace resistance",
+        "Only PCB thickness",
+        "Only solder-mask openings"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "These reductions are explicitly listed.",
+      "category": "Return strap",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q216",
+      "type": "single",
+      "question": "For RT=8 ns, what electrically-short limit does Len<4.3RT give?",
+      "options": [
+        "About 34.4 cm",
+        "8 cm",
+        "18.6 cm",
+        "43 cm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "4.3×8=34.4 cm.",
+      "category": "Electrical length",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q217",
+      "type": "single",
+      "question": "For RT=20 ns, what electrically-short limit does the course rule give?",
+      "options": [
+        "About 86 cm",
+        "20 cm",
+        "43 cm",
+        "172 cm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "4.3×20=86 cm.",
+      "category": "Electrical length",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q218",
+      "type": "single",
+      "question": "A 30 cm trace with RT=10 ns is:",
+      "options": [
+        "Electrically short by the 4.3RT rule",
+        "Electrically long",
+        "Automatically transparent",
+        "Always problematic"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Threshold is 43 cm.",
+      "category": "Electrical length",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q219",
+      "type": "single",
+      "question": "A 60 cm trace with RT=10 ns is:",
+      "options": [
+        "Electrically long by the 4.3RT rule",
+        "Electrically short",
+        "Automatically transparent",
+        "Always ideal"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "60 cm exceeds 43 cm.",
+      "category": "Electrical length",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q220",
+      "type": "single",
+      "question": "A 20 cm interconnect with RT=5 ns is:",
+      "options": [
+        "Electrically short by the 4.3RT rule",
+        "Electrically long",
+        "Always transparent",
+        "Always a transmission line"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Threshold is 21.5 cm.",
+      "category": "Electrical length",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q221",
+      "type": "single",
+      "question": "A 25 cm interconnect with RT=5 ns is:",
+      "options": [
+        "Electrically long by the 4.3RT rule",
+        "Electrically short",
+        "Automatically transparent",
+        "Guaranteed to ring"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Threshold is 21.5 cm.",
+      "category": "Electrical length",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q222",
+      "type": "single",
+      "question": "If RT halves, the electrically-short length threshold:",
+      "options": [
+        "Halves",
+        "Doubles",
+        "Stays the same",
+        "Quadruples"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Threshold is proportional to RT.",
+      "category": "Electrical length",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q223",
+      "type": "single",
+      "question": "At vp=15 cm/ns, what is TD for a 30 cm interconnect?",
+      "options": [
+        "2 ns",
+        "0.5 ns",
+        "15 ns",
+        "45 ns"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "TD=30/15=2 ns.",
+      "category": "Propagation delay",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q224",
+      "type": "single",
+      "question": "At vp=15 cm/ns, what is TD for a 75 cm interconnect?",
+      "options": [
+        "5 ns",
+        "1 ns",
+        "15 ns",
+        "50 ns"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "75/15=5 ns.",
+      "category": "Propagation delay",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q225",
+      "type": "single",
+      "question": "If TD=5 ns, negligible-TL behavior requires RT greater than:",
+      "options": [
+        "20 ns",
+        "5 ns",
+        "10 ns",
+        "2.5 ns"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "RT>4TD.",
+      "category": "Propagation delay",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q226",
+      "type": "single",
+      "question": "If RT=20 ns and vp=15 cm/ns, the 4TD criterion gives max length about:",
+      "options": [
+        "75 cm",
+        "86 cm",
+        "20 cm",
+        "300 cm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Len<15×20/4=75 cm.",
+      "category": "Propagation delay",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q227",
+      "type": "single",
+      "question": "If k=0.1, L1=50 nH and L2=50 nH, what is M?",
+      "options": [
+        "5 nH",
+        "50 nH",
+        "0.5 nH",
+        "25 nH"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "M=0.1×50=5 nH.",
+      "category": "Inductive coupling",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q228",
+      "type": "single",
+      "question": "If k=0.5, L1=50 nH and L2=50 nH, what is M?",
+      "options": [
+        "25 nH",
+        "5 nH",
+        "50 nH",
+        "100 nH"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "M=0.5×50=25 nH.",
+      "category": "Inductive coupling",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q229",
+      "type": "single",
+      "question": "If M doubles while di/dt stays constant, inductive crosstalk voltage:",
+      "options": [
+        "Doubles",
+        "Halves",
+        "Is unchanged",
+        "Quadruples"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Vnoise=M·di/dt.",
+      "category": "Inductive coupling",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q230",
+      "type": "single",
+      "question": "If current transition time halves for the same ΔI and M, inductive crosstalk voltage:",
+      "options": [
+        "Doubles",
+        "Halves",
+        "Is unchanged",
+        "Becomes zero"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "di/dt doubles.",
+      "category": "Inductive coupling",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q231",
+      "type": "single",
+      "question": "If Ccoupling doubles while dV/dt stays constant, capacitive crosstalk current:",
+      "options": [
+        "Doubles",
+        "Halves",
+        "Is unchanged",
+        "Quadruples"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Inoise=Ccoupling·dV/dt.",
+      "category": "Capacitive coupling",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q232",
+      "type": "single",
+      "question": "If voltage transition time halves for same ΔV and Ccoupling, capacitive crosstalk current:",
+      "options": [
+        "Doubles",
+        "Halves",
+        "Is unchanged",
+        "Becomes zero"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "dV/dt doubles.",
+      "category": "Capacitive coupling",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q233",
+      "type": "single",
+      "question": "Which statement correctly distinguishes transparent from electrically short?",
+      "options": [
+        "Transparent concerns negligible signal impact; electrically short concerns negligible propagation delay",
+        "They mean exactly the same thing",
+        "Transparent only applies to transmission lines",
+        "Electrically short means zero resistance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter treats them as separate criteria.",
+      "category": "Concepts",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q234",
+      "type": "single",
+      "question": "Which criterion is checked first in the course decision flow?",
+      "options": [
+        "Transparency",
+        "Electrical length",
+        "Termination",
+        "Earth grounding"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Step 1 is transparency.",
+      "category": "Decision process",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q235",
+      "type": "single",
+      "question": "Can an electrically long interconnect be acceptable?",
+      "options": [
+        "Yes, if transmission-line effects are analyzed and controlled",
+        "No, never",
+        "Only if transparent by definition",
+        "Only on breadboards"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Electrically long does not automatically mean problematic.",
+      "category": "Concepts",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q236",
+      "type": "single",
+      "question": "Can a non-transparent interconnect still be electrically short?",
+      "options": [
+        "Yes",
+        "No",
+        "Only at DC",
+        "Only if it has zero inductance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Then a lumped model is appropriate.",
+      "category": "Concepts",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q237",
+      "type": "single",
+      "question": "What matters more than clock frequency alone for digital electrical length?",
+      "options": [
+        "Rise time",
+        "PCB color",
+        "Solder type",
+        "Connector brand"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Fast edges determine high-frequency content.",
+      "category": "Concepts",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q238",
+      "type": "multi",
+      "question": "Ways to estimate R, L, C, M include:",
+      "options": [
+        "2D/3D electromagnetic field solvers",
+        "Approximate analytical expressions",
+        "Online calculators",
+        "Ignoring parasitics always"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three are listed.",
+      "category": "Parasitic extraction",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q239",
+      "type": "single",
+      "question": "When are simple order-of-magnitude estimates often sufficient?",
+      "options": [
+        "For many circuits to identify potential SI problems",
+        "Never",
+        "Only optical circuits",
+        "Only with no interconnect"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says simple estimates are often enough.",
+      "category": "Parasitic extraction",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q240",
+      "type": "single",
+      "question": "When does accurate parasitic extraction become more important?",
+      "options": [
+        "When parasitics are comparable to circuit impedances or rise times are very short",
+        "When PCB color changes",
+        "When clock is off",
+        "Only for mechanical design"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "These are the conditions given.",
+      "category": "Parasitic extraction",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q241",
+      "type": "single",
+      "question": "What is the preferred design philosophy instead of calculating every parasitic precisely?",
+      "options": [
+        "Make parasitic effects inherently small through good PCB design",
+        "Maximize parasitics",
+        "Ignore geometry",
+        "Use only breadboards"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the stated approach.",
+      "category": "Parasitic extraction",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q242",
+      "type": "single",
+      "question": "Where should sensitive traces be kept relative to high-current fast-switching signals and shared returns?",
+      "options": [
+        "Away from them",
+        "As close as possible",
+        "On the same narrow return",
+        "Across plane gaps"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter recommends separation.",
+      "category": "Ground",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q243",
+      "type": "single",
+      "question": "Why are analog inputs such as ADC inputs especially sensitive?",
+      "options": [
+        "Small ground-voltage disturbances can corrupt small analog signals",
+        "They generate the largest SSN",
+        "They never use ground",
+        "They only operate at zero volts"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives ADC inputs as an example.",
+      "category": "Analog vs digital ground",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q244",
+      "type": "single",
+      "question": "What does increasing aggressor-victim spacing reduce?",
+      "options": [
+        "Both coupling capacitance and mutual inductance",
+        "Only DC resistance",
+        "Only rise time",
+        "Only supply voltage"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly says it reduces Ccoupling and M.",
+      "category": "Noise reduction",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q245",
+      "type": "single",
+      "question": "What is a major PCB advantage over breadboards for SI?",
+      "options": [
+        "A wide continuous return plane can be placed directly under signal traces",
+        "PCBs have no parasitics",
+        "PCBs have infinite conductivity",
+        "PCBs eliminate all noise"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter highlights this advantage.",
+      "category": "Noise reduction",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q246",
+      "type": "tf",
+      "question": "Signal-integrity problems generally worsen with longer interconnects.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Signal integrity",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q247",
+      "type": "tf",
+      "question": "Signal-integrity problems generally worsen with faster edges.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Shorter rise time increases severity.",
+      "category": "Signal integrity",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q248",
+      "type": "tf",
+      "question": "A schematic netlist fully specifies physical return-path geometry.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Schematics/netlists do not define the physical return route.",
+      "category": "Return paths",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q249",
+      "type": "tf",
+      "question": "Crosstalk can arise from electric-field or magnetic-field coupling.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Both mechanisms are described.",
+      "category": "Crosstalk",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q250",
+      "type": "tf",
+      "question": "Reflection noise is mainly a concern on electrically long interconnects.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Reflections",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q251",
+      "type": "tf",
+      "question": "A slow rise time can make mismatch reflections negligible.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter discusses this condition.",
+      "category": "Reflections",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q252",
+      "type": "tf",
+      "question": "A continuous return plane can greatly reduce measured ground bounce.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The measured example shows this.",
+      "category": "Ground bounce",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q253",
+      "type": "tf",
+      "question": "Power rail collapse and ground bounce are both linked to switching current through parasitic inductance.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Both use L·di/dt relations.",
+      "category": "Switching noise",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q254",
+      "type": "tf",
+      "question": "Shared return paths can create both common-impedance and magnetic coupling.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Both are explicitly discussed.",
+      "category": "Shared return path",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q255",
+      "type": "tf",
+      "question": "The coupling factor k can be greater than 1 in the model used here.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The chapter states k is between 0 and 1.",
+      "category": "Inductive coupling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q256",
+      "type": "tf",
+      "question": "A larger loop area generally increases loop inductance and magnetic coupling.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter repeatedly uses this relationship.",
+      "category": "Inductive coupling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q257",
+      "type": "tf",
+      "question": "At high frequency, return current spreads uniformly over the entire ground plane.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "It concentrates near the signal trace.",
+      "category": "Ground plane",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q258",
+      "type": "tf",
+      "question": "At low frequency, DC resistance is more important in return-current distribution.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter states this below about 100 kHz.",
+      "category": "Ground plane",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q259",
+      "type": "tf",
+      "question": "A ground plane may be shared without forcing all signals to share the same current path.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This resolves the ground-plane paradox.",
+      "category": "Ground plane",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q260",
+      "type": "tf",
+      "question": "A split ground plane can force return current to take a longer path.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is a key warning.",
+      "category": "Ground-plane gaps",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q261",
+      "type": "tf",
+      "question": "Long cross-unders are discouraged because they create long gaps in the ground plane.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter recommends several short ones instead.",
+      "category": "Cross-unders",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q262",
+      "type": "tf",
+      "question": "A return strap provides a short return-current connection across a gap.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is its purpose.",
+      "category": "Return strap",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q263",
+      "type": "tf",
+      "question": "A return strap can reduce loop area, mutual inductance, and crosstalk.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "All three are stated.",
+      "category": "Return strap",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q264",
+      "type": "single",
+      "question": "What does SI stand for?",
+      "options": [
+        "Signal Integrity",
+        "Signal Inductance",
+        "Switching Impedance",
+        "Series Interconnect"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "SI means Signal Integrity.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q265",
+      "type": "single",
+      "question": "What does TX stand for?",
+      "options": [
+        "Transmitter",
+        "Transfer reactance",
+        "Timing crossover",
+        "Trace extension"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "TX denotes the transmitter.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q266",
+      "type": "single",
+      "question": "What does RX stand for?",
+      "options": [
+        "Receiver",
+        "Return reactance",
+        "Rise crossover",
+        "Resistance extension"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "RX denotes the receiver.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q267",
+      "type": "single",
+      "question": "What does SSN stand for?",
+      "options": [
+        "Simultaneous Switching Noise",
+        "Serial Signal Network",
+        "Single Switching Node",
+        "Signal-Supply Noise"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly expands SSN.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q268",
+      "type": "single",
+      "question": "What does RT denote?",
+      "options": [
+        "10%-90% rise time",
+        "Return trace",
+        "Receiver termination",
+        "Resistance total"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "RT denotes rise time.",
+      "category": "Symbols",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q269",
+      "type": "single",
+      "question": "What does BW denote?",
+      "options": [
+        "Bandwidth",
+        "Board width",
+        "Bounce waveform",
+        "Bus wire"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "BW is bandwidth.",
+      "category": "Symbols",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q270",
+      "type": "single",
+      "question": "What does vp denote?",
+      "options": [
+        "Propagation velocity",
+        "Peak voltage",
+        "Victim power",
+        "Plane voltage"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "vp is propagation velocity.",
+      "category": "Symbols",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q271",
+      "type": "single",
+      "question": "What does λ denote?",
+      "options": [
+        "Wavelength",
+        "Inductance",
+        "Coupling factor",
+        "Resistance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "λ denotes wavelength.",
+      "category": "Symbols",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q272",
+      "type": "single",
+      "question": "What does M denote?",
+      "options": [
+        "Mutual inductance",
+        "Mutual capacitance",
+        "Magnetic resistance",
+        "Maximum voltage"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "M is mutual inductance.",
+      "category": "Symbols",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q273",
+      "type": "single",
+      "question": "What does k denote?",
+      "options": [
+        "Magnetic coupling factor",
+        "Clock frequency",
+        "Characteristic impedance",
+        "Loop resistance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "k is coupling factor.",
+      "category": "Symbols",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q274",
+      "type": "single",
+      "question": "What does Ccoupling denote?",
+      "options": [
+        "Coupling capacitance",
+        "Load capacitance only",
+        "Power decoupling capacitance",
+        "Ground capacitance only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "It is the aggressor-victim coupling capacitance.",
+      "category": "Symbols",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q275",
+      "type": "single",
+      "question": "What does Z0 denote?",
+      "options": [
+        "Characteristic impedance",
+        "Zero resistance",
+        "Ground impedance",
+        "Output voltage"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Z0 is characteristic impedance.",
+      "category": "Symbols",
+      "difficulty": "easy"
+    }
+  ]
+}
