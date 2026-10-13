@@ -18,6 +18,13 @@ const CHAPTERS = [
     title:"Soldering",
     subtitle:"wetting · flux · leaded/lead-free solder · cold joints · tip care · desoldering · reflow",
     file:"chapter2.json"
+  },
+  {
+    id:"chapter3",
+    number:"03",
+    title:"DIY PCB Fabrication",
+    subtitle:"layout printing · mirror transfer · etching · Ferric Chloride · Ammonium Persulphate · drilling · testing",
+    file:"chapter3.json"
   }
 ];
 

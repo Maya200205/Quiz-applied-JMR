@@ -1386,9 +1386,9 @@
       "question": "What melting range is typical for common lead-free solders?",
       "options": [
         "Approximately 217–227 °C",
-        "Approximately 180–190 °C",
-        "Approximately 100–120 °C",
-        "Approximately 232–242 °C"
+        "180–190 °C",
+        "100–120 °C",
+        "232–242 °C"
       ],
       "answer": [
         0

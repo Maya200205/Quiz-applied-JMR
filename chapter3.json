@@ -1,0 +1,1737 @@
+{
+  "id": "chapter3",
+  "title": "Chapter 3 — DIY PCB Fabrication",
+  "source": "03 - DIY PCB(1).pdf",
+  "question_count": 103,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "question": "What is the topic of Chapter 3?",
+      "options": [
+        "DIY PCB fabrication",
+        "Industrial PCB assembly",
+        "High-frequency PCB design",
+        "Power distribution"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter is titled DIY PCB fabrication.",
+      "category": "Overview",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "question": "Why is there generally no logical need to etch your own PCB today?",
+      "options": [
+        "Commercial PCB manufacturing is cheap",
+        "DIY is illegal",
+        "FR4 is unavailable",
+        "Etching never works"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The introduction points to low-cost commercial manufacturers.",
+      "category": "Overview",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "question": "When might DIY PCB fabrication still be useful?",
+      "options": [
+        "When time-pressured and a board is needed quickly",
+        "Only for mass production",
+        "Only for 8-layer boards",
+        "Only for RF boards"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Time pressure is the example given.",
+      "category": "Overview",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "tf",
+      "question": "The described method takes about half an hour.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter states this explicitly.",
+      "category": "Overview",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "tf",
+      "question": "The method is described as safe if proper precautions and common sense are used.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This qualification appears in the introduction.",
+      "category": "Safety",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "single",
+      "question": "How many PCB layers can be made with satisfactory quality using this method?",
+      "options": [
+        "Up to two layers",
+        "Only one",
+        "Up to four",
+        "Any number"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says up to two layers.",
+      "category": "Capabilities",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "single",
+      "question": "What minimum track/spacing size is stated as implementable?",
+      "options": [
+        "10 mil",
+        "1 mil",
+        "6 mil",
+        "100 mil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "10 mil tracks and spacing are stated as implementable.",
+      "category": "Capabilities",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "single",
+      "question": "What is recommended for inexperienced users?",
+      "options": [
+        "Use thicker tracks and larger spacing",
+        "Use exactly 10 mil everywhere",
+        "Use thinner tracks",
+        "Use no spacing"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Beginners are advised to use more generous geometry.",
+      "category": "Capabilities",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "tf",
+      "question": "The chapter recommends 10 mil tracks as the easiest choice for beginners.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "10 mil is possible, but thicker tracks/larger spacing are advised for beginners.",
+      "category": "Capabilities",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q10",
+      "type": "multi",
+      "question": "Which materials/tools are listed as needed?",
+      "options": [
+        "Copper-clad FR4 board",
+        "Ferric Chloride or Ammonium Persulphate",
+        "Glossy/photo paper",
+        "Suitable printer"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All four are listed.",
+      "category": "Tools and materials",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "multi",
+      "question": "Which additional tools are listed?",
+      "options": [
+        "Permanent black marker",
+        "Cutter or sharp knife",
+        "Scissors",
+        "Tool to cut the copper-clad FR4 board"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All four appear in the equipment list.",
+      "category": "Tools and materials",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "multi",
+      "question": "Which additional items are listed?",
+      "options": [
+        "Drill",
+        "Plastic container",
+        "Kitchen scale and/or measuring cup",
+        "Heating iron"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All four are listed.",
+      "category": "Tools and materials",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "single",
+      "question": "What is the drill used for?",
+      "options": [
+        "Drilling vias/holes",
+        "Printing the layout",
+        "Etching copper",
+        "Cleaning the board"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The equipment list specifies drilling the vias.",
+      "category": "Tools and materials",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q14",
+      "type": "single",
+      "question": "What is the plastic container used for?",
+      "options": [
+        "The etching process",
+        "Printing",
+        "Soldering",
+        "Measuring continuity"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "It is listed for etching.",
+      "category": "Tools and materials",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q15",
+      "type": "single",
+      "question": "What is the heating iron used for?",
+      "options": [
+        "Heating the glossy/photo paper against the copper board",
+        "Drilling holes",
+        "Polishing copper",
+        "Testing connectivity"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "It is used during heat transfer.",
+      "category": "Tools and materials",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q16",
+      "type": "single",
+      "question": "Which etchant is listed as a liquid?",
+      "options": [
+        "Ferric Chloride",
+        "Ammonium Persulphate",
+        "FR4",
+        "IPA"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Ferric Chloride is listed as liquid.",
+      "category": "Etchants",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q17",
+      "type": "single",
+      "question": "Which etchant is listed as a powder?",
+      "options": [
+        "Ammonium Persulphate",
+        "Ferric Chloride",
+        "Rosin",
+        "Copper foil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Ammonium Persulphate is listed as powder.",
+      "category": "Etchants",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q18",
+      "type": "single",
+      "question": "What is Step 1?",
+      "options": [
+        "Print the layout on glossy paper or photo paper",
+        "Etch the copper",
+        "Drill holes",
+        "Solder components"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the title of Step 1.",
+      "category": "Step 1",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q19",
+      "type": "tf",
+      "question": "For a very simple design, the layout may be drawn directly on the copper-clad board with a black permanent marker.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives this alternative.",
+      "category": "Step 1",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q20",
+      "type": "single",
+      "question": "What type of marker is suggested for a hand-drawn layout?",
+      "options": [
+        "A very black permanent marker (Sharpie-type)",
+        "Pencil",
+        "Whiteboard marker",
+        "Highlighter"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A Sharpie-type permanent black marker is specified.",
+      "category": "Step 1",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q21",
+      "type": "single",
+      "question": "Where is a hand-drawn layout placed?",
+      "options": [
+        "Directly on the copper-clad FR4 board",
+        "On the paper only",
+        "On the plastic container",
+        "On the printer tray"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "It can be drawn directly on the board.",
+      "category": "Step 1",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q22",
+      "type": "single",
+      "question": "Why is the printed layout mirrored?",
+      "options": [
+        "Because the print is applied face-down against the FR4 board",
+        "Because the etchant mirrors it",
+        "Because copper is transparent",
+        "Because the printer requires it"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The transfer orientation requires a mirror image.",
+      "category": "Step 1",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q23",
+      "type": "tf",
+      "question": "The printed layout should be a mirror image of the pattern transferred to the board.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Step 1",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q24",
+      "type": "single",
+      "question": "How should the layer be printed?",
+      "options": [
+        "Black and white, with no scaling",
+        "Color, scaled to fit",
+        "Grayscale at 200%",
+        "White on black"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says black and white / no scaling.",
+      "category": "Step 1",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q25",
+      "type": "tf",
+      "question": "Scaling the printed layout to fit the page is recommended.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The chapter explicitly says no scaling.",
+      "category": "Step 1",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q26",
+      "type": "single",
+      "question": "What printer feature may need to be used for glossy/photo paper?",
+      "options": [
+        "A special tray suited to the printer model and paper",
+        "A random tray",
+        "A CD tray only",
+        "No tray"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter notes using the appropriate special tray.",
+      "category": "Step 1",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q27",
+      "type": "single",
+      "question": "What is Step 2?",
+      "options": [
+        "Transfer the printed PCB layout onto the copper sheet",
+        "Etch copper",
+        "Solder components",
+        "Test continuity"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Step 2 transfers the print to copper.",
+      "category": "Step 2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q28",
+      "type": "single",
+      "question": "How is ink transferred from glossy paper to copper?",
+      "options": [
+        "By applying heat and pressure",
+        "By drilling",
+        "By etchant only",
+        "By soldering"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Heat and pressure are used.",
+      "category": "Step 2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q29",
+      "type": "single",
+      "question": "What size should the FR4 copper-clad piece be?",
+      "options": [
+        "The same size as the printed layout",
+        "Twice the size",
+        "Half the size",
+        "Any size"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The board is cut to matching dimensions.",
+      "category": "Step 2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q30",
+      "type": "single",
+      "question": "What should be done before placing the print on the copper?",
+      "options": [
+        "Wash the board with soap and a dishcloth",
+        "Etch it first",
+        "Drill it first",
+        "Coat it with solder paste"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter instructs cleaning the board first.",
+      "category": "Step 2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q31",
+      "type": "single",
+      "question": "On which side is the printed layout positioned?",
+      "options": [
+        "The copper side",
+        "The bare FR4 side",
+        "The board edge",
+        "Any side"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "It is positioned on the copper side.",
+      "category": "Step 2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q32",
+      "type": "single",
+      "question": "Where is the heated iron applied?",
+      "options": [
+        "On the back side of the print",
+        "Directly on bare copper",
+        "Under the board",
+        "On the drill"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The iron presses the back of the paper.",
+      "category": "Step 2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q33",
+      "type": "single",
+      "question": "What kind of pressure is recommended during ironing?",
+      "options": [
+        "Even and gentle pressure",
+        "Maximum uneven pressure",
+        "No pressure",
+        "Only edge pressure"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says even and gentle.",
+      "category": "Step 2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q34",
+      "type": "single",
+      "question": "How long should ironing continue?",
+      "options": [
+        "A few minutes, depending on PCB area",
+        "Exactly 10 seconds",
+        "Exactly 30 minutes",
+        "Until copper melts"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Duration depends on board area.",
+      "category": "Step 2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q35",
+      "type": "tf",
+      "question": "Ironing time depends on PCB area.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Step 2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q36",
+      "type": "single",
+      "question": "At the end of ironing, the print should be:",
+      "options": [
+        "Entirely stuck to the FR4 board",
+        "Completely detached",
+        "Burned away",
+        "Floating"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The print should be fully stuck.",
+      "category": "Step 2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q37",
+      "type": "single",
+      "question": "What is done after ironing?",
+      "options": [
+        "Immerse the board-and-print assembly fully in water",
+        "Etch immediately",
+        "Drill holes",
+        "Solder components"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The assembly goes into a water bath.",
+      "category": "Step 2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q38",
+      "type": "single",
+      "question": "How long should you wait before peeling the paper?",
+      "options": [
+        "2–3 minutes",
+        "2–3 seconds",
+        "20–30 minutes",
+        "1 hour"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says 2 or 3 minutes.",
+      "category": "Step 2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q39",
+      "type": "single",
+      "question": "Where is the paper peeled from the copper?",
+      "options": [
+        "In water",
+        "Only after full drying",
+        "Inside etchant",
+        "Before immersion"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says to peel in water.",
+      "category": "Step 2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q40",
+      "type": "single",
+      "question": "After peeling, what should have happened?",
+      "options": [
+        "The printed layout has transferred to the copper sheet",
+        "The copper is fully etched",
+        "The holes are drilled",
+        "The components are soldered"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the objective of the transfer.",
+      "category": "Step 2",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q41",
+      "type": "single",
+      "question": "What should be done after transfer and before etching?",
+      "options": [
+        "Dry the copper sheet and examine all tracks",
+        "Solder immediately",
+        "Ignore defects",
+        "Remove all markings"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Inspection occurs before etching.",
+      "category": "Inspection",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q42",
+      "type": "multi",
+      "question": "What defects may be noticed at this stage?",
+      "options": [
+        "Missing tracks",
+        "Wrong connections",
+        "Incomplete tracks",
+        "Problems caused by improper ironing"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All are described.",
+      "category": "Inspection",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q43",
+      "type": "single",
+      "question": "How can missing or incomplete tracks be repaired?",
+      "options": [
+        "Use a black permanent marker",
+        "Add solder",
+        "Use sandpaper",
+        "Drill holes"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Marker touch-up is recommended.",
+      "category": "Inspection",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q44",
+      "type": "single",
+      "question": "How can wrong connections be removed?",
+      "options": [
+        "Use a blade",
+        "Add more ink",
+        "Use a soldering iron",
+        "Use a scale"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A blade can remove unwanted connections.",
+      "category": "Inspection",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q45",
+      "type": "single",
+      "question": "Why should touch-up be done before etching?",
+      "options": [
+        "It is harder to correct defects after etching",
+        "Etching fixes them automatically",
+        "The board expands later",
+        "Ink vanishes instantly"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter emphasizes correcting now.",
+      "category": "Inspection",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q46",
+      "type": "tf",
+      "question": "The preferred time to fix transfer errors is before etching.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly emphasized.",
+      "category": "Inspection",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q47",
+      "type": "single",
+      "question": "What is Step 3?",
+      "options": [
+        "Etching the uncovered copper",
+        "Printing",
+        "Drilling",
+        "Soldering"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the Step 3 title.",
+      "category": "Step 3",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q48",
+      "type": "single",
+      "question": "When should the board be exposed to etchant?",
+      "options": [
+        "After confirming tracks are correct and fixing errors",
+        "Before printing",
+        "Before cleaning",
+        "After soldering"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Inspection and correction precede etching.",
+      "category": "Step 3",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q49",
+      "type": "multi",
+      "question": "Which etchants are suggested?",
+      "options": [
+        "Ferric Chloride",
+        "Ammonium Persulphate",
+        "IPA",
+        "Rosin"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "These are the two named copper etchants.",
+      "category": "Etchants",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q50",
+      "type": "tf",
+      "question": "Ferric Chloride and Ammonium Persulphate can both etch copper.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Both are explicitly named.",
+      "category": "Etchants",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q51",
+      "type": "single",
+      "question": "What safety instructions should be followed?",
+      "options": [
+        "The selected chemical's safety, storage, and disposal instructions",
+        "No precautions",
+        "Only printer instructions",
+        "Only drill instructions"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter stresses chemical-specific guidance.",
+      "category": "Safety",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q52",
+      "type": "single",
+      "question": "Where should used etching solution be disposed of appropriately?",
+      "options": [
+        "A recycling center",
+        "Kitchen sink",
+        "Garden soil",
+        "Drinking-water drain"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A recycling center is specifically mentioned.",
+      "category": "Safety",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q53",
+      "type": "single",
+      "question": "Why are etching chemicals dangerous to metal objects?",
+      "options": [
+        "They corrode metal",
+        "They magnetize metal",
+        "They freeze it",
+        "They make it transparent"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "They are used precisely because they corrode/etch metal.",
+      "category": "Safety",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q54",
+      "type": "tf",
+      "question": "A separate container should be used for etching.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly says so.",
+      "category": "Safety",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q55",
+      "type": "single",
+      "question": "What Ferric Chloride dilution is specified?",
+      "options": [
+        "1 unit Ferric Chloride to 2–3 units water",
+        "1:1",
+        "1:5",
+        "3:1"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives 2 to 3 units water per unit Ferric Chloride.",
+      "category": "Etchant ratios",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q56",
+      "type": "single",
+      "question": "For 100 mL Ferric Chloride, how much water matches the stated range?",
+      "options": [
+        "200–300 mL",
+        "50 mL",
+        "100 mL",
+        "500 mL"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Multiply by 2–3.",
+      "category": "Etchant ratios",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q57",
+      "type": "single",
+      "question": "For 50 mL Ferric Chloride, how much water matches the stated range?",
+      "options": [
+        "100–150 mL",
+        "25–50 mL",
+        "50–75 mL",
+        "250–300 mL"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "50×2 to 50×3.",
+      "category": "Etchant ratios",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q58",
+      "type": "single",
+      "question": "For 200 mL Ferric Chloride, how much water matches the stated range?",
+      "options": [
+        "400–600 mL",
+        "100–200 mL",
+        "200–300 mL",
+        "1000 mL"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "200×2 to 200×3.",
+      "category": "Etchant ratios",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q59",
+      "type": "single",
+      "question": "What Ammonium Persulphate dilution is specified?",
+      "options": [
+        "1 g powder to 5 g water",
+        "1:1",
+        "1:2",
+        "5 g powder to 1 g water"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives 5 g water per gram powder.",
+      "category": "Etchant ratios",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q60",
+      "type": "single",
+      "question": "For 10 g Ammonium Persulphate, how much water is needed?",
+      "options": [
+        "50 g",
+        "10 g",
+        "20 g",
+        "100 g"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "10×5 = 50 g.",
+      "category": "Etchant ratios",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q61",
+      "type": "single",
+      "question": "For 20 g Ammonium Persulphate, how much water is needed?",
+      "options": [
+        "100 g",
+        "20 g",
+        "40 g",
+        "200 g"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "20×5 = 100 g.",
+      "category": "Etchant ratios",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q62",
+      "type": "single",
+      "question": "For 25 g Ammonium Persulphate, how much water is needed?",
+      "options": [
+        "125 g",
+        "25 g",
+        "50 g",
+        "75 g"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "25×5 = 125 g.",
+      "category": "Etchant ratios",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q63",
+      "type": "single",
+      "question": "Which etchant is used in the detailed step-by-step example?",
+      "options": [
+        "Ammonium Persulphate",
+        "Ferric Chloride only",
+        "IPA",
+        "Water only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The worked procedure uses Ammonium Persulphate.",
+      "category": "Etching procedure",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q64",
+      "type": "single",
+      "question": "What color is the Ammonium Persulphate solution initially?",
+      "options": [
+        "Colourless",
+        "Blue",
+        "Black",
+        "Green"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "It is initially colourless.",
+      "category": "Etching procedure",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q65",
+      "type": "single",
+      "question": "What color does it gradually turn while etching?",
+      "options": [
+        "Blue",
+        "Red",
+        "Yellow",
+        "White"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "It gradually turns blue.",
+      "category": "Etching procedure",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q66",
+      "type": "tf",
+      "question": "Ammonium Persulphate solution is initially blue.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "It starts colourless and turns blue.",
+      "category": "Etching procedure",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q67",
+      "type": "single",
+      "question": "How high should the etchant level be?",
+      "options": [
+        "It should cover the copper surface",
+        "Only touch one corner",
+        "Stay below the board",
+        "Cover only half the copper"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The copper surface should be covered.",
+      "category": "Etching procedure",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q68",
+      "type": "single",
+      "question": "What optional action can speed etching?",
+      "options": [
+        "Very gently shake the container",
+        "Shake violently",
+        "Boil the board",
+        "Scratch continuously"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Very gentle agitation is suggested.",
+      "category": "Etching procedure",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q69",
+      "type": "tf",
+      "question": "Violent shaking is recommended to accelerate etching.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The chapter says very gently and carefully.",
+      "category": "Etching procedure",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q70",
+      "type": "single",
+      "question": "How long does the example etching step take?",
+      "options": [
+        "About 5–10 minutes",
+        "5–10 seconds",
+        "30–60 minutes",
+        "Several hours"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives 5–10 minutes.",
+      "category": "Etching procedure",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q71",
+      "type": "single",
+      "question": "Which copper remains after successful etching?",
+      "options": [
+        "Copper protected by the black markings",
+        "All uncovered copper",
+        "No copper",
+        "Only copper under drill holes"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The protected copper remains.",
+      "category": "Etching principle",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q72",
+      "type": "single",
+      "question": "Which copper is removed?",
+      "options": [
+        "Copper not covered by black markings",
+        "Copper under black markings",
+        "FR4 substrate",
+        "Only via pads"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Uncovered copper is etched away.",
+      "category": "Etching principle",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q73",
+      "type": "single",
+      "question": "When should the board be removed from etchant?",
+      "options": [
+        "After ensuring etching is complete",
+        "Immediately",
+        "Before copper is removed",
+        "Only after soldering"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The board is removed after confirming completion.",
+      "category": "Etching procedure",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q74",
+      "type": "single",
+      "question": "What can remove/polish the ink after etching?",
+      "options": [
+        "Fine sandpaper",
+        "Desoldering braid",
+        "Solder paste",
+        "Drill bit"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Fine sandpaper is suggested.",
+      "category": "Finishing",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q75",
+      "type": "single",
+      "question": "What is done after polishing?",
+      "options": [
+        "Drill the holes through the board",
+        "Print again",
+        "Re-etch all copper",
+        "Apply photo paper"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Drilling follows finishing.",
+      "category": "Finishing",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q76",
+      "type": "single",
+      "question": "What instrument is suggested for checking connectivity?",
+      "options": [
+        "A multimeter",
+        "Kitchen scale",
+        "Printer",
+        "Heating iron"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A multimeter is explicitly suggested.",
+      "category": "Testing",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q77",
+      "type": "multi",
+      "question": "What is suggested for ensuring connectivity?",
+      "options": [
+        "A multimeter",
+        "Your eyes",
+        "A heating iron",
+        "Scissors"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The chapter says use a multimeter and your eyes.",
+      "category": "Testing",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q78",
+      "type": "single",
+      "question": "What is Step 4?",
+      "options": [
+        "Solder your components and admire your PCB",
+        "Print the layout",
+        "Prepare etchant",
+        "Peel paper"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the final step.",
+      "category": "Step 4",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q79",
+      "type": "single",
+      "question": "Which sequence is correct?",
+      "options": [
+        "Print → transfer → inspect/touch up → etch → polish → drill/test → solder",
+        "Etch → print → solder → drill",
+        "Drill → print → etch → transfer",
+        "Solder → etch → print → wash"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This matches the chapter's workflow.",
+      "category": "Process sequence",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q80",
+      "type": "single",
+      "question": "What happens immediately before etching?",
+      "options": [
+        "Inspect and correct transferred tracks",
+        "Solder components",
+        "Drill vias",
+        "Polish with sandpaper"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Track correction comes before etching.",
+      "category": "Process sequence",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q81",
+      "type": "single",
+      "question": "What happens after etching but before drilling?",
+      "options": [
+        "Remove/polish ink with fine sandpaper",
+        "Mirror print",
+        "Wash before transfer",
+        "Apply iron"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Sandpaper is used before drilling.",
+      "category": "Process sequence",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q82",
+      "type": "single",
+      "question": "What happens after drilling and connectivity checking?",
+      "options": [
+        "Solder the components",
+        "Print layout",
+        "Transfer print",
+        "Prepare etchant"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Step 4 is soldering.",
+      "category": "Process sequence",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q83",
+      "type": "single",
+      "question": "Some tracks are missing after ironing. What should you do?",
+      "options": [
+        "Repair them with black permanent marker",
+        "Ignore them",
+        "Use more etchant",
+        "Drill extra holes"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Marker touch-up is specified.",
+      "category": "Troubleshooting",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q84",
+      "type": "single",
+      "question": "Two tracks are wrongly connected after transfer. What should you use?",
+      "options": [
+        "A blade",
+        "More marker",
+        "Soldering iron",
+        "Measuring cup"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A blade removes wrong connections.",
+      "category": "Troubleshooting",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q85",
+      "type": "single",
+      "question": "What is the core principle of the etching method?",
+      "options": [
+        "Protect desired copper with the black pattern and etch away uncovered copper",
+        "Etch all copper then repaint tracks",
+        "Melt FR4",
+        "Solder tracks onto bare FR4"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the process described throughout the chapter.",
+      "category": "Etching principle",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q86",
+      "type": "tf",
+      "question": "The black markings define the copper that should remain after etching.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Protected copper remains.",
+      "category": "Etching principle",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q87",
+      "type": "single",
+      "question": "What does the page 10 figure illustrate?",
+      "options": [
+        "A water bath and removal of the print from copper",
+        "Finished soldered PCB",
+        "Printer tray",
+        "Etchant ratio"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the figure caption.",
+      "category": "Figures",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q88",
+      "type": "single",
+      "question": "What does the page 13 figure show?",
+      "options": [
+        "Ammonium Persulphate turning blue while etching the copper-clad board",
+        "Tip cleaning",
+        "Dry board before transfer",
+        "Stencil process"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the page 13 caption.",
+      "category": "Figures",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q89",
+      "type": "single",
+      "question": "What does the page 14 figure compare?",
+      "options": [
+        "The etched PCB before and after sandpaper",
+        "Before/after drilling",
+        "Before/after soldering",
+        "Before/after printing"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the page 14 caption.",
+      "category": "Figures",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q90",
+      "type": "multi",
+      "question": "Which actions occur before etching?",
+      "options": [
+        "Print/draw the layout",
+        "Transfer the layout",
+        "Inspect/touch up tracks",
+        "Remove wrong connections"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All occur before etching.",
+      "category": "Mixed review",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q91",
+      "type": "multi",
+      "question": "Which actions occur after etching?",
+      "options": [
+        "Polish with fine sandpaper",
+        "Drill holes",
+        "Check connectivity",
+        "Solder components"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All occur after etching.",
+      "category": "Mixed review",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q92",
+      "type": "single",
+      "question": "Which tool repairs missing tracks?",
+      "options": [
+        "Permanent black marker",
+        "Drill",
+        "Multimeter",
+        "Scissors"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The marker is used for touch-up.",
+      "category": "Mixed review",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q93",
+      "type": "single",
+      "question": "Which tool removes unwanted transferred connections?",
+      "options": [
+        "Blade/cutter",
+        "Multimeter",
+        "Printer",
+        "Heating iron"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A blade is recommended.",
+      "category": "Mixed review",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q94",
+      "type": "single",
+      "question": "Which tool verifies electrical connectivity?",
+      "options": [
+        "Multimeter",
+        "Kitchen scale",
+        "Heating iron",
+        "Scissors"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The multimeter is used for connectivity checks.",
+      "category": "Mixed review",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q95",
+      "type": "single",
+      "question": "Which tool transfers the print by heat and pressure?",
+      "options": [
+        "Heating iron",
+        "Drill",
+        "Multimeter",
+        "Cutter"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The iron is used during toner/ink transfer.",
+      "category": "Mixed review",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q96",
+      "type": "tf",
+      "question": "The described method can make satisfactory two-layer PCBs.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly says up to two layers.",
+      "category": "Capabilities",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q97",
+      "type": "tf",
+      "question": "The method cannot produce tracks as thin as 10 mil.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The chapter says 10 mil is implementable.",
+      "category": "Capabilities",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q98",
+      "type": "tf",
+      "question": "The printed pattern must be mirrored because it is placed against the copper.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is why the mirror image is needed.",
+      "category": "Step 1",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q99",
+      "type": "tf",
+      "question": "Wrong connections should only be checked after etching.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "They should be corrected before etching.",
+      "category": "Inspection",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q100",
+      "type": "tf",
+      "question": "Etchant removes the copper protected by black markings first.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Uncovered copper is removed.",
+      "category": "Etching principle",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q101",
+      "type": "tf",
+      "question": "A multimeter is suggested for final connectivity testing.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Testing",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q102",
+      "type": "tf",
+      "question": "Used etchant should be disposed of appropriately rather than casually discarded.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter stresses appropriate disposal.",
+      "category": "Safety",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q103",
+      "type": "tf",
+      "question": "Because the process is called safe, chemical instructions can be ignored.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Safety depends on following precautions and chemical instructions.",
+      "category": "Safety",
+      "difficulty": "easy"
+    }
+  ]
+}
