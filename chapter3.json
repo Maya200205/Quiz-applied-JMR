@@ -2,25 +2,8 @@
   "id": "chapter3",
   "title": "Chapter 3 — DIY PCB Fabrication",
   "source": "03 - DIY PCB(1).pdf",
-  "question_count": 103,
+  "question_count": 98,
   "questions": [
-    {
-      "id": "q1",
-      "type": "single",
-      "question": "What is the topic of Chapter 3?",
-      "options": [
-        "DIY PCB fabrication",
-        "Industrial PCB assembly",
-        "High-frequency PCB design",
-        "Power distribution"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The chapter is titled DIY PCB fabrication.",
-      "category": "Overview",
-      "difficulty": "easy"
-    },
     {
       "id": "q2",
       "type": "single",
@@ -921,9 +904,9 @@
       "question": "What Ferric Chloride dilution is specified?",
       "options": [
         "1 unit Ferric Chloride to 2–3 units water",
-        "1:1",
-        "1:5",
-        "3:1"
+        "1 unit Ferric Chloride to 4–5 units water",
+        "1 unit Ferric Chloride to 1 units water",
+        "1 unit Ferric Chloride to 10 units water"
       ],
       "answer": [
         0
@@ -1325,7 +1308,7 @@
       "type": "single",
       "question": "Which sequence is correct?",
       "options": [
-        "Print → transfer → inspect/touch up → etch → polish → drill/test → solder",
+        "Print → transfer → etch → solder",
         "Etch → print → solder → drill",
         "Drill → print → etch → transfer",
         "Solder → etch → print → wash"
@@ -1452,57 +1435,6 @@
       ],
       "explanation": "Protected copper remains.",
       "category": "Etching principle",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q87",
-      "type": "single",
-      "question": "What does the page 10 figure illustrate?",
-      "options": [
-        "A water bath and removal of the print from copper",
-        "Finished soldered PCB",
-        "Printer tray",
-        "Etchant ratio"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "This is the figure caption.",
-      "category": "Figures",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q88",
-      "type": "single",
-      "question": "What does the page 13 figure show?",
-      "options": [
-        "Ammonium Persulphate turning blue while etching the copper-clad board",
-        "Tip cleaning",
-        "Dry board before transfer",
-        "Stencil process"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "This is the page 13 caption.",
-      "category": "Figures",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q89",
-      "type": "single",
-      "question": "What does the page 14 figure compare?",
-      "options": [
-        "The etched PCB before and after sandpaper",
-        "Before/after drilling",
-        "Before/after soldering",
-        "Before/after printing"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "This is the page 14 caption.",
-      "category": "Figures",
       "difficulty": "easy"
     },
     {
@@ -1701,21 +1633,6 @@
       ],
       "explanation": "This is explicitly stated.",
       "category": "Testing",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q102",
-      "type": "tf",
-      "question": "Used etchant should be disposed of appropriately rather than casually discarded.",
-      "options": [
-        "True",
-        "False"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The chapter stresses appropriate disposal.",
-      "category": "Safety",
       "difficulty": "easy"
     },
     {
