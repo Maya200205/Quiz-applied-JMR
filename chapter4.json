@@ -2,7 +2,7 @@
   "id": "chapter4",
   "title": "Chapter 4 — PCB Interconnects: Electrical Properties, Noise and Return Path Routing",
   "source": "04 - PCB interconnects(1).pdf",
-  "question_count": 275,
+  "question_count": 250,
   "questions": [
     {
       "id": "q1",
@@ -874,9 +874,9 @@
       "question": "What propagation velocity is used for a trace on FR4?",
       "options": [
         "Approximately 15 cm/ns",
-        "3 cm/ns",
-        "30 cm/ns",
-        "1.5 cm/ns"
+        "Approximately 3 cm/ns",
+        "Approximately 30 cm/ns",
+        "Approximately 1.5 cm/ns"
       ],
       "answer": [
         0
@@ -1092,7 +1092,7 @@
     {
       "id": "q65",
       "type": "single",
-      "question": "When are transmission-line properties considered negligible in the slide-25 rule?",
+      "question": "When are transmission-line properties considered negligible?",
       "options": [
         "When RT > 4TD",
         "When RT < TD",
@@ -1111,10 +1111,10 @@
       "type": "single",
       "question": "Using vp=15 cm/ns, RT>4TD yields approximately:",
       "options": [
-        "Len [cm] < 3.75 × RT [ns]",
-        "Len < 15×RT",
-        "Len > 3.75×RT",
-        "Len < RT/15"
+        "Len [cm] < 3.75 × RT",
+        "Len [cm] < 15 × RT",
+        "Len [cm] > 3.75/RT",
+        "Len [cm] < RT/15"
       ],
       "answer": [
         0
@@ -1175,23 +1175,6 @@
       "difficulty": "easy"
     },
     {
-      "id": "q70",
-      "type": "single",
-      "question": "If an interconnect is transparent, what does the slide jokingly recommend?",
-      "options": [
-        "Have a coffee",
-        "Use a field solver",
-        "Split ground plane",
-        "Add termination"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The slide says 'If yes: have a coffee'.",
-      "category": "Decision process",
-      "difficulty": "easy"
-    },
-    {
       "id": "q71",
       "type": "single",
       "question": "If an interconnect is not transparent but is electrically short, use:",
@@ -1231,9 +1214,9 @@
       "question": "What STM32 GPIO rise-time ballpark is assumed?",
       "options": [
         "About 5–25 ns",
-        "0.1–1 ns",
-        "100–500 ns",
-        "1–5 µs"
+        "About 0.1–1 ns",
+        "About 100–500 ns",
+        "About 1–5 µs"
       ],
       "answer": [
         0
@@ -1243,308 +1226,19 @@
       "difficulty": "easy"
     },
     {
-      "id": "q74",
-      "type": "single",
-      "question": "What conservative GPIO current change is assumed?",
-      "options": [
-        "ΔI ≈ 25 mA",
-        "2.5 mA",
-        "250 mA",
-        "1 A"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The example uses 25 mA.",
-      "category": "Practical example",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q75",
-      "type": "single",
-      "question": "What maximum tolerable noise is assumed?",
-      "options": [
-        "ΔV ≈ 50 mV",
-        "5 V",
-        "500 mV",
-        "5 mV"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The example assumes 50 mV.",
-      "category": "Practical example",
-      "difficulty": "easy"
-    },
-    {
       "id": "q76",
       "type": "single",
       "question": "With ΔVmax=50 mV, ΔI=25 mA, LLen=1 nH/mm, what relation is obtained?",
       "options": [
-        "Ltransparent [mm] ≈ 2 × RT [ns]",
-        "Ltransparent ≈ 20×RT",
+        "Ltransparent ≈ 2 × RT",
+        "Ltransparent ≈ 20 × RT",
         "Ltransparent ≈ RT/2",
-        "Ltransparent ≈ 4.3×RT mm"
+        "Ltransparent ≈ 4.3 × RT"
       ],
       "answer": [
         0
       ],
       "explanation": "The chapter derives 2 mm per ns.",
-      "category": "Practical example",
-      "difficulty": "standard"
-    },
-    {
-      "id": "q77",
-      "type": "single",
-      "question": "For RT=5 ns under those assumptions, transparent length is about:",
-      "options": [
-        "10 mm = 1 cm",
-        "5 cm",
-        "10 cm",
-        "43 cm"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "2×5=10 mm.",
-      "category": "Practical example",
-      "difficulty": "standard"
-    },
-    {
-      "id": "q78",
-      "type": "single",
-      "question": "For RT=25 ns under those assumptions, transparent length is about:",
-      "options": [
-        "50 mm = 5 cm",
-        "25 cm",
-        "50 cm",
-        "10 cm"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "2×25=50 mm.",
-      "category": "Practical example",
-      "difficulty": "standard"
-    },
-    {
-      "id": "q79",
-      "type": "single",
-      "question": "In Case 1, what is the STM32 driving?",
-      "options": [
-        "A digital input",
-        "A stepper motor directly",
-        "A power rail",
-        "An analog sensor only"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "Case 1 is a lightly loaded digital input.",
-      "category": "Practical example",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q80",
-      "type": "single",
-      "question": "What VDD is used in the STM32 cases?",
-      "options": [
-        "3.3 V",
-        "5 V",
-        "1.2 V",
-        "12 V"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The examples use 3.3 V.",
-      "category": "Practical example",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q81",
-      "type": "single",
-      "question": "What load capacitance is used in Case 1?",
-      "options": [
-        "Approximately 5 pF",
-        "75 pF",
-        "500 pF",
-        "0.5 pF"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "Case 1 uses ~5 pF.",
-      "category": "Practical example",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q82",
-      "type": "single",
-      "question": "What rise time is used in Case 1?",
-      "options": [
-        "Approximately 5 ns",
-        "10 ns",
-        "25 ns",
-        "100 ns"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "Case 1 uses ~5 ns.",
-      "category": "Practical example",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q83",
-      "type": "single",
-      "question": "What current change is estimated in Case 1?",
-      "options": [
-        "Approximately 3.3 mA",
-        "25 mA",
-        "33 mA",
-        "0.33 mA"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "Cload·VDD/RT≈3.3 mA.",
-      "category": "Practical example",
-      "difficulty": "standard"
-    },
-    {
-      "id": "q84",
-      "type": "single",
-      "question": "What electrically-short limit is found in Case 1?",
-      "options": [
-        "Approximately 21.5 cm",
-        "7.6 cm",
-        "43 cm",
-        "1 cm"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "4.3×5=21.5 cm.",
-      "category": "Practical example",
-      "difficulty": "standard"
-    },
-    {
-      "id": "q85",
-      "type": "single",
-      "question": "What transparent-length limit is found in Case 1?",
-      "options": [
-        "Approximately 7.6 cm",
-        "21.5 cm",
-        "43 cm",
-        "2 cm"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The slide computes ~7.6 cm.",
-      "category": "Practical example",
-      "difficulty": "standard"
-    },
-    {
-      "id": "q86",
-      "type": "single",
-      "question": "In Case 2, what is the STM32 driving?",
-      "options": [
-        "A stepper motor driver input",
-        "A bare LED only",
-        "A crystal",
-        "A ground plane"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "Case 2 is a larger capacitive load.",
-      "category": "Practical example",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q87",
-      "type": "single",
-      "question": "What load capacitance is used in Case 2?",
-      "options": [
-        "Approximately 75 pF",
-        "5 pF",
-        "7.5 pF",
-        "750 pF"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "Case 2 uses ~75 pF.",
-      "category": "Practical example",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q88",
-      "type": "single",
-      "question": "What rise time is used in Case 2?",
-      "options": [
-        "Approximately 10 ns",
-        "5 ns",
-        "25 ns",
-        "100 ns"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "Case 2 uses ~10 ns.",
-      "category": "Practical example",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q89",
-      "type": "single",
-      "question": "What current change is estimated in Case 2?",
-      "options": [
-        "Approximately 25 mA",
-        "3.3 mA",
-        "2.5 mA",
-        "250 mA"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The slide computes ~25 mA.",
-      "category": "Practical example",
-      "difficulty": "standard"
-    },
-    {
-      "id": "q90",
-      "type": "single",
-      "question": "What electrically-short limit is found in Case 2?",
-      "options": [
-        "Approximately 43 cm",
-        "2 cm",
-        "7.6 cm",
-        "21.5 cm"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "4.3×10=43 cm.",
-      "category": "Practical example",
-      "difficulty": "standard"
-    },
-    {
-      "id": "q91",
-      "type": "single",
-      "question": "What transparent-length limit is found in Case 2?",
-      "options": [
-        "Approximately 2 cm",
-        "43 cm",
-        "21.5 cm",
-        "7.6 cm"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The slide computes ~2 cm.",
       "category": "Practical example",
       "difficulty": "standard"
     },
@@ -1611,21 +1305,6 @@
         0
       ],
       "explanation": "The victim is the affected signal.",
-      "category": "Noise",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q96",
-      "type": "tf",
-      "question": "The chapter's use of 'noise' differs from thermal noise.",
-      "options": [
-        "True",
-        "False"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "It explicitly says interference would be a more precise term.",
       "category": "Noise",
       "difficulty": "easy"
     },
@@ -1956,23 +1635,6 @@
       "difficulty": "easy"
     },
     {
-      "id": "q116",
-      "type": "single",
-      "question": "Without a continuous return plane, the measured bounce swings below about:",
-      "options": [
-        "−600 mV",
-        "−20 mV",
-        "−60 mV",
-        "−6 mV"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The slide states below −600 mV.",
-      "category": "Ground bounce",
-      "difficulty": "easy"
-    },
-    {
       "id": "q117",
       "type": "single",
       "question": "What is power rail collapse?",
@@ -2116,23 +1778,6 @@
       "explanation": "Beyond a point a PCB is needed.",
       "category": "Breadboards vs PCB",
       "difficulty": "standard"
-    },
-    {
-      "id": "q126",
-      "type": "single",
-      "question": "In the Bogatin example, measured noise increases as:",
-      "options": [
-        "More I/O pins switch simultaneously",
-        "Fewer pins switch",
-        "Rise time slows only",
-        "The quiet line disconnects"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The measured noise increases with 1 to 4 I/O switching.",
-      "category": "Switching noise",
-      "difficulty": "easy"
     },
     {
       "id": "q127",
@@ -2497,23 +2142,6 @@
       "difficulty": "standard"
     },
     {
-      "id": "q149",
-      "type": "single",
-      "question": "What is this effect called?",
-      "options": [
-        "Common-impedance coupling",
-        "Reflection loss",
-        "Skin effect",
-        "Rise-time degradation"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The chapter names it common-impedance coupling.",
-      "category": "Shared return path",
-      "difficulty": "easy"
-    },
-    {
       "id": "q150",
       "type": "tf",
       "question": "Common-impedance coupling contributes to ground bounce.",
@@ -2582,7 +2210,7 @@
     {
       "id": "q154",
       "type": "single",
-      "question": "For a shared return path under the stated geometry, what k rule of thumb is given?",
+      "question": "For a shared return, what k rule of thumb is given?",
       "options": [
         "k ≈ 0.5",
         "k ≈ 0.1",
@@ -2602,9 +2230,9 @@
       "question": "With separate returns and comparable loop dimensions, estimate M as about:",
       "options": [
         "10% of either loop's self-inductance",
-        "100%",
-        "50%",
-        "1%"
+        "100% of either loop's self-inductance",
+        "50% of either loop's self-inductance",
+        "1% of either loop's self-inductance"
       ],
       "answer": [
         0
@@ -2685,9 +2313,9 @@
       "question": "With M≈5 nH and ΔI=20 mA in 5 ns, victim noise is:",
       "options": [
         "About 20 mV",
-        "2 mV",
-        "200 mV",
-        "5 mV"
+        "About 2 mV",
+        "About 200 mV",
+        "About 5 mV"
       ],
       "answer": [
         0
@@ -3116,23 +2744,6 @@
       "difficulty": "standard"
     },
     {
-      "id": "q186",
-      "type": "single",
-      "question": "What spacing rule is shown?",
-      "options": [
-        "s ≈ 3w",
-        "s ≈ w/3",
-        "s ≈ 10w",
-        "s = 0"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The figure labels spacing as 3 trace widths.",
-      "category": "Ground plane",
-      "difficulty": "easy"
-    },
-    {
       "id": "q187",
       "type": "tf",
       "question": "Some inductive crosstalk remains even with largely separated return-current distributions.",
@@ -3429,23 +3040,6 @@
       "difficulty": "easy"
     },
     {
-      "id": "q205",
-      "type": "single",
-      "question": "What can this larger loop area cause?",
-      "options": [
-        "Additional noise and crosstalk",
-        "Less inductance always",
-        "Zero ground bounce",
-        "Perfect transparency"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The chapter explicitly warns of this.",
-      "category": "Ground-plane gaps",
-      "difficulty": "easy"
-    },
-    {
       "id": "q206",
       "type": "single",
       "question": "What is a cross-under in this chapter?",
@@ -3508,23 +3102,6 @@
         0
       ],
       "explanation": "Increased loop area raises self-inductance.",
-      "category": "Cross-unders",
-      "difficulty": "standard"
-    },
-    {
-      "id": "q210",
-      "type": "single",
-      "question": "If neighboring trace B crosses the same gap, the two return paths may:",
-      "options": [
-        "Overlap more",
-        "Become perfectly separated",
-        "Vanish",
-        "Become DC-only"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The similar detour increases overlap.",
       "category": "Cross-unders",
       "difficulty": "standard"
     },
@@ -3619,9 +3196,9 @@
       "question": "For RT=8 ns, what electrically-short limit does Len<4.3RT give?",
       "options": [
         "About 34.4 cm",
-        "8 cm",
-        "18.6 cm",
-        "43 cm"
+        "About 8 cm",
+        "About 18.6 cm",
+        "About 43 cm"
       ],
       "answer": [
         0
@@ -3635,7 +3212,7 @@
       "type": "single",
       "question": "For RT=20 ns, what electrically-short limit does the course rule give?",
       "options": [
-        "About 86 cm",
+        "86 cm",
         "20 cm",
         "43 cm",
         "172 cm"
