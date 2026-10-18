@@ -1,0 +1,3587 @@
+{
+  "id": "chapter5",
+  "title": "Chapter 5 — PCB Traces and Vias: Physical Properties",
+  "source": "05 - PCB traces and vias(1).pdf",
+  "question_count": 213,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "question": "For an electrically long interconnect, trace geometry is mainly chosen to provide:",
+      "options": [
+        "The required characteristic impedance",
+        "The lowest possible DC resistance only",
+        "The largest possible width",
+        "The smallest possible copper thickness"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Controlled impedance is used to minimize reflections and ringing.",
+      "category": "Trace design",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "question": "For electrically short interconnects, trace width should generally be:",
+      "options": [
+        "Only as wide as required by electrical and manufacturing constraints",
+        "As wide as the board allows",
+        "Always exactly 6 mil",
+        "Always exactly 20 mil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter recommends routing efficiency subject to manufacturability, current handling, and resistance.",
+      "category": "Trace design",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multi",
+      "question": "For electrically short traces, which criteria constrain minimum width?",
+      "options": [
+        "Manufacturability",
+        "Current handling",
+        "Series resistance",
+        "PCB color"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three are explicitly listed.",
+      "category": "Trace design",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "question": "The manufacturability criterion means a trace should be:",
+      "options": [
+        "No narrower than the fabrication process can reliably produce",
+        "No wider than 6 mil",
+        "Always exactly 12 mil",
+        "Wider than the PCB thickness"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the manufacturability requirement.",
+      "category": "Trace design",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "question": "The current-handling criterion means a trace must be wide enough to:",
+      "options": [
+        "Carry maximum current without excessive temperature rise",
+        "Eliminate all parasitic capacitance",
+        "Guarantee 0 Ω resistance",
+        "Avoid all crosstalk"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Current handling is fundamentally a temperature-rise issue.",
+      "category": "Current handling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "single",
+      "question": "The series-resistance criterion means a trace must be wide enough to keep:",
+      "options": [
+        "Voltage drop and power loss acceptable",
+        "Rise time constant",
+        "Solder-mask thickness",
+        "Ground bounce exactly zero"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly listed.",
+      "category": "Trace resistance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "single",
+      "question": "As a rule of thumb, low-cost internet PCB fabs can typically make about:",
+      "options": [
+        "6 mil trace width and 6 mil spacing",
+        "1 mil/1 mil",
+        "20 mil/20 mil only",
+        "100 mil/100 mil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The slide says about 6 mil wide tracks and spacing are standard low-cost capabilities.",
+      "category": "Manufacturability",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "tf",
+      "question": "Using a standard low-cost process, 6 mil traces and spacing are generally manufacturable without a cost premium.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter's rule of thumb.",
+      "category": "Manufacturability",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "single",
+      "question": "Why can selecting thicker copper reduce routing density?",
+      "options": [
+        "It may require larger minimum trace widths and spacings",
+        "It eliminates vias",
+        "It requires fewer layers",
+        "It increases hole pitch"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly states this.",
+      "category": "Copper thickness",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q10",
+      "type": "single",
+      "question": "PCB copper thickness is commonly specified in:",
+      "options": [
+        "Ounces per square foot (oz/ft²)",
+        "Millimeters only",
+        "Grams per meter",
+        "Amperes per square inch"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Copper weight per unit area is the common specification.",
+      "category": "Copper thickness",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "single",
+      "question": "Approximately how much mass does 1 oz correspond to in this context?",
+      "options": [
+        "28 g",
+        "2.8 g",
+        "280 g",
+        "35 g"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter states 1 oz ≈ 28 g.",
+      "category": "Copper thickness",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "single",
+      "question": "What thickness corresponds approximately to 1 oz copper?",
+      "options": [
+        "35 µm",
+        "17 µm",
+        "70 µm",
+        "3.5 µm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "1 oz copper corresponds to about 35 µm.",
+      "category": "Copper thickness",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "single",
+      "question": "What is 35 µm in mils approximately?",
+      "options": [
+        "1.4 mil",
+        "0.14 mil",
+        "14 mil",
+        "3.5 mil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives 1 oz ≈ 35 µm ≈ 1.4 mil.",
+      "category": "Copper thickness",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q14",
+      "type": "single",
+      "question": "What thickness corresponds approximately to 1/2 oz copper?",
+      "options": [
+        "17 µm",
+        "35 µm",
+        "70 µm",
+        "8 µm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Half-ounce copper is about 17 µm.",
+      "category": "Copper thickness",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q15",
+      "type": "tf",
+      "question": "Inner PCB layers may use thinner copper foil than outer layers.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter notes inner layers may commonly be 1/2 oz or 1 oz.",
+      "category": "Copper thickness",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q16",
+      "type": "multi",
+      "question": "Thicker copper may be useful when:",
+      "options": [
+        "Lower interconnect resistance is required",
+        "Higher current must be carried",
+        "Copper is used to spread heat away from a power component",
+        "Maximum routing density is the only goal"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "These three benefits are explicitly listed.",
+      "category": "Copper thickness",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q17",
+      "type": "single",
+      "question": "An example of a component that may benefit from copper used for heat spreading is:",
+      "options": [
+        "A power MOSFET",
+        "A crystal oscillator only",
+        "A pushbutton",
+        "A passive header"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The slide explicitly gives a power MOSFET as an example.",
+      "category": "Copper thickness",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q18",
+      "type": "tf",
+      "question": "Thicker copper generally costs more.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly states this.",
+      "category": "Copper thickness",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q19",
+      "type": "single",
+      "question": "Electrical power dissipated by a PCB trace is:",
+      "options": [
+        "P = I²R",
+        "P = IR²",
+        "P = V/R²",
+        "P = I/R"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the Joule heating equation used in the chapter.",
+      "category": "Current handling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q20",
+      "type": "single",
+      "question": "At steady state, trace heat transfer to the environment is approximated by:",
+      "options": [
+        "P = ΔT/Θ",
+        "P = Θ/ΔT",
+        "P = ΔT·Θ",
+        "P = IΘ"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter defines Θ as thermal resistance.",
+      "category": "Current handling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q21",
+      "type": "single",
+      "question": "Combining P = I²R and P = ΔT/Θ gives:",
+      "options": [
+        "ΔT = I²RΘ",
+        "ΔT = I/RΘ",
+        "ΔT = I²/(RΘ)",
+        "ΔT = R/(I²Θ)"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the combined expression shown.",
+      "category": "Current handling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q22",
+      "type": "single",
+      "question": "What does Θ represent?",
+      "options": [
+        "Effective thermal resistance from the trace to the environment",
+        "Electrical resistance of the trace",
+        "Copper resistivity",
+        "Thermal conductivity of FR4 only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Θ is measured in °C/W.",
+      "category": "Current handling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q23",
+      "type": "single",
+      "question": "What are the units of Θ?",
+      "options": [
+        "°C/W",
+        "Ω/cm",
+        "A/mm²",
+        "W/°C²"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Thermal resistance is measured in degrees Celsius per watt.",
+      "category": "Current handling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q24",
+      "type": "single",
+      "question": "A larger Θ means:",
+      "options": [
+        "Poorer heat removal",
+        "Better heat removal",
+        "Lower resistance",
+        "Lower current"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly states this.",
+      "category": "Current handling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q25",
+      "type": "tf",
+      "question": "For the same dissipated power, a larger Θ produces a larger temperature rise.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "ΔT=PΘ.",
+      "category": "Current handling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q26",
+      "type": "single",
+      "question": "The current limit of a PCB trace is fundamentally a limit on:",
+      "options": [
+        "Temperature rise",
+        "Clock frequency",
+        "Characteristic impedance only",
+        "Copper color"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter states this explicitly.",
+      "category": "Current handling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q27",
+      "type": "single",
+      "question": "What ΔT is presented as a reasonable design value?",
+      "options": [
+        "40 °C",
+        "10 °C",
+        "100 °C",
+        "250 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "40 °C is the chapter's rule-of-thumb design value.",
+      "category": "Current handling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q28",
+      "type": "single",
+      "question": "What ΔT is described as conservative?",
+      "options": [
+        "10 °C",
+        "40 °C",
+        "100 °C",
+        "250 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "10 °C is described as conservative.",
+      "category": "Current handling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q29",
+      "type": "single",
+      "question": "What ΔT is described as very aggressive?",
+      "options": [
+        "100 °C",
+        "10 °C",
+        "40 °C",
+        "20 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "100 °C is described as very aggressive.",
+      "category": "Current handling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q30",
+      "type": "tf",
+      "question": "A 40 °C trace temperature rise means the absolute trace temperature is always 40 °C.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "ΔT is temperature rise above ambient.",
+      "category": "Current handling",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q31",
+      "type": "single",
+      "question": "What standard is commonly used for PCB trace current capability estimates?",
+      "options": [
+        "IPC-2152",
+        "IPC-2221 only",
+        "IEEE-2152",
+        "IEC-6001"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter references IPC-2152.",
+      "category": "Current handling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q32",
+      "type": "single",
+      "question": "IPC-2152 is based largely on:",
+      "options": [
+        "Empirical thermal measurements",
+        "Purely theoretical EM simulation",
+        "Mechanical vibration tests",
+        "Optical measurements only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Current handling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q33",
+      "type": "single",
+      "question": "According to the chapter, a 6 mil, 1 oz copper trace gives about ΔT = 40 °C at:",
+      "options": [
+        "1 A DC",
+        "0.1 A",
+        "3 A",
+        "10 A"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is one of the core design guidelines.",
+      "category": "Current handling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q34",
+      "type": "single",
+      "question": "As a simple default, signal traces carrying less than 1 A DC can be routed at:",
+      "options": [
+        "6 mil",
+        "3 mil",
+        "20 mil",
+        "100 mil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter's default rule.",
+      "category": "Current handling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q35",
+      "type": "single",
+      "question": "A 20 mil, 1 oz copper trace gives about ΔT = 40 °C at:",
+      "options": [
+        "3 A DC",
+        "1 A",
+        "0.3 A",
+        "10 A"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the power-trace guideline.",
+      "category": "Current handling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q36",
+      "type": "single",
+      "question": "As a simple default, power traces carrying less than 3 A DC can be routed at:",
+      "options": [
+        "20 mil",
+        "6 mil",
+        "3 mil",
+        "100 mil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly recommended.",
+      "category": "Current handling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q37",
+      "type": "single",
+      "question": "Why use 20 mil power traces even if current is much lower than 3 A?",
+      "options": [
+        "They are visually easy to identify and can simplify debugging",
+        "They guarantee zero voltage drop",
+        "They eliminate all EMI",
+        "They remove the need for vias"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly gives this practical reason.",
+      "category": "Current handling",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q38",
+      "type": "single",
+      "question": "According to the chapter, a 13 mil via can handle about:",
+      "options": [
+        "3 A",
+        "0.3 A",
+        "1 A",
+        "10 A"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the via current rule of thumb given.",
+      "category": "Vias",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q39",
+      "type": "single",
+      "question": "If more current than one 13 mil via can handle is required, the chapter recommends:",
+      "options": [
+        "Place multiple 13 mil vias in parallel",
+        "Increase solder mask thickness",
+        "Use fewer vias",
+        "Use a longer via"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Vias",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q40",
+      "type": "single",
+      "question": "What signal-trace width will be used in the project?",
+      "options": [
+        "12 mil",
+        "6 mil",
+        "20 mil",
+        "3 mil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The project uses 12 mil signal traces.",
+      "category": "Project rules",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q41",
+      "type": "single",
+      "question": "Why use 12 mil signal traces in the project instead of 6 mil?",
+      "options": [
+        "Greater mechanical robustness and easier rework",
+        "Lower characteristic impedance is always needed",
+        "They are the thinnest possible",
+        "They eliminate resistance entirely"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives robustness and easier rework as the reasons.",
+      "category": "Project rules",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q42",
+      "type": "tf",
+      "question": "Narrow traces are more susceptible to damage or lifting during repeated soldering/desoldering.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This motivates the 12 mil project choice.",
+      "category": "Project rules",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q43",
+      "type": "tf",
+      "question": "The 12 mil project trace width is chosen because 6 mil cannot be manufactured by low-cost fabs.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "6 mil is manufacturable; 12 mil is chosen for robustness and rework.",
+      "category": "Project rules",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q44",
+      "type": "single",
+      "question": "Around room temperature, copper's temperature coefficient of resistance is approximately:",
+      "options": [
+        "0.004 /°C",
+        "0.04 /°C",
+        "0.0004 /°C",
+        "4 /°C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter uses α≈0.004/°C.",
+      "category": "Thermal runaway",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q45",
+      "type": "single",
+      "question": "The temperature dependence of copper-trace resistance is modeled as:",
+      "options": [
+        "R = R0(1 + αΔT)",
+        "R = R0/(1+αΔT)",
+        "R = αR0/ΔT",
+        "R = R0 + ΔT/α"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the linear model shown.",
+      "category": "Thermal runaway",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q46",
+      "type": "single",
+      "question": "In R = R0(1 + αΔT), R0 is:",
+      "options": [
+        "Resistance at reference temperature T0",
+        "Resistance at infinite temperature",
+        "Thermal resistance",
+        "Sheet resistance only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the variable definition.",
+      "category": "Thermal runaway",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q47",
+      "type": "single",
+      "question": "In R = R0(1 + αΔT), ΔT equals:",
+      "options": [
+        "T − T0",
+        "T + T0",
+        "T/T0",
+        "R − R0"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter defines ΔT this way.",
+      "category": "Thermal runaway",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q48",
+      "type": "single",
+      "question": "Why can thermal runaway occur at constant DC current?",
+      "options": [
+        "Copper resistance rises with temperature, causing more I²R heating",
+        "Copper resistance falls with temperature",
+        "Current becomes zero",
+        "Thermal resistance becomes negative"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This creates positive feedback.",
+      "category": "Thermal runaway",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q49",
+      "type": "multi",
+      "question": "Which sequence describes the positive thermal feedback loop?",
+      "options": [
+        "Joule heating raises temperature",
+        "Copper resistance increases",
+        "At constant current, higher resistance increases Joule heating",
+        "The trace automatically cools to 0 °C"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three form the positive feedback loop.",
+      "category": "Thermal runaway",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q50",
+      "type": "single",
+      "question": "The question determining stability of thermal runaway is whether:",
+      "options": [
+        "Heat removal is sufficient to control the positive feedback loop",
+        "Copper is gold plated",
+        "The trace is exactly 6 mil",
+        "The PCB is two-layer"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly frames the problem this way.",
+      "category": "Thermal runaway",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q51",
+      "type": "single",
+      "question": "What does ΔT0 represent in the thermal-runaway derivation?",
+      "options": [
+        "Predicted temperature rise if resistance stayed equal to R0",
+        "Absolute ambient temperature",
+        "Critical temperature only",
+        "Temperature rise after failure"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter definition.",
+      "category": "Thermal runaway",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q52",
+      "type": "single",
+      "question": "The corrected steady-state temperature rise is:",
+      "options": [
+        "ΔT = ΔT0 / (1 − αΔT0)",
+        "ΔT = ΔT0(1−αΔT0)",
+        "ΔT = α/ΔT0",
+        "ΔT = ΔT0 + α"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the derived formula.",
+      "category": "Thermal runaway",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q53",
+      "type": "single",
+      "question": "For ΔT0 = 40 °C and α = 0.004/°C, αΔT0 equals:",
+      "options": [
+        "0.16",
+        "0.016",
+        "1.6",
+        "16"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "0.004×40=0.16.",
+      "category": "Thermal runaway",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q54",
+      "type": "single",
+      "question": "For ΔT0 = 40 °C and α = 0.004/°C, corrected ΔT is approximately:",
+      "options": [
+        "47.6 °C",
+        "40 °C",
+        "44 °C",
+        "62.5 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "40/(1−0.16)=47.6 °C.",
+      "category": "Thermal runaway",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q55",
+      "type": "single",
+      "question": "Positive thermal feedback increases the 40 °C nominal rise by about:",
+      "options": [
+        "19%",
+        "1.9%",
+        "40%",
+        "90%"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly states about 19%.",
+      "category": "Thermal runaway",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q56",
+      "type": "tf",
+      "question": "The corrected temperature rise is larger than ΔT0 because copper resistance increases as the trace heats.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the mechanism described.",
+      "category": "Thermal runaway",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q57",
+      "type": "single",
+      "question": "Thermal feedback becomes unstable as:",
+      "options": [
+        "1 − αΔT0 approaches zero",
+        "α approaches zero",
+        "Current approaches zero",
+        "Trace width approaches infinity"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The denominator of the corrected expression approaches zero.",
+      "category": "Thermal runaway",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q58",
+      "type": "single",
+      "question": "At the idealized critical condition:",
+      "options": [
+        "αΔT0 = 1",
+        "αΔT0 = 0",
+        "αΔT0 = 40",
+        "αΔT0 = −1"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the critical condition shown.",
+      "category": "Thermal runaway",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q59",
+      "type": "single",
+      "question": "The idealized critical current is:",
+      "options": [
+        "Icrit = 1/√(αR0Θ)",
+        "Icrit = αR0Θ",
+        "Icrit = √(αR0Θ)",
+        "Icrit = R0/Θ"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the formula derived in the chapter.",
+      "category": "Thermal runaway",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q60",
+      "type": "single",
+      "question": "If I < Icrit, the simplified model predicts:",
+      "options": [
+        "A finite steady-state temperature",
+        "No finite steady-state temperature",
+        "Immediate fuse opening",
+        "Zero temperature rise"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter states this explicitly.",
+      "category": "Thermal runaway",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q61",
+      "type": "single",
+      "question": "As I approaches Icrit from below:",
+      "options": [
+        "Predicted equilibrium temperature rises dramatically",
+        "Temperature tends to ambient",
+        "Resistance becomes zero",
+        "Thermal resistance becomes zero"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Thermal runaway",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q62",
+      "type": "single",
+      "question": "If I > Icrit, the simplified model predicts:",
+      "options": [
+        "No finite physical steady-state temperature",
+        "Exactly 40 °C rise",
+        "Zero resistance",
+        "Stable 10 °C rise"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the stated idealized result.",
+      "category": "Thermal runaway",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q63",
+      "type": "single",
+      "question": "The nominal critical temperature rise is:",
+      "options": [
+        "ΔT0,crit = 1/α",
+        "ΔT0,crit = α",
+        "ΔT0,crit = 1/α²",
+        "ΔT0,crit = αR0"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This follows from αΔT0=1.",
+      "category": "Thermal runaway",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q64",
+      "type": "single",
+      "question": "For α = 0.004/°C, the theoretical critical nominal rise is about:",
+      "options": [
+        "250 °C",
+        "25 °C",
+        "40 °C",
+        "100 °C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "1/0.004=250 °C.",
+      "category": "Thermal runaway",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q65",
+      "type": "tf",
+      "question": "The 40 °C design value is well below the idealized critical value of about 250 °C.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly makes this comparison.",
+      "category": "Thermal runaway",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q66",
+      "type": "multi",
+      "question": "The simplified thermal-runaway model assumes:",
+      "options": [
+        "Constant current",
+        "Constant thermal resistance Θ",
+        "Linear R(T) relationship",
+        "Perfectly constant material properties in reality"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three are the stated simplifying assumptions.",
+      "category": "Thermal runaway",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q67",
+      "type": "tf",
+      "question": "In reality, a PCB will likely degrade or fail before the theoretical instability point is reached.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly states this.",
+      "category": "Thermal runaway",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q68",
+      "type": "single",
+      "question": "In Bogatin's experiment, thermal runaway occurred in a 6 mil, 1 oz trace at about:",
+      "options": [
+        "3.9 A DC",
+        "1 A",
+        "2 A",
+        "10 A"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The slide gives 3.9 A.",
+      "category": "Thermal runaway experiment",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q69",
+      "type": "single",
+      "question": "How long did the trace take to fuse open in that experiment?",
+      "options": [
+        "About 3 minutes",
+        "3 seconds",
+        "30 minutes",
+        "1 hour"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The trace fused open after approximately 3 minutes.",
+      "category": "Thermal runaway experiment",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q70",
+      "type": "single",
+      "question": "Compared with 1 A, 3.9 A produces roughly how much more Joule heating in the same trace?",
+      "options": [
+        "15 times more",
+        "3.9 times more",
+        "2 times more",
+        "30 times more"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Since power scales with I², 3.9²≈15.2.",
+      "category": "Thermal runaway experiment",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q71",
+      "type": "tf",
+      "question": "The 3.9 A test current is far above the earlier 1 A guideline for a 6 mil, 1 oz trace.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly notes this.",
+      "category": "Thermal runaway experiment",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q72",
+      "type": "single",
+      "question": "What is the bottom-line conclusion if the earlier trace/via current guidelines are followed?",
+      "options": [
+        "Thermal runaway should not be a concern",
+        "Thermal runaway is guaranteed",
+        "All traces must be doubled",
+        "Only gold traces are safe"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter's stated conclusion.",
+      "category": "Thermal runaway experiment",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q73",
+      "type": "single",
+      "question": "What law is used as the simplest approximation for PCB-trace DC resistance?",
+      "options": [
+        "Pouillet's law",
+        "Faraday's law",
+        "Ohm's law only",
+        "Gauss's law"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly names Pouillet's law.",
+      "category": "Trace resistance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q74",
+      "type": "single",
+      "question": "Pouillet's law is:",
+      "options": [
+        "R = ρL/A",
+        "R = ρA/L",
+        "R = LA/ρ",
+        "R = ρ/L"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the formula given.",
+      "category": "Trace resistance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q75",
+      "type": "single",
+      "question": "What value of copper resistivity is used?",
+      "options": [
+        "1.68 µΩ·cm",
+        "0.168 µΩ·cm",
+        "16.8 µΩ·cm",
+        "2.4 µΩ·cm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives 1.68 µΩ·cm.",
+      "category": "Trace resistance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q76",
+      "type": "single",
+      "question": "In R = ρL/A, A is:",
+      "options": [
+        "Conductor cross-sectional area",
+        "Trace perimeter",
+        "Copper density",
+        "Thermal resistance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the variable definition.",
+      "category": "Trace resistance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q77",
+      "type": "single",
+      "question": "1 cm of AWG24 copper wire has about what resistance?",
+      "options": [
+        "0.8 mΩ",
+        "8 mΩ",
+        "0.08 mΩ",
+        "1.3 mΩ"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This rule of thumb is given.",
+      "category": "Wire resistance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q78",
+      "type": "single",
+      "question": "What diameter is given for AWG24 copper wire?",
+      "options": [
+        "0.5 mm",
+        "0.4 mm",
+        "1.0 mm",
+        "0.25 mm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives 0.5 mm.",
+      "category": "Wire resistance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q79",
+      "type": "single",
+      "question": "What cross-sectional area is given for AWG24?",
+      "options": [
+        "0.21 mm²",
+        "0.13 mm²",
+        "2.1 mm²",
+        "0.021 mm²"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives 0.21 mm².",
+      "category": "Wire resistance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q80",
+      "type": "single",
+      "question": "1 cm of AWG26 copper wire has about what resistance?",
+      "options": [
+        "1.3 mΩ",
+        "0.8 mΩ",
+        "13 mΩ",
+        "0.13 mΩ"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This rule of thumb is given.",
+      "category": "Wire resistance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q81",
+      "type": "single",
+      "question": "What diameter is given for AWG26 copper wire?",
+      "options": [
+        "0.4 mm",
+        "0.5 mm",
+        "0.8 mm",
+        "0.2 mm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives 0.4 mm.",
+      "category": "Wire resistance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q82",
+      "type": "single",
+      "question": "What cross-sectional area is given for AWG26?",
+      "options": [
+        "0.13 mm²",
+        "0.21 mm²",
+        "1.3 mm²",
+        "0.013 mm²"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives 0.13 mm².",
+      "category": "Wire resistance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q83",
+      "type": "tf",
+      "question": "AWG26 has a higher resistance per cm than AWG24.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The thinner wire has 1.3 mΩ/cm versus 0.8 mΩ/cm.",
+      "category": "Wire resistance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q84",
+      "type": "single",
+      "question": "Which listed metal has the lowest resistivity?",
+      "options": [
+        "Silver",
+        "Copper",
+        "Gold",
+        "Aluminum"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Silver is listed at 1.59 µΩ·cm.",
+      "category": "Materials",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q85",
+      "type": "single",
+      "question": "Silver resistivity is approximately:",
+      "options": [
+        "1.59 µΩ·cm",
+        "1.68 µΩ·cm",
+        "2.4 µΩ·cm",
+        "12 µΩ·cm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the listed value.",
+      "category": "Materials",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q86",
+      "type": "single",
+      "question": "Gold resistivity is approximately:",
+      "options": [
+        "2.4 µΩ·cm",
+        "1.59 µΩ·cm",
+        "1.68 µΩ·cm",
+        "12 µΩ·cm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the listed value.",
+      "category": "Materials",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q87",
+      "type": "single",
+      "question": "Aluminum resistivity is approximately:",
+      "options": [
+        "2.7 µΩ·cm",
+        "1.68 µΩ·cm",
+        "12 µΩ·cm",
+        "0.27 µΩ·cm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the listed value.",
+      "category": "Materials",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q88",
+      "type": "single",
+      "question": "Tin resistivity is approximately:",
+      "options": [
+        "12 µΩ·cm",
+        "1.2 µΩ·cm",
+        "2.4 µΩ·cm",
+        "6–9 µΩ·cm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the listed value.",
+      "category": "Materials",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q89",
+      "type": "single",
+      "question": "Brass resistivity is approximately:",
+      "options": [
+        "6–9 µΩ·cm",
+        "1.59 µΩ·cm",
+        "12–18 µΩ·cm",
+        "0.6–0.9 µΩ·cm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives this range.",
+      "category": "Materials",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q90",
+      "type": "tf",
+      "question": "Gold is a better bulk conductor than copper.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Copper has lower resistivity than gold.",
+      "category": "Materials",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q91",
+      "type": "tf",
+      "question": "Silver is a better bulk conductor than copper.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Silver has slightly lower resistivity.",
+      "category": "Materials",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q92",
+      "type": "single",
+      "question": "Why is gold often used for electrical contacts despite not being the best conductor?",
+      "options": [
+        "It resists oxidation and corrosion, giving stable low contact resistance",
+        "It has zero resistivity",
+        "It is cheaper than copper",
+        "It is magnetic"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter's explanation.",
+      "category": "Materials",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q93",
+      "type": "tf",
+      "question": "Oxide layers on metal contacts can significantly increase contact resistance.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Materials",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q94",
+      "type": "single",
+      "question": "For fixed copper thickness, trace resistance can be conveniently expressed using:",
+      "options": [
+        "Sheet resistance Rsq",
+        "Characteristic impedance Z0",
+        "Thermal resistance Θ",
+        "Mutual inductance M"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter introduces sheet resistance.",
+      "category": "Sheet resistance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q95",
+      "type": "single",
+      "question": "Sheet resistance is defined as:",
+      "options": [
+        "Rsq = ρ/t",
+        "Rsq = ρt",
+        "Rsq = t/ρ",
+        "Rsq = L/w"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the definition given.",
+      "category": "Sheet resistance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q96",
+      "type": "single",
+      "question": "The number of squares along a rectangular trace is:",
+      "options": [
+        "n = L/w",
+        "n = w/L",
+        "n = Lt",
+        "n = L·w"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter definition.",
+      "category": "Sheet resistance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q97",
+      "type": "single",
+      "question": "Using sheet resistance, trace resistance is:",
+      "options": [
+        "R = Rsq·n",
+        "R = Rsq/n",
+        "R = n/Rsq",
+        "R = Rsq+n"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the convenient form.",
+      "category": "Sheet resistance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q98",
+      "type": "tf",
+      "question": "Any square of copper from the same layer has the same resistance between opposite sides, independent of square size.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the defining property of sheet resistance.",
+      "category": "Sheet resistance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q99",
+      "type": "single",
+      "question": "Rule of thumb for 1 oz copper sheet resistance:",
+      "options": [
+        "≈ 0.5 mΩ/□",
+        "≈ 5 mΩ/□",
+        "≈ 1 mΩ/□",
+        "≈ 0.05 mΩ/□"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives 0.5 mΩ per square.",
+      "category": "Sheet resistance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q100",
+      "type": "single",
+      "question": "Rule of thumb for 1/2 oz copper sheet resistance:",
+      "options": [
+        "≈ 1 mΩ/□",
+        "≈ 0.5 mΩ/□",
+        "≈ 2 mΩ/□",
+        "≈ 10 mΩ/□"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives 1 mΩ per square.",
+      "category": "Sheet resistance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q101",
+      "type": "single",
+      "question": "Compared with 1 oz copper, 1/2 oz copper has approximately:",
+      "options": [
+        "Twice the sheet resistance",
+        "Half the sheet resistance",
+        "The same sheet resistance",
+        "Four times lower resistance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Half the thickness doubles Rsq.",
+      "category": "Sheet resistance",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q102",
+      "type": "single",
+      "question": "What is the resistance of a 7.5 cm long, 6 mil wide, 1 oz copper trace in the example?",
+      "options": [
+        "About 250 mΩ",
+        "25 mΩ",
+        "2.5 Ω",
+        "75 mΩ"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter computes 250 mΩ.",
+      "category": "Trace resistance",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q103",
+      "type": "single",
+      "question": "What is 6 mil approximately in micrometers?",
+      "options": [
+        "150 µm",
+        "15 µm",
+        "1.5 mm",
+        "600 µm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The example uses 6 mil ≈150 µm.",
+      "category": "Trace resistance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q104",
+      "type": "single",
+      "question": "How many squares are in a 7.5 cm long, 150 µm wide trace?",
+      "options": [
+        "About 500",
+        "50",
+        "5",
+        "5000"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "75,000 µm / 150 µm = 500 squares.",
+      "category": "Trace resistance",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q105",
+      "type": "single",
+      "question": "A 1 oz, 6 mil signal trace has about what DC resistance per cm?",
+      "options": [
+        "33 mΩ/cm",
+        "3.3 mΩ/cm",
+        "10 mΩ/cm",
+        "100 mΩ/cm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is a chapter rule of thumb.",
+      "category": "Trace resistance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q106",
+      "type": "single",
+      "question": "A 1 oz, 20 mil power trace has about what DC resistance per cm?",
+      "options": [
+        "10 mΩ/cm",
+        "33 mΩ/cm",
+        "1 mΩ/cm",
+        "100 mΩ/cm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is a chapter rule of thumb.",
+      "category": "Trace resistance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q107",
+      "type": "single",
+      "question": "A 10 cm long, 6 mil, 1 oz trace has approximately what resistance?",
+      "options": [
+        "330 mΩ",
+        "33 mΩ",
+        "100 mΩ",
+        "3.3 Ω"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "33 mΩ/cm ×10 cm =330 mΩ.",
+      "category": "Trace resistance",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q108",
+      "type": "single",
+      "question": "A 10 cm long, 20 mil, 1 oz trace has approximately what resistance?",
+      "options": [
+        "100 mΩ",
+        "10 mΩ",
+        "330 mΩ",
+        "1 Ω"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "10 mΩ/cm ×10 cm =100 mΩ.",
+      "category": "Trace resistance",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q109",
+      "type": "single",
+      "question": "Why may a 6 mil trace be unacceptable over a long distance even if it can thermally carry 1 A?",
+      "options": [
+        "Voltage drop may be too large",
+        "It cannot be manufactured",
+        "It always causes reflections",
+        "Its copper melts instantly"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly makes this point.",
+      "category": "Trace resistance",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q110",
+      "type": "single",
+      "question": "What does PTH stand for?",
+      "options": [
+        "Plated Through Hole",
+        "Power Thermal Hole",
+        "Printed Trace Hole",
+        "Parallel Through Header"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "PTH means plated through hole.",
+      "category": "Vias",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q111",
+      "type": "single",
+      "question": "For a multilayer PCB, what happens first in PTH via fabrication?",
+      "options": [
+        "Inner copper layers are patterned, then laminated together",
+        "Outer layers are etched last only",
+        "Holes are plated before drilling",
+        "Solder mask is applied first"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the first step described.",
+      "category": "Vias",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q112",
+      "type": "single",
+      "question": "After lamination, the via is created by:",
+      "options": [
+        "Drilling a hole through the board",
+        "Melting the FR4",
+        "Punching only the outer copper",
+        "Applying solder paste"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A hole is drilled at each via location.",
+      "category": "Vias",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q113",
+      "type": "single",
+      "question": "After drilling, the hole walls are:",
+      "options": [
+        "Cleaned and coated with a thin conductive copper seed layer",
+        "Filled with solder mask",
+        "Left nonconductive",
+        "Coated with gold only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly described.",
+      "category": "Vias",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q114",
+      "type": "single",
+      "question": "How is the conductive via barrel built up?",
+      "options": [
+        "Copper is electroplated onto the hole walls",
+        "Solder is painted on",
+        "FR4 is metallized by heat only",
+        "Copper foil is glued inside"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Electroplating builds the barrel.",
+      "category": "Vias",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q115",
+      "type": "tf",
+      "question": "Copper may also be deposited on the outer copper layers during via electroplating.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly notes this.",
+      "category": "Vias",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q116",
+      "type": "single",
+      "question": "After via plating, the outer copper layers are:",
+      "options": [
+        "Patterned and etched to form traces and via pads",
+        "Removed entirely",
+        "Left unpatterned",
+        "Covered with FR4"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the final fabrication step described.",
+      "category": "Vias",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q117",
+      "type": "single",
+      "question": "Typical electroplated copper thickness in a PTH via barrel is about:",
+      "options": [
+        "25 µm",
+        "2.5 µm",
+        "250 µm",
+        "1 mm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter states approximately 25 µm.",
+      "category": "Vias",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q118",
+      "type": "single",
+      "question": "For subsequent calculations, the chapter assumes via copper thickness equal to:",
+      "options": [
+        "1 oz copper = 1.4 mil",
+        "1/2 oz = 0.7 mil",
+        "2 oz = 2.8 mil",
+        "No copper"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter follows Bogatin's 1 oz assumption.",
+      "category": "Vias",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q119",
+      "type": "single",
+      "question": "Typical PTH drill diameter used in the chapter is about:",
+      "options": [
+        "13 mil",
+        "6 mil",
+        "25 mil",
+        "62 mil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The slide uses a 13 mil drill.",
+      "category": "Via geometry",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q120",
+      "type": "single",
+      "question": "After plating, the finished hole diameter becomes:",
+      "options": [
+        "Smaller than the drill diameter",
+        "Larger than the drill diameter",
+        "Exactly unchanged",
+        "Zero"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Copper plating reduces the opening.",
+      "category": "Via geometry",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q121",
+      "type": "single",
+      "question": "Using a 13 mil drill and 1.4 mil plating on each side, finished hole diameter is about:",
+      "options": [
+        "10.2 mil",
+        "13 mil",
+        "15.8 mil",
+        "8.8 mil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "13 − 2×1.4 =10.2 mil.",
+      "category": "Via geometry",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q122",
+      "type": "single",
+      "question": "Typical minimum annular ring assumed for a low-cost process is:",
+      "options": [
+        "6 mil",
+        "3 mil",
+        "13 mil",
+        "25 mil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter assumes 6 mil.",
+      "category": "Via geometry",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q123",
+      "type": "single",
+      "question": "For a 13 mil drill and 6 mil annular ring, via pad diameter is:",
+      "options": [
+        "25 mil",
+        "13 mil",
+        "19 mil",
+        "31 mil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "13 + 2×6 =25 mil.",
+      "category": "Via geometry",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q124",
+      "type": "single",
+      "question": "What formula is used for pad diameter?",
+      "options": [
+        "dpad = ddrill + 2wring",
+        "dpad = ddrill − 2wring",
+        "dpad = ddrill/wring",
+        "dpad = 2ddrill + wring"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the geometry relation shown.",
+      "category": "Via geometry",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q125",
+      "type": "single",
+      "question": "What PCB thickness is assumed in the via-resistance example?",
+      "options": [
+        "62 mil",
+        "35 mil",
+        "13 mil",
+        "100 mil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter assumes 62 mil board thickness.",
+      "category": "Via resistance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q126",
+      "type": "single",
+      "question": "For a 13 mil diameter via barrel unrolled into a strip, the effective width is approximately:",
+      "options": [
+        "πd ≈ 41 mil",
+        "13 mil",
+        "25 mil",
+        "62 mil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "π×13≈41 mil.",
+      "category": "Via resistance",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q127",
+      "type": "single",
+      "question": "With 62 mil via length and 41 mil effective width, the via has about:",
+      "options": [
+        "1.5 squares",
+        "0.5 squares",
+        "15 squares",
+        "6.2 squares"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "62/41≈1.5.",
+      "category": "Via resistance",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q128",
+      "type": "single",
+      "question": "Using Rsq = 0.5 mΩ/□, a 1.5-square via has resistance about:",
+      "options": [
+        "0.75 mΩ",
+        "7.5 mΩ",
+        "0.075 mΩ",
+        "75 mΩ"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "0.5×1.5=0.75 mΩ.",
+      "category": "Via resistance",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q129",
+      "type": "tf",
+      "question": "The DC series resistance of a typical PTH via is usually very small compared with several centimeters of PCB trace.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter's conclusion.",
+      "category": "Via resistance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q130",
+      "type": "single",
+      "question": "Why can directly connecting a pad or via to a large copper plane make soldering difficult?",
+      "options": [
+        "The plane conducts heat away rapidly",
+        "The plane raises electrical resistance",
+        "The plane prevents current flow",
+        "The pad becomes electrically isolated"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The plane gives a low thermal-resistance path.",
+      "category": "Thermal relief",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q131",
+      "type": "single",
+      "question": "A thermal relief typically connects a pad/via to a plane through:",
+      "options": [
+        "Four narrow spokes",
+        "One wide copper bar",
+        "No copper at all",
+        "Only solder mask"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says typically 4 spokes.",
+      "category": "Thermal relief",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q132",
+      "type": "single",
+      "question": "Another name for thermal-relief stubs is:",
+      "options": [
+        "Thermal spokes",
+        "Thermal vias",
+        "Antipads",
+        "Blind vias"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly uses this term.",
+      "category": "Thermal relief",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q133",
+      "type": "single",
+      "question": "What is the purpose of thermal spokes?",
+      "options": [
+        "Increase thermal resistance between the pad/via and the plane",
+        "Increase DC electrical resistance dramatically",
+        "Reduce annular ring",
+        "Increase copper thickness"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "They make soldering and desoldering easier.",
+      "category": "Thermal relief",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q134",
+      "type": "single",
+      "question": "If each of four thermal spokes is about one square of 1 oz copper, each has resistance about:",
+      "options": [
+        "0.5 mΩ",
+        "0.125 mΩ",
+        "2 mΩ",
+        "5 mΩ"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "One square of 1 oz copper is about 0.5 mΩ.",
+      "category": "Thermal relief",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q135",
+      "type": "single",
+      "question": "Four identical 0.5 mΩ thermal spokes in parallel give about:",
+      "options": [
+        "0.125 mΩ",
+        "0.5 mΩ",
+        "2 mΩ",
+        "0.25 mΩ"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "0.5/4=0.125 mΩ.",
+      "category": "Thermal relief",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q136",
+      "type": "tf",
+      "question": "The electrical resistance added by a typical four-spoke thermal relief is very small.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter calls it 'peanuts'.",
+      "category": "Thermal relief",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q137",
+      "type": "single",
+      "question": "Standard solderless breadboard hole pitch is:",
+      "options": [
+        "100 mil = 2.54 mm",
+        "50 mil = 1.27 mm",
+        "200 mil = 5.08 mm",
+        "300 mil = 7.62 mm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Breadboards",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q138",
+      "type": "single",
+      "question": "What is inside each breadboard hole?",
+      "options": [
+        "A spring contact that grips a lead or wire",
+        "A solder joint",
+        "A plated via barrel",
+        "A resistor"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the mechanical contact mechanism.",
+      "category": "Breadboards",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q139",
+      "type": "single",
+      "question": "In the main terminal area, breadboard holes are typically connected in groups of:",
+      "options": [
+        "Five",
+        "Two",
+        "Ten",
+        "Twenty"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says groups of five.",
+      "category": "Breadboards",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q140",
+      "type": "single",
+      "question": "The side power rails on a breadboard usually form:",
+      "options": [
+        "Longer connected strips",
+        "Isolated holes",
+        "Groups of two only",
+        "Ground planes"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Breadboards",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q141",
+      "type": "single",
+      "question": "Breadboard geometry is well suited to DIP/DIL packages with pin pitch about:",
+      "options": [
+        "100 mil",
+        "50 mil",
+        "20 mil",
+        "300 mil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "DIP/DIL packages commonly use 100 mil pin pitch.",
+      "category": "Breadboards",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q142",
+      "type": "single",
+      "question": "Typical DIP/DIL row spacing mentioned is:",
+      "options": [
+        "300 mil",
+        "100 mil",
+        "200 mil",
+        "30 mil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives 300 mil.",
+      "category": "Breadboards",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q143",
+      "type": "single",
+      "question": "Small breadboards can be mounted on PCB shields with headers matching:",
+      "options": [
+        "Arduino Uno form factor",
+        "Raspberry Pi Zero only",
+        "PCIe",
+        "USB-C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This example is explicitly shown.",
+      "category": "Breadboards",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q144",
+      "type": "tf",
+      "question": "A solderless breadboard generally has poorer signal integrity than a carefully designed PCB.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Breadboard SI",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q145",
+      "type": "tf",
+      "question": "Breadboards are generally more susceptible to noise than a carefully designed PCB.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Breadboard SI",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q146",
+      "type": "single",
+      "question": "With short, carefully routed wires, breadboards may work at frequencies up to roughly:",
+      "options": [
+        "50 MHz",
+        "5 MHz",
+        "500 MHz",
+        "5 GHz"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives ~50 MHz as a rough rule, not a hard limit.",
+      "category": "Breadboard SI",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q147",
+      "type": "tf",
+      "question": "The ~50 MHz breadboard value is a strict absolute frequency limit.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The chapter explicitly says it is not strict.",
+      "category": "Breadboard SI",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q148",
+      "type": "single",
+      "question": "What can dramatically reduce usable breadboard bandwidth?",
+      "options": [
+        "Long wires and large loops",
+        "Short wires and small loops",
+        "Low-noise routing",
+        "Local decoupling"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly says this.",
+      "category": "Breadboard SI",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q149",
+      "type": "single",
+      "question": "For slow signals with rise times of order what value are breadboard parasitics usually much less critical?",
+      "options": [
+        "1 µs or longer",
+        "1 ns",
+        "10 ns",
+        "100 ns"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives ~1 µs or longer.",
+      "category": "Breadboard SI",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q150",
+      "type": "tf",
+      "question": "For slow breadboard signals, modest noise and voltage errors may still need to be acceptable.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This condition is explicitly stated.",
+      "category": "Breadboard SI",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q151",
+      "type": "single",
+      "question": "As signal rise time decreases on breadboards, loop self-inductance tends to:",
+      "options": [
+        "Distort and slow signal edges",
+        "Improve edge speed",
+        "Eliminate crosstalk",
+        "Reduce loop area automatically"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is one of the two common problems.",
+      "category": "Breadboard SI",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q152",
+      "type": "single",
+      "question": "The second common fast-edge breadboard problem is:",
+      "options": [
+        "Mutual inductance producing crosstalk",
+        "Copper oxidation only",
+        "Thermal runaway",
+        "Solder mask failure"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly listed.",
+      "category": "Breadboard SI",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q153",
+      "type": "single",
+      "question": "A useful order-of-magnitude estimate for loop/wire inductance is:",
+      "options": [
+        "1 nH/mm",
+        "1 pH/mm",
+        "1 µH/mm",
+        "10 nH/mm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter uses 1 nH/mm.",
+      "category": "Breadboard SI",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q154",
+      "type": "single",
+      "question": "Why does loop inductance produce low-pass behavior?",
+      "options": [
+        "Inductive impedance increases with frequency and interacts with circuit impedances/parasitic capacitance",
+        "Inductive impedance decreases with frequency",
+        "Resistance becomes zero",
+        "Capacitance disappears"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This slows and distorts fast edges.",
+      "category": "Breadboard SI",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q155",
+      "type": "single",
+      "question": "A 10 cm jumper wire has inductance roughly:",
+      "options": [
+        "100 nH",
+        "10 nH",
+        "1 µH",
+        "1 nH"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Using 1 nH/mm gives ~100 nH.",
+      "category": "Breadboard SI",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q156",
+      "type": "single",
+      "question": "Including the return path, the example assumes total loop inductance:",
+      "options": [
+        "200 nH",
+        "100 nH",
+        "20 nH",
+        "2 µH"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Breadboard SI",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q157",
+      "type": "single",
+      "question": "In the example, Rsource and Rload are each:",
+      "options": [
+        "50 Ω",
+        "25 Ω",
+        "100 Ω",
+        "1 kΩ"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The slide uses 50 Ω each.",
+      "category": "Breadboard SI",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q158",
+      "type": "single",
+      "question": "The -3 dB bandwidth for the example is approximately:",
+      "options": [
+        "80 MHz",
+        "8 MHz",
+        "800 MHz",
+        "50 MHz"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter calculates ~80 MHz.",
+      "category": "Breadboard SI",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q159",
+      "type": "single",
+      "question": "The bandwidth formula used is:",
+      "options": [
+        "f−3dB = (Rsource + Rload)/(2πLloop)",
+        "f−3dB = 2πL/(Rsource+Rload)",
+        "f−3dB = 1/(2πRC) only",
+        "f−3dB = L/R"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the formula shown.",
+      "category": "Breadboard SI",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q160",
+      "type": "tf",
+      "question": "Minimizing breadboard interconnect length and loop area improves high-frequency performance.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the conclusion of the example.",
+      "category": "Breadboard SI",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q161",
+      "type": "single",
+      "question": "When current switches in an aggressor loop, a changing magnetic flux induces voltage in the:",
+      "options": [
+        "Victim loop",
+        "Power rail only",
+        "Source resistor only",
+        "Solder mask"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is inductive crosstalk.",
+      "category": "Breadboard crosstalk",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q162",
+      "type": "single",
+      "question": "If two loops share part of their return path, what additional effect appears?",
+      "options": [
+        "Common return-path inductance",
+        "Zero coupling",
+        "Only capacitive loading",
+        "No ground bounce"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The shared return adds coupling and ground bounce.",
+      "category": "Breadboard crosstalk",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q163",
+      "type": "tf",
+      "question": "Common return-path inductance contributes to ground bounce.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Breadboard crosstalk",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q164",
+      "type": "multi",
+      "question": "Inductive crosstalk can be reduced by:",
+      "options": [
+        "Bring signal and return closer together",
+        "Increase spacing between loops",
+        "Use separate return paths",
+        "Increase shared return inductance"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three are explicitly summarized.",
+      "category": "Breadboard crosstalk",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q165",
+      "type": "single",
+      "question": "Bringing each signal close to its return path primarily reduces:",
+      "options": [
+        "Loop self-inductance",
+        "Copper resistivity",
+        "Sheet resistance",
+        "Hole pitch"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Breadboard crosstalk",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q166",
+      "type": "single",
+      "question": "Increasing spacing between aggressor and victim primarily reduces:",
+      "options": [
+        "Mutual inductance",
+        "Thermal resistance",
+        "Sheet resistance",
+        "Via barrel thickness"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Breadboard crosstalk",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q167",
+      "type": "single",
+      "question": "Using separate return paths avoids:",
+      "options": [
+        "Shared return-path inductance",
+        "All copper resistance",
+        "All capacitance",
+        "All voltage drop"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is one of the summary rules.",
+      "category": "Breadboard crosstalk",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q168",
+      "type": "single",
+      "question": "How can an SMD be used on a breadboard?",
+      "options": [
+        "Solder it to a breakout board with 100 mil-spaced pins",
+        "Insert it directly into any hole",
+        "Use a thermal via",
+        "Place it on copper foil only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly recommends breakout boards.",
+      "category": "SMD breakout boards",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q169",
+      "type": "single",
+      "question": "What does SMD stand for?",
+      "options": [
+        "Surface-Mount Device",
+        "Signal-Matched Driver",
+        "Series-Mounted Device",
+        "Surface Metal Drill"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the standard abbreviation used in the chapter.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q170",
+      "type": "single",
+      "question": "A breakout board allows:",
+      "options": [
+        "A complex SMD to be tested on a breadboard",
+        "A breadboard to become multilayer",
+        "All vias to disappear",
+        "A PCB to be etched automatically"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "SMD breakout boards",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q171",
+      "type": "multi",
+      "question": "A breakout board can also include:",
+      "options": [
+        "Local decoupling capacitors",
+        "Simple passive components",
+        "Simple active components",
+        "Only mechanical spacers"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "These are explicitly listed.",
+      "category": "SMD breakout boards",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q172",
+      "type": "single",
+      "question": "What is described as the major disadvantage of breadboards?",
+      "options": [
+        "Wiring can quickly become messy",
+        "They cannot carry any DC current",
+        "They cannot use DIP packages",
+        "They require solder"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter's stated major disadvantage.",
+      "category": "Breadboard practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q173",
+      "type": "single",
+      "question": "What should be done with breadboard power rails?",
+      "options": [
+        "Use them consistently",
+        "Avoid them entirely",
+        "Use random polarities",
+        "Short them together arbitrarily"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is one of the listed tips.",
+      "category": "Breadboard practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q174",
+      "type": "single",
+      "question": "Why use short jumper wires?",
+      "options": [
+        "For a neater, sturdier setup and fewer SI problems",
+        "To increase loop area",
+        "To increase inductance",
+        "To make debugging harder"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "These are the explicit benefits.",
+      "category": "Breadboard practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q175",
+      "type": "multi",
+      "question": "Ways to keep breadboard interconnections short include:",
+      "options": [
+        "Trim excess component leads",
+        "Use vertical mounting where practical",
+        "Use unnecessarily long jumpers",
+        "Bridge gaps with headers where useful"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "The first, second, and fourth are consistent with the listed tips.",
+      "category": "Breadboard practices",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q176",
+      "type": "single",
+      "question": "What pitch pin headers can be used to bridge gaps?",
+      "options": [
+        "100 mil",
+        "50 mil",
+        "20 mil",
+        "300 mil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The slide gives 100 mil-pitch headers.",
+      "category": "Breadboard practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q177",
+      "type": "single",
+      "question": "Typical solid-core hookup wire size recommended is:",
+      "options": [
+        "22–24 AWG",
+        "30–32 AWG",
+        "10–12 AWG",
+        "2–4 AWG"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter recommendation.",
+      "category": "Breadboard practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q178",
+      "type": "single",
+      "question": "What color code example is given for positive supply?",
+      "options": [
+        "Red",
+        "Black",
+        "Blue",
+        "White"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Red is suggested for positive supply.",
+      "category": "Breadboard practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q179",
+      "type": "single",
+      "question": "What color code example is given for ground?",
+      "options": [
+        "Black",
+        "Red",
+        "Blue",
+        "White"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Black is suggested for ground.",
+      "category": "Breadboard practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q180",
+      "type": "single",
+      "question": "What color code example is given for negative supply?",
+      "options": [
+        "Blue",
+        "Red",
+        "Black",
+        "White"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Blue is suggested for negative supply.",
+      "category": "Breadboard practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q181",
+      "type": "single",
+      "question": "What color code example is given for clocks?",
+      "options": [
+        "White",
+        "Black",
+        "Red",
+        "Blue"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "White is suggested for clocks.",
+      "category": "Breadboard practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q182",
+      "type": "tf",
+      "question": "Using a consistent wire color code can improve breadboard organization and debugging.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly recommends a consistent color code.",
+      "category": "Breadboard practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q183",
+      "type": "single",
+      "question": "How can long breadboard interconnects be routed to reduce crosstalk?",
+      "options": [
+        "As signal-return pairs",
+        "As widely separated random loops",
+        "With shared long return wires",
+        "Only as single-ended floating wires"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter recommends signal-return pairs.",
+      "category": "Breadboard practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q184",
+      "type": "single",
+      "question": "An example of implementing signal-return pairs is:",
+      "options": [
+        "Ribbon cable with adjacent return conductors",
+        "Coax with no shield",
+        "Loose flying wires far apart",
+        "Only twisted power rails"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This example is explicitly given.",
+      "category": "Breadboard practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q185",
+      "type": "single",
+      "question": "Shared return paths are especially problematic for:",
+      "options": [
+        "Large or fast-switching currents",
+        "Only static low-current nodes",
+        "Only mechanical switches",
+        "Only DC references with no current"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Breadboard practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q186",
+      "type": "single",
+      "question": "For higher-speed or low-noise circuits, each signal should have:",
+      "options": [
+        "A nearby return path",
+        "A shared long return path",
+        "No return path",
+        "The longest wire possible"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter recommendation.",
+      "category": "Breadboard practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q187",
+      "type": "tf",
+      "question": "For higher-speed or low-noise breadboard circuits, sharing inductive return paths should be avoided where possible.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Breadboard practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q188",
+      "type": "single",
+      "question": "A 5 cm long 6 mil, 1 oz trace has approximately what resistance?",
+      "options": [
+        "165 mΩ",
+        "33 mΩ",
+        "50 mΩ",
+        "330 mΩ"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "33 mΩ/cm ×5 cm=165 mΩ.",
+      "category": "Trace resistance",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q189",
+      "type": "single",
+      "question": "A 5 cm long 20 mil, 1 oz trace has approximately what resistance?",
+      "options": [
+        "50 mΩ",
+        "10 mΩ",
+        "165 mΩ",
+        "500 mΩ"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "10 mΩ/cm ×5 cm=50 mΩ.",
+      "category": "Trace resistance",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q190",
+      "type": "single",
+      "question": "At 1 A, a 10 cm, 6 mil trace with R≈330 mΩ drops about:",
+      "options": [
+        "0.33 V",
+        "0.033 V",
+        "3.3 V",
+        "0.0033 V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "V=IR=1×0.33=0.33 V.",
+      "category": "Trace resistance",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q191",
+      "type": "single",
+      "question": "At 3 A, a 10 cm, 20 mil trace with R≈100 mΩ drops about:",
+      "options": [
+        "0.30 V",
+        "0.03 V",
+        "3 V",
+        "0.10 V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "V=IR=3×0.1=0.3 V.",
+      "category": "Trace resistance",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q192",
+      "type": "single",
+      "question": "At 1 A through a 250 mΩ trace, dissipated power is:",
+      "options": [
+        "0.25 W",
+        "0.025 W",
+        "2.5 W",
+        "4 W"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "P=I²R=1²×0.25=0.25 W.",
+      "category": "Current handling",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q193",
+      "type": "single",
+      "question": "If current doubles while resistance stays constant, Joule heating:",
+      "options": [
+        "Quadruples",
+        "Doubles",
+        "Halves",
+        "Stays unchanged"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "P=I²R.",
+      "category": "Current handling",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q194",
+      "type": "single",
+      "question": "If resistance doubles at constant current, Joule heating:",
+      "options": [
+        "Doubles",
+        "Quadruples",
+        "Halves",
+        "Stays unchanged"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "P=I²R.",
+      "category": "Current handling",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q195",
+      "type": "single",
+      "question": "If Θ halves for the same electrical power, temperature rise:",
+      "options": [
+        "Halves",
+        "Doubles",
+        "Quadruples",
+        "Stays unchanged"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "ΔT=PΘ.",
+      "category": "Current handling",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q196",
+      "type": "single",
+      "question": "If trace width doubles at fixed length/thickness, number of squares:",
+      "options": [
+        "Halves",
+        "Doubles",
+        "Quadruples",
+        "Stays unchanged"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "n=L/w.",
+      "category": "Sheet resistance",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q197",
+      "type": "single",
+      "question": "If copper thickness doubles, sheet resistance approximately:",
+      "options": [
+        "Halves",
+        "Doubles",
+        "Quadruples",
+        "Stays unchanged"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Rsq=ρ/t.",
+      "category": "Sheet resistance",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q198",
+      "type": "single",
+      "question": "If trace length doubles at fixed width and thickness, resistance:",
+      "options": [
+        "Doubles",
+        "Halves",
+        "Quadruples",
+        "Stays unchanged"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "R∝L.",
+      "category": "Trace resistance",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q199",
+      "type": "single",
+      "question": "If trace width doubles at fixed length and thickness, resistance:",
+      "options": [
+        "Halves",
+        "Doubles",
+        "Quadruples",
+        "Stays unchanged"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "R∝1/w.",
+      "category": "Trace resistance",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q200",
+      "type": "single",
+      "question": "Which issue can limit a trace even if thermal current capacity is acceptable?",
+      "options": [
+        "Excessive voltage drop due to series resistance",
+        "Only solder mask color",
+        "Only via pad shape",
+        "Only silkscreen"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly emphasizes this.",
+      "category": "Concepts",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q201",
+      "type": "single",
+      "question": "Which is generally more resistive per centimeter: a 6 mil trace or a 20 mil trace of the same copper thickness?",
+      "options": [
+        "The 6 mil trace",
+        "The 20 mil trace",
+        "They are identical",
+        "It depends only on length"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Narrower width means higher resistance.",
+      "category": "Concepts",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q202",
+      "type": "single",
+      "question": "Which statement about vias is correct?",
+      "options": [
+        "A typical PTH via can have much lower DC resistance than several centimeters of narrow PCB trace",
+        "Vias always dominate DC resistance",
+        "Via resistance is always zero",
+        "A via cannot carry DC current"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly concludes this.",
+      "category": "Concepts",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q203",
+      "type": "single",
+      "question": "Which statement about thermal relief is correct?",
+      "options": [
+        "It raises thermal resistance while adding very little electrical resistance",
+        "It isolates the pad electrically",
+        "It greatly increases electrical resistance",
+        "It removes the copper plane"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the main takeaway.",
+      "category": "Concepts",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q204",
+      "type": "single",
+      "question": "Which statement about breadboards is correct?",
+      "options": [
+        "They are convenient but generally worse for SI than a carefully designed PCB",
+        "They always outperform PCBs at high speed",
+        "They have no parasitic inductance",
+        "They eliminate crosstalk"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is a core chapter conclusion.",
+      "category": "Concepts",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q205",
+      "type": "tf",
+      "question": "The same 1 nH/mm order-of-magnitude inductance estimate appears for PCB/breadboard interconnects.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly uses this estimate for loose wiring, hook-up wires, and typical PCB interconnects.",
+      "category": "Concepts",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q206",
+      "type": "single",
+      "question": "What does AWG stand for?",
+      "options": [
+        "American Wire Gauge",
+        "Applied Wire Geometry",
+        "Analog Wiring Grade",
+        "Average Wire Ground"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "AWG is the wire-size system used for the hookup-wire examples.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q207",
+      "type": "single",
+      "question": "What does DIP/DIL refer to?",
+      "options": [
+        "Dual In-line Package / Dual In-line",
+        "Direct Interconnect Plane",
+        "Digital Inductive Loop",
+        "Double Insulated Lead"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "These are the package styles referenced for breadboards.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q208",
+      "type": "single",
+      "question": "What does DC stand for?",
+      "options": [
+        "Direct Current",
+        "Distributed Capacitance",
+        "Dual Conductor",
+        "Drive Current"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter repeatedly refers to DC current and resistance.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q209",
+      "type": "single",
+      "question": "What does PTH stand for?",
+      "options": [
+        "Plated Through Hole",
+        "Power Through Hole",
+        "Printed Thermal Header",
+        "Parallel Through Hole"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "PTH is the via type discussed.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q210",
+      "type": "single",
+      "question": "What does SMD stand for?",
+      "options": [
+        "Surface-Mount Device",
+        "Signal-Matched Device",
+        "Series-Mounted Driver",
+        "Surface Metal Drill"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter uses SMD for surface-mount devices.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q211",
+      "type": "single",
+      "question": "What does mΩ mean?",
+      "options": [
+        "Milliohm",
+        "Megaohm",
+        "Microohm",
+        "Meter-ohm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "mΩ is used throughout the resistance calculations.",
+      "category": "Units",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q212",
+      "type": "single",
+      "question": "What does µΩ·cm mean?",
+      "options": [
+        "Micro-ohm-centimeter",
+        "Microfarad-centimeter",
+        "Microwatt-centimeter",
+        "Milliohm-centimeter"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the resistivity unit used.",
+      "category": "Units",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q213",
+      "type": "single",
+      "question": "What does mil mean in PCB dimensions?",
+      "options": [
+        "One thousandth of an inch",
+        "One millimeter",
+        "One micron",
+        "One hundredth of an inch"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter uses mil dimensions for traces and vias.",
+      "category": "Units",
+      "difficulty": "easy"
+    }
+  ]
+}
