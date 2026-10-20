@@ -1,0 +1,4224 @@
+{
+  "id": "chapter6",
+  "title": "Chapter 6 — Power Distribution, Power Supply Noise and Decoupling Capacitors",
+  "source": "06 - Power distribution, power supply noise and decoupling capacitors.pdf",
+  "question_count": 252,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "question": "What does PDN stand for?",
+      "options": [
+        "Power Distribution Network",
+        "Power Decoupling Node",
+        "Passive Distribution Network",
+        "Power Driver Network"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "PDN means power distribution network.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "question": "What is a PDN?",
+      "options": [
+        "The complete electrical path that delivers power from the source/regulator to the load",
+        "Only the ground plane",
+        "Only the VRM output capacitor",
+        "Only the power traces"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter definition.",
+      "category": "PDN basics",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "multi",
+      "question": "Which elements can be part of the PDN?",
+      "options": [
+        "Power source",
+        "Voltage regulator module (VRM)",
+        "Interconnects such as traces, planes, vias, connectors and packages",
+        "Bulk and decoupling capacitors"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All are explicitly listed as parts of the PDN.",
+      "category": "PDN basics",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "question": "What is the final element of the PDN chain?",
+      "options": [
+        "The load(s)",
+        "The solder mask",
+        "The silkscreen",
+        "The PCB outline"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The load is part of the complete PDN path.",
+      "category": "PDN basics",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "multi",
+      "question": "Which are common power sources listed in the chapter?",
+      "options": [
+        "External AC-DC supply",
+        "USB connection",
+        "Battery",
+        "Ferrite bead"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three are listed as common power sources.",
+      "category": "PDN basics",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "single",
+      "question": "What does VRM stand for?",
+      "options": [
+        "Voltage Regulator Module",
+        "Voltage Return Module",
+        "Variable Resistance Matrix",
+        "Voltage Ripple Monitor"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "VRM means voltage regulator module.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "multi",
+      "question": "Typical VRMs include:",
+      "options": [
+        "Switch-mode power supplies (SMPS)",
+        "Linear voltage regulators",
+        "Low-dropout regulators (LDOs)",
+        "Only batteries"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "SMPS and linear regulators including LDOs are listed as common VRMs.",
+      "category": "VRM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "single",
+      "question": "The passive part of the PDN between the VRM and load is characterized by:",
+      "options": [
+        "An impedance ZPDN seen by the load",
+        "Only a resistance RPDN",
+        "Only a capacitance CPDN",
+        "Only a current source"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter defines a frequency-dependent PDN impedance.",
+      "category": "PDN basics",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "single",
+      "question": "A changing load current across finite ZPDN causes:",
+      "options": [
+        "Supply-voltage variation/noise",
+        "Zero voltage change",
+        "Only thermal noise",
+        "Only current noise"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter states ΔV(f)=ZPDN(f)ΔI(f).",
+      "category": "PDN noise",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "single",
+      "question": "What relation is given for supply-voltage noise in the frequency domain?",
+      "options": [
+        "ΔV(f) = ZPDN(f) · ΔI(f)",
+        "ΔV(f)=ΔI(f)/ZPDN(f)",
+        "ΔV(f)=ZPDN(f)/ΔI(f)",
+        "ΔV(f)=ZPDN(f)+ΔI(f)"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the equation shown on page 4.",
+      "category": "PDN noise",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "tf",
+      "question": "A finite PDN impedance allows load-current changes to create supply-voltage noise.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is a central concept of the chapter.",
+      "category": "PDN noise",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "single",
+      "question": "A linear regulator is generally:",
+      "options": [
+        "Simple and low-noise but potentially inefficient for large Vin−Vout",
+        "Always more efficient than an SMPS",
+        "High-noise and high-efficiency",
+        "Used only for AC signals"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter contrasts linear regulators with SMPSs this way.",
+      "category": "VRM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "single",
+      "question": "Why can a linear regulator be inefficient when Vin−Vout is large?",
+      "options": [
+        "The excess power is dissipated as heat",
+        "The output is switched at MHz",
+        "The capacitor absorbs all power",
+        "The load resistance becomes zero"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "VRM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q14",
+      "type": "single",
+      "question": "An SMPS regulates output by:",
+      "options": [
+        "Rapidly switching energy-storage elements within a feedback loop",
+        "Burning excess voltage as heat only",
+        "Using no feedback",
+        "Using only a resistor divider"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter description.",
+      "category": "VRM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q15",
+      "type": "single",
+      "question": "Typical SMPS switching frequencies are:",
+      "options": [
+        "Tens of kHz to several MHz",
+        "A few Hz",
+        "Only 50 Hz",
+        "Several GHz only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives this range.",
+      "category": "VRM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q16",
+      "type": "single",
+      "question": "Compared with a linear regulator, an SMPS is generally:",
+      "options": [
+        "More efficient but noisier",
+        "Less efficient and quieter",
+        "Always noiseless",
+        "Identical in noise and efficiency"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter comparison.",
+      "category": "VRM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q17",
+      "type": "multi",
+      "question": "Which are drawbacks of an SMPS mentioned in the chapter?",
+      "options": [
+        "Switching noise",
+        "EMI",
+        "More ripple than an ideal DC source",
+        "Always lower efficiency"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Switching noise and EMI are explicitly mentioned; output ripple is discussed later.",
+      "category": "VRM",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q18",
+      "type": "single",
+      "question": "What does SMPS stand for?",
+      "options": [
+        "Switch-Mode Power Supply",
+        "Signal Modulated Power Stage",
+        "Switched Main Power Source",
+        "Supply Mode Processing System"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "SMPS means switch-mode power supply.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q19",
+      "type": "single",
+      "question": "What does LDO stand for?",
+      "options": [
+        "Low-Dropout Regulator",
+        "Low-Damping Oscillator",
+        "Linear Drive Output",
+        "Low-Duty Output"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "LDO means low-dropout regulator.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q20",
+      "type": "single",
+      "question": "An LDO is designed to operate with:",
+      "options": [
+        "A small difference between Vin and Vout",
+        "A very large difference between Vin and Vout",
+        "No input voltage",
+        "AC only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the defining feature stated.",
+      "category": "VRM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q21",
+      "type": "single",
+      "question": "A linear regulator uses what control principle?",
+      "options": [
+        "Negative feedback",
+        "Positive feedback",
+        "Open-loop control only",
+        "No feedback"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly states negative feedback.",
+      "category": "VRM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q22",
+      "type": "single",
+      "question": "For the shown linear regulator, the output relation is:",
+      "options": [
+        "Vout = Vref(1 + R1/R2)",
+        "Vout = Vref(R2/R1)",
+        "Vout = Vin(1+R2/R1)",
+        "Vout = Vref/R1R2"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the formula shown on page 6.",
+      "category": "VRM formulas",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q23",
+      "type": "single",
+      "question": "In the regulator divider, Vref equals:",
+      "options": [
+        "Vout · R2/(R1+R2)",
+        "Vout · R1/R2",
+        "Vout(R1+R2)",
+        "Vout/R2"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the divider relation shown.",
+      "category": "VRM formulas",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q24",
+      "type": "single",
+      "question": "Fast changes in load current cause supply-voltage variations mainly because the PDN has:",
+      "options": [
+        "Finite loop inductance",
+        "Infinite capacitance",
+        "Zero resistance",
+        "No return path"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is stated on page 7.",
+      "category": "PDN noise",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q25",
+      "type": "single",
+      "question": "Self-aggression noise means:",
+      "options": [
+        "A device disturbs its own supply voltage",
+        "A VRM disturbs another board",
+        "An IC disturbs only its signal line",
+        "A ground plane radiates EMI"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the definition used.",
+      "category": "Noise types",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q26",
+      "type": "single",
+      "question": "Mutual-aggression noise means:",
+      "options": [
+        "Noise generated in one part of the PDN disturbs another device/rail",
+        "Only self-noise",
+        "Only thermal noise",
+        "Only ADC quantization"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter uses this term for shared-rail disturbances.",
+      "category": "Noise types",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q27",
+      "type": "multi",
+      "question": "Which increase supply-voltage noise caused by PDN inductance?",
+      "options": [
+        "Higher loop inductance",
+        "Larger current steps",
+        "Faster edges",
+        "Smaller current steps"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three are explicitly listed.",
+      "category": "PDN noise",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q28",
+      "type": "single",
+      "question": "What equation relates inductive supply noise to current slew rate?",
+      "options": [
+        "ΔV = L · dI/dt",
+        "ΔV=C·dV/dt",
+        "ΔV=I/L",
+        "ΔV=R/C"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter uses the inductor voltage relation.",
+      "category": "PDN noise",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q29",
+      "type": "single",
+      "question": "For a current step ΔI occurring in rise time RT, the chapter approximates noise as:",
+      "options": [
+        "ΔV ≈ L·ΔI/RT",
+        "ΔV≈L·RT/ΔI",
+        "ΔV≈ΔI/(LRT)",
+        "ΔV≈L+ΔI+RT"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the approximation shown.",
+      "category": "PDN noise",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q30",
+      "type": "tf",
+      "question": "Faster current edges increase dI/dt and therefore supply-voltage noise.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Directly follows ΔV=L dI/dt.",
+      "category": "PDN noise",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q31",
+      "type": "tf",
+      "question": "Increasing loop inductance reduces supply-noise amplitude.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Higher L increases ΔV.",
+      "category": "PDN noise",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q32",
+      "type": "single",
+      "question": "The momentary drop of the IC supply relative to the VRM output is called:",
+      "options": [
+        "Supply-switching noise",
+        "Only thermal noise",
+        "Ground-plane resonance only",
+        "Soldering noise"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter uses this terminology.",
+      "category": "PDN noise",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q33",
+      "type": "single",
+      "question": "PDN inductance and decoupling capacitance together can form:",
+      "options": [
+        "Resonant networks",
+        "Only DC dividers",
+        "Purely resistive networks",
+        "Ideal transformers"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter warns about resonance.",
+      "category": "PDN resonance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q34",
+      "type": "single",
+      "question": "What can excite PDN resonances?",
+      "options": [
+        "Load-current transients",
+        "Static DC voltage only",
+        "PCB color",
+        "Solder-mask openings"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "PDN resonance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q35",
+      "type": "single",
+      "question": "A likely symptom of excited PDN resonance is:",
+      "options": [
+        "Ringing on the supply rails",
+        "Zero current draw",
+        "Mechanical vibration only",
+        "No voltage change"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Ringing is explicitly mentioned.",
+      "category": "PDN resonance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q36",
+      "type": "multi",
+      "question": "Main strategies to reduce inductive supply-voltage noise include:",
+      "options": [
+        "Increase rise/fall time when possible",
+        "Reduce PDN loop inductance between VRM and IC",
+        "Place decoupling capacitors close to IC",
+        "Increase loop area"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three are explicitly listed.",
+      "category": "Mitigation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q37",
+      "type": "single",
+      "question": "Increasing RT reduces noise because it reduces:",
+      "options": [
+        "dI/dt",
+        "Capacitance",
+        "Resistance",
+        "Supply voltage"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is stated on page 9.",
+      "category": "Mitigation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q38",
+      "type": "single",
+      "question": "A possible drawback of increasing RT is:",
+      "options": [
+        "It may affect timing and increase switching losses",
+        "It always reduces switching losses",
+        "It eliminates all timing constraints",
+        "It increases capacitance automatically"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly notes these tradeoffs.",
+      "category": "Mitigation",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q39",
+      "type": "single",
+      "question": "In the example, RT = 0.5 µs produced about:",
+      "options": [
+        "100 mV supply noise",
+        "700 mV",
+        "10 mV",
+        "1 V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This value is shown on page 9.",
+      "category": "Mitigation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q40",
+      "type": "single",
+      "question": "In the same example, RT = 0.05 µs produced about:",
+      "options": [
+        "700 mV supply noise",
+        "100 mV",
+        "70 mV",
+        "7 mV"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This value is shown on page 9.",
+      "category": "Mitigation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q41",
+      "type": "tf",
+      "question": "In the example, making the rise time ten times faster increased the observed supply noise substantially.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Noise rose from roughly 100 mV to 700 mV.",
+      "category": "Mitigation",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q42",
+      "type": "single",
+      "question": "How should the power-return loop area between IC and VRM be reduced?",
+      "options": [
+        "Use short, closely coupled interconnects",
+        "Use long separated wires",
+        "Use no return conductor",
+        "Increase spacing between power and return"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the explicit recommendation.",
+      "category": "Mitigation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q43",
+      "type": "single",
+      "question": "What is the main purpose of a decoupling capacitor near an IC?",
+      "options": [
+        "Supply fast transient current locally",
+        "Set the clock frequency",
+        "Replace the VRM entirely",
+        "Increase loop inductance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The capacitor reduces fast transient current through the inductive VRM-IC path.",
+      "category": "Decoupling basics",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q44",
+      "type": "single",
+      "question": "Where should decoupling capacitors be placed?",
+      "options": [
+        "Close to the IC supply pins",
+        "Near the power source only",
+        "Anywhere on the PCB",
+        "At the board edge"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Close placement minimizes local loop inductance.",
+      "category": "Decoupling basics",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q45",
+      "type": "single",
+      "question": "Why does close placement matter?",
+      "options": [
+        "It minimizes the local power-return loop inductance",
+        "It increases ESR",
+        "It increases ESL",
+        "It raises ripple"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the key design message.",
+      "category": "Decoupling basics",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q46",
+      "type": "tf",
+      "question": "The decoupling capacitor reduces transient current flowing through the inductive VRM–IC path.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Decoupling basics",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q47",
+      "type": "single",
+      "question": "Neglecting ESR and ESL, the capacitor sizing relation for approximately constant transient current is:",
+      "options": [
+        "C = IΔt/ΔV",
+        "C = ΔV/(IΔt)",
+        "C = I/(ΔtΔV)",
+        "C = Δt/(IΔV)"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This follows from ΔQ=CΔV=IΔt and is the relation implied on page 11.",
+      "category": "Decoupling formulas",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q48",
+      "type": "single",
+      "question": "In C = IΔt/ΔV, I is:",
+      "options": [
+        "Transient load current",
+        "DC rail voltage",
+        "Capacitor ESR",
+        "Loop inductance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Variable definition from the slide.",
+      "category": "Decoupling formulas",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q49",
+      "type": "single",
+      "question": "In C = IΔt/ΔV, Δt is:",
+      "options": [
+        "Duration of the transient",
+        "Rise-time noise voltage",
+        "Capacitor ESR",
+        "Loop length"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Variable definition from the slide.",
+      "category": "Decoupling formulas",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q50",
+      "type": "single",
+      "question": "In C = IΔt/ΔV, ΔV is:",
+      "options": [
+        "Maximum allowable supply-voltage drop",
+        "Capacitor current rating",
+        "Package inductance",
+        "DC resistance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Variable definition from the slide.",
+      "category": "Decoupling formulas",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q51",
+      "type": "single",
+      "question": "What rule of thumb is given for local decoupling capacitance?",
+      "options": [
+        "10–22 µF",
+        "1–2 pF",
+        "100–220 nF only",
+        "1 F"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly gives 10–22 µF.",
+      "category": "Decoupling basics",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q52",
+      "type": "tf",
+      "question": "The exact capacitance value is less important than ensuring sufficient capacitance and low PDN impedance over the relevant frequency range.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Decoupling basics",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q53",
+      "type": "single",
+      "question": "The most important property of a decoupling capacitor in this chapter is:",
+      "options": [
+        "The loop inductance between the capacitor and the IC",
+        "Only its printed capacitance value",
+        "Its color",
+        "Its manufacturer"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter emphasizes this strongly.",
+      "category": "Decoupling basics",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q54",
+      "type": "single",
+      "question": "Using multiple identical capacitors in parallel can reduce:",
+      "options": [
+        "Effective ESL",
+        "Rail voltage",
+        "Ground potential",
+        "DC current rating"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter states this explicitly.",
+      "category": "Decoupling basics",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q55",
+      "type": "tf",
+      "question": "For fast switching transients, the loop inductance between the VRM and the local decoupling capacitors is not critical.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The capacitor isolates the IC from that remote inductive path.",
+      "category": "Decoupling basics",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q56",
+      "type": "multi",
+      "question": "The loop inductance between IC and local decoupling capacitor includes:",
+      "options": [
+        "IC package loop inductance",
+        "PCB interconnect loop inductance",
+        "Capacitor ESL",
+        "VRM transformer inductance only"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "These three are explicitly listed.",
+      "category": "Decoupling loop",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q57",
+      "type": "single",
+      "question": "What does ESL stand for?",
+      "options": [
+        "Equivalent Series Inductance",
+        "Effective Supply Loss",
+        "Equivalent Shunt Leakage",
+        "External Series Loop"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "ESL is explicitly defined.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q58",
+      "type": "single",
+      "question": "What does ESR stand for?",
+      "options": [
+        "Equivalent Series Resistance",
+        "Equivalent Shunt Resistance",
+        "Effective Supply Reactance",
+        "External Series Resistance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "ESR is explicitly defined.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q59",
+      "type": "single",
+      "question": "The decoupling loop inductance can be written as:",
+      "options": [
+        "Lloop = Lpackage + Linterconnect + LESL",
+        "Lloop=Lpackage·Linterconnect·LESL",
+        "Lloop=Lpackage−Linterconnect",
+        "Lloop=LESL only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This formula is shown on page 13.",
+      "category": "Decoupling loop",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q60",
+      "type": "single",
+      "question": "A 2 cm breadboard connection can already introduce about:",
+      "options": [
+        "20 nH of loop inductance",
+        "2 nH",
+        "200 nH",
+        "20 µH"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Breadboard decoupling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q61",
+      "type": "single",
+      "question": "On a breadboard, distances below about what range are difficult to achieve?",
+      "options": [
+        "1–2 cm",
+        "1–2 mm",
+        "10–20 cm",
+        "1–2 m"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is stated on page 14.",
+      "category": "Breadboard decoupling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q62",
+      "type": "single",
+      "question": "For high-frequency PCB decoupling, the chapter recommends:",
+      "options": [
+        "Small SMD MLCCs",
+        "Large leaded electrolytics only",
+        "Wirewound inductors",
+        "Mechanical relays"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "SMD MLCCs have low loop inductance.",
+      "category": "Decoupling hardware",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q63",
+      "type": "single",
+      "question": "Why avoid leaded capacitors for high-frequency decoupling?",
+      "options": [
+        "Their loop inductance is higher",
+        "Their capacitance is always too small",
+        "They are never polarized",
+        "They have zero ESR"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Decoupling hardware",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q64",
+      "type": "single",
+      "question": "What does MLCC stand for?",
+      "options": [
+        "Multilayer Ceramic Capacitor",
+        "Multi-Loop Coupling Capacitor",
+        "Metal-Layer Current Capacitor",
+        "Modular Low-Cost Capacitor"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter expands MLCC.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q65",
+      "type": "single",
+      "question": "What does SMD stand for?",
+      "options": [
+        "Surface-Mount Device",
+        "Series-Mounted Device",
+        "Signal-Matching Device",
+        "Supply-Mounted Driver"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter uses SMD repeatedly.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q66",
+      "type": "single",
+      "question": "On breadboards, power rails should be used to minimize:",
+      "options": [
+        "Resistance and loop inductance",
+        "Capacitance only",
+        "Clock frequency",
+        "PCB area"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly recommended.",
+      "category": "Routing guidelines",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q67",
+      "type": "single",
+      "question": "For larger or longer current transients, the chapter recommends adding:",
+      "options": [
+        "A larger bulk capacitor, e.g. 500 µF or more",
+        "A smaller 1 pF capacitor",
+        "Only a ferrite bead",
+        "No extra capacitance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Bulk capacitance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q68",
+      "type": "single",
+      "question": "What kind of capacitor requires observing polarity in this context?",
+      "options": [
+        "Electrolytic capacitor",
+        "MLCC",
+        "Film capacitor only",
+        "Air capacitor"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly warns to observe polarity.",
+      "category": "Bulk capacitance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q69",
+      "type": "single",
+      "question": "For MLCCs, a common voltage-rating rule is:",
+      "options": [
+        "At least 2× the DC rail voltage",
+        "Exactly equal to rail voltage",
+        "Half the rail voltage",
+        "10× always"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the rule of thumb given.",
+      "category": "MLCC voltage rating",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q70",
+      "type": "single",
+      "question": "Why choose an MLCC voltage rating well above the rail voltage?",
+      "options": [
+        "To reduce DC-bias capacitance loss and improve reliability",
+        "To increase ESR",
+        "To raise loop inductance",
+        "To increase inrush current"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "MLCC voltage rating",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q71",
+      "type": "tf",
+      "question": "Insufficient capacitor voltage rating can reduce product lifetime.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The planned-obsolescence intermezzo makes this point.",
+      "category": "MLCC voltage rating",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q72",
+      "type": "tf",
+      "question": "Too much bulk decoupling capacitance can cause startup problems.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly says yes.",
+      "category": "Inrush current",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q73",
+      "type": "single",
+      "question": "Why can excessive bulk capacitance cause high inrush current?",
+      "options": [
+        "Initially uncharged capacitors draw a transient charging current at power-up",
+        "Charged capacitors become open circuits",
+        "Capacitance reduces source voltage to zero permanently",
+        "The VRM becomes purely resistive"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the mechanism described.",
+      "category": "Inrush current",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q74",
+      "type": "single",
+      "question": "For a 5 V source and 0.5 Ω total series resistance, initial inrush current is about:",
+      "options": [
+        "10 A",
+        "1 A",
+        "2.5 A",
+        "0.1 A"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "I=V/R=5/0.5=10 A.",
+      "category": "Inrush current",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q75",
+      "type": "single",
+      "question": "Large inrush current may trigger:",
+      "options": [
+        "Current limiting or protection in the power source",
+        "Only thermal noise",
+        "Lower ESR",
+        "Ground isolation"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Inrush current",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q76",
+      "type": "single",
+      "question": "The peak inrush current is set mainly by:",
+      "options": [
+        "Series resistance",
+        "Capacitance value only",
+        "Ground-plane area only",
+        "Capacitor color"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly says this.",
+      "category": "Inrush current",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q77",
+      "type": "single",
+      "question": "Increasing capacitance mainly increases:",
+      "options": [
+        "The duration of the inrush current",
+        "The initial peak if series resistance is unchanged",
+        "The source voltage",
+        "The ferrite bead ESR"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter makes this distinction.",
+      "category": "Inrush current",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q78",
+      "type": "single",
+      "question": "A common way to limit inrush current is:",
+      "options": [
+        "A soft-start circuit",
+        "Short-circuit the supply",
+        "Remove all capacitors",
+        "Increase loop area"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly suggested.",
+      "category": "Inrush current",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q79",
+      "type": "single",
+      "question": "One soft-start implementation mentioned is:",
+      "options": [
+        "A series resistor bypassed after the capacitors charge",
+        "A permanent short",
+        "A shunt capacitor across ground only",
+        "A transformerless AC stage"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This exact example is given.",
+      "category": "Inrush current",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q80",
+      "type": "single",
+      "question": "Why can noise propagate through the PDN?",
+      "options": [
+        "Because the PDN has finite impedance",
+        "Because it has zero impedance",
+        "Because loads are ideal",
+        "Because capacitors block DC"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter's core statement.",
+      "category": "PDN as noise path",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q81",
+      "type": "single",
+      "question": "Noise from the VRM coupled onto a shared rail is:",
+      "options": [
+        "Mutual-aggression noise",
+        "Self-aggression noise",
+        "Thermal noise",
+        "Shot noise"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is category 1 on page 19.",
+      "category": "Noise types",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q82",
+      "type": "single",
+      "question": "An IC's switching current creating noise on its own supply rail is:",
+      "options": [
+        "Self-aggression noise",
+        "Mutual-aggression noise",
+        "Thermal noise",
+        "EMI only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is category 2 on page 19.",
+      "category": "Noise types",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q83",
+      "type": "single",
+      "question": "An IC's switching current disturbing other ICs through the shared PDN is:",
+      "options": [
+        "Mutual-aggression noise",
+        "Self-aggression noise",
+        "No noise",
+        "Only ground bounce"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is category 3 on page 19.",
+      "category": "Noise types",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q84",
+      "type": "single",
+      "question": "An SMPS generates switching ripple at:",
+      "options": [
+        "Its switching frequency and harmonics",
+        "Only DC",
+        "Only mains frequency",
+        "Only audio frequencies"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "SMPS ripple",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q85",
+      "type": "single",
+      "question": "What filter is used to attenuate SMPS switching ripple before the load?",
+      "options": [
+        "An LC low-pass filter",
+        "A high-pass RC filter",
+        "A band-stop crystal filter",
+        "No filter"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "SMPS ripple",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q86",
+      "type": "single",
+      "question": "The inductor and output capacitor form a:",
+      "options": [
+        "Second-order low-pass filter",
+        "First-order high-pass filter",
+        "Pure resistor divider",
+        "Third-order band-pass filter"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "SMPS ripple",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q87",
+      "type": "single",
+      "question": "What is the LC resonant-frequency formula?",
+      "options": [
+        "f0 = 1/(2π√(LC))",
+        "f0=2π√(LC)",
+        "f0=L/C",
+        "f0=1/(LC)"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the standard formula shown in the chapter.",
+      "category": "SMPS ripple",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q88",
+      "type": "single",
+      "question": "Where should f0 be relative to the switching frequency?",
+      "options": [
+        "Well below it",
+        "Well above it",
+        "Exactly equal to it",
+        "Unrelated"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "SMPS ripple",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q89",
+      "type": "single",
+      "question": "An ideal second-order low-pass filter eventually approaches what attenuation above f0?",
+      "options": [
+        "−40 dB/decade",
+        "−20 dB/decade",
+        "+40 dB/decade",
+        "0 dB/decade"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "SMPS ripple",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q90",
+      "type": "single",
+      "question": "In the example, the SMPS switching frequency is:",
+      "options": [
+        "50 kHz",
+        "5 kHz",
+        "500 kHz",
+        "50 MHz"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the example value.",
+      "category": "SMPS ripple",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q91",
+      "type": "single",
+      "question": "The target LC resonant frequency in the example is around:",
+      "options": [
+        "5 kHz",
+        "50 kHz",
+        "500 Hz",
+        "500 kHz"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the target given.",
+      "category": "SMPS ripple",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q92",
+      "type": "single",
+      "question": "With L=10 µH and target f0≈5 kHz, the chapter says capacitance should be at least about:",
+      "options": [
+        "100 µF",
+        "1 µF",
+        "10 µF",
+        "1 mF"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the example conclusion.",
+      "category": "SMPS ripple",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q93",
+      "type": "single",
+      "question": "Capacitances around 100 µF are often implemented with:",
+      "options": [
+        "Electrolytic capacitors such as aluminum or tantalum",
+        "Only MLCCs in every case",
+        "Air capacitors",
+        "Variable capacitors"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "SMPS ripple",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q94",
+      "type": "tf",
+      "question": "Aluminum and tantalum electrolytic capacitors are polarized.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter states this.",
+      "category": "SMPS ripple",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q95",
+      "type": "tf",
+      "question": "Reverse-polarizing an electrolytic capacitor can damage or rupture it.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly warns this.",
+      "category": "SMPS ripple",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q96",
+      "type": "single",
+      "question": "Excessive SMPS output capacitance can cause:",
+      "options": [
+        "Startup problems and over-current protection triggering",
+        "Lower inrush current",
+        "Zero ripple with no drawbacks",
+        "Ground-plane splitting"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly discussed.",
+      "category": "SMPS startup",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q97",
+      "type": "single",
+      "question": "If SMPS over-current protection repeatedly trips during startup, the supply may:",
+      "options": [
+        "Shut down and restart repeatedly",
+        "Increase output voltage indefinitely",
+        "Become an ideal source",
+        "Eliminate switching"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter states this behavior.",
+      "category": "SMPS startup",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q98",
+      "type": "single",
+      "question": "What helps an SMPS charge a large output capacitor more gradually?",
+      "options": [
+        "Soft-start",
+        "Hard reset",
+        "Ferrite in the ground return",
+        "More ESR-free capacitance only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "SMPS startup",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q99",
+      "type": "single",
+      "question": "What does PSRR stand for?",
+      "options": [
+        "Power-Supply Rejection Ratio",
+        "Power Series Resistance Ratio",
+        "Passive Supply Ripple Reduction",
+        "Power Switching Resonance Ratio"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter defines PSRR.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q100",
+      "type": "single",
+      "question": "PSRR characterizes:",
+      "options": [
+        "Attenuation of input-supply noise through the regulator to its output",
+        "Output current limit only",
+        "Thermal resistance",
+        "Ground-bounce amplitude only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter meaning.",
+      "category": "PSRR",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q101",
+      "type": "tf",
+      "question": "PSRR is frequency dependent.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly states this.",
+      "category": "PSRR",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q102",
+      "type": "single",
+      "question": "A PSRR of 40 dB corresponds to about:",
+      "options": [
+        "100× reduction in noise voltage",
+        "10× reduction",
+        "40× reduction",
+        "1000× reduction"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "20log10(100)=40 dB; the chapter states this directly.",
+      "category": "PSRR",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q103",
+      "type": "single",
+      "question": "Additional VRM output noise can be reduced using:",
+      "options": [
+        "Additional filtering and/or an LDO",
+        "Only a larger ground gap",
+        "Longer power traces",
+        "No output capacitor"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "PSRR",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q104",
+      "type": "single",
+      "question": "A cost of adding an LDO for extra filtering is:",
+      "options": [
+        "Additional voltage drop and power dissipation",
+        "Zero power loss",
+        "More switching ripple",
+        "No dropout requirement"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "PSRR",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q105",
+      "type": "single",
+      "question": "Many LDOs require:",
+      "options": [
+        "A specified output capacitance and ESR range for stable operation",
+        "No output capacitor ever",
+        "Only inductive loads",
+        "A ferrite in ground"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "LDO stability",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q106",
+      "type": "single",
+      "question": "Too little LDO output capacitance or unsuitable ESR may cause:",
+      "options": [
+        "Oscillation",
+        "Guaranteed stability",
+        "Lower dropout only",
+        "Zero current"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly states this.",
+      "category": "LDO stability",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q107",
+      "type": "single",
+      "question": "Excessive LDO output capacitance mainly increases:",
+      "options": [
+        "Startup/inrush current",
+        "PSRR at all frequencies infinitely",
+        "Ground inductance",
+        "Output ripple frequency"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "LDO stability",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q108",
+      "type": "tf",
+      "question": "An LDO datasheet should be checked for output-capacitance and ESR requirements.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter shows datasheet excerpts for this reason.",
+      "category": "LDO stability",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q109",
+      "type": "single",
+      "question": "When an IC switches, it draws:",
+      "options": [
+        "A transient current from its PDN",
+        "No current",
+        "Only DC steady-state current",
+        "Current only from signal pins"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Self-aggression",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q110",
+      "type": "single",
+      "question": "The key to controlling self-aggression noise is to minimize:",
+      "options": [
+        "Loop inductance between decoupling capacitor and IC power pins",
+        "Loop inductance between VRM and wall outlet",
+        "Ferrite-bead DC resistance only",
+        "Board thickness"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the central design rule.",
+      "category": "Self-aggression",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q111",
+      "type": "single",
+      "question": "What is the minimum recommended power-trace width rule of thumb in the chapter?",
+      "options": [
+        "20 mil for 1 oz copper",
+        "6 mil always",
+        "3 mil",
+        "100 mil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter recommends at least 20 mil for power traces.",
+      "category": "Routing guidelines",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q112",
+      "type": "single",
+      "question": "A 20 mil, 1 oz, 5 cm trace has about what resistance?",
+      "options": [
+        "0.05 Ω",
+        "0.5 Ω",
+        "0.005 Ω",
+        "5 Ω"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter states 10 mΩ/cm, so 5 cm gives 0.05 Ω.",
+      "category": "Routing guidelines",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q113",
+      "type": "single",
+      "question": "At 3 A, a 0.05 Ω power trace drops about:",
+      "options": [
+        "150 mV",
+        "15 mV",
+        "1.5 V",
+        "50 mV"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "V=IR=3×0.05=0.15 V.",
+      "category": "Routing guidelines",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q114",
+      "type": "single",
+      "question": "Connections between local decoupling capacitors and IC power/ground pins should be:",
+      "options": [
+        "Short and wide",
+        "Long and narrow",
+        "Long and wide",
+        "Short and very resistive"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Routing guidelines",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q115",
+      "type": "single",
+      "question": "The chapter recommends using:",
+      "options": [
+        "A solid ground plane",
+        "Arbitrary isolated copper islands",
+        "No ground plane",
+        "A ferrite bead in the IC ground return"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Routing guidelines",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q116",
+      "type": "tf",
+      "question": "Arbitrary copper pours may increase unwanted coupling.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly warns this.",
+      "category": "Routing guidelines",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q117",
+      "type": "single",
+      "question": "What is a local power 'puddle' used for?",
+      "options": [
+        "A short, low-inductance local power connection around decoupling capacitors",
+        "A solder-mask opening",
+        "A thermal relief",
+        "A mechanical keepout"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter uses this term for local power routing.",
+      "category": "Routing guidelines",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q118",
+      "type": "single",
+      "question": "Rule of thumb: use at least how many 10–22 µF MLCCs per power pin?",
+      "options": [
+        "One",
+        "Zero",
+        "Ten",
+        "Exactly three only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says at least one per power pin; later summary broadens to 1–3 per pin/group.",
+      "category": "Routing guidelines",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q119",
+      "type": "tf",
+      "question": "Additional identical capacitors in parallel can further reduce effective high-frequency impedance.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Routing guidelines",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q120",
+      "type": "multi",
+      "question": "A microcontroller may have separate supply pins for:",
+      "options": [
+        "Core/digital logic VDD",
+        "I/O circuitry VCC or VIO",
+        "Analog circuitry AVCC",
+        "ADC reference Vref"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All are listed.",
+      "category": "Multiple rails",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q121",
+      "type": "single",
+      "question": "What does AVCC generally denote here?",
+      "options": [
+        "Analog supply rail",
+        "Main clock rail",
+        "Ground return",
+        "Ferrite bead current rating"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter uses AVCC for analog circuitry.",
+      "category": "Multiple rails",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q122",
+      "type": "single",
+      "question": "What does Vref denote in the microcontroller example?",
+      "options": [
+        "Sensitive ADC reference supply/reference",
+        "Ground return",
+        "Digital output rail",
+        "USB supply"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter identifies Vref as a sensitive function.",
+      "category": "Multiple rails",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q123",
+      "type": "tf",
+      "question": "Even if several supply pins connect to the same PCB rail, each pin or pin group should be locally decoupled.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Multiple rails",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q124",
+      "type": "tf",
+      "question": "Different on-die power rails can have different current requirements, noise generation and noise sensitivity.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "All three differences are explicitly listed.",
+      "category": "Multiple rails",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q125",
+      "type": "single",
+      "question": "Digital VDD rails typically:",
+      "options": [
+        "Carry large switching currents and are prone to self-aggression noise",
+        "Draw no transient current",
+        "Are always the most noise-sensitive and quietest",
+        "Require no decoupling"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Multiple rails",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q126",
+      "type": "single",
+      "question": "Sensitive rails such as AVCC and Vref typically:",
+      "options": [
+        "Generate little self-noise but can be highly sensitive to shared-PDN noise",
+        "Carry the largest switching currents",
+        "Require no filtering",
+        "Are immune to mutual aggression"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Multiple rails",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q127",
+      "type": "single",
+      "question": "The best first-line solution for self-aggression noise is:",
+      "options": [
+        "Low-loop-inductance local decoupling",
+        "Ferrite bead in ground path",
+        "Longer traces",
+        "Only bulk capacitance at VRM"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the stated solution.",
+      "category": "Noise mitigation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q128",
+      "type": "single",
+      "question": "The best strategy for mutual-aggression noise on a sensitive rail is:",
+      "options": [
+        "Filter or isolate the sensitive rail from board-level PDN noise",
+        "Increase IC switching current",
+        "Remove local capacitor",
+        "Use shared ground inductance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Noise mitigation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q129",
+      "type": "single",
+      "question": "A sensitive rail can be isolated using a low-pass filter made of:",
+      "options": [
+        "A series inductive element followed by a local decoupling capacitor",
+        "A parallel resistor only",
+        "A high-pass RC filter",
+        "No local capacitor"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Ferrite beads",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q130",
+      "type": "single",
+      "question": "Why is some series resistance useful in this filter?",
+      "options": [
+        "It provides damping and reduces resonance",
+        "It increases resonance Q indefinitely",
+        "It removes all DC voltage",
+        "It eliminates inductance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Ferrite beads",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q131",
+      "type": "single",
+      "question": "What component is often used as the series inductive element?",
+      "options": [
+        "Ferrite bead",
+        "LED",
+        "Crystal",
+        "Thermistor only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Ferrite beads",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q132",
+      "type": "single",
+      "question": "A ferrite bead is best described as:",
+      "options": [
+        "A frequency-dependent, lossy impedance",
+        "An ideal inductor only",
+        "An ideal resistor only",
+        "An ideal capacitor"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter definition.",
+      "category": "Ferrite beads",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q133",
+      "type": "single",
+      "question": "At low frequencies, a ferrite bead behaves mainly:",
+      "options": [
+        "Inductively",
+        "Capacitively",
+        "As an open circuit",
+        "As an ideal voltage source"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Ferrite beads",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q134",
+      "type": "single",
+      "question": "As frequency rises into the suppression region, what component tends to dominate?",
+      "options": [
+        "Resistive component R(f)",
+        "Pure capacitance only",
+        "DC resistance only",
+        "No impedance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Magnetic losses make R(f) dominant.",
+      "category": "Ferrite beads",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q135",
+      "type": "single",
+      "question": "At very high frequencies, ferrite-bead impedance may decrease because of:",
+      "options": [
+        "Parasitic capacitance",
+        "Increasing copper thickness",
+        "Negative resistance",
+        "Ground-plane resonance only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Ferrite beads",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q136",
+      "type": "tf",
+      "question": "Ferrite-bead impedance typically rises, reaches a maximum, then falls at very high frequency.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is described on page 35.",
+      "category": "Ferrite beads",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q137",
+      "type": "multi",
+      "question": "Ferrite components can appear as:",
+      "options": [
+        "Toroidal cores",
+        "Through-hole ferrite beads",
+        "Compact SMD ferrite beads",
+        "Only electrolytic capacitors"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "All three ferrite forms are shown/listed.",
+      "category": "Ferrite beads",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q138",
+      "type": "single",
+      "question": "Where should a ferrite bead be placed to filter a sensitive AVCC rail?",
+      "options": [
+        "Between the board-level supply and the IC AVCC pin",
+        "In the IC ground-return path",
+        "Across VDD and ground directly",
+        "In series with a signal output"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly shown.",
+      "category": "Ferrite beads",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q139",
+      "type": "single",
+      "question": "Where should the local decoupling capacitor be connected in that filter?",
+      "options": [
+        "From AVCC to ground close to the IC",
+        "From ground to ground only",
+        "Across the VRM input only",
+        "In series with AVCC"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the circuit shown on page 37.",
+      "category": "Ferrite beads",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q140",
+      "type": "single",
+      "question": "The ferrite bead mainly:",
+      "options": [
+        "Isolates high-frequency noise from the shared PDN",
+        "Supplies transient current locally",
+        "Creates the IC clock",
+        "Eliminates DC voltage drop"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the stated role.",
+      "category": "Ferrite beads",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q141",
+      "type": "single",
+      "question": "The local capacitor mainly:",
+      "options": [
+        "Provides a low-impedance local supply for the sensitive rail",
+        "Generates high-frequency noise",
+        "Raises DC resistance",
+        "Increases ground bounce"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the stated role.",
+      "category": "Ferrite beads",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q142",
+      "type": "single",
+      "question": "A ferrite bead is often specified by:",
+      "options": [
+        "Its impedance magnitude at a given frequency",
+        "Its capacitance only",
+        "Its color",
+        "Its inductance at DC only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Ferrite calculations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q143",
+      "type": "single",
+      "question": "In its inductive region, approximate ferrite-bead inductance is:",
+      "options": [
+        "L ≈ |Z|/(2πf)",
+        "L≈2πf|Z|",
+        "L≈|Z|f",
+        "L≈f/|Z|"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the formula shown.",
+      "category": "Ferrite calculations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q144",
+      "type": "single",
+      "question": "For |Z|=2 kΩ at 30 MHz, the estimated inductance is about:",
+      "options": [
+        "10.6 µH",
+        "1.06 µH",
+        "106 µH",
+        "0.106 µH"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the example result on page 38.",
+      "category": "Ferrite calculations",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q145",
+      "type": "single",
+      "question": "With L≈10.6 µH and C=22 µF, the LC resonant frequency is about:",
+      "options": [
+        "10 kHz",
+        "100 kHz",
+        "1 kHz",
+        "1 MHz"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the example result.",
+      "category": "Ferrite calculations",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q146",
+      "type": "single",
+      "question": "The LC resonant frequency formula is:",
+      "options": [
+        "f0≈1/(2π√(LC))",
+        "f0≈2π√(LC)",
+        "f0≈L/C",
+        "f0≈1/(LC)"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the formula used.",
+      "category": "Ferrite calculations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q147",
+      "type": "tf",
+      "question": "An LC low-pass filter can exhibit resonant peaking near f0.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Ferrite resonance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q148",
+      "type": "single",
+      "question": "What is needed to damp LC resonance?",
+      "options": [
+        "Sufficient series resistance",
+        "Zero resistance",
+        "More inductance only",
+        "No capacitor"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter states this explicitly.",
+      "category": "Ferrite resonance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q149",
+      "type": "single",
+      "question": "For the simplified series-damped LC model, the chapter uses:",
+      "options": [
+        "Q = (1/R)√(L/C)",
+        "Q=R√(L/C)",
+        "Q=√(LC)/R",
+        "Q=RC/L"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the formula shown on page 39.",
+      "category": "Ferrite resonance",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q150",
+      "type": "single",
+      "question": "Assuming Q=1, L=10 µH and C=22 µF, required R is about:",
+      "options": [
+        "0.67 Ω",
+        "6.7 Ω",
+        "0.067 Ω",
+        "67 Ω"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the example result.",
+      "category": "Ferrite resonance",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q151",
+      "type": "multi",
+      "question": "Effective damping resistance can include:",
+      "options": [
+        "Ferrite bead's R(f)",
+        "Interconnect resistance",
+        "Capacitor ESR",
+        "Capacitor capacitance only"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "These three are explicitly listed.",
+      "category": "Ferrite resonance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q152",
+      "type": "single",
+      "question": "A ferrite bead's datasheet DC resistance can be used for:",
+      "options": [
+        "A coarse estimate of damping in a simplified LC model",
+        "Exact high-frequency impedance at all frequencies",
+        "Calculating capacitance directly",
+        "Determining PCB thickness"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Ferrite resonance",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q153",
+      "type": "single",
+      "question": "In the simulation example, ferrite-bead DC resistance is assumed to be:",
+      "options": [
+        "0.5 Ω",
+        "0.05 Ω",
+        "5 Ω",
+        "50 Ω"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Ferrite resonance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q154",
+      "type": "single",
+      "question": "The simulated filter exhibits some peaking near:",
+      "options": [
+        "10 kHz",
+        "10 MHz",
+        "100 Hz",
+        "1 GHz"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Ferrite resonance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q155",
+      "type": "tf",
+      "question": "Despite some peaking near 10 kHz, the filter strongly attenuates higher-frequency noise.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Ferrite resonance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q156",
+      "type": "single",
+      "question": "Why is a 1 µs power-rail pulse strongly suppressed by a 10 kHz low-pass filter?",
+      "options": [
+        "Its main frequency components are far above the filter corner",
+        "Its frequency components are below DC",
+        "The ferrite acts as a short at all frequencies",
+        "The capacitor is open at high frequency"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the explanation on page 41.",
+      "category": "Ferrite resonance",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q157",
+      "type": "tf",
+      "question": "A ferrite bead is a 'magic pill' that solves all PDN noise problems.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The chapter explicitly says it is not.",
+      "category": "Ferrite limitations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q158",
+      "type": "single",
+      "question": "The useful high-frequency resistive component R(f) of a ferrite bead helps:",
+      "options": [
+        "Damp resonances and dissipate high-frequency noise",
+        "Increase ground bounce",
+        "Raise loop inductance intentionally",
+        "Eliminate all DC loss"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Ferrite limitations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q159",
+      "type": "single",
+      "question": "A drawback of ferrite-bead DC resistance is:",
+      "options": [
+        "Voltage drop and power loss",
+        "It improves DC efficiency",
+        "It creates no loss",
+        "It reduces current to zero by design"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Ferrite limitations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q160",
+      "type": "single",
+      "question": "With 0.5 Ω bead resistance and 1 A current, the DC drop is:",
+      "options": [
+        "0.5 V",
+        "0.05 V",
+        "5 V",
+        "0.005 V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "V=IR=0.5×1=0.5 V.",
+      "category": "Ferrite limitations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q161",
+      "type": "single",
+      "question": "Ferrite beads are most useful on:",
+      "options": [
+        "Sensitive supply pins with moderate current draw",
+        "High-current ground returns",
+        "Every signal line by default",
+        "Only 100 A rails"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Ferrite limitations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q162",
+      "type": "multi",
+      "question": "Before using a ferrite bead on a supply rail, check:",
+      "options": [
+        "Current rating",
+        "DC resistance",
+        "Acceptable DC voltage drop",
+        "Only its color"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "These checks are explicitly stated.",
+      "category": "Ferrite limitations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q163",
+      "type": "single",
+      "question": "Is a ferrite bead the primary solution for self-aggression noise?",
+      "options": [
+        "No; local low-loop-inductance decoupling is primary",
+        "Yes, always",
+        "Only if placed in ground",
+        "Only at DC"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly says no.",
+      "category": "Ferrite limitations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q164",
+      "type": "single",
+      "question": "A ferrite bead can still help with self-generated noise by:",
+      "options": [
+        "Preventing it from propagating back onto the shared PDN",
+        "Increasing local ground impedance",
+        "Removing the local capacitor",
+        "Increasing switching current"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Ferrite limitations",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q165",
+      "type": "single",
+      "question": "Where should ferrite beads never be placed according to the chapter?",
+      "options": [
+        "In the ground-return path of an IC",
+        "In a sensitive AVCC feed",
+        "In an input EMI filter",
+        "In a toroidal choke"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This warning is explicit.",
+      "category": "Ferrite limitations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q166",
+      "type": "single",
+      "question": "Why avoid ferrite beads in IC ground returns?",
+      "options": [
+        "Added impedance increases ground bounce and contaminates shared signal-return paths",
+        "They reduce all noise too much",
+        "They make the ground plane too conductive",
+        "They lower ESR"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Ferrite limitations",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q167",
+      "type": "tf",
+      "question": "The chapter strongly recommends using a solid ground plane.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This appears repeatedly.",
+      "category": "Ferrite limitations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q168",
+      "type": "single",
+      "question": "In the TDK ferrite example shown, impedance at 100 MHz is approximately:",
+      "options": [
+        "120 Ω",
+        "12 Ω",
+        "1200 Ω",
+        "2 kΩ"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The datasheet image shows 120 Ω ±25% at 100 MHz.",
+      "category": "Datasheet example",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q169",
+      "type": "single",
+      "question": "In the same TDK example, impedance at 1 GHz is approximately:",
+      "options": [
+        "2000 Ω",
+        "200 Ω",
+        "20 Ω",
+        "120 Ω"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The datasheet image shows 2000 Ω ±40% at 1 GHz.",
+      "category": "Datasheet example",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q170",
+      "type": "single",
+      "question": "The rated current shown for the TDK bead is approximately:",
+      "options": [
+        "250 mA",
+        "25 mA",
+        "2.5 A",
+        "1 A"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The datasheet image shows 250 mA.",
+      "category": "Datasheet example",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q171",
+      "type": "single",
+      "question": "The maximum DC resistance shown for that bead is about:",
+      "options": [
+        "370 mΩ",
+        "37 mΩ",
+        "3.7 Ω",
+        "0.37 mΩ"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The datasheet image shows 370 mΩ max.",
+      "category": "Datasheet example",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q172",
+      "type": "single",
+      "question": "A real capacitor can be approximated by:",
+      "options": [
+        "A series RLC circuit",
+        "An ideal capacitor only",
+        "A pure resistor",
+        "A pure inductor"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter includes C, ESR, and ESL.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q173",
+      "type": "multi",
+      "question": "A real capacitor includes:",
+      "options": [
+        "Capacitance C",
+        "Equivalent series resistance ESR",
+        "Equivalent series inductance ESL",
+        "Only ideal capacitance"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "All three parasitic elements are explicitly listed.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q174",
+      "type": "single",
+      "question": "What does SRF stand for?",
+      "options": [
+        "Self-Resonant Frequency",
+        "Series Resistance Factor",
+        "Supply Ripple Frequency",
+        "Self-Reactance Function"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "SRF is the self-resonant frequency.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q175",
+      "type": "single",
+      "question": "At the self-resonant frequency, capacitor and inductor reactances:",
+      "options": [
+        "Cancel each other",
+        "Add constructively without limit",
+        "Both become zero resistance physically",
+        "Reverse polarity"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q176",
+      "type": "single",
+      "question": "At SRF, capacitor impedance reaches a minimum approximately equal to:",
+      "options": [
+        "Its ESR",
+        "Its ESL",
+        "Its capacitance",
+        "Zero always"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q177",
+      "type": "single",
+      "question": "For equal ESL, a smaller capacitance has:",
+      "options": [
+        "A higher self-resonant frequency",
+        "A lower SRF",
+        "Exactly the same SRF always",
+        "No SRF"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q178",
+      "type": "single",
+      "question": "The old advice to parallel 1 µF, 0.1 µF and 0.01 µF capacitors was based on the idea that:",
+      "options": [
+        "Smaller capacitors have higher SRF and better high-frequency decoupling",
+        "Larger capacitors always have lower ESR",
+        "Different values remove all resonance",
+        "Capacitance does not matter"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the rationale described.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q179",
+      "type": "single",
+      "question": "For modern SMD MLCCs, that reasoning is described as:",
+      "options": [
+        "Misleading",
+        "Always correct",
+        "Required by standards",
+        "Impossible to evaluate"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The slide says it is misleading.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q180",
+      "type": "single",
+      "question": "What can happen when different-value SMD MLCCs are paralleled?",
+      "options": [
+        "Impedance peaks can appear between their individual resonances",
+        "All resonance disappears",
+        "The PDN impedance is always lower at every frequency",
+        "Only one minimum remains"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q181",
+      "type": "single",
+      "question": "Why are impedance peaks undesirable?",
+      "options": [
+        "They can increase PDN impedance and supply-voltage noise",
+        "They always reduce noise",
+        "They lower DC resistance",
+        "They increase capacitance without drawbacks"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q182",
+      "type": "single",
+      "question": "With three different SMD capacitor values in parallel, the simulation shows:",
+      "options": [
+        "Three minima and two impedance peaks",
+        "One minimum and no peaks",
+        "Two minima and one peak",
+        "A perfectly flat impedance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is stated on page 48.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q183",
+      "type": "single",
+      "question": "Using identical SMD MLCCs in parallel tends to:",
+      "options": [
+        "Lower overall impedance while retaining essentially one SRF",
+        "Create more anti-resonance peaks",
+        "Increase ESL",
+        "Raise DC resistance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter conclusion.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q184",
+      "type": "tf",
+      "question": "In many cases, one well-placed, low-inductance SMD decoupling capacitor can be adequate.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q185",
+      "type": "single",
+      "question": "Why did multiple different-value capacitors make more sense for through-hole parts historically?",
+      "options": [
+        "Smaller capacitance often meant smaller physical size and lower lead/loop inductance",
+        "Through-hole capacitors had no inductance",
+        "Larger capacitors always had higher SRF",
+        "Different values reduced DC resistance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the explanation on page 49.",
+      "category": "Decoupling myth",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q186",
+      "type": "tf",
+      "question": "For modern MLCCs in the same SMD package, smaller C does not necessarily mean lower ESL.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q187",
+      "type": "single",
+      "question": "Modern 10 µF, 1 µF and 0.1 µF MLCCs may:",
+      "options": [
+        "Exist in the same SMD package and therefore have similar loop inductance",
+        "Always have completely different lead inductance",
+        "Require through-hole leads",
+        "Have identical capacitance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q188",
+      "type": "single",
+      "question": "Compared with leaded capacitors, modern SMD MLCC loop inductance is generally:",
+      "options": [
+        "Much lower",
+        "Much higher",
+        "Exactly the same",
+        "Infinite"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q189",
+      "type": "single",
+      "question": "What ground strategy is recommended in the chapter summary?",
+      "options": [
+        "Use a continuous ground plane, or as continuous as possible",
+        "Split ground everywhere",
+        "Use narrow ground traces only",
+        "Use no ground plane"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the first best-practice bullet.",
+      "category": "Best practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q190",
+      "type": "single",
+      "question": "How many local 10–22 µF decoupling capacitors per power pin/group are suggested in the final summary?",
+      "options": [
+        "1 to 3",
+        "Exactly 10",
+        "None",
+        "20 to 30"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated on page 53.",
+      "category": "Best practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q191",
+      "type": "single",
+      "question": "What voltage rating should those local capacitors have?",
+      "options": [
+        "At least 2× the rail voltage",
+        "Equal to half the rail voltage",
+        "Exactly equal to the rail voltage",
+        "No voltage rating needed"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Best practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q192",
+      "type": "single",
+      "question": "Where should local decoupling capacitors be placed?",
+      "options": [
+        "As close as practical to the IC power pins",
+        "At the VRM only",
+        "At the board edge",
+        "Anywhere"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Best practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q193",
+      "type": "single",
+      "question": "How should connections between IC power pins and decoupling capacitors be routed?",
+      "options": [
+        "Short and wide",
+        "Long and thin",
+        "Long and wide",
+        "Only through long vias"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Best practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q194",
+      "type": "single",
+      "question": "How should each capacitor connect to the ground plane?",
+      "options": [
+        "Through a short, low-inductance path, preferably its own nearby ground via",
+        "Through a shared long ground wire",
+        "Through a ferrite bead in ground",
+        "Through no ground connection"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Best practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q195",
+      "type": "tf",
+      "question": "Sharing one ground via among several decoupling capacitors is discouraged.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The final summary explicitly says to avoid it.",
+      "category": "Best practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q196",
+      "type": "single",
+      "question": "The area beneath the IC can be used for:",
+      "options": [
+        "Short ground connections to the ground plane and/or a local ground puddle",
+        "A mandatory ground split",
+        "Long signal loops",
+        "Floating copper only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Best practices",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q197",
+      "type": "single",
+      "question": "For decoupling, leaded capacitors should be:",
+      "options": [
+        "Avoided especially at higher frequencies",
+        "Preferred over SMD MLCCs",
+        "Mandatory",
+        "Used in the ground return"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Best practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q198",
+      "type": "single",
+      "question": "At the VRM output, the chapter recommends roughly:",
+      "options": [
+        "22 µF or more, subject to the datasheet",
+        "0.01 µF only",
+        "No capacitor",
+        "1 pF"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Best practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q199",
+      "type": "single",
+      "question": "The purpose of the VRM output capacitor is to reduce:",
+      "options": [
+        "Low-frequency ripple and supply transients",
+        "Only crosstalk between signals",
+        "Only ground bounce at the IC package",
+        "Only thermal noise"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Best practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q200",
+      "type": "single",
+      "question": "Power traces from source to VRM and VRM to local decoupling should be:",
+      "options": [
+        "Sufficiently wide; 20 mil is a useful minimum rule of thumb",
+        "Always 3 mil",
+        "Always 6 mil maximum",
+        "As narrow as possible"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Best practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q201",
+      "type": "single",
+      "question": "For sensitive supply pins, the chapter recommends:",
+      "options": [
+        "A series ferrite bead or inductor followed by a large low-inductance local capacitor",
+        "A ferrite bead in ground only",
+        "No local capacitor",
+        "A long narrow power trace"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Best practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q202",
+      "type": "tf",
+      "question": "The VRM-to-decoupling-capacitor loop inductance does not need to be minimized for fast local transients.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The local capacitor isolates the IC from that remote inductance.",
+      "category": "Best practices",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q203",
+      "type": "single",
+      "question": "Because the VRM-to-local-decoupling inductance is not critical for fast switching, those traces may be:",
+      "options": [
+        "Routed relatively long if this simplifies layout",
+        "Required to be under 1 mm always",
+        "Removed",
+        "Placed in the ground path"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Best practices",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q204",
+      "type": "single",
+      "question": "What copper structures should be avoided near signal traces?",
+      "options": [
+        "Floating or unnecessary copper pours",
+        "Ground plane under the trace",
+        "Local ground via",
+        "Short power puddle"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter warns these may increase capacitive coupling and crosstalk.",
+      "category": "Best practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q205",
+      "type": "single",
+      "question": "If a 10 µF capacitor supplies 0.1 A for 1 µs, ideal voltage droop is about:",
+      "options": [
+        "10 mV",
+        "1 mV",
+        "100 mV",
+        "1 V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "ΔV=IΔt/C=0.1×1e-6/10e-6=0.01 V.",
+      "category": "Decoupling calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q206",
+      "type": "single",
+      "question": "If a 22 µF capacitor supplies 0.22 A for 1 µs, ideal voltage droop is about:",
+      "options": [
+        "10 mV",
+        "1 mV",
+        "100 mV",
+        "1 V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "ΔV=0.22×1e-6/22e-6=0.01 V.",
+      "category": "Decoupling calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q207",
+      "type": "single",
+      "question": "If maximum allowed droop is 50 mV for a 0.5 A transient lasting 2 µs, ideal C is about:",
+      "options": [
+        "20 µF",
+        "2 µF",
+        "200 µF",
+        "0.2 µF"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "C=IΔt/ΔV=0.5×2e-6/0.05=20e-6 F.",
+      "category": "Decoupling calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q208",
+      "type": "single",
+      "question": "If loop inductance is 10 nH and current changes by 1 A in 1 ns, inductive noise is about:",
+      "options": [
+        "10 V",
+        "1 V",
+        "0.1 V",
+        "100 V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "ΔV=LΔI/RT=10e-9×1/1e-9=10 V.",
+      "category": "PDN calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q209",
+      "type": "single",
+      "question": "If loop inductance is 10 nH and current changes by 1 A in 10 ns, inductive noise is about:",
+      "options": [
+        "1 V",
+        "10 V",
+        "0.1 V",
+        "100 mV exactly"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "10e-9/10e-9=1 V.",
+      "category": "PDN calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q210",
+      "type": "single",
+      "question": "If rise time doubles while L and ΔI remain fixed, inductive supply noise:",
+      "options": [
+        "Halves",
+        "Doubles",
+        "Quadruples",
+        "Is unchanged"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "ΔV≈LΔI/RT.",
+      "category": "PDN calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q211",
+      "type": "single",
+      "question": "If loop inductance doubles while ΔI and RT stay fixed, noise:",
+      "options": [
+        "Doubles",
+        "Halves",
+        "Quadruples",
+        "Is unchanged"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "ΔV is proportional to L.",
+      "category": "PDN calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q212",
+      "type": "single",
+      "question": "If current step doubles while L and RT stay fixed, noise:",
+      "options": [
+        "Doubles",
+        "Halves",
+        "Quadruples",
+        "Is unchanged"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "ΔV is proportional to ΔI.",
+      "category": "PDN calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q213",
+      "type": "single",
+      "question": "At 3 A through a 0.05 Ω power trace, dissipated power is:",
+      "options": [
+        "0.45 W",
+        "0.15 W",
+        "0.9 W",
+        "4.5 W"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "P=I²R=9×0.05=0.45 W.",
+      "category": "Routing calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q214",
+      "type": "single",
+      "question": "A 0.5 Ω ferrite bead carrying 0.5 A has a DC voltage drop of:",
+      "options": [
+        "0.25 V",
+        "0.5 V",
+        "1 V",
+        "0.05 V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "V=IR=0.5×0.5=0.25 V.",
+      "category": "Ferrite calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q215",
+      "type": "single",
+      "question": "A 0.5 Ω ferrite bead carrying 1 A dissipates:",
+      "options": [
+        "0.5 W",
+        "0.25 W",
+        "1 W",
+        "2 W"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "P=I²R=1×0.5=0.5 W.",
+      "category": "Ferrite calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q216",
+      "type": "single",
+      "question": "If PSRR is 40 dB and input ripple is 100 mV, idealized output ripple contribution is about:",
+      "options": [
+        "1 mV",
+        "10 mV",
+        "40 mV",
+        "0.1 mV"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "40 dB is 100× voltage reduction.",
+      "category": "PSRR",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q217",
+      "type": "single",
+      "question": "Which inductance is most critical for fast local decoupling?",
+      "options": [
+        "The loop inductance between the local capacitor and IC pins",
+        "The inductance from VRM to wall outlet",
+        "Only transformer leakage inductance",
+        "The ferrite bead ground inductance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter's key point.",
+      "category": "Concepts",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q218",
+      "type": "single",
+      "question": "Which inductance is less critical for fast transient current once local decoupling is present?",
+      "options": [
+        "The VRM-to-decoupling-capacitor path inductance",
+        "The capacitor-to-IC loop inductance",
+        "The IC package inductance",
+        "The capacitor ESL"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The local capacitor isolates fast current from the remote path.",
+      "category": "Concepts",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q219",
+      "type": "single",
+      "question": "Which is the primary solution for self-aggression noise?",
+      "options": [
+        "Local low-loop-inductance decoupling",
+        "Ferrite bead in ground",
+        "Only bulk capacitance at source",
+        "Longer rise-time always"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Concepts",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q220",
+      "type": "single",
+      "question": "Which is the primary role of a ferrite bead on AVCC?",
+      "options": [
+        "Reduce mutual-aggression noise reaching the sensitive rail",
+        "Supply all transient current",
+        "Eliminate self-aggression by itself",
+        "Reduce DC current to zero"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter's intended use.",
+      "category": "Concepts",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q221",
+      "type": "single",
+      "question": "Which is more important than choosing 0.1 µF versus 1 µF for a modern SMD decoupler, according to the chapter?",
+      "options": [
+        "Low loop inductance and good placement",
+        "Capacitor color",
+        "Leaded construction",
+        "Longest possible trace"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter's central correction to the common myth.",
+      "category": "Concepts",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q222",
+      "type": "single",
+      "question": "Why can different-value SMD MLCCs be worse than identical ones?",
+      "options": [
+        "They can create anti-resonant impedance peaks",
+        "They always have higher ESR",
+        "They reduce capacitance",
+        "They cannot be soldered"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter's main conclusion on the myth.",
+      "category": "Concepts",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q223",
+      "type": "single",
+      "question": "Which statement about bulk capacitance is correct?",
+      "options": [
+        "More capacitance can help long transients but can worsen inrush/startup",
+        "More capacitance is always better",
+        "Bulk capacitance replaces local decoupling",
+        "Bulk capacitance eliminates need for voltage rating"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This summarizes the chapter tradeoff.",
+      "category": "Concepts",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q224",
+      "type": "single",
+      "question": "What does EMI stand for?",
+      "options": [
+        "Electromagnetic Interference",
+        "Equivalent Magnetic Impedance",
+        "Electrical Mode Injection",
+        "Energy Modulation Index"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter mentions SMPS-generated EMI.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q225",
+      "type": "single",
+      "question": "What does IC stand for?",
+      "options": [
+        "Integrated Circuit",
+        "Inductive Capacitor",
+        "Input Coupler",
+        "Internal Current"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "IC is used throughout the chapter.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q226",
+      "type": "single",
+      "question": "What does VDD typically denote in this chapter?",
+      "options": [
+        "Digital/core supply rail",
+        "Ground",
+        "ADC reference only",
+        "USB data line"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The multiple-rail example uses VDD for core/digital logic.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q227",
+      "type": "single",
+      "question": "What does VIO denote?",
+      "options": [
+        "I/O supply rail",
+        "Ground rail",
+        "Analog reference",
+        "Inductor voltage"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The multiple-rail example uses VIO/VCC for I/O circuitry.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q228",
+      "type": "single",
+      "question": "What does Vref denote?",
+      "options": [
+        "Reference voltage, e.g. ADC reference",
+        "Ground return",
+        "Clock output",
+        "Ferrite impedance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives ADC reference as the example.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q229",
+      "type": "single",
+      "question": "What does Q represent in the LC damping discussion?",
+      "options": [
+        "Quality factor",
+        "Charge only",
+        "Current rating",
+        "Thermal coefficient"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Q is the resonance quality factor used on page 39.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q230",
+      "type": "single",
+      "question": "What is meant by a 'power puddle' in the chapter?",
+      "options": [
+        "A short local copper area connecting power pins and decoupling network with low inductance",
+        "A liquid spill on the PCB",
+        "A ground split",
+        "A thermal relief"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This term is used for local low-inductance power routing.",
+      "category": "Terminology",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q231",
+      "type": "single",
+      "question": "What is meant by a 'ground puddle'?",
+      "options": [
+        "A local ground copper area used to make short low-inductance ground connections",
+        "A disconnected copper island",
+        "A ferrite bead",
+        "A solder-mask opening"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter shows this layout idea.",
+      "category": "Terminology",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q232",
+      "type": "tf",
+      "question": "The PDN includes both active elements such as the VRM and passive interconnect/capacitor elements.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This follows from the PDN definition.",
+      "category": "PDN basics",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q233",
+      "type": "tf",
+      "question": "A linear regulator is generally quieter than an SMPS.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly says linear regulators are low-noise.",
+      "category": "VRM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q234",
+      "type": "tf",
+      "question": "An SMPS generally has better efficiency than a linear regulator.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "VRM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q235",
+      "type": "tf",
+      "question": "Faster load-current edges generally increase supply-voltage noise.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "ΔV=L dI/dt.",
+      "category": "PDN noise",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q236",
+      "type": "tf",
+      "question": "Decoupling capacitors work best when placed far from the IC.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "They should be close to minimize loop inductance.",
+      "category": "Decoupling basics",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q237",
+      "type": "tf",
+      "question": "The capacitor-to-IC loop inductance includes package inductance, PCB interconnect inductance and capacitor ESL.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "All three are listed.",
+      "category": "Decoupling loop",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q238",
+      "type": "tf",
+      "question": "Leaded capacitors are preferred over SMD MLCCs for high-frequency decoupling.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The chapter recommends SMD MLCCs.",
+      "category": "Decoupling hardware",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q239",
+      "type": "tf",
+      "question": "Too much bulk capacitance can increase inrush-current duration.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly says this.",
+      "category": "Inrush current",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q240",
+      "type": "tf",
+      "question": "PSRR is independent of frequency.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "It is frequency dependent.",
+      "category": "PSRR",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q241",
+      "type": "tf",
+      "question": "Too little LDO output capacitance can cause instability.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter warns about oscillation.",
+      "category": "LDO stability",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q242",
+      "type": "tf",
+      "question": "Sensitive analog rails typically generate more self-aggression noise than digital rails.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Digital rails typically carry larger switching currents.",
+      "category": "Multiple rails",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q243",
+      "type": "tf",
+      "question": "Ferrite beads can help isolate sensitive rails from shared-PDN noise.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is their intended use here.",
+      "category": "Ferrite beads",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q244",
+      "type": "tf",
+      "question": "A ferrite bead's impedance can decrease at very high frequency because of parasitic capacitance.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Ferrite beads",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q245",
+      "type": "tf",
+      "question": "Ferrite beads should be placed in IC ground-return paths to improve decoupling.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The chapter explicitly warns against this.",
+      "category": "Ferrite limitations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q246",
+      "type": "tf",
+      "question": "A real capacitor has ESR and ESL in addition to capacitance.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q247",
+      "type": "tf",
+      "question": "At SRF, a capacitor's impedance is approximately equal to ESR.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q248",
+      "type": "tf",
+      "question": "Modern identical MLCCs in parallel can reduce overall impedance.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is part of the conclusion.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q249",
+      "type": "tf",
+      "question": "Different-value MLCCs in parallel can create impedance peaks.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the key warning.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q250",
+      "type": "tf",
+      "question": "A continuous ground plane is recommended for PCB power distribution.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is in the best-practice summary.",
+      "category": "Best practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q251",
+      "type": "tf",
+      "question": "Each decoupling capacitor should preferably have its own nearby ground via.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly recommended.",
+      "category": "Best practices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q252",
+      "type": "tf",
+      "question": "Floating copper pours can increase unwanted capacitive coupling and crosstalk.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Best practices",
+      "difficulty": "easy"
+    }
+  ]
+}
