@@ -2,7 +2,7 @@
   "id": "chapter5",
   "title": "Chapter 5 — PCB Traces and Vias: Physical Properties",
   "source": "05 - PCB traces and vias(1).pdf",
-  "question_count": 213,
+  "question_count": 201,
   "questions": [
     {
       "id": "q1",
@@ -2110,8 +2110,8 @@
       "options": [
         "πd ≈ 41 mil",
         "13 mil",
-        "25 mil",
-        "62 mil"
+        "2π ≈ 26 mil",
+        "4π ≈ 52 mil"
       ],
       "answer": [
         0
@@ -2267,7 +2267,7 @@
       "answer": [
         0
       ],
-      "explanation": "0.5/4=0.125 mΩ.",
+      "explanation": "0.5/4=0.125 mΩ (in parallel).",
       "category": "Thermal relief",
       "difficulty": "standard"
     },
@@ -2355,57 +2355,6 @@
       "difficulty": "easy"
     },
     {
-      "id": "q141",
-      "type": "single",
-      "question": "Breadboard geometry is well suited to DIP/DIL packages with pin pitch about:",
-      "options": [
-        "100 mil",
-        "50 mil",
-        "20 mil",
-        "300 mil"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "DIP/DIL packages commonly use 100 mil pin pitch.",
-      "category": "Breadboards",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q142",
-      "type": "single",
-      "question": "Typical DIP/DIL row spacing mentioned is:",
-      "options": [
-        "300 mil",
-        "100 mil",
-        "200 mil",
-        "30 mil"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The chapter gives 300 mil.",
-      "category": "Breadboards",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q143",
-      "type": "single",
-      "question": "Small breadboards can be mounted on PCB shields with headers matching:",
-      "options": [
-        "Arduino Uno form factor",
-        "Raspberry Pi Zero only",
-        "PCIe",
-        "USB-C"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "This example is explicitly shown.",
-      "category": "Breadboards",
-      "difficulty": "easy"
-    },
-    {
       "id": "q144",
       "type": "tf",
       "question": "A solderless breadboard generally has poorer signal integrity than a carefully designed PCB.",
@@ -2449,21 +2398,6 @@
         0
       ],
       "explanation": "The chapter gives ~50 MHz as a rough rule, not a hard limit.",
-      "category": "Breadboard SI",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q147",
-      "type": "tf",
-      "question": "The ~50 MHz breadboard value is a strict absolute frequency limit.",
-      "options": [
-        "True",
-        "False"
-      ],
-      "answer": [
-        1
-      ],
-      "explanation": "The chapter explicitly says it is not strict.",
       "category": "Breadboard SI",
       "difficulty": "easy"
     },
@@ -2600,57 +2534,6 @@
       "explanation": "Using 1 nH/mm gives ~100 nH.",
       "category": "Breadboard SI",
       "difficulty": "easy"
-    },
-    {
-      "id": "q156",
-      "type": "single",
-      "question": "Including the return path, the example assumes total loop inductance:",
-      "options": [
-        "200 nH",
-        "100 nH",
-        "20 nH",
-        "2 µH"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "This is explicitly stated.",
-      "category": "Breadboard SI",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q157",
-      "type": "single",
-      "question": "In the example, Rsource and Rload are each:",
-      "options": [
-        "50 Ω",
-        "25 Ω",
-        "100 Ω",
-        "1 kΩ"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The slide uses 50 Ω each.",
-      "category": "Breadboard SI",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q158",
-      "type": "single",
-      "question": "The -3 dB bandwidth for the example is approximately:",
-      "options": [
-        "80 MHz",
-        "8 MHz",
-        "800 MHz",
-        "50 MHz"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The chapter calculates ~80 MHz.",
-      "category": "Breadboard SI",
-      "difficulty": "standard"
     },
     {
       "id": "q159",
@@ -2804,23 +2687,6 @@
       "difficulty": "standard"
     },
     {
-      "id": "q168",
-      "type": "single",
-      "question": "How can an SMD be used on a breadboard?",
-      "options": [
-        "Solder it to a breakout board with 100 mil-spaced pins",
-        "Insert it directly into any hole",
-        "Use a thermal via",
-        "Place it on copper foil only"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The chapter explicitly recommends breakout boards.",
-      "category": "SMD breakout boards",
-      "difficulty": "easy"
-    },
-    {
       "id": "q169",
       "type": "single",
       "question": "What does SMD stand for?",
@@ -2942,40 +2808,6 @@
       "explanation": "The first, second, and fourth are consistent with the listed tips.",
       "category": "Breadboard practices",
       "difficulty": "standard"
-    },
-    {
-      "id": "q176",
-      "type": "single",
-      "question": "What pitch pin headers can be used to bridge gaps?",
-      "options": [
-        "100 mil",
-        "50 mil",
-        "20 mil",
-        "300 mil"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The slide gives 100 mil-pitch headers.",
-      "category": "Breadboard practices",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q177",
-      "type": "single",
-      "question": "Typical solid-core hookup wire size recommended is:",
-      "options": [
-        "22–24 AWG",
-        "30–32 AWG",
-        "10–12 AWG",
-        "2–4 AWG"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "This is the chapter recommendation.",
-      "category": "Breadboard practices",
-      "difficulty": "easy"
     },
     {
       "id": "q178",
@@ -3446,40 +3278,6 @@
       "explanation": "The chapter explicitly uses this estimate for loose wiring, hook-up wires, and typical PCB interconnects.",
       "category": "Concepts",
       "difficulty": "standard"
-    },
-    {
-      "id": "q206",
-      "type": "single",
-      "question": "What does AWG stand for?",
-      "options": [
-        "American Wire Gauge",
-        "Applied Wire Geometry",
-        "Analog Wiring Grade",
-        "Average Wire Ground"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "AWG is the wire-size system used for the hookup-wire examples.",
-      "category": "Abbreviations",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q207",
-      "type": "single",
-      "question": "What does DIP/DIL refer to?",
-      "options": [
-        "Dual In-line Package / Dual In-line",
-        "Direct Interconnect Plane",
-        "Digital Inductive Loop",
-        "Double Insulated Lead"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "These are the package styles referenced for breadboards.",
-      "category": "Abbreviations",
-      "difficulty": "easy"
     },
     {
       "id": "q208",
