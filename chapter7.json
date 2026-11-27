@@ -1,7 +1,7 @@
 {
   "id": "chapter7",
   "title": "Chapter 7 — PCB Debugging and Layout",
-  "source": "07 - PCB Debugging and layout (1).pdf",
+  "source": "07 - PCB Debugging and layout.pdf",
   "question_count": 164,
   "questions": [
     {
@@ -129,7 +129,7 @@
       "type": "single",
       "question": "A basic jumper consists of:",
       "options": [
-        "A 100 mil (2.54 mm) pin header and shunt",
+        "A 100 mil pin header and shunt",
         "A 50 mil via and resistor",
         "A BNC connector",
         "A ferrite bead and capacitor"
@@ -249,7 +249,7 @@
         "Pull-up / pull-down options",
         "Alternative signal paths",
         "Alternative component configurations",
-        "Permanent high-current fusing only"
+        "Permanent high-current fusing"
       ],
       "answer": [
         0,
