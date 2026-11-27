@@ -1,0 +1,2745 @@
+{
+  "id": "chapter7",
+  "title": "Chapter 7 — PCB Debugging and Layout",
+  "source": "07 - PCB Debugging and layout (1).pdf",
+  "question_count": 164,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "question": "When a new PCB comes back from fabrication, how should debugging begin?",
+      "options": [
+        "Start with basic functions in a logical order",
+        "Immediately test the fastest signal",
+        "Replace all ICs first",
+        "Reflow the entire board"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter recommends a logical bring-up sequence starting from basic functions.",
+      "category": "Debugging workflow",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multi",
+      "question": "For an Arduino-type board, which checks are suggested early in bring-up?",
+      "options": [
+        "5 V rail present",
+        "3.3 V rail present",
+        "Detected as a USB device",
+        "Code can be uploaded over USB"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All four are explicitly listed before running Blink.",
+      "category": "Debugging workflow",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "question": "After verifying rails, USB detection, and code upload, what simple test is suggested?",
+      "options": [
+        "Run a Blink test program",
+        "Run a thermal stress test",
+        "Measure only clock jitter",
+        "Remove the USB connector"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter suggests checking whether Blink runs correctly.",
+      "category": "Debugging workflow",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "tf",
+      "question": "Good PCB design can reduce bring-up and debugging time.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Debugging workflow",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "question": "Why is a logical test order useful during bring-up?",
+      "options": [
+        "It helps isolate faults step by step",
+        "It guarantees zero defects",
+        "It eliminates the need for measurements",
+        "It increases PCB speed"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter's debugging approach is to verify basic functions progressively.",
+      "category": "Debugging workflow",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q6",
+      "type": "single",
+      "question": "A good debugging-oriented PCB should be partitioned into:",
+      "options": [
+        "Functional sections",
+        "Random copper islands",
+        "Only power and ground",
+        "Only analog and digital areas"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The first PCB-debugging recommendation is to partition the circuit into functional sections.",
+      "category": "Functional partitioning",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "single",
+      "question": "Parts of the PDN and signal paths can be isolated using:",
+      "options": [
+        "Jumpers",
+        "Thermal vias",
+        "Silkscreen",
+        "Solder mask"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly recommends jumpers for isolation.",
+      "category": "Functional partitioning",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "single",
+      "question": "A basic jumper consists of:",
+      "options": [
+        "A 100 mil (2.54 mm) pin header and shunt",
+        "A 50 mil via and resistor",
+        "A BNC connector",
+        "A ferrite bead and capacitor"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the basic jumper construction given.",
+      "category": "Jumpers",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "single",
+      "question": "A 2-pin jumper can be used as:",
+      "options": [
+        "An ON/OFF link",
+        "A three-way selector",
+        "A differential probe",
+        "A current clamp"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly listed.",
+      "category": "Jumpers",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "single",
+      "question": "A 3-pin jumper can be used as:",
+      "options": [
+        "A selector between two paths",
+        "Only an ON/OFF link",
+        "A current shunt only",
+        "A test point"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly listed.",
+      "category": "Jumpers",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "single",
+      "question": "A jumper adds roughly how much series loop inductance?",
+      "options": [
+        "10 nH",
+        "1 nH",
+        "100 nH",
+        "1 µH"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives roughly 10 nH.",
+      "category": "Jumpers",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "tf",
+      "question": "A jumper should never be placed between an IC and its decoupling capacitors.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The slide explicitly warns against this.",
+      "category": "Jumpers",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "single",
+      "question": "Why should a jumper not be placed between an IC and its decoupling capacitors?",
+      "options": [
+        "Its added loop inductance degrades decoupling",
+        "It increases LED current",
+        "It changes package pitch",
+        "It lowers the rail voltage to zero"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The jumper adds about 10 nH of series loop inductance.",
+      "category": "Jumpers",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q14",
+      "type": "single",
+      "question": "What component can be used as a configurable PCB link instead of a jumper?",
+      "options": [
+        "A 0 Ω resistor",
+        "A 1 MΩ resistor",
+        "An LED",
+        "A crystal"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter recommends 0 Ω resistors.",
+      "category": "Configurable links",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q15",
+      "type": "multi",
+      "question": "0 Ω resistors can be used for:",
+      "options": [
+        "Pull-up / pull-down options",
+        "Alternative signal paths",
+        "Alternative component configurations",
+        "Permanent high-current fusing only"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three are explicitly listed.",
+      "category": "Configurable links",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q16",
+      "type": "single",
+      "question": "How should an indicator LED and its current-limiting resistor be connected to a rail or critical signal?",
+      "options": [
+        "In parallel",
+        "In series with the entire rail",
+        "In the ground plane only",
+        "Across two unrelated signals"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly says parallel, never series.",
+      "category": "Indicator LEDs",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q17",
+      "type": "tf",
+      "question": "An indicator LED should never be inserted in series with the power rail it is monitoring.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Indicator LEDs",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q18",
+      "type": "single",
+      "question": "What current is used as a rule of thumb for a red SMD indicator LED?",
+      "options": [
+        "About 1 mA",
+        "10 mA",
+        "100 µA",
+        "20 mA"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives ~1 mA.",
+      "category": "Indicator LEDs",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q19",
+      "type": "single",
+      "question": "What forward voltage is used as a rule of thumb for a red SMD LED?",
+      "options": [
+        "About 2 V",
+        "0.2 V",
+        "3.3 V",
+        "5 V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives ~2 V.",
+      "category": "Indicator LEDs",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q20",
+      "type": "single",
+      "question": "For a 3.3 V rail, 2 V red LED, and 1 kΩ resistor, LED current is about:",
+      "options": [
+        "1.3 mA",
+        "0.13 mA",
+        "3.3 mA",
+        "13 mA"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "I=(3.3−2)/1 kΩ≈1.3 mA.",
+      "category": "Indicator LEDs",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q21",
+      "type": "single",
+      "question": "What formula is used to calculate LED current in that example?",
+      "options": [
+        "I = (Vrail − VLED)/R",
+        "I = VLED/R only",
+        "I = R/(Vrail−VLED)",
+        "I = Vrail·R"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the calculation shown.",
+      "category": "Indicator LEDs",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q22",
+      "type": "single",
+      "question": "For a 5 V rail, 2 V LED and 1 kΩ resistor, current would be about:",
+      "options": [
+        "3 mA",
+        "1 mA",
+        "5 mA",
+        "0.3 mA"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "I=(5−2)/1000=3 mA.",
+      "category": "Indicator LEDs",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q23",
+      "type": "single",
+      "question": "Why add test points to a PCB?",
+      "options": [
+        "To make connection of test instruments easy",
+        "To increase signal speed",
+        "To replace decoupling capacitors",
+        "To reduce solder-mask thickness"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the heading and purpose of the section.",
+      "category": "Test points",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q24",
+      "type": "single",
+      "question": "For oscilloscope measurements, the chapter recommends what kind of test point?",
+      "options": [
+        "A PTH test point near the board edge",
+        "A buried via in the center",
+        "A floating copper island",
+        "A split ground plane"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This allows easy attachment of a micrograbber clip.",
+      "category": "Test points",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q25",
+      "type": "single",
+      "question": "What is the recommended test-point hole diameter?",
+      "options": [
+        "About 60 mil",
+        "6 mil",
+        "25 mil",
+        "100 mil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives ~60 mil.",
+      "category": "Test points",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q26",
+      "type": "single",
+      "question": "How far from the board edge should the hole center be?",
+      "options": [
+        "No farther than about 60 mil",
+        "At least 600 mil",
+        "Exactly 1 inch",
+        "No closer than 100 mil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives no further than ~60 mil.",
+      "category": "Test points",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q27",
+      "type": "single",
+      "question": "Why provide a nearby ground test point?",
+      "options": [
+        "To keep the oscilloscope ground connection short",
+        "To increase loop area",
+        "To raise ground inductance",
+        "To make the signal slower"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A short ground connection improves measurements.",
+      "category": "Test points",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q28",
+      "type": "single",
+      "question": "For high-frequency or permanent measurements, what is recommended?",
+      "options": [
+        "Coaxial connectors such as SMA or BNC",
+        "Only micrograbbers",
+        "Long flying wires",
+        "0 Ω resistors"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly recommends coaxial connectors.",
+      "category": "Test points",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q29",
+      "type": "single",
+      "question": "What does PTH stand for?",
+      "options": [
+        "Plated Through Hole",
+        "Power Test Header",
+        "Printed Trace Hole",
+        "Parallel Through Header"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "PTH is used for the recommended test point.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q30",
+      "type": "single",
+      "question": "What does SMA refer to in this context?",
+      "options": [
+        "A coaxial RF connector type",
+        "A solder mask aperture",
+        "A current sensor",
+        "A resistor package"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "SMA is listed as a coaxial connector.",
+      "category": "Test points",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q31",
+      "type": "single",
+      "question": "What does BNC refer to in this context?",
+      "options": [
+        "A coaxial connector type",
+        "A PCB finish",
+        "A jumper style",
+        "A package acronym"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "BNC is listed as a coaxial connector.",
+      "category": "Test points",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q32",
+      "type": "single",
+      "question": "During debugging, what should be checked and rechecked?",
+      "options": [
+        "Power rails",
+        "Silkscreen color",
+        "Board outline",
+        "Only package markings"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the title of debugging recommendation 4.",
+      "category": "Power-rail debugging",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q33",
+      "type": "single",
+      "question": "What quantity should be measured from each power rail?",
+      "options": [
+        "Current draw",
+        "Only voltage ripple frequency",
+        "Only capacitance",
+        "Only trace width"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly says measure current drawn from each rail.",
+      "category": "Power-rail debugging",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q34",
+      "type": "single",
+      "question": "How many common current-measurement methods are listed?",
+      "options": [
+        "Three",
+        "One",
+        "Two",
+        "Five"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter lists three methods.",
+      "category": "Current measurement",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q35",
+      "type": "single",
+      "question": "One current-measurement method is to measure voltage across:",
+      "options": [
+        "A small series resistor",
+        "A decoupling capacitor",
+        "A ground plane gap",
+        "An LED"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the shunt-resistor method.",
+      "category": "Current measurement",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q36",
+      "type": "single",
+      "question": "For oscilloscope measurement of a high-side shunt, use:",
+      "options": [
+        "A differential probe",
+        "A standard passive probe referenced to earth ground only",
+        "A clamp meter only",
+        "A logic analyzer"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly specifies a differential probe.",
+      "category": "Current measurement",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q37",
+      "type": "single",
+      "question": "A clamp-on current probe senses:",
+      "options": [
+        "The magnetic field around a conductor",
+        "The electric field only",
+        "PCB temperature",
+        "Capacitor ESR"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is how the probe works.",
+      "category": "Current measurement",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q38",
+      "type": "tf",
+      "question": "A clamp-on current probe can measure current without breaking the circuit.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Current measurement",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q39",
+      "type": "single",
+      "question": "Wideband AC/DC current probes can measure:",
+      "options": [
+        "DC and fast current transients",
+        "Only AC",
+        "Only DC",
+        "Only temperature"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Current measurement",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q40",
+      "type": "single",
+      "question": "What PCB feature can be added specifically for a clamp-on current probe?",
+      "options": [
+        "A short wire loop between two PTHs",
+        "A thermal relief",
+        "A copper pour island",
+        "A split plane"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly suggested.",
+      "category": "Current measurement",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q41",
+      "type": "single",
+      "question": "For continuous current monitoring, the chapter suggests:",
+      "options": [
+        "Integrated Hall-effect current sensors",
+        "Only LEDs",
+        "Only SMA connectors",
+        "Only thermistors"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the third method.",
+      "category": "Current measurement",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q42",
+      "type": "single",
+      "question": "Where are integrated Hall-effect current sensors placed?",
+      "options": [
+        "Directly in the power path",
+        "On the board edge only",
+        "In parallel with a test point",
+        "On the silkscreen"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Current measurement",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q43",
+      "type": "single",
+      "question": "What physical quantity does a Hall-effect sensor exploit?",
+      "options": [
+        "Magnetic field produced by current",
+        "Only resistance change",
+        "Light intensity",
+        "Capacitance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter identifies Hall-effect sensors as current sensors in the power path.",
+      "category": "Current measurement",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q44",
+      "type": "tf",
+      "question": "Acid traps from 90° PCB corners are mainly a historical fabrication concern.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Layout myths",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q45",
+      "type": "single",
+      "question": "In modern PCB fabrication, 90° corners are generally:",
+      "options": [
+        "Fine",
+        "Always forbidden",
+        "Always cheaper than 45° corners",
+        "Only allowed on ground"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says they are generally fine.",
+      "category": "Layout myths",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q46",
+      "type": "single",
+      "question": "What important exception is mentioned for 90° corners?",
+      "options": [
+        "High-frequency controlled-impedance traces",
+        "Power LEDs",
+        "Low-frequency DC traces",
+        "Test points"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Layout myths",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q47",
+      "type": "tf",
+      "question": "Empty space on a signal layer should always be filled with copper.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The chapter identifies this as a myth.",
+      "category": "Copper pour",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q48",
+      "type": "single",
+      "question": "Floating or poorly connected copper islands can introduce:",
+      "options": [
+        "Unwanted coupling and resonances",
+        "Zero capacitance",
+        "Perfect shielding",
+        "Lower inductance in every case"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Copper pour",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q49",
+      "type": "single",
+      "question": "If copper fill is used for shielding, it should be:",
+      "options": [
+        "Firmly connected to ground with many vias",
+        "Left floating",
+        "Connected by one long thin trace only",
+        "Placed over all signals without clearance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the recommendation given.",
+      "category": "Copper pour",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q50",
+      "type": "single",
+      "question": "When using grounded copper fill for shielding, you should also maintain:",
+      "options": [
+        "Appropriate clearance from signal traces",
+        "Zero clearance",
+        "Maximum overlap",
+        "No vias"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Copper pour",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q51",
+      "type": "tf",
+      "question": "Copper should not be added simply because there is empty space.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Copper pour",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q52",
+      "type": "single",
+      "question": "A common old decoupling recommendation is to parallel:",
+      "options": [
+        "10 µF, 1 µF, and 0.1 µF capacitors",
+        "10 pF, 1 pF, and 0.1 pF",
+        "Only one 1000 µF capacitor",
+        "Three identical 10 µF capacitors only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This example is given.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q53",
+      "type": "single",
+      "question": "According to the old rule, the 0.1 µF capacitor supposedly handles:",
+      "options": [
+        "High frequencies",
+        "Low frequencies only",
+        "DC only",
+        "Mechanical resonance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the old assumption described.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q54",
+      "type": "single",
+      "question": "According to the old rule, the 10 µF capacitor supposedly handles:",
+      "options": [
+        "Low frequencies",
+        "Only high frequencies",
+        "No frequencies",
+        "Clock signals only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the old assumption described.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q55",
+      "type": "single",
+      "question": "Why is this rule outdated for modern SMD MLCCs?",
+      "options": [
+        "Capacitors in the same package size have similar ESL",
+        "MLCCs have no capacitance",
+        "MLCCs are always polarized",
+        "Modern PCBs have no PDN impedance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the key reason given.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q56",
+      "type": "single",
+      "question": "For modern SMD MLCCs in the same package size, smaller capacitance does not necessarily mean:",
+      "options": [
+        "Lower ESL or better high-frequency decoupling",
+        "Lower DC voltage",
+        "Smaller footprint",
+        "Higher cost"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q57",
+      "type": "single",
+      "question": "Mixing capacitor values can create:",
+      "options": [
+        "Peaks in PDN impedance",
+        "Guaranteed flat impedance",
+        "Zero ESR",
+        "No resonance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q58",
+      "type": "single",
+      "question": "General local-decoupling guideline from this chapter:",
+      "options": [
+        "Use at least one 10 µF SMD MLCC unless the IC datasheet says otherwise",
+        "Always use exactly 0.1 µF",
+        "Use no capacitor",
+        "Use only electrolytics"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q59",
+      "type": "tf",
+      "question": "The IC datasheet can override the general decoupling guideline.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The slide explicitly says 'unless the IC datasheet specifies otherwise'.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q60",
+      "type": "single",
+      "question": "Should ground planes always be split to separate digital and analog ground noise?",
+      "options": [
+        "No, in most cases they should not",
+        "Yes, always",
+        "Only when using SMDs",
+        "Only above 100 MHz"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter presents splitting as an exception, not the default.",
+      "category": "Ground-plane myths",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q61",
+      "type": "single",
+      "question": "One case where a split ground plane may be justified is when very low ground noise of about what level is required at low frequency?",
+      "options": [
+        "About 1 mV or less",
+        "100 mV",
+        "1 V",
+        "10 V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives ~1 mV or less.",
+      "category": "Ground-plane myths",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q62",
+      "type": "single",
+      "question": "The special low-frequency split-ground case also assumes:",
+      "options": [
+        "Large low-frequency currents flow in the ground plane",
+        "No ground current flows",
+        "Only high-frequency currents exist",
+        "All returns are optical"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This condition is explicitly stated.",
+      "category": "Ground-plane myths",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q63",
+      "type": "single",
+      "question": "Above roughly what frequency do return currents tend to concentrate directly under the signal trace?",
+      "options": [
+        "100 kHz",
+        "100 Hz",
+        "1 kHz",
+        "100 MHz"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter uses about 100 kHz.",
+      "category": "Ground-plane myths",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q64",
+      "type": "single",
+      "question": "Why do different return-current paths tend not to interact much above ~100 kHz?",
+      "options": [
+        "They remain localized under their respective signal traces",
+        "They disappear",
+        "Ground impedance becomes infinite",
+        "All current flows at board edges"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the reasoning given.",
+      "category": "Ground-plane myths",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q65",
+      "type": "tf",
+      "question": "Above about 100 kHz, return current tends to be localized underneath the signal trace.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Ground-plane myths",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q66",
+      "type": "single",
+      "question": "A through-hole component has leads that:",
+      "options": [
+        "Pass through plated through-holes and are soldered on the opposite side",
+        "Sit only on surface pads",
+        "Are hidden underneath the package",
+        "Use solder balls only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter's top-level definition.",
+      "category": "Packages",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q67",
+      "type": "single",
+      "question": "A surface-mount component is soldered:",
+      "options": [
+        "Directly onto pads on the PCB surface",
+        "Only through PTHs",
+        "On the opposite side through long leads",
+        "To an external connector only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the top-level SMD definition.",
+      "category": "Packages",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q68",
+      "type": "single",
+      "question": "What does SMD stand for?",
+      "options": [
+        "Surface-Mount Device",
+        "Series-Mounted Device",
+        "Signal-Matched Driver",
+        "Surface Mechanical Device"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is standard terminology used throughout the chapter.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q69",
+      "type": "single",
+      "question": "Through-hole packages are generally:",
+      "options": [
+        "More mechanically robust",
+        "Smaller than all SMDs",
+        "Lower parasitic than SMDs",
+        "Harder to solder manually"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Packages",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q70",
+      "type": "single",
+      "question": "Through-hole packages are usually:",
+      "options": [
+        "Easier to solder manually",
+        "Impossible to solder manually",
+        "Only suitable for robots",
+        "Always cheaper"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Packages",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q71",
+      "type": "single",
+      "question": "A major electrical drawback of through-hole packages is:",
+      "options": [
+        "Longer leads create larger parasitics",
+        "They have no inductance",
+        "They always short to ground",
+        "They have zero stray capacitance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter highlights inductance and stray capacitance.",
+      "category": "Packages",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q72",
+      "type": "multi",
+      "question": "Through-hole leads particularly introduce:",
+      "options": [
+        "Inductance",
+        "Stray capacitance",
+        "Zero parasitics",
+        "Only thermal resistance"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Both parasitics are explicitly mentioned.",
+      "category": "Packages",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q73",
+      "type": "single",
+      "question": "Why can through-hole packages limit high-frequency performance?",
+      "options": [
+        "Their longer leads have larger parasitic inductance and capacitance",
+        "They are always plastic",
+        "They use 100 mil pitch",
+        "They cannot carry current"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Packages",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q74",
+      "type": "single",
+      "question": "Many high-pin-count ICs such as microcontrollers are available only in:",
+      "options": [
+        "Surface-mount packages",
+        "Through-hole packages only",
+        "Breadboard modules only",
+        "Coaxial packages"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Packages",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q75",
+      "type": "single",
+      "question": "Excessive soldering temperature or prolonged heating can cause a PCB pad to:",
+      "options": [
+        "Lift or delaminate",
+        "Become a via",
+        "Increase copper thickness",
+        "Turn into a ground plane"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Manual soldering",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q76",
+      "type": "tf",
+      "question": "When hand soldering, excessive temperature and prolonged heating should be avoided.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Manual soldering",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q77",
+      "type": "single",
+      "question": "SMDs are generally:",
+      "options": [
+        "Smaller and harder to solder by hand",
+        "Larger and easier than through-hole",
+        "Always mechanically stronger",
+        "Only suitable below 100 kHz"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Packages",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q78",
+      "type": "multi",
+      "question": "Advantages of SMD assembly include:",
+      "options": [
+        "Smaller PCBs",
+        "Lower parasitics",
+        "Often lower cost",
+        "Better high-frequency performance"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All four are explicitly stated.",
+      "category": "Packages",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q79",
+      "type": "single",
+      "question": "For university projects that require hand soldering, package selection should consider:",
+      "options": [
+        "Your realistic soldering skills",
+        "Only component color",
+        "Only brand",
+        "Only board thickness"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter's practical tip.",
+      "category": "Packages",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q80",
+      "type": "single",
+      "question": "Two-terminal SMD packages are commonly identified by:",
+      "options": [
+        "A four-digit size code",
+        "A one-digit code",
+        "A six-letter code only",
+        "A color band code only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "SMD size codes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q81",
+      "type": "single",
+      "question": "In a four-digit two-terminal SMD size code, the first two digits indicate:",
+      "options": [
+        "Package length",
+        "Package width",
+        "Lead pitch",
+        "Height"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "SMD size codes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q82",
+      "type": "single",
+      "question": "In a four-digit two-terminal SMD size code, the last two digits indicate:",
+      "options": [
+        "Package width",
+        "Package length",
+        "Lead pitch",
+        "Height"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "SMD size codes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q83",
+      "type": "single",
+      "question": "Which unit system is used more often for SMD size codes?",
+      "options": [
+        "Imperial",
+        "Metric only",
+        "SI base units only",
+        "AWG"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says imperial units are used more often.",
+      "category": "SMD size codes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q84",
+      "type": "tf",
+      "question": "The same four-digit SMD code can mean different physical dimensions in imperial and metric systems.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly warned.",
+      "category": "SMD size codes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q85",
+      "type": "single",
+      "question": "0603 imperial corresponds approximately to:",
+      "options": [
+        "1.6 mm × 0.8 mm",
+        "0.6 mm × 0.3 mm",
+        "6 mm × 3 mm",
+        "0.8 mm × 0.6 mm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The example on page 15 shows 0603 imperial =1.6×0.8 mm.",
+      "category": "SMD size codes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q86",
+      "type": "single",
+      "question": "0603 metric corresponds approximately to:",
+      "options": [
+        "0.6 mm × 0.3 mm",
+        "1.6 mm × 0.8 mm",
+        "6 mm × 3 mm",
+        "0.3 mm × 0.6 mm imperial"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The example on page 15 shows 0603 metric =0.6×0.3 mm.",
+      "category": "SMD size codes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q87",
+      "type": "tf",
+      "question": "0603 imperial and 0603 metric refer to the same physical size.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The chapter explicitly shows that they differ greatly.",
+      "category": "SMD size codes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q88",
+      "type": "single",
+      "question": "0201 imperial is approximately:",
+      "options": [
+        "0.6 mm × 0.3 mm",
+        "1.0 mm × 0.5 mm",
+        "1.6 mm × 0.8 mm",
+        "3.2 mm × 1.6 mm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The size table gives ~0.6×0.3 mm.",
+      "category": "SMD package sizes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q89",
+      "type": "single",
+      "question": "0402 imperial is approximately:",
+      "options": [
+        "1.0 mm × 0.5 mm",
+        "0.6 mm × 0.3 mm",
+        "2.0 mm × 1.25 mm",
+        "3.2 mm × 1.6 mm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The size table gives ~1.0×0.5 mm.",
+      "category": "SMD package sizes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q90",
+      "type": "single",
+      "question": "0603 imperial is approximately:",
+      "options": [
+        "1.6 mm × 0.8 mm",
+        "1.0 mm × 0.5 mm",
+        "2.0 mm × 1.25 mm",
+        "3.2 mm × 2.6 mm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The size table gives ~1.6×0.8 mm.",
+      "category": "SMD package sizes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q91",
+      "type": "single",
+      "question": "0805 imperial is approximately:",
+      "options": [
+        "2.0 mm × 1.25 mm",
+        "1.6 mm × 0.8 mm",
+        "3.2 mm × 1.6 mm",
+        "5.08 mm × 5.08 mm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The size table gives ~2.0×1.25 mm.",
+      "category": "SMD package sizes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q92",
+      "type": "single",
+      "question": "1206 imperial is approximately:",
+      "options": [
+        "3.2 mm × 1.6 mm",
+        "2.0 mm × 1.25 mm",
+        "3.2 mm × 2.6 mm",
+        "6.35 mm × 3.0 mm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The size table gives ~3.2×1.6 mm.",
+      "category": "SMD package sizes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q93",
+      "type": "single",
+      "question": "1210 imperial is approximately:",
+      "options": [
+        "3.2 mm × 2.6 mm",
+        "3.2 mm × 1.6 mm",
+        "2.0 mm × 1.25 mm",
+        "5.08 mm × 5.08 mm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The size table gives ~3.2×2.6 mm.",
+      "category": "SMD package sizes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q94",
+      "type": "single",
+      "question": "2020 imperial is approximately:",
+      "options": [
+        "5.08 mm × 5.08 mm",
+        "2.0 mm × 2.0 mm",
+        "6.35 mm × 3.0 mm",
+        "3.2 mm × 2.6 mm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The size table gives ~5.08×5.08 mm.",
+      "category": "SMD package sizes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q95",
+      "type": "single",
+      "question": "2512 imperial is approximately:",
+      "options": [
+        "6.35 mm × 3.0 mm",
+        "2.5 mm × 1.2 mm",
+        "5.08 mm × 5.08 mm",
+        "3.2 mm × 1.6 mm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The size table gives ~6.35×3.0 mm.",
+      "category": "SMD package sizes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q96",
+      "type": "multi",
+      "question": "Which are listed as common imperial SMD package sizes?",
+      "options": [
+        "1206",
+        "0805",
+        "0603",
+        "0402"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All four are explicitly listed.",
+      "category": "SMD package sizes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q97",
+      "type": "multi",
+      "question": "Which additional common imperial package sizes are listed?",
+      "options": [
+        "0201",
+        "01005",
+        "2512",
+        "1206"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "0201 and 01005 are explicitly listed; 2512 appears in the size table but is not in the 'common sizes' list on page 16.",
+      "category": "SMD package sizes",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q98",
+      "type": "single",
+      "question": "01005 is approximately:",
+      "options": [
+        "0.4 mm × 0.2 mm",
+        "1.0 mm × 0.5 mm",
+        "0.6 mm × 0.3 mm",
+        "4 mm × 2 mm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "SMD package sizes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q99",
+      "type": "single",
+      "question": "For manual assembly in student projects, good choices are:",
+      "options": [
+        "1206 and 0805",
+        "01005 and 0201",
+        "BGA only",
+        "0402 only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter recommends 1206 and 0805 unless there is a compelling reason otherwise.",
+      "category": "Manual assembly",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q100",
+      "type": "single",
+      "question": "For automated assembly, minimum practical package size is determined by:",
+      "options": [
+        "Pick-and-place and assembly-process capabilities",
+        "Only PCB thickness",
+        "Only copper weight",
+        "Only solder-mask color"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Automated assembly",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q101",
+      "type": "single",
+      "question": "Modern pick-and-place equipment can routinely handle:",
+      "options": [
+        "0402 packages and smaller",
+        "Only 1206 and larger",
+        "Only through-hole parts",
+        "Only DIP packages"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Automated assembly",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q102",
+      "type": "single",
+      "question": "SMD IC packages fall into how many broad categories in this chapter?",
+      "options": [
+        "Two",
+        "Three",
+        "Four",
+        "Five"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter divides them into leadless and packages with leads.",
+      "category": "IC packages",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q103",
+      "type": "single",
+      "question": "A leadless package has connections:",
+      "options": [
+        "Underneath or along the edges rather than on protruding leads",
+        "Only on long protruding wires",
+        "Only through PTHs",
+        "Only on the top surface"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter definition.",
+      "category": "IC packages",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q104",
+      "type": "single",
+      "question": "What does QFN stand for?",
+      "options": [
+        "Quad Flat No-Lead",
+        "Quad Fine Node",
+        "Quick Flat Network",
+        "Quad Frame Narrow"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly expands QFN.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q105",
+      "type": "single",
+      "question": "What does BGA stand for?",
+      "options": [
+        "Ball Grid Array",
+        "Board Ground Array",
+        "Ball Gate Assembly",
+        "Bond Grid Area"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly expands BGA.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q106",
+      "type": "multi",
+      "question": "Which are examples of leadless IC packages?",
+      "options": [
+        "QFN",
+        "BGA",
+        "DIP",
+        "SOIC"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "QFN and BGA are explicitly listed as leadless examples.",
+      "category": "IC packages",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q107",
+      "type": "single",
+      "question": "A package 'with leads' has:",
+      "options": [
+        "External metal leads extending from the body",
+        "Only solder balls underneath",
+        "No external metal connections",
+        "Only plated through-holes"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the definition given.",
+      "category": "IC packages",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q108",
+      "type": "tf",
+      "question": "Packages with external leads can often be soldered manually.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly says this.",
+      "category": "IC packages",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q109",
+      "type": "single",
+      "question": "In package naming, Q commonly means:",
+      "options": [
+        "Quad, with leads on all four sides",
+        "Quality",
+        "Quarter pitch",
+        "Quick connect"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives Q=quad.",
+      "category": "Package acronyms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q110",
+      "type": "single",
+      "question": "An example of a Q package family is:",
+      "options": [
+        "QFP",
+        "DIP",
+        "SOIC",
+        "BGA"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "QFP is the example given.",
+      "category": "Package acronyms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q111",
+      "type": "single",
+      "question": "In package naming, D commonly means:",
+      "options": [
+        "Dual, with leads on two sides",
+        "Digital",
+        "Dense",
+        "Double-layer"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives D=dual.",
+      "category": "Package acronyms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q112",
+      "type": "single",
+      "question": "An example of a D package family is:",
+      "options": [
+        "DIP",
+        "QFN",
+        "BGA",
+        "TQFP"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "DIP is the example given.",
+      "category": "Package acronyms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q113",
+      "type": "single",
+      "question": "In package naming, P commonly means:",
+      "options": [
+        "Plastic",
+        "Power",
+        "Pitch",
+        "Parallel"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives P=plastic.",
+      "category": "Package acronyms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q114",
+      "type": "single",
+      "question": "Plastic packages are typically:",
+      "options": [
+        "Non-hermetic",
+        "Always hermetic",
+        "Always ceramic",
+        "Leadless only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly notes this.",
+      "category": "Package acronyms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q115",
+      "type": "single",
+      "question": "An example using P for plastic is:",
+      "options": [
+        "PDIP",
+        "CDIP",
+        "QFN",
+        "BGA"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "PDIP is the example given.",
+      "category": "Package acronyms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q116",
+      "type": "single",
+      "question": "In package naming, C commonly means:",
+      "options": [
+        "Ceramic",
+        "Compact",
+        "Current",
+        "Coaxial"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives C=ceramic.",
+      "category": "Package acronyms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q117",
+      "type": "single",
+      "question": "Ceramic packages are often:",
+      "options": [
+        "Hermetic",
+        "Non-hermetic by definition",
+        "Only surface-mount",
+        "Plastic-coated only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly notes this.",
+      "category": "Package acronyms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q118",
+      "type": "single",
+      "question": "An example using C for ceramic is:",
+      "options": [
+        "CDIP",
+        "PDIP",
+        "SOIC",
+        "QFP"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "CDIP is the example given.",
+      "category": "Package acronyms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q119",
+      "type": "single",
+      "question": "In package naming, F commonly means:",
+      "options": [
+        "Flat",
+        "Fine pitch",
+        "Fast",
+        "Ferrite"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives F=flat.",
+      "category": "Package acronyms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q120",
+      "type": "single",
+      "question": "In package naming, SO means:",
+      "options": [
+        "Small outline",
+        "Surface only",
+        "Series output",
+        "Signal orientation"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives SO=small outline.",
+      "category": "Package acronyms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q121",
+      "type": "single",
+      "question": "SOIC means:",
+      "options": [
+        "Small Outline Integrated Circuit",
+        "Series Output Interface Connector",
+        "Small Output Inductor Coil",
+        "Surface Outline Interconnect Chip"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives SO=small outline and IC=integrated circuit.",
+      "category": "Package acronyms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q122",
+      "type": "single",
+      "question": "In package naming, T can mean:",
+      "options": [
+        "Transistor package or thin",
+        "Thermal only",
+        "Through-hole only",
+        "Test"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly says T=transistor package or thin.",
+      "category": "Package acronyms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q123",
+      "type": "single",
+      "question": "An example using T for thin is:",
+      "options": [
+        "TQFP",
+        "BGA",
+        "DIP",
+        "SOIC"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "TQFP is the example given.",
+      "category": "Package acronyms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q124",
+      "type": "single",
+      "question": "In package naming, IC means:",
+      "options": [
+        "Integrated circuit",
+        "Inductive coupling",
+        "Internal capacitor",
+        "Input connector"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly gives IC=integrated circuit.",
+      "category": "Package acronyms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q125",
+      "type": "single",
+      "question": "In package naming, V means:",
+      "options": [
+        "Very",
+        "Voltage",
+        "Via",
+        "Variable"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly gives V=very.",
+      "category": "Package acronyms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q126",
+      "type": "tf",
+      "question": "Every package acronym can always be decoded perfectly letter by letter.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The chapter explicitly warns that not every acronym can be decoded letter-by-letter.",
+      "category": "Package acronyms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q127",
+      "type": "single",
+      "question": "What is lead pitch?",
+      "options": [
+        "Center-to-center spacing between adjacent leads",
+        "Lead width only",
+        "Package height",
+        "Distance from die to package edge"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the definition on page 20.",
+      "category": "Lead pitch",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q128",
+      "type": "single",
+      "question": "Which is easier to place, align and solder manually?",
+      "options": [
+        "50 mil (1.27 mm) pitch",
+        "25 mil (0.65 mm) pitch",
+        "10 mil pitch",
+        "5 mil pitch"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly states this.",
+      "category": "Lead pitch",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q129",
+      "type": "single",
+      "question": "25 mil corresponds approximately to:",
+      "options": [
+        "0.65 mm",
+        "1.27 mm",
+        "2.54 mm",
+        "0.25 mm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives this conversion.",
+      "category": "Lead pitch",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q130",
+      "type": "single",
+      "question": "50 mil corresponds approximately to:",
+      "options": [
+        "1.27 mm",
+        "0.65 mm",
+        "2.54 mm",
+        "0.50 mm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives this conversion.",
+      "category": "Lead pitch",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q131",
+      "type": "tf",
+      "question": "Many modern ICs are available only in fine-pitch packages.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Lead pitch",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q132",
+      "type": "single",
+      "question": "When choosing a package for manual assembly, one important mechanical parameter is:",
+      "options": [
+        "Lead pitch",
+        "Only package color",
+        "Only supply voltage",
+        "Only copper weight"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly says to pay attention to lead pitch.",
+      "category": "Lead pitch",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q133",
+      "type": "single",
+      "question": "You want to isolate two possible signal routes during debugging. What is a suitable feature?",
+      "options": [
+        "A 3-pin jumper selector",
+        "A thermal relief",
+        "A single via",
+        "A BGA footprint"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly gives a 3-pin selector use.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q134",
+      "type": "single",
+      "question": "You want to enable or disable a circuit block during bring-up. What simple feature fits?",
+      "options": [
+        "A 2-pin jumper ON/OFF link",
+        "An SMA connector",
+        "A BGA",
+        "A 0603 resistor only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is one of the explicit jumper uses.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q135",
+      "type": "single",
+      "question": "You need a configurable pull-up option without using a bulky jumper. What can you place?",
+      "options": [
+        "A 0 Ω resistor link",
+        "A BNC connector",
+        "A ferrite bead in ground",
+        "A QFN package"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "0 Ω resistors are recommended as configurable links.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q136",
+      "type": "single",
+      "question": "You need to monitor a 3.3 V rail visually. How should the LED branch be connected?",
+      "options": [
+        "In parallel with the rail",
+        "In series with the rail",
+        "In series with the IC ground",
+        "Across two unrelated signals"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly warns never to place the indicator branch in series.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q137",
+      "type": "single",
+      "question": "You need a temporary oscilloscope connection near the PCB edge. Best choice?",
+      "options": [
+        "A PTH test point sized for a micrograbber",
+        "A buried via",
+        "A floating pad in the center",
+        "A BGA ball"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the recommended arrangement.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q138",
+      "type": "single",
+      "question": "You need a permanent high-frequency measurement point. Best choice?",
+      "options": [
+        "An SMA or BNC coaxial connector",
+        "A long flying wire",
+        "A 0 Ω jumper only",
+        "A red LED"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly recommends coaxial connectors.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q139",
+      "type": "single",
+      "question": "You need to measure current without opening the circuit. Best listed tool?",
+      "options": [
+        "Clamp-on current probe",
+        "Series resistor only",
+        "LED indicator",
+        "Logic analyzer"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A clamp-on probe senses the magnetic field without breaking the circuit.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q140",
+      "type": "single",
+      "question": "You need continuous current monitoring built into the board. Best listed solution?",
+      "options": [
+        "Integrated Hall-effect current sensor",
+        "Micrograbber",
+        "BNC connector",
+        "Solder bridge"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the third listed current-measurement method.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q141",
+      "type": "single",
+      "question": "A floating copper island was added simply to fill space. What is a possible consequence?",
+      "options": [
+        "Unwanted coupling or resonance",
+        "Guaranteed shielding",
+        "Zero parasitics",
+        "Lower EMI in every case"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly warns against this.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q142",
+      "type": "single",
+      "question": "A student wants to split analog and digital grounds by default. What does the chapter recommend?",
+      "options": [
+        "Usually do not split; use a continuous plane unless a specific low-frequency case justifies it",
+        "Always split",
+        "Never use a ground plane",
+        "Split only above 100 kHz"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter's myth correction.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q143",
+      "type": "single",
+      "question": "For easiest student hand assembly, which passive SMD size is generally a good choice?",
+      "options": [
+        "0805 or 1206",
+        "01005",
+        "0201 only",
+        "BGA"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter recommends these sizes.",
+      "category": "Application",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q144",
+      "type": "single",
+      "question": "Which package would usually have lower parasitics for high-frequency performance?",
+      "options": [
+        "A compact SMD package",
+        "A long-leaded through-hole package",
+        "Any package; parasitics are identical",
+        "A long jumper wire"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly states SMDs enable lower parasitics.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q145",
+      "type": "single",
+      "question": "Which package is mechanically more robust and easier to hand solder?",
+      "options": [
+        "Through-hole",
+        "BGA",
+        "QFN only",
+        "01005"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter tradeoff.",
+      "category": "Application",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q146",
+      "type": "single",
+      "question": "Which package type is generally more suitable when board size and high-frequency performance dominate?",
+      "options": [
+        "SMD",
+        "Through-hole only",
+        "DIP only",
+        "Pin-header module only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter links SMDs to smaller boards and lower parasitics.",
+      "category": "Application",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q147",
+      "type": "tf",
+      "question": "A jumper adds about 10 nH of series loop inductance.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Jumpers",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q148",
+      "type": "tf",
+      "question": "A 0 Ω resistor can be used to select alternative signal paths.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly listed.",
+      "category": "Configurable links",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q149",
+      "type": "tf",
+      "question": "Indicator LEDs for rails should be wired in series with the rail.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "They should be connected in parallel.",
+      "category": "Indicator LEDs",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q150",
+      "type": "tf",
+      "question": "A red SMD LED is approximated as about 2 V forward drop.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the rule of thumb given.",
+      "category": "Indicator LEDs",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q151",
+      "type": "tf",
+      "question": "A nearby ground test point helps keep oscilloscope ground inductance low.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is why the chapter recommends it.",
+      "category": "Test points",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q152",
+      "type": "tf",
+      "question": "A clamp-on current probe requires opening the circuit.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "It senses the magnetic field without breaking the circuit.",
+      "category": "Current measurement",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q153",
+      "type": "tf",
+      "question": "90 degree corners are generally acceptable in modern PCB fabrication.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Except for special cases such as controlled-impedance high-frequency traces.",
+      "category": "Layout myths",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q154",
+      "type": "tf",
+      "question": "Floating copper islands are always beneficial for shielding.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "They can introduce coupling and resonances.",
+      "category": "Copper pour",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q155",
+      "type": "tf",
+      "question": "Mixing decoupling capacitor values can create PDN impedance peaks.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Decoupling myth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q156",
+      "type": "tf",
+      "question": "For most cases, splitting ground planes is the default recommendation.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The chapter says the opposite.",
+      "category": "Ground-plane myths",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q157",
+      "type": "tf",
+      "question": "Through-hole packages generally have larger parasitics than SMD packages.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Packages",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q158",
+      "type": "tf",
+      "question": "Excessive hand-soldering heat can lift PCB pads.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Manual soldering",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q159",
+      "type": "tf",
+      "question": "SMDs generally enable smaller PCBs.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Packages",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q160",
+      "type": "tf",
+      "question": "0603 imperial and 0603 metric are physically different sizes.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter gives 1.6×0.8 mm versus 0.6×0.3 mm.",
+      "category": "SMD size codes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q161",
+      "type": "tf",
+      "question": "1206 and 0805 are good manual-assembly choices for student projects.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Manual assembly",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q162",
+      "type": "tf",
+      "question": "QFN and BGA are examples of leadless SMD IC packages.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Both are explicitly listed.",
+      "category": "IC packages",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q163",
+      "type": "tf",
+      "question": "A 50 mil lead pitch is easier to hand solder than a 25 mil pitch.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Lead pitch",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q164",
+      "type": "tf",
+      "question": "Every package acronym can be decoded reliably from its letters.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The chapter explicitly warns against assuming this.",
+      "category": "Package acronyms",
+      "difficulty": "easy"
+    }
+  ]
+}
