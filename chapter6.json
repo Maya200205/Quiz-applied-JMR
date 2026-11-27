@@ -63,7 +63,7 @@
       "type": "single",
       "question": "What is an element of the PDN chain?",
       "options": [
-        "The load(s)", 5 
+        "The load(s)", 
         "The solder mask",
         "The silkscreen",
         "The PCB outline"
