@@ -25,6 +25,41 @@ const CHAPTERS = [
     title:"DIY PCB Fabrication",
     subtitle:"layout printing · mirror transfer · etching · Ferric Chloride · Ammonium Persulphate · drilling · testing",
     file:"chapter3.json"
+  },
+  {
+    id:"chapter4",
+    number:"04",
+    title:"PCB Interconnects",
+    subtitle:"signal integrity · transparency · electrical length · reflections · crosstalk · return paths · ground planes",
+    file:"chapter4.json"
+  },
+  {
+    id:"chapter5",
+    number:"05",
+    title:"PCB Traces and Vias",
+    subtitle:"trace width · current handling · copper thickness · thermal runaway · resistance · vias · breadboards",
+    file:"chapter5.json"
+  },
+  {
+    id:"chapter6",
+    number:"06",
+    title:"Power Distribution & Decoupling",
+    subtitle:"PDN · VRM · SMPS · LDO · decoupling · inrush current · ferrite beads · PSRR · MLCCs",
+    file:"chapter6.json"
+  },
+  {
+    id:"chapter7",
+    number:"07",
+    title:"PCB Debugging and Layout",
+    subtitle:"bring-up · jumpers · test points · current measurement · layout myths · packages · lead pitch",
+    file:"chapter7.json"
+  },
+  {
+    id:"chapter8",
+    number:"08",
+    title:"High-Frequency PCB Design",
+    subtitle:"bandwidth · transmission lines · characteristic impedance · reflections · TDR · ISI · eye diagrams · losses",
+    file:"chapter8.json"
   }
 ];
 
