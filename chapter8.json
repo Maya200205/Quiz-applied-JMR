@@ -1,0 +1,4354 @@
+{
+  "id": "chapter8",
+  "title": "Chapter 8 — High-Frequency PCB Design",
+  "source": "08 - High-frequency PCB design (1).pdf",
+  "question_count": 260,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "question": "What is signal integrity?",
+      "options": [
+        "The quality and reliability of electrical signals transmitted through a circuit or communication system",
+        "Only the amplitude of a DC rail",
+        "The thermal stability of a PCB",
+        "The mechanical strength of a connector"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter definition.",
+      "category": "Signal integrity",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "question": "What type of signals are considered in this chapter?",
+      "options": [
+        "High-speed digital signals",
+        "Only low-frequency analog signals",
+        "Only RF carrier signals",
+        "Only DC power rails"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly focuses on high-speed digital signals.",
+      "category": "Signal integrity",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "question": "A high-speed digital signal on a PCB is characterized by approximately:",
+      "options": [
+        "fclock ≥ 100 MHz and/or RT ≤ 1 ns",
+        "fclock ≤ 1 MHz only",
+        "RT ≥ 100 ns",
+        "Only fclock = 50 Hz"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter rule of thumb.",
+      "category": "High-speed criteria",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q4",
+      "type": "tf",
+      "question": "A digital signal can be considered high-speed because of a very short rise time even if its clock frequency is not extremely high.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The criterion is fclock ≥100 MHz and/or RT ≤1 ns.",
+      "category": "High-speed criteria",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "question": "For a typical high-speed digital clock, the 10–90% rise time is roughly:",
+      "options": [
+        "10% of the clock period",
+        "50% of the clock period",
+        "Equal to the whole clock period",
+        "1% of the clock period"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This rule of thumb is given on page 3.",
+      "category": "Rise time",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q6",
+      "type": "single",
+      "question": "For fclock = 100 MHz, the clock period is:",
+      "options": [
+        "10 ns",
+        "1 ns",
+        "100 ns",
+        "0.1 ns"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "T=1/f=10 ns.",
+      "category": "Rise time",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q7",
+      "type": "single",
+      "question": "For fclock = 100 MHz, the rough 10% rise-time estimate is:",
+      "options": [
+        "1 ns",
+        "10 ns",
+        "0.1 ns",
+        "5 ns"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "10% of a 10 ns period is 1 ns.",
+      "category": "Rise time",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q8",
+      "type": "single",
+      "question": "When is an interconnect referred to as a transmission line?",
+      "options": [
+        "When propagation delay can no longer be neglected",
+        "Whenever it is longer than 1 cm",
+        "Only when it uses coax",
+        "Whenever it has 50 Ω DC resistance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The lumped-circuit approximation breaks down when propagation delay matters.",
+      "category": "Transmission lines",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q9",
+      "type": "single",
+      "question": "An electrically long interconnect is one whose length is significant relative to:",
+      "options": [
+        "The wavelength of relevant signal components",
+        "The PCB thickness",
+        "The trace width only",
+        "The supply voltage"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the definition given.",
+      "category": "Electrical length",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q10",
+      "type": "single",
+      "question": "What wavelength criterion is given for an electrically long interconnect?",
+      "options": [
+        "L > λ/10",
+        "L < λ/100",
+        "L = λ only",
+        "L > 10λ"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter uses L>λ/10.",
+      "category": "Electrical length",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q11",
+      "type": "single",
+      "question": "When an interconnect becomes electrically long, it must be treated as:",
+      "options": [
+        "A distributed system",
+        "A single lumped resistor",
+        "An ideal wire",
+        "A thermal network only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly states this.",
+      "category": "Transmission lines",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q12",
+      "type": "single",
+      "question": "The transmission-line equations are derived from:",
+      "options": [
+        "Maxwell's equations",
+        "Ohm's law only",
+        "Kirchhoff's voltage law only",
+        "Newton's laws"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Transmission lines",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q13",
+      "type": "single",
+      "question": "For digital signals, transmission-line effects are usually negligible if:",
+      "options": [
+        "RT ≳ 4TD",
+        "RT ≪ TD",
+        "RT = TD/10",
+        "RT = 0"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the practical rule of thumb shown on page 5.",
+      "category": "Electrical length",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q14",
+      "type": "single",
+      "question": "What does TD represent?",
+      "options": [
+        "Propagation delay of the interconnect",
+        "Clock period",
+        "Dielectric loss tangent",
+        "Total distortion"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "TD is the one-way propagation delay.",
+      "category": "Electrical length",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q15",
+      "type": "single",
+      "question": "Propagation delay is given by:",
+      "options": [
+        "TD = L/v",
+        "TD = v/L",
+        "TD = Lv",
+        "TD = L²/v"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This formula is shown on page 5.",
+      "category": "Electrical length",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q16",
+      "type": "single",
+      "question": "If the interconnect length doubles while propagation velocity stays the same, TD:",
+      "options": [
+        "Doubles",
+        "Halves",
+        "Quadruples",
+        "Is unchanged"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "TD=L/v.",
+      "category": "Electrical length",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q17",
+      "type": "single",
+      "question": "The electromagnetic wave velocity in a dielectric is:",
+      "options": [
+        "v = 3×10^8 / √(μrεr)",
+        "v = 3×10^8√(μrεr)",
+        "v = εr/μr",
+        "v = 1/(μrεr)"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This formula is shown on page 6.",
+      "category": "Propagation velocity",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q18",
+      "type": "single",
+      "question": "For quasi-all dielectric materials used here, μr is approximately:",
+      "options": [
+        "1",
+        "0",
+        "4",
+        "100"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter states μr≈1.",
+      "category": "Propagation velocity",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q19",
+      "type": "single",
+      "question": "For FR-4, εr is approximately:",
+      "options": [
+        "4",
+        "1",
+        "0.25",
+        "40"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter uses about 4 as a conservative value.",
+      "category": "Propagation velocity",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q20",
+      "type": "single",
+      "question": "Using εr = 4 and μr = 1, propagation velocity is approximately:",
+      "options": [
+        "1.5×10^8 m/s",
+        "3×10^8 m/s",
+        "0.75×10^8 m/s",
+        "6×10^8 m/s"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "3×10^8/√4=1.5×10^8 m/s.",
+      "category": "Propagation velocity",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q21",
+      "type": "single",
+      "question": "That propagation velocity corresponds to approximately:",
+      "options": [
+        "15 cm/ns",
+        "1.5 cm/ns",
+        "30 cm/ns",
+        "150 cm/ns"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly gives 15 cm/ns.",
+      "category": "Propagation velocity",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q22",
+      "type": "tf",
+      "question": "For a PCB surface trace, the electric field lies partly in air and partly in FR-4.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Propagation velocity",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q23",
+      "type": "single",
+      "question": "Much of the electric field of a surface PCB trace is concentrated between:",
+      "options": [
+        "The trace and the ground plane",
+        "Two unrelated traces",
+        "The PCB edge and the trace",
+        "The solder mask and air only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Propagation velocity",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q24",
+      "type": "single",
+      "question": "Interconnects are modeled as:",
+      "options": [
+        "RLC networks",
+        "Purely resistive networks",
+        "Only capacitors",
+        "Only inductors"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly says interconnects are RLC networks.",
+      "category": "Time-frequency domain",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q25",
+      "type": "single",
+      "question": "The telegrapher's equations are:",
+      "options": [
+        "Linear partial differential equations",
+        "Algebraic DC equations only",
+        "Nonlinear thermal equations",
+        "Mechanical equations"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Time-frequency domain",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q26",
+      "type": "single",
+      "question": "High-speed digital signals can be represented as a sum of sinusoidal components using:",
+      "options": [
+        "Fourier analysis",
+        "Laplace's law only",
+        "Ohm's law",
+        "Kirchhoff's law only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Time-frequency domain",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q27",
+      "type": "single",
+      "question": "For high-speed digital signals, bandwidth BW is:",
+      "options": [
+        "The highest frequency component considered significant in the spectrum",
+        "The clock frequency exactly in all cases",
+        "The lowest frequency component",
+        "The DC resistance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter definition.",
+      "category": "Bandwidth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q28",
+      "type": "tf",
+      "question": "A shorter rise time contains higher-frequency components.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Bandwidth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q29",
+      "type": "tf",
+      "question": "A shorter rise time generally means larger bandwidth.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Bandwidth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q30",
+      "type": "single",
+      "question": "Reducing digital-signal bandwidth generally:",
+      "options": [
+        "Increases rise time",
+        "Decreases rise time",
+        "Leaves rise time unchanged",
+        "Eliminates all attenuation"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Attenuating high-frequency components slows the edge.",
+      "category": "Bandwidth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q31",
+      "type": "single",
+      "question": "In FR-4 interconnects, losses can become significant at:",
+      "options": [
+        "GHz frequencies",
+        "Only DC",
+        "Only audio frequencies",
+        "Only below 1 Hz"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Losses",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q32",
+      "type": "single",
+      "question": "FR-4 losses can limit bandwidth and therefore set:",
+      "options": [
+        "A minimum achievable rise time",
+        "A maximum PCB thickness only",
+        "A minimum DC current",
+        "A maximum ground area"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Losses",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q33",
+      "type": "single",
+      "question": "High-speed digital signals are:",
+      "options": [
+        "Broadband",
+        "Always narrowband",
+        "Pure DC",
+        "Single-frequency sinusoids"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Their fast edges contain many frequency components.",
+      "category": "Broadband signals",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q34",
+      "type": "single",
+      "question": "RF wireless communication signals are often:",
+      "options": [
+        "Narrowband around a carrier frequency",
+        "Always broadband digital edges",
+        "DC only",
+        "Spread uniformly from DC to infinity"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly contrasted.",
+      "category": "Broadband signals",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q35",
+      "type": "tf",
+      "question": "High-speed digital PCB design must control interconnect behavior over a wide frequency range.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is a key conclusion on page 9.",
+      "category": "Broadband signals",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q36",
+      "type": "tf",
+      "question": "The relevant bandwidth of a high-speed digital signal may extend far above its clock or data rate.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Broadband signals",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q37",
+      "type": "single",
+      "question": "For a 10–90% rise time, the approximate BW relation is:",
+      "options": [
+        "BW = 0.35/RT",
+        "BW = RT/0.35",
+        "BW = 1/RT²",
+        "BW = 2πRT"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This relation is shown on page 10.",
+      "category": "Bandwidth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q38",
+      "type": "single",
+      "question": "The approximation BW = 0.35/RT assumes:",
+      "options": [
+        "A single-pole low-pass response",
+        "An ideal high-pass filter",
+        "A second-order oscillator only",
+        "No filtering"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Bandwidth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q39",
+      "type": "single",
+      "question": "The equivalent circuit assumption for BW = 0.35/RT is approximately:",
+      "options": [
+        "A first-order RC filter",
+        "An ideal transformer",
+        "An LC oscillator only",
+        "A pure resistor"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Bandwidth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q40",
+      "type": "single",
+      "question": "The coarse lower-frequency estimate assumes:",
+      "options": [
+        "BW ≈ fclock",
+        "BW ≈ 10fclock always",
+        "BW=0",
+        "BW≈fclock/100"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This was the earlier rule recalled in the chapter.",
+      "category": "Bandwidth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q41",
+      "type": "single",
+      "question": "Under the coarse estimate, RT is approximately:",
+      "options": [
+        "0.35/fclock",
+        "fclock/0.35",
+        "0.07/fclock",
+        "5/fclock"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This follows BW≈fclock and BW=0.35/RT.",
+      "category": "Bandwidth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q42",
+      "type": "single",
+      "question": "For the ATmega328 at 16 MHz, the coarse estimate gives RT about:",
+      "options": [
+        "22 ns",
+        "2.2 ns",
+        "220 ns",
+        "0.22 ns"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This example is explicitly recalled.",
+      "category": "Bandwidth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q43",
+      "type": "tf",
+      "question": "The coarse RT≈0.35/fclock rule can underestimate the bandwidth of modern high-speed digital edges.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter says it is insufficient for high-speed signals.",
+      "category": "Bandwidth",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q44",
+      "type": "single",
+      "question": "For high-speed PCB design, the chapter adopts a conservative rise-time estimate:",
+      "options": [
+        "RT ≈ 0.07Tclock",
+        "RT≈0.35Tclock",
+        "RT≈Tclock",
+        "RT≈0.7Tclock"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is shown on page 12.",
+      "category": "High-speed estimate",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q45",
+      "type": "single",
+      "question": "RT ≈ 0.07Tclock leads to approximately:",
+      "options": [
+        "BW ≈ 5fclock",
+        "BW≈fclock",
+        "BW≈0.2fclock",
+        "BW≈50fclock"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "0.35/(0.07T)=5/T=5fclock.",
+      "category": "High-speed estimate",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q46",
+      "type": "single",
+      "question": "For fclock = 100 MHz, the high-speed estimate gives BW approximately:",
+      "options": [
+        "500 MHz",
+        "100 MHz",
+        "50 MHz",
+        "5 GHz"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This example is explicitly given.",
+      "category": "High-speed estimate",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q47",
+      "type": "single",
+      "question": "For fclock = 100 MHz, the high-speed estimate gives RT approximately:",
+      "options": [
+        "0.7 ns",
+        "7 ns",
+        "0.07 ns",
+        "3.5 ns"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This example is explicitly given.",
+      "category": "High-speed estimate",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q48",
+      "type": "single",
+      "question": "For fclock = 200 MHz, using BW≈5fclock gives:",
+      "options": [
+        "1 GHz",
+        "200 MHz",
+        "500 MHz",
+        "10 GHz"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "5×200 MHz=1 GHz.",
+      "category": "High-speed estimate",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q49",
+      "type": "single",
+      "question": "For fclock = 400 MHz, using RT≈0.07Tclock gives approximately:",
+      "options": [
+        "175 ps",
+        "1.75 ns",
+        "70 ps",
+        "700 ps"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "T=2.5 ns; 0.07T=0.175 ns=175 ps.",
+      "category": "High-speed estimate",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q50",
+      "type": "single",
+      "question": "The bandwidth of an interconnect is:",
+      "options": [
+        "The highest frequency transmitted with acceptable attenuation",
+        "The DC resistance of the trace",
+        "The source clock frequency only",
+        "The inverse of trace length only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter definition.",
+      "category": "Interconnect bandwidth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q51",
+      "type": "single",
+      "question": "Intrinsic rise time of an interconnect characterizes:",
+      "options": [
+        "The rise-time limitation introduced by the interconnect",
+        "The source driver's intrinsic rise time",
+        "The dielectric constant only",
+        "The return current only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly defined.",
+      "category": "Interconnect bandwidth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q52",
+      "type": "single",
+      "question": "Intrinsic rise time is estimated by:",
+      "options": [
+        "RTintrinsic ≈ 0.35/BW",
+        "RTintrinsic≈BW/0.35",
+        "RTintrinsic≈1/BW²",
+        "RTintrinsic≈2πBW"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is shown on page 14.",
+      "category": "Interconnect bandwidth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q53",
+      "type": "single",
+      "question": "If an interconnect BW is 1 GHz, RTintrinsic is about:",
+      "options": [
+        "350 ps",
+        "35 ps",
+        "3.5 ns",
+        "1 ns"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "0.35/1 GHz=350 ps.",
+      "category": "Interconnect bandwidth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q54",
+      "type": "single",
+      "question": "The output rise time is estimated by:",
+      "options": [
+        "RTout ≈ √(RTin² + RTintrinsic²)",
+        "RTout=RTin+RTintrinsic exactly",
+        "RTout=RTin−RTintrinsic",
+        "RTout=RTin·RTintrinsic"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This formula is shown on page 14.",
+      "category": "Interconnect bandwidth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q55",
+      "type": "single",
+      "question": "RTout denotes:",
+      "options": [
+        "10–90% rise time at the output",
+        "Clock period",
+        "Propagation delay",
+        "Characteristic impedance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Variable definition from page 14.",
+      "category": "Interconnect bandwidth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q56",
+      "type": "single",
+      "question": "RTin denotes:",
+      "options": [
+        "10–90% rise time at the input",
+        "Intrinsic rise time",
+        "Round-trip delay",
+        "Bandwidth"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Variable definition from page 14.",
+      "category": "Interconnect bandwidth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q57",
+      "type": "single",
+      "question": "RTintrinsic denotes:",
+      "options": [
+        "Rise-time contribution of the interconnect",
+        "Source resistance",
+        "Load resistance",
+        "Clock period"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Variable definition from page 14.",
+      "category": "Interconnect bandwidth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q58",
+      "type": "single",
+      "question": "The example transmission line on FR-4 is:",
+      "options": [
+        "50 Ω and 10 cm long",
+        "100 Ω and 1 cm",
+        "25 Ω and 1 m",
+        "75 Ω and 5 cm"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "These values are explicitly given.",
+      "category": "Interconnect example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q59",
+      "type": "single",
+      "question": "The 3 dB bandwidth in the example is:",
+      "options": [
+        "8 GHz",
+        "800 MHz",
+        "80 GHz",
+        "4 GHz"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly given.",
+      "category": "Interconnect example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q60",
+      "type": "single",
+      "question": "At the 3 dB bandwidth, the sine-wave amplitude is about:",
+      "options": [
+        "71% of its low-frequency value",
+        "50%",
+        "100%",
+        "25%"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Interconnect example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q61",
+      "type": "single",
+      "question": "For BW = 8 GHz, RTintrinsic is approximately:",
+      "options": [
+        "44 ps",
+        "4.4 ps",
+        "440 ps",
+        "88 ps"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "0.35/8 GHz≈43.75 ps.",
+      "category": "Interconnect example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q62",
+      "type": "single",
+      "question": "For RTin = 1 ps and RTintrinsic = 44 ps, RTout is approximately:",
+      "options": [
+        "44 ps",
+        "1 ps",
+        "45 ns",
+        "88 ps"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "sqrt(1²+44²)≈44 ps.",
+      "category": "Interconnect example",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q63",
+      "type": "single",
+      "question": "For a very fast input edge, the output rise time is mainly determined by:",
+      "options": [
+        "The interconnect bandwidth",
+        "The PCB color",
+        "The DC source voltage only",
+        "The connector material only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the conclusion on page 16.",
+      "category": "Interconnect example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q64",
+      "type": "single",
+      "question": "For RTin = 50 ps and RTintrinsic = 44 ps, RTout is approximately:",
+      "options": [
+        "67 ps",
+        "44 ps",
+        "50 ps",
+        "94 ps"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "sqrt(50²+44²)≈66.6 ps.",
+      "category": "Interconnect example",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q65",
+      "type": "tf",
+      "question": "Finite interconnect bandwidth slows down fast digital edges.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Interconnect bandwidth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q66",
+      "type": "single",
+      "question": "To limit rise-time increase to about 10%, RTintrinsic should be no more than about:",
+      "options": [
+        "0.46 RTin",
+        "1.0 RTin",
+        "2.2 RTin",
+        "0.1 RTin"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is shown on page 17.",
+      "category": "Design guideline",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q67",
+      "type": "single",
+      "question": "That condition implies interconnect bandwidth should be at least approximately:",
+      "options": [
+        "2.2 times the signal bandwidth",
+        "0.46 times",
+        "Equal to the signal bandwidth",
+        "10 times exactly"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the derived result.",
+      "category": "Design guideline",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q68",
+      "type": "single",
+      "question": "The simplified rule of thumb states interconnect bandwidth should be at least:",
+      "options": [
+        "Twice the signal bandwidth",
+        "Half the signal bandwidth",
+        "Equal to the clock frequency",
+        "Ten times the signal bandwidth"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the bold guideline on page 17.",
+      "category": "Design guideline",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q69",
+      "type": "tf",
+      "question": "BWinterconnect ≥ 2×BWsignal is used to limit rise-time degradation to roughly 10%.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter rule of thumb.",
+      "category": "Design guideline",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q70",
+      "type": "single",
+      "question": "In the 800 MHz example, BWsignal is estimated as:",
+      "options": [
+        "4 GHz",
+        "800 MHz",
+        "8 GHz",
+        "400 MHz"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "BWsignal≈5fclock=4 GHz.",
+      "category": "800 MHz example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q71",
+      "type": "single",
+      "question": "For BWsignal = 4 GHz, RTin is about:",
+      "options": [
+        "88 ps",
+        "44 ps",
+        "175 ps",
+        "8.8 ps"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "0.35/4 GHz=87.5 ps.",
+      "category": "800 MHz example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q72",
+      "type": "single",
+      "question": "For the 8 GHz interconnect, RTintrinsic remains about:",
+      "options": [
+        "44 ps",
+        "88 ps",
+        "22 ps",
+        "8 ps"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The line bandwidth is still 8 GHz.",
+      "category": "800 MHz example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q73",
+      "type": "single",
+      "question": "Combining 88 ps and 44 ps gives RTout approximately:",
+      "options": [
+        "98 ps",
+        "132 ps",
+        "44 ps",
+        "88 ps"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "sqrt(88²+44²)≈98 ps.",
+      "category": "800 MHz example",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q74",
+      "type": "single",
+      "question": "The rise-time increase in the 800 MHz example is approximately:",
+      "options": [
+        "12%",
+        "2%",
+        "50%",
+        "100%"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "800 MHz example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q75",
+      "type": "single",
+      "question": "A transmission line consists of:",
+      "options": [
+        "A signal path and a return path",
+        "A signal path only",
+        "A ground plane only",
+        "Two power rails only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Transmission line structure",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q76",
+      "type": "tf",
+      "question": "A signal current on a transmission line always has an associated return current.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Transmission line structure",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q77",
+      "type": "single",
+      "question": "A balanced transmission line has:",
+      "options": [
+        "Two conductors with the same geometry arranged symmetrically",
+        "Only one conductor",
+        "A ground plane and arbitrary trace",
+        "No return path"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Transmission line structure",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q78",
+      "type": "single",
+      "question": "Which example is given as a balanced line?",
+      "options": [
+        "Twisted pair",
+        "Microstrip",
+        "Asymmetric stripline",
+        "Single-ended coax only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Twisted pair is the example given.",
+      "category": "Transmission line structure",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q79",
+      "type": "multi",
+      "question": "Which structures are shown as common uniform transmission lines?",
+      "options": [
+        "Twisted pair",
+        "Coax",
+        "Coplanar",
+        "Microstrip"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All are shown on page 19.",
+      "category": "Transmission line structures",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q80",
+      "type": "multi",
+      "question": "Which additional PCB transmission-line structures are shown?",
+      "options": [
+        "Embedded microstrip",
+        "Stripline",
+        "Asymmetric stripline",
+        "Only DIP traces"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "All three are shown on page 19.",
+      "category": "Transmission line structures",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q81",
+      "type": "single",
+      "question": "In the intuitive model, the advancing wave repeatedly encounters:",
+      "options": [
+        "Small distributed capacitances between signal and return",
+        "Only resistors",
+        "Only transformers",
+        "Mechanical springs"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the page-20 model.",
+      "category": "Intuitive model",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q82",
+      "type": "single",
+      "question": "As the wave advances, each distributed capacitance is charged from:",
+      "options": [
+        "0 to V",
+        "V to 0 only",
+        "0 to infinite voltage",
+        "V to V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Intuitive model",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q83",
+      "type": "single",
+      "question": "The advancing voltage wave therefore continuously draws current to:",
+      "options": [
+        "Charge the distributed capacitance",
+        "Heat the solder mask",
+        "Magnetize the PCB",
+        "Discharge the source"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Intuitive model",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q84",
+      "type": "single",
+      "question": "During time Δt, the wavefront travels:",
+      "options": [
+        "Δx = vΔt",
+        "Δx=Δt/v",
+        "Δx=v/Δt",
+        "Δx=v²Δt"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is shown on page 21.",
+      "category": "Intuitive model",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q85",
+      "type": "single",
+      "question": "If CL is capacitance per unit length, a section Δx has capacitance:",
+      "options": [
+        "C = CLΔx",
+        "C=CL/Δx",
+        "C=Δx/CL",
+        "C=CLv"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is shown on page 21.",
+      "category": "Intuitive model",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q86",
+      "type": "single",
+      "question": "The charging current derived in the model is:",
+      "options": [
+        "I = CL v V",
+        "I=V/(CLv)",
+        "I=CL/V",
+        "I=v/(CLV)"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is derived on page 22.",
+      "category": "Intuitive model",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q87",
+      "type": "single",
+      "question": "The instantaneous impedance derived from the intuitive model is:",
+      "options": [
+        "Z = 1/(CL v)",
+        "Z=CLv",
+        "Z=v/CL",
+        "Z=CL/v"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is shown on page 22.",
+      "category": "Intuitive model",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q88",
+      "type": "tf",
+      "question": "Changing the length of a uniform transmission line changes its instantaneous characteristic impedance.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The chapter explicitly says it does not.",
+      "category": "Characteristic impedance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q89",
+      "type": "single",
+      "question": "If trace width increases locally, capacitance per unit length CL generally:",
+      "options": [
+        "Increases",
+        "Decreases",
+        "Becomes zero",
+        "Is unchanged always"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Characteristic impedance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q90",
+      "type": "single",
+      "question": "If trace width increases locally, the instantaneous impedance generally:",
+      "options": [
+        "Decreases",
+        "Increases",
+        "Becomes infinite",
+        "Is unchanged"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "More capacitance requires more charging current for the same voltage.",
+      "category": "Characteristic impedance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q91",
+      "type": "single",
+      "question": "For a uniform transmission line, the constant instantaneous impedance seen by a forward wave is called:",
+      "options": [
+        "Characteristic impedance Z0",
+        "Load impedance ZL",
+        "Source impedance RS",
+        "Dielectric resistance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the definition on page 24.",
+      "category": "Characteristic impedance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q92",
+      "type": "single",
+      "question": "Before any load reflection returns, the input impedance seen by the source equals:",
+      "options": [
+        "Z0",
+        "ZL always",
+        "Zero",
+        "Infinite impedance always"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Characteristic impedance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q93",
+      "type": "single",
+      "question": "An infinitely long uniform line has input impedance:",
+      "options": [
+        "Equal to Z0",
+        "Zero",
+        "Infinite",
+        "Equal to DC resistance only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Characteristic impedance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q94",
+      "type": "single",
+      "question": "A finite line terminated with Z0 has input impedance:",
+      "options": [
+        "Equal to Z0",
+        "Infinite",
+        "Zero",
+        "Double Z0"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Characteristic impedance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q95",
+      "type": "single",
+      "question": "A widely used characteristic impedance in RF systems is:",
+      "options": [
+        "50 Ω",
+        "5 Ω",
+        "500 Ω",
+        "1 kΩ"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter states 50 Ω is widely used.",
+      "category": "Characteristic impedance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q96",
+      "type": "single",
+      "question": "Historically, 50 Ω coax was chosen as a compromise between:",
+      "options": [
+        "Low attenuation and high power handling",
+        "Low cost and PCB size",
+        "Capacitance and clock frequency",
+        "Rise time and DC current"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Characteristic impedance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q97",
+      "type": "single",
+      "question": "In the Earth-to-Moon example, the one-way propagation delay is:",
+      "options": [
+        "2 s",
+        "1 s",
+        "4 s",
+        "0.5 s"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Moon example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q98",
+      "type": "single",
+      "question": "The round-trip delay in the Moon example is:",
+      "options": [
+        "4 s",
+        "2 s",
+        "8 s",
+        "1 s"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Moon example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q99",
+      "type": "single",
+      "question": "For the first 4 s, the measured input impedance of the open line is:",
+      "options": [
+        "The characteristic impedance",
+        "An open circuit",
+        "A short circuit",
+        "Zero"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The source has not yet received the reflection.",
+      "category": "Moon example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q100",
+      "type": "single",
+      "question": "After the 4 s round trip, the measured input impedance becomes:",
+      "options": [
+        "Open circuit",
+        "Z0 forever",
+        "Short circuit",
+        "Half Z0"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The reflection reveals the open load.",
+      "category": "Moon example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q101",
+      "type": "tf",
+      "question": "The source does not know the load impedance until a reflected wave returns.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the central conclusion on page 25.",
+      "category": "Moon example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q102",
+      "type": "single",
+      "question": "A high-speed driver initially sees a line as approximately resistive Z0 when:",
+      "options": [
+        "Rise time is smaller than the round-trip time",
+        "Rise time is much larger than the round-trip time",
+        "The line is DC only",
+        "The source resistance is zero"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Moon example",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q103",
+      "type": "single",
+      "question": "The telegrapher's equations describe how:",
+      "options": [
+        "Voltage and current vary with position and time along a line",
+        "Only DC resistance varies with temperature",
+        "Only capacitance varies with width",
+        "Only current varies with frequency"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Telegrapher equations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q104",
+      "type": "single",
+      "question": "LL represents:",
+      "options": [
+        "Distributed loop inductance per unit length",
+        "Total load inductance",
+        "Leakage inductance",
+        "Line length"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Variable definition from page 26.",
+      "category": "Telegrapher equations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q105",
+      "type": "single",
+      "question": "CL represents:",
+      "options": [
+        "Distributed loop capacitance per unit length",
+        "Total load capacitance",
+        "Clock load",
+        "Coupling factor"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Variable definition from page 26.",
+      "category": "Telegrapher equations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q106",
+      "type": "single",
+      "question": "For a lossless line, characteristic impedance is:",
+      "options": [
+        "Z0 = √(LL/CL)",
+        "Z0=√(CL/LL)",
+        "Z0=LLCL",
+        "Z0=1/√(LLCL)"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is shown on page 27.",
+      "category": "Telegrapher equations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q107",
+      "type": "single",
+      "question": "For a lossless line, propagation velocity is:",
+      "options": [
+        "v = 1/√(LLCL)",
+        "v=√(LLCL)",
+        "v=LL/CL",
+        "v=CL/LL"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is shown on page 27.",
+      "category": "Telegrapher equations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q108",
+      "type": "single",
+      "question": "Knowing Z0 and v, CL is:",
+      "options": [
+        "CL = 1/(vZ0)",
+        "CL=vZ0",
+        "CL=Z0/v",
+        "CL=1/(v²Z0)"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is shown on page 27.",
+      "category": "Telegrapher equations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q109",
+      "type": "single",
+      "question": "Knowing Z0 and v, LL is:",
+      "options": [
+        "LL = Z0/v",
+        "LL=v/Z0",
+        "LL=1/(vZ0)",
+        "LL=vZ0"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is shown on page 27.",
+      "category": "Telegrapher equations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q110",
+      "type": "tf",
+      "question": "For a transmission line, voltage and current depend on both position and time.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is why a lumped model is insufficient.",
+      "category": "Telegrapher equations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q111",
+      "type": "tf",
+      "question": "The intuitive capacitive model and telegrapher equations give the same Z0.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated on page 28.",
+      "category": "Telegrapher equations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q112",
+      "type": "single",
+      "question": "Substituting v into Z = 1/(CLv) gives:",
+      "options": [
+        "Z0 = √(LL/CL)",
+        "Z0=LLCL",
+        "Z0=√(CL/LL)",
+        "Z0=1/(LLCL)"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the result shown on page 28.",
+      "category": "Telegrapher equations",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q113",
+      "type": "tf",
+      "question": "An infinite lossless LC transmission line can look resistive at its input.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the conclusion of the intuitive derivation.",
+      "category": "Characteristic impedance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q114",
+      "type": "single",
+      "question": "Reflections occur when a traveling wave encounters:",
+      "options": [
+        "An impedance discontinuity",
+        "A perfectly matched impedance",
+        "Only a long trace",
+        "Only a capacitor"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Reflections",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q115",
+      "type": "multi",
+      "question": "Reflections can cause:",
+      "options": [
+        "Overshoot",
+        "Undershoot",
+        "Ringing",
+        "Only DC offset"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three are explicitly listed.",
+      "category": "Reflections",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q116",
+      "type": "single",
+      "question": "The magnitude and polarity of a reflected signal depend on:",
+      "options": [
+        "The impedance mismatch",
+        "Trace color",
+        "Solder-mask thickness",
+        "Clock name"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Reflections",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q117",
+      "type": "single",
+      "question": "The voltage reflection coefficient is:",
+      "options": [
+        "Γ = (Z2−Z1)/(Z2+Z1)",
+        "Γ=(Z2+Z1)/(Z2−Z1)",
+        "Γ=Z1/Z2",
+        "Γ=Z1+Z2"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This formula is shown on page 32.",
+      "category": "Reflection coefficient",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q118",
+      "type": "single",
+      "question": "Γ can also be defined as:",
+      "options": [
+        "Vreflected/Vincident",
+        "Vincident/Vreflected",
+        "I/V",
+        "Z1Z2"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is shown on page 32.",
+      "category": "Reflection coefficient",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q119",
+      "type": "single",
+      "question": "For matched impedances Z2=Z1, Γ is:",
+      "options": [
+        "0",
+        "1",
+        "−1",
+        "0.5"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "No reflection occurs.",
+      "category": "Reflection coefficient",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q120",
+      "type": "single",
+      "question": "If Z2 > Z1, Γ is:",
+      "options": [
+        "Positive",
+        "Negative",
+        "Always zero",
+        "Always −1"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The reflected voltage has the same polarity.",
+      "category": "Reflection coefficient",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q121",
+      "type": "single",
+      "question": "If Z2 < Z1, Γ is:",
+      "options": [
+        "Negative",
+        "Positive",
+        "Always zero",
+        "Always +1"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The reflected voltage has opposite polarity.",
+      "category": "Reflection coefficient",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q122",
+      "type": "single",
+      "question": "For passive terminations, Γ lies between:",
+      "options": [
+        "−1 and +1",
+        "0 and ∞",
+        "−∞ and +∞",
+        "0 and +1 only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Reflection coefficient",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q123",
+      "type": "single",
+      "question": "For a short-circuited line end, Γ is:",
+      "options": [
+        "−1",
+        "+1",
+        "0",
+        "−0.5"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Reflection coefficient",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q124",
+      "type": "single",
+      "question": "For an open-circuited line end, Γ is:",
+      "options": [
+        "+1",
+        "−1",
+        "0",
+        "+0.5"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Reflection coefficient",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q125",
+      "type": "single",
+      "question": "A TDR generates:",
+      "options": [
+        "A fast step edge and measures the reflected voltage",
+        "A sine wave only and measures current",
+        "Only a DC voltage",
+        "A thermal pulse"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter definition.",
+      "category": "TDR",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q126",
+      "type": "single",
+      "question": "What does TDR stand for?",
+      "options": [
+        "Time-Domain Reflectometer",
+        "Transmission Delay Receiver",
+        "Time-Dependent Resistance",
+        "Trace Discontinuity Reader"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the instrument named on page 34.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q127",
+      "type": "single",
+      "question": "Reflections can occur at:",
+      "options": [
+        "Both source-line and line-load impedance transitions",
+        "Only the load",
+        "Only the source",
+        "Only the middle of a uniform line"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Both locations are explicitly listed.",
+      "category": "Reflections",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q128",
+      "type": "single",
+      "question": "In the bounce-diagram example, source output impedance RS is:",
+      "options": [
+        "10 Ω",
+        "50 Ω",
+        "100 Ω",
+        "1 Ω"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Bounce diagram",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q129",
+      "type": "single",
+      "question": "The line characteristic impedance Z0 is:",
+      "options": [
+        "50 Ω",
+        "10 Ω",
+        "100 Ω",
+        "∞"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Bounce diagram",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q130",
+      "type": "single",
+      "question": "The load is:",
+      "options": [
+        "Open circuit",
+        "50 Ω matched",
+        "Short circuit",
+        "25 Ω"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Bounce diagram",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q131",
+      "type": "single",
+      "question": "The one-way propagation delay TD is:",
+      "options": [
+        "1 ns",
+        "2 ns",
+        "0.5 ns",
+        "10 ns"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Bounce diagram",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q132",
+      "type": "single",
+      "question": "The source step amplitude is:",
+      "options": [
+        "1 V",
+        "5 V",
+        "0.5 V",
+        "10 V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The diagram and calculation use a 1 V source.",
+      "category": "Bounce diagram",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q133",
+      "type": "single",
+      "question": "At t=0, the source initially sees:",
+      "options": [
+        "Z0 = 50 Ω",
+        "The open load directly",
+        "Infinite impedance",
+        "Zero impedance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The source has not yet received the load reflection.",
+      "category": "Bounce diagram",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q134",
+      "type": "single",
+      "question": "The initially launched voltage is approximately:",
+      "options": [
+        "0.84 V",
+        "1.68 V",
+        "0.56 V",
+        "1 V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "1 V×50/(10+50)=0.833 V≈0.84 V.",
+      "category": "Bounce diagram",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q135",
+      "type": "single",
+      "question": "The load reflection coefficient ΓL for the open circuit is:",
+      "options": [
+        "+1",
+        "−1",
+        "0",
+        "−0.67"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Open circuit gives Γ=+1.",
+      "category": "Bounce diagram",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q136",
+      "type": "single",
+      "question": "At t=1 ns, the load voltage becomes approximately:",
+      "options": [
+        "1.68 V",
+        "0.84 V",
+        "1.12 V",
+        "0 V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Incident and equal reflected wave add at the open load.",
+      "category": "Bounce diagram",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q137",
+      "type": "single",
+      "question": "The source reflection coefficient ΓS is approximately:",
+      "options": [
+        "−0.67",
+        "+0.67",
+        "0",
+        "−1"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "(10−50)/(10+50)=−40/60≈−0.67.",
+      "category": "Bounce diagram",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q138",
+      "type": "single",
+      "question": "The reflected wave generated at the source from 0.84 V is about:",
+      "options": [
+        "−0.56 V",
+        "+0.56 V",
+        "−0.84 V",
+        "+0.38 V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "0.84×−0.67≈−0.56 V.",
+      "category": "Bounce diagram",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q139",
+      "type": "single",
+      "question": "At t=2 ns, the source-end voltage is approximately:",
+      "options": [
+        "1.12 V",
+        "0.84 V",
+        "1.68 V",
+        "0.56 V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "0.84+0.84−0.56≈1.12 V.",
+      "category": "Bounce diagram",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q140",
+      "type": "single",
+      "question": "At t=3 ns, after the −0.56 V wave reaches the open load, load voltage becomes approximately:",
+      "options": [
+        "0.56 V",
+        "1.68 V",
+        "1.12 V",
+        "0 V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "1.68−0.56−0.56≈0.56 V.",
+      "category": "Bounce diagram",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q141",
+      "type": "single",
+      "question": "The −0.56 V wave reflecting from the source with ΓS≈−0.67 creates about:",
+      "options": [
+        "+0.375 V",
+        "−0.375 V",
+        "+0.84 V",
+        "−0.56 V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "−0.56×−0.67≈+0.375 V.",
+      "category": "Bounce diagram",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q142",
+      "type": "single",
+      "question": "At t=5 ns, the load voltage is approximately:",
+      "options": [
+        "1.31 V",
+        "1.00 V",
+        "0.56 V",
+        "1.68 V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "0.56+0.375+0.375≈1.31 V.",
+      "category": "Bounce diagram",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q143",
+      "type": "single",
+      "question": "The repeated reflections eventually settle to:",
+      "options": [
+        "1 V",
+        "0 V",
+        "1.68 V",
+        "0.84 V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The final DC voltage is 1 V.",
+      "category": "Bounce diagram",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q144",
+      "type": "tf",
+      "question": "In the open-load example, reflection amplitude decreases over successive bounces.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Because |ΓS|<1 at the source.",
+      "category": "Bounce diagram",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q145",
+      "type": "single",
+      "question": "If the load is short-circuited, the load voltage is:",
+      "options": [
+        "0 V",
+        "1 V",
+        "0.84 V",
+        "1.68 V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "A short circuit enforces zero voltage at the load.",
+      "category": "Bounce diagram",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q146",
+      "type": "single",
+      "question": "If the load is matched to Z0=50 Ω, the load reflection coefficient is:",
+      "options": [
+        "0",
+        "+1",
+        "−1",
+        "−0.67"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Matched impedance gives no reflection.",
+      "category": "Bounce diagram",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q147",
+      "type": "tf",
+      "question": "With a matched 50 Ω load, the initially launched ~0.84 V reaches the load without reflection.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "ΓL=0.",
+      "category": "Bounce diagram",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q148",
+      "type": "single",
+      "question": "In a lossy transmission line, higher-frequency components are typically:",
+      "options": [
+        "Attenuated more strongly",
+        "Amplified more strongly",
+        "Unaffected by frequency",
+        "Converted to DC"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Lossy lines",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q149",
+      "type": "single",
+      "question": "Frequency-dependent loss reduces:",
+      "options": [
+        "The effective bandwidth of the interconnect",
+        "The trace length",
+        "The characteristic impedance to zero",
+        "The clock period"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Lossy lines",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q150",
+      "type": "single",
+      "question": "Reducing effective interconnect bandwidth generally:",
+      "options": [
+        "Increases rise time",
+        "Decreases rise time",
+        "Has no effect on edges",
+        "Makes the signal purely sinusoidal"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Lossy lines",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q151",
+      "type": "single",
+      "question": "When rise/fall times become a significant fraction of bit period, the voltage reached in one bit depends on:",
+      "options": [
+        "Preceding bits",
+        "Only PCB thickness",
+        "Only supply voltage",
+        "Only current rating"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "ISI",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q152",
+      "type": "single",
+      "question": "This dependence on preceding bits is called:",
+      "options": [
+        "Inter-symbol interference (ISI)",
+        "Ground bounce",
+        "Skin effect",
+        "TDR"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter definition.",
+      "category": "ISI",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q153",
+      "type": "single",
+      "question": "ISI tends to:",
+      "options": [
+        "Reduce eye opening",
+        "Increase eye opening",
+        "Eliminate jitter",
+        "Increase bandwidth"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "ISI",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q154",
+      "type": "single",
+      "question": "ISI increases the probability of:",
+      "options": [
+        "Bit errors",
+        "Lower trace resistance",
+        "Better matching",
+        "Lower jitter"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "ISI",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q155",
+      "type": "single",
+      "question": "What does ISI stand for?",
+      "options": [
+        "Inter-Symbol Interference",
+        "Inter-Signal Impedance",
+        "Internal Series Inductance",
+        "Input Signal Integrity"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the term defined on page 43.",
+      "category": "Abbreviations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q156",
+      "type": "single",
+      "question": "An eye diagram is formed by:",
+      "options": [
+        "Overlaying many successive bit intervals",
+        "Plotting DC voltage versus temperature",
+        "Plotting a single clock period only",
+        "Plotting impedance versus trace width"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter definition.",
+      "category": "Eye diagram",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q157",
+      "type": "single",
+      "question": "Eye diagrams are typically synchronized to:",
+      "options": [
+        "The clock",
+        "The PCB temperature",
+        "The ground plane",
+        "The DC supply only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Eye diagram",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q158",
+      "type": "single",
+      "question": "A large open eye indicates:",
+      "options": [
+        "Good voltage and timing margins",
+        "Poor SI",
+        "High loss only",
+        "Guaranteed reflections"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Eye diagram",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q159",
+      "type": "multi",
+      "question": "Eye closure can result from:",
+      "options": [
+        "ISI",
+        "Noise",
+        "Jitter",
+        "Only low DC resistance"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "These causes are explicitly listed.",
+      "category": "Eye diagram",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q160",
+      "type": "single",
+      "question": "Eye closure generally corresponds to:",
+      "options": [
+        "Increased probability of bit errors",
+        "Lower error probability",
+        "Zero jitter",
+        "More bandwidth"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Eye diagram",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q161",
+      "type": "single",
+      "question": "An eye diagram reveals both:",
+      "options": [
+        "Amplitude and timing variations",
+        "Only DC resistance",
+        "Only capacitance",
+        "Only temperature"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Eye diagram",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q162",
+      "type": "single",
+      "question": "How many main mechanisms are listed that reduce signal energy delivered to the receiver?",
+      "options": [
+        "Five",
+        "Two",
+        "Three",
+        "Seven"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly lists five.",
+      "category": "Loss mechanisms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q163",
+      "type": "single",
+      "question": "Which loss mechanism is usually negligible for well-designed PCB interconnects?",
+      "options": [
+        "Radiative loss",
+        "Conductor loss",
+        "Dielectric loss",
+        "Impedance-mismatch loss"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Loss mechanisms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q164",
+      "type": "single",
+      "question": "Coupling to adjacent traces corresponds to:",
+      "options": [
+        "Crosstalk",
+        "Skin effect",
+        "Dielectric loss",
+        "Radiative loss only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly identified.",
+      "category": "Loss mechanisms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q165",
+      "type": "single",
+      "question": "Impedance mismatches reduce delivered energy because:",
+      "options": [
+        "Reflections send some energy back and forth along the line",
+        "They eliminate current entirely",
+        "They reduce dielectric constant",
+        "They increase bandwidth"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Loss mechanisms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q166",
+      "type": "single",
+      "question": "In a lossy line, extra trips caused by reflections result in:",
+      "options": [
+        "Further attenuation",
+        "Amplification",
+        "Zero loss",
+        "Lower propagation delay only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Loss mechanisms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q167",
+      "type": "single",
+      "question": "Conductor loss means:",
+      "options": [
+        "Resistive loss in the conductors",
+        "Loss in the dielectric only",
+        "Radiation only",
+        "Only crosstalk"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Loss mechanisms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q168",
+      "type": "single",
+      "question": "Dielectric loss means:",
+      "options": [
+        "Energy dissipated in the dielectric material",
+        "Only copper heating",
+        "Only radiation",
+        "Only source mismatch"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Loss mechanisms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q169",
+      "type": "multi",
+      "question": "The five listed energy-loss mechanisms are:",
+      "options": [
+        "Radiative loss",
+        "Crosstalk",
+        "Impedance mismatches",
+        "Conductor and dielectric loss"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "The fourth option groups the two final listed mechanisms.",
+      "category": "Loss mechanisms",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q170",
+      "type": "single",
+      "question": "At low frequency, conductor series resistance can be calculated using:",
+      "options": [
+        "Pouillet's law",
+        "Faraday's law",
+        "Gauss's law",
+        "Snell's law"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Conductor loss",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q171",
+      "type": "single",
+      "question": "Pouillet's law is:",
+      "options": [
+        "R = ρl/A",
+        "R=ρA/l",
+        "R=lA/ρ",
+        "R=ρ/l"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This formula is shown on page 46.",
+      "category": "Conductor loss",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q172",
+      "type": "single",
+      "question": "In Pouillet's law, ρ is:",
+      "options": [
+        "Bulk resistivity",
+        "Relative permittivity",
+        "Skin depth",
+        "Loss tangent"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly defined.",
+      "category": "Conductor loss",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q173",
+      "type": "single",
+      "question": "At high frequency, current becomes concentrated near the conductor surface due to:",
+      "options": [
+        "Skin effect",
+        "TDR",
+        "ISI",
+        "Ground bounce"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Skin effect",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q174",
+      "type": "single",
+      "question": "Current density with depth under skin effect decreases approximately:",
+      "options": [
+        "Exponentially",
+        "Linearly",
+        "Quadratically",
+        "Not at all"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Skin effect",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q175",
+      "type": "single",
+      "question": "Skin depth δ varies approximately as:",
+      "options": [
+        "1/√f",
+        "√f",
+        "f",
+        "1/f²"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is shown on page 46.",
+      "category": "Skin effect",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q176",
+      "type": "single",
+      "question": "As frequency increases, skin depth:",
+      "options": [
+        "Decreases",
+        "Increases",
+        "Stays constant",
+        "Becomes infinite"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "δ∝1/√f.",
+      "category": "Skin effect",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q177",
+      "type": "single",
+      "question": "As frequency increases, the effective conductor cross-sectional area available to current:",
+      "options": [
+        "Decreases",
+        "Increases",
+        "Stays constant",
+        "Becomes zero immediately"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Skin effect",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q178",
+      "type": "single",
+      "question": "For a conductor much thicker than skin depth, RAC varies approximately as:",
+      "options": [
+        "√f",
+        "1/√f",
+        "f²",
+        "1/f"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is shown on page 46.",
+      "category": "Skin effect",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q179",
+      "type": "single",
+      "question": "If frequency increases by a factor of 4, approximate RAC due to skin effect increases by:",
+      "options": [
+        "A factor of 2",
+        "A factor of 4",
+        "A factor of 16",
+        "No change"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "RAC∝√f.",
+      "category": "Skin effect",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q180",
+      "type": "single",
+      "question": "If frequency increases by a factor of 9, skin depth becomes:",
+      "options": [
+        "One third",
+        "Three times larger",
+        "One ninth",
+        "Unchanged"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "δ∝1/√f.",
+      "category": "Skin effect",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q181",
+      "type": "single",
+      "question": "Dielectric loss occurs because dielectric polarization:",
+      "options": [
+        "Does not respond instantaneously to an alternating electric field",
+        "Is always instantaneous",
+        "Is absent in FR-4",
+        "Produces no heat"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Dielectric loss",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q182",
+      "type": "single",
+      "question": "Part of the electromagnetic energy in a dielectric is dissipated as:",
+      "options": [
+        "Heat",
+        "Light",
+        "Mechanical motion only",
+        "DC current only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Dielectric loss",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q183",
+      "type": "single",
+      "question": "Dielectric loss is characterized by:",
+      "options": [
+        "Loss tangent tan δ (dissipation factor)",
+        "Skin depth only",
+        "Characteristic impedance only",
+        "DC resistance only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Dielectric loss",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q184",
+      "type": "single",
+      "question": "A larger tan δ means:",
+      "options": [
+        "A lossier dielectric",
+        "A less lossy dielectric",
+        "Zero dielectric loss",
+        "Higher copper conductivity"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Dielectric loss",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q185",
+      "type": "single",
+      "question": "The chapter writes dissipation factor as:",
+      "options": [
+        "DF = tan δ",
+        "DF=1/tanδ",
+        "DF=√tanδ",
+        "DF=δ/f"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is shown on page 47.",
+      "category": "Dielectric loss",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q186",
+      "type": "single",
+      "question": "Equivalent AC resistivity of the dielectric is:",
+      "options": [
+        "ρbulk = 1/(2πfε0εr tanδ)",
+        "ρbulk=2πfε0εr tanδ",
+        "ρbulk=f/(ε0εr)",
+        "ρbulk=εr/f"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is shown on page 47.",
+      "category": "Dielectric loss",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q187",
+      "type": "single",
+      "question": "For approximately constant tan δ, dielectric loss varies approximately as:",
+      "options": [
+        "f",
+        "√f",
+        "1/f",
+        "f²"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Dielectric loss",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q188",
+      "type": "single",
+      "question": "Conductor loss varies approximately as:",
+      "options": [
+        "√f",
+        "f",
+        "1/f",
+        "f²"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is summarized on page 47.",
+      "category": "Loss scaling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q189",
+      "type": "single",
+      "question": "Dielectric loss varies approximately as:",
+      "options": [
+        "f",
+        "√f",
+        "1/√f",
+        "Constant"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is summarized on page 47.",
+      "category": "Loss scaling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q190",
+      "type": "tf",
+      "question": "At sufficiently high frequency, dielectric loss can grow faster with frequency than conductor skin-effect loss.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Dielectric loss∝f while conductor loss∝√f.",
+      "category": "Loss scaling",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q191",
+      "type": "single",
+      "question": "A lossy transmission line section is modeled with how many components?",
+      "options": [
+        "Four",
+        "Two",
+        "Three",
+        "Six"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter lists C, L, Rseries, and Rshunt.",
+      "category": "Lossy model",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q192",
+      "type": "single",
+      "question": "In the lossy line model, C represents:",
+      "options": [
+        "Capacitance between signal and return paths",
+        "Conductor resistance",
+        "Dielectric resistance",
+        "Source resistance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Lossy model",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q193",
+      "type": "single",
+      "question": "In the lossy line model, L represents:",
+      "options": [
+        "Loop self-inductance",
+        "Leakage resistance",
+        "Load impedance",
+        "Loss tangent"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Lossy model",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q194",
+      "type": "single",
+      "question": "Rseries represents:",
+      "options": [
+        "Series conductor resistance including DC and skin-effect losses",
+        "Dielectric loss only",
+        "Capacitance",
+        "Only source resistance"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Lossy model",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q195",
+      "type": "single",
+      "question": "Rshunt represents:",
+      "options": [
+        "Dielectric losses",
+        "Conductor skin effect",
+        "Source mismatch",
+        "Radiative loss"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Lossy model",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q196",
+      "type": "single",
+      "question": "Exact lossy-line expressions for Z0, propagation velocity and attenuation are:",
+      "options": [
+        "Cumbersome",
+        "Identical to the lossless case exactly",
+        "Undefined",
+        "Purely resistive"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The chapter explicitly states this.",
+      "category": "Lossy model",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q197",
+      "type": "single",
+      "question": "Therefore, practical analysis often uses:",
+      "options": [
+        "The low-loss approximation",
+        "The no-capacitance approximation",
+        "The no-inductance approximation",
+        "Only DC analysis"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Low-loss approximation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q198",
+      "type": "single",
+      "question": "The low-loss approximation requires:",
+      "options": [
+        "Rseries ≪ ωLL",
+        "Rseries ≫ ωLL",
+        "Rseries=ωLL",
+        "Rseries=0 exactly"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This condition is shown on page 49.",
+      "category": "Low-loss approximation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q199",
+      "type": "single",
+      "question": "The low-loss approximation also requires:",
+      "options": [
+        "Rshunt ≫ 1/(ωCL)",
+        "Rshunt ≪ 1/(ωCL)",
+        "Rshunt=0",
+        "Rshunt=ωCL"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This condition is shown on page 49.",
+      "category": "Low-loss approximation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q200",
+      "type": "single",
+      "question": "For most practical transmission lines, the low-loss approximation is valid:",
+      "options": [
+        "Above a few MHz",
+        "Only below 1 Hz",
+        "Only above 100 GHz",
+        "Never"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Low-loss approximation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q201",
+      "type": "single",
+      "question": "Total attenuation per unit length is the sum of:",
+      "options": [
+        "Conductor and dielectric contributions",
+        "Only conductor loss",
+        "Only dielectric loss",
+        "Only radiation"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Attenuation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q202",
+      "type": "single",
+      "question": "The chapter expresses total attenuation as:",
+      "options": [
+        "αdB = αcond + αdiel",
+        "αdB=αcond·αdiel",
+        "αdB=αcond−αdiel",
+        "αdB=1/(αcond+αdiel)"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This formula is shown on page 49.",
+      "category": "Attenuation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q203",
+      "type": "single",
+      "question": "αcond represents:",
+      "options": [
+        "Conductive loss",
+        "Dielectric loss",
+        "Radiation only",
+        "Reflection coefficient"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Attenuation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q204",
+      "type": "single",
+      "question": "αdiel represents:",
+      "options": [
+        "Dielectric loss",
+        "Conductive loss",
+        "Crosstalk only",
+        "Source loss"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Attenuation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q205",
+      "type": "single",
+      "question": "The attenuation example on page 50 uses a:",
+      "options": [
+        "50 Ω FR-4 microstrip",
+        "100 Ω twisted pair",
+        "25 Ω stripline",
+        "75 Ω coax"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Loss example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q206",
+      "type": "single",
+      "question": "The trace width in that example is:",
+      "options": [
+        "8 mil",
+        "6 mil",
+        "20 mil",
+        "80 mil"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Loss example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q207",
+      "type": "single",
+      "question": "In that example, dielectric loss becomes dominant above approximately:",
+      "options": [
+        "1 GHz",
+        "1 MHz",
+        "100 MHz",
+        "10 GHz"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Loss example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q208",
+      "type": "tf",
+      "question": "At sufficiently high frequencies in the shown FR-4 microstrip example, αtotal is approximately αdiel.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the conclusion on page 50.",
+      "category": "Loss example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q209",
+      "type": "single",
+      "question": "A 15 cm FR-4 interconnect with v≈15 cm/ns has TD approximately:",
+      "options": [
+        "1 ns",
+        "0.1 ns",
+        "15 ns",
+        "2 ns"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "TD=L/v=15/15=1 ns.",
+      "category": "Calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q210",
+      "type": "single",
+      "question": "For TD=1 ns, transmission-line effects are usually negligible if RT is approximately:",
+      "options": [
+        "4 ns or longer",
+        "0.25 ns or shorter",
+        "1 ns exactly only",
+        "40 ps"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Use RT≳4TD.",
+      "category": "Calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q211",
+      "type": "single",
+      "question": "A 30 cm FR-4 trace has TD approximately:",
+      "options": [
+        "2 ns",
+        "0.5 ns",
+        "30 ns",
+        "4 ns"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "30/15=2 ns.",
+      "category": "Calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q212",
+      "type": "single",
+      "question": "For a 30 cm line, the RT≳4TD rule gives approximately:",
+      "options": [
+        "RT ≳ 8 ns",
+        "RT≳2 ns",
+        "RT≳30 ns",
+        "RT≳0.5 ns"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "4×2 ns=8 ns.",
+      "category": "Calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q213",
+      "type": "single",
+      "question": "If RT=200 ps, estimated signal bandwidth is approximately:",
+      "options": [
+        "1.75 GHz",
+        "175 MHz",
+        "17.5 GHz",
+        "700 MHz"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "BW=0.35/0.2 ns=1.75 GHz.",
+      "category": "Calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q214",
+      "type": "single",
+      "question": "If RT=500 ps, estimated bandwidth is:",
+      "options": [
+        "700 MHz",
+        "70 MHz",
+        "7 GHz",
+        "500 MHz"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "0.35/0.5 ns=0.7 GHz.",
+      "category": "Calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q215",
+      "type": "single",
+      "question": "If BW=2 GHz, intrinsic rise time is approximately:",
+      "options": [
+        "175 ps",
+        "350 ps",
+        "70 ps",
+        "2 ns"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "0.35/2 GHz=175 ps.",
+      "category": "Calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q216",
+      "type": "single",
+      "question": "If BW=5 GHz, intrinsic rise time is approximately:",
+      "options": [
+        "70 ps",
+        "350 ps",
+        "7 ps",
+        "500 ps"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "0.35/5 GHz=70 ps.",
+      "category": "Calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q217",
+      "type": "single",
+      "question": "If RTin=100 ps and RTintrinsic=100 ps, RTout is approximately:",
+      "options": [
+        "141 ps",
+        "100 ps",
+        "200 ps",
+        "50 ps"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "sqrt(100²+100²)=141.4 ps.",
+      "category": "Calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q218",
+      "type": "single",
+      "question": "If RTin=200 ps and RTintrinsic=100 ps, RTout is approximately:",
+      "options": [
+        "224 ps",
+        "300 ps",
+        "100 ps",
+        "173 ps"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "sqrt(200²+100²)=223.6 ps.",
+      "category": "Calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q219",
+      "type": "single",
+      "question": "If signal BW is 2 GHz, a rough minimum interconnect BW for ~10% RT degradation is:",
+      "options": [
+        "About 4 GHz",
+        "1 GHz",
+        "2 GHz",
+        "20 GHz"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Use at least twice the signal bandwidth.",
+      "category": "Calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q220",
+      "type": "single",
+      "question": "If fclock=500 MHz, the high-speed rule BW≈5fclock gives:",
+      "options": [
+        "2.5 GHz",
+        "500 MHz",
+        "1 GHz",
+        "5 GHz"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "5×500 MHz=2.5 GHz.",
+      "category": "Calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q221",
+      "type": "single",
+      "question": "If fclock=500 MHz, RT≈0.07Tclock gives:",
+      "options": [
+        "140 ps",
+        "700 ps",
+        "70 ps",
+        "1.4 ns"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "T=2 ns; 0.07×2 ns=0.14 ns.",
+      "category": "Calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q222",
+      "type": "single",
+      "question": "For Z1=50 Ω and Z2=100 Ω, Γ is approximately:",
+      "options": [
+        "+0.33",
+        "−0.33",
+        "+1",
+        "0"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "(100−50)/(100+50)=1/3.",
+      "category": "Reflection calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q223",
+      "type": "single",
+      "question": "For Z1=50 Ω and Z2=25 Ω, Γ is approximately:",
+      "options": [
+        "−0.33",
+        "+0.33",
+        "−1",
+        "0"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "(25−50)/(25+50)=−1/3.",
+      "category": "Reflection calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q224",
+      "type": "single",
+      "question": "For Z1=50 Ω and Z2=50 Ω, Γ is:",
+      "options": [
+        "0",
+        "+1",
+        "−1",
+        "+0.5"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Matched impedances give zero reflection.",
+      "category": "Reflection calculations",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q225",
+      "type": "single",
+      "question": "For a 1 V incident wave and Γ=+0.5, reflected voltage is:",
+      "options": [
+        "+0.5 V",
+        "−0.5 V",
+        "+1.5 V",
+        "0 V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Vreflected=ΓVincident.",
+      "category": "Reflection calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q226",
+      "type": "single",
+      "question": "For a 1 V incident wave and Γ=−0.5, reflected voltage is:",
+      "options": [
+        "−0.5 V",
+        "+0.5 V",
+        "0 V",
+        "−1 V"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Vreflected=ΓVincident.",
+      "category": "Reflection calculations",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q227",
+      "type": "single",
+      "question": "For Z0=50 Ω and v=1.5×10^8 m/s, CL is approximately:",
+      "options": [
+        "133 pF/m",
+        "13.3 pF/m",
+        "1.33 nF/m",
+        "333 pF/m"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "CL=1/(vZ0)=1/(1.5e8×50)=1.33e-10 F/m.",
+      "category": "Distributed parameters",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q228",
+      "type": "single",
+      "question": "For Z0=50 Ω and v=1.5×10^8 m/s, LL is approximately:",
+      "options": [
+        "333 nH/m",
+        "33.3 nH/m",
+        "3.33 µH/m",
+        "750 nH/m"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "LL=Z0/v=50/1.5e8=3.33e-7 H/m.",
+      "category": "Distributed parameters",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q229",
+      "type": "tf",
+      "question": "For fixed propagation velocity, increasing CL lowers Z0.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Z0=1/(CLv) in the intuitive model.",
+      "category": "Distributed parameters",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q230",
+      "type": "tf",
+      "question": "For fixed CL, increasing propagation velocity lowers the instantaneous impedance.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Z=1/(CLv).",
+      "category": "Distributed parameters",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q231",
+      "type": "single",
+      "question": "Which quantity matters more than clock frequency alone when judging high-speed behavior?",
+      "options": [
+        "Rise time",
+        "PCB color",
+        "DC current rating",
+        "Solder-mask thickness"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Fast edges can contain frequencies far above fclock.",
+      "category": "Concepts",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q232",
+      "type": "single",
+      "question": "Why can a 100 MHz clock require analysis well above 100 MHz?",
+      "options": [
+        "Its fast edges contain harmonics/high-frequency components",
+        "Because the DC component is 100 MHz",
+        "Because FR-4 doubles frequency",
+        "Because Z0 equals frequency"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is a key broadband-design concept.",
+      "category": "Concepts",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q233",
+      "type": "single",
+      "question": "Why does increasing local trace width create a discontinuity?",
+      "options": [
+        "It changes CL and therefore Z0",
+        "It changes clock frequency directly",
+        "It removes the return path",
+        "It always changes dielectric constant"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This follows the intuitive model.",
+      "category": "Concepts",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q234",
+      "type": "single",
+      "question": "What is the key difference between a lumped interconnect and a transmission line?",
+      "options": [
+        "Propagation delay and spatial variation cannot be neglected in a transmission line",
+        "A transmission line has no capacitance",
+        "A lumped interconnect has no resistance",
+        "Only transmission lines carry current"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the core distinction.",
+      "category": "Concepts",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q235",
+      "type": "single",
+      "question": "Why does a matched load eliminate reflection?",
+      "options": [
+        "The traveling wave sees no impedance discontinuity",
+        "The load absorbs no energy",
+        "The line becomes infinitely long",
+        "The source resistance becomes zero"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Γ=0 when ZL=Z0.",
+      "category": "Concepts",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q236",
+      "type": "single",
+      "question": "Why does an open load produce Γ=+1?",
+      "options": [
+        "The reflected voltage has the same polarity and equal magnitude",
+        "The reflected voltage is inverted",
+        "No reflection occurs",
+        "Current doubles permanently"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the extreme positive-reflection case.",
+      "category": "Concepts",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q237",
+      "type": "single",
+      "question": "Why does a shorted load produce Γ=−1?",
+      "options": [
+        "The reflected voltage has equal magnitude and opposite polarity",
+        "No reflection occurs",
+        "Voltage doubles",
+        "The line becomes matched"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the extreme negative-reflection case.",
+      "category": "Concepts",
+      "difficulty": "standard"
+    },
+    {
+      "id": "q238",
+      "type": "single",
+      "question": "What does a large open eye indicate in practice?",
+      "options": [
+        "Large voltage and timing margins",
+        "Severe ISI",
+        "High bit-error probability",
+        "Strong reflections only"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter's eye-diagram interpretation.",
+      "category": "Concepts",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q239",
+      "type": "tf",
+      "question": "High-speed digital signals are broadband.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "Fast edges contain significant high-frequency components.",
+      "category": "Broadband signals",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q240",
+      "type": "tf",
+      "question": "A 100 MHz clock with 1 ns rise time is consistent with the chapter's high-speed rule of thumb.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "100 MHz and about 1 ns are the stated thresholds.",
+      "category": "High-speed criteria",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q241",
+      "type": "tf",
+      "question": "Propagation velocity in FR-4 is approximated as 15 cm/ns.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter's conservative approximation.",
+      "category": "Propagation velocity",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q242",
+      "type": "tf",
+      "question": "Transmission-line effects are usually negligible when RT is much shorter than 4TD.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "They are usually negligible when RT is about 4TD or longer.",
+      "category": "Electrical length",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q243",
+      "type": "tf",
+      "question": "Reducing bandwidth makes digital edges slower.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "High-frequency components are attenuated.",
+      "category": "Bandwidth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q244",
+      "type": "tf",
+      "question": "The coarse estimate BW≈fclock is sufficient for all high-speed digital design.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "The chapter explicitly says it is insufficient.",
+      "category": "Bandwidth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q245",
+      "type": "tf",
+      "question": "The high-speed estimate used in the chapter is BW≈5fclock.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is derived from RT≈0.07Tclock.",
+      "category": "High-speed estimate",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q246",
+      "type": "tf",
+      "question": "The output rise time can be estimated by root-sum-square combination of input and interconnect rise times.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "RTout≈sqrt(RTin²+RTintrinsic²).",
+      "category": "Interconnect bandwidth",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q247",
+      "type": "tf",
+      "question": "A uniform line's characteristic impedance depends on its total length.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Changing line length does not change Z0.",
+      "category": "Characteristic impedance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q248",
+      "type": "tf",
+      "question": "An infinite lossless LC line can present a real input impedance.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the chapter's intuitive conclusion.",
+      "category": "Characteristic impedance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q249",
+      "type": "tf",
+      "question": "A matched transmission line has Γ=0.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "No reflection occurs.",
+      "category": "Reflection coefficient",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q250",
+      "type": "tf",
+      "question": "An open circuit has Γ=+1.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Reflection coefficient",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q251",
+      "type": "tf",
+      "question": "A short circuit has Γ=−1.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Reflection coefficient",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q252",
+      "type": "tf",
+      "question": "A TDR measures reflections from a fast launched step.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the definition given.",
+      "category": "TDR",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q253",
+      "type": "tf",
+      "question": "In a lossy line, higher-frequency components are often attenuated more strongly.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Lossy lines",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q254",
+      "type": "tf",
+      "question": "ISI can reduce the eye opening.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "ISI",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q255",
+      "type": "tf",
+      "question": "A closed eye generally indicates better signal integrity.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "A large open eye indicates good margins.",
+      "category": "Eye diagram",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q256",
+      "type": "tf",
+      "question": "Skin depth increases as frequency increases.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        1
+      ],
+      "explanation": "Skin depth decreases as 1/sqrt(f).",
+      "category": "Skin effect",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q257",
+      "type": "tf",
+      "question": "Conductor skin-effect loss scales approximately with sqrt(f).",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is summarized on page 47.",
+      "category": "Loss scaling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q258",
+      "type": "tf",
+      "question": "Dielectric loss scales approximately with f for constant tanδ.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is explicitly stated.",
+      "category": "Loss scaling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q259",
+      "type": "tf",
+      "question": "At sufficiently high frequency in the shown FR-4 microstrip, dielectric loss dominates.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "The example shows this above about 1 GHz.",
+      "category": "Loss example",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q260",
+      "type": "tf",
+      "question": "The low-loss approximation requires resistive loss terms to remain small relative to reactive terms.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": [
+        0
+      ],
+      "explanation": "This is the defining assumption.",
+      "category": "Low-loss approximation",
+      "difficulty": "easy"
+    }
+  ]
+}
