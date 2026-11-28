@@ -1,8 +1,8 @@
 {
   "id": "chapter8",
   "title": "Chapter 8 — High-Frequency PCB Design",
-  "source": "08 - High-frequency PCB design (1).pdf",
-  "question_count": 260,
+  "source": "08 - High-frequency PCB design.pdf",
+  "question_count": 224,
   "questions": [
     {
       "id": "q1",
@@ -10,7 +10,7 @@
       "question": "What is signal integrity?",
       "options": [
         "The quality and reliability of electrical signals transmitted through a circuit or communication system",
-        "Only the amplitude of a DC rail",
+        "The amplitude of a DC rail",
         "The thermal stability of a PCB",
         "The mechanical strength of a connector"
       ],
@@ -45,7 +45,7 @@
       "options": [
         "fclock ≥ 100 MHz and/or RT ≤ 1 ns",
         "fclock ≤ 1 MHz only",
-        "RT ≥ 100 ns",
+        "RT ≥ 1 ns",
         "Only fclock = 50 Hz"
       ],
       "answer": [
@@ -343,23 +343,6 @@
       "difficulty": "standard"
     },
     {
-      "id": "q21",
-      "type": "single",
-      "question": "That propagation velocity corresponds to approximately:",
-      "options": [
-        "15 cm/ns",
-        "1.5 cm/ns",
-        "30 cm/ns",
-        "150 cm/ns"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The chapter explicitly gives 15 cm/ns.",
-      "category": "Propagation velocity",
-      "difficulty": "easy"
-    },
-    {
       "id": "q22",
       "type": "tf",
       "question": "For a PCB surface trace, the electric field lies partly in air and partly in FR-4.",
@@ -513,8 +496,8 @@
       "options": [
         "GHz frequencies",
         "Only DC",
-        "Only audio frequencies",
-        "Only below 1 Hz"
+        "Audio frequencies",
+        "Below 1 Hz"
       ],
       "answer": [
         0
@@ -960,57 +943,6 @@
       "difficulty": "easy"
     },
     {
-      "id": "q58",
-      "type": "single",
-      "question": "The example transmission line on FR-4 is:",
-      "options": [
-        "50 Ω and 10 cm long",
-        "100 Ω and 1 cm",
-        "25 Ω and 1 m",
-        "75 Ω and 5 cm"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "These values are explicitly given.",
-      "category": "Interconnect example",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q59",
-      "type": "single",
-      "question": "The 3 dB bandwidth in the example is:",
-      "options": [
-        "8 GHz",
-        "800 MHz",
-        "80 GHz",
-        "4 GHz"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "This is explicitly given.",
-      "category": "Interconnect example",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q60",
-      "type": "single",
-      "question": "At the 3 dB bandwidth, the sine-wave amplitude is about:",
-      "options": [
-        "71% of its low-frequency value",
-        "50%",
-        "100%",
-        "25%"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "This is explicitly stated.",
-      "category": "Interconnect example",
-      "difficulty": "easy"
-    },
-    {
       "id": "q61",
       "type": "single",
       "question": "For BW = 8 GHz, RTintrinsic is approximately:",
@@ -1160,91 +1092,6 @@
       "difficulty": "easy"
     },
     {
-      "id": "q70",
-      "type": "single",
-      "question": "In the 800 MHz example, BWsignal is estimated as:",
-      "options": [
-        "4 GHz",
-        "800 MHz",
-        "8 GHz",
-        "400 MHz"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "BWsignal≈5fclock=4 GHz.",
-      "category": "800 MHz example",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q71",
-      "type": "single",
-      "question": "For BWsignal = 4 GHz, RTin is about:",
-      "options": [
-        "88 ps",
-        "44 ps",
-        "175 ps",
-        "8.8 ps"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "0.35/4 GHz=87.5 ps.",
-      "category": "800 MHz example",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q72",
-      "type": "single",
-      "question": "For the 8 GHz interconnect, RTintrinsic remains about:",
-      "options": [
-        "44 ps",
-        "88 ps",
-        "22 ps",
-        "8 ps"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The line bandwidth is still 8 GHz.",
-      "category": "800 MHz example",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q73",
-      "type": "single",
-      "question": "Combining 88 ps and 44 ps gives RTout approximately:",
-      "options": [
-        "98 ps",
-        "132 ps",
-        "44 ps",
-        "88 ps"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "sqrt(88²+44²)≈98 ps.",
-      "category": "800 MHz example",
-      "difficulty": "standard"
-    },
-    {
-      "id": "q74",
-      "type": "single",
-      "question": "The rise-time increase in the 800 MHz example is approximately:",
-      "options": [
-        "12%",
-        "2%",
-        "50%",
-        "100%"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "This is explicitly stated.",
-      "category": "800 MHz example",
-      "difficulty": "easy"
-    },
-    {
       "id": "q75",
       "type": "single",
       "question": "A transmission line consists of:",
@@ -1338,7 +1185,7 @@
         "Embedded microstrip",
         "Stripline",
         "Asymmetric stripline",
-        "Only DIP traces"
+        "DIP traces"
       ],
       "answer": [
         0,
@@ -1617,74 +1464,6 @@
       ],
       "explanation": "This is explicitly stated.",
       "category": "Characteristic impedance",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q97",
-      "type": "single",
-      "question": "In the Earth-to-Moon example, the one-way propagation delay is:",
-      "options": [
-        "2 s",
-        "1 s",
-        "4 s",
-        "0.5 s"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "This is explicitly stated.",
-      "category": "Moon example",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q98",
-      "type": "single",
-      "question": "The round-trip delay in the Moon example is:",
-      "options": [
-        "4 s",
-        "2 s",
-        "8 s",
-        "1 s"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "This is explicitly stated.",
-      "category": "Moon example",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q99",
-      "type": "single",
-      "question": "For the first 4 s, the measured input impedance of the open line is:",
-      "options": [
-        "The characteristic impedance",
-        "An open circuit",
-        "A short circuit",
-        "Zero"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The source has not yet received the reflection.",
-      "category": "Moon example",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q100",
-      "type": "single",
-      "question": "After the 4 s round trip, the measured input impedance becomes:",
-      "options": [
-        "Open circuit",
-        "Z0 forever",
-        "Short circuit",
-        "Half Z0"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The reflection reveals the open load.",
-      "category": "Moon example",
       "difficulty": "easy"
     },
     {
@@ -2141,342 +1920,6 @@
       "difficulty": "easy"
     },
     {
-      "id": "q128",
-      "type": "single",
-      "question": "In the bounce-diagram example, source output impedance RS is:",
-      "options": [
-        "10 Ω",
-        "50 Ω",
-        "100 Ω",
-        "1 Ω"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "This is explicitly stated.",
-      "category": "Bounce diagram",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q129",
-      "type": "single",
-      "question": "The line characteristic impedance Z0 is:",
-      "options": [
-        "50 Ω",
-        "10 Ω",
-        "100 Ω",
-        "∞"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "This is explicitly stated.",
-      "category": "Bounce diagram",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q130",
-      "type": "single",
-      "question": "The load is:",
-      "options": [
-        "Open circuit",
-        "50 Ω matched",
-        "Short circuit",
-        "25 Ω"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "This is explicitly stated.",
-      "category": "Bounce diagram",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q131",
-      "type": "single",
-      "question": "The one-way propagation delay TD is:",
-      "options": [
-        "1 ns",
-        "2 ns",
-        "0.5 ns",
-        "10 ns"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "This is explicitly stated.",
-      "category": "Bounce diagram",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q132",
-      "type": "single",
-      "question": "The source step amplitude is:",
-      "options": [
-        "1 V",
-        "5 V",
-        "0.5 V",
-        "10 V"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The diagram and calculation use a 1 V source.",
-      "category": "Bounce diagram",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q133",
-      "type": "single",
-      "question": "At t=0, the source initially sees:",
-      "options": [
-        "Z0 = 50 Ω",
-        "The open load directly",
-        "Infinite impedance",
-        "Zero impedance"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The source has not yet received the load reflection.",
-      "category": "Bounce diagram",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q134",
-      "type": "single",
-      "question": "The initially launched voltage is approximately:",
-      "options": [
-        "0.84 V",
-        "1.68 V",
-        "0.56 V",
-        "1 V"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "1 V×50/(10+50)=0.833 V≈0.84 V.",
-      "category": "Bounce diagram",
-      "difficulty": "standard"
-    },
-    {
-      "id": "q135",
-      "type": "single",
-      "question": "The load reflection coefficient ΓL for the open circuit is:",
-      "options": [
-        "+1",
-        "−1",
-        "0",
-        "−0.67"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "Open circuit gives Γ=+1.",
-      "category": "Bounce diagram",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q136",
-      "type": "single",
-      "question": "At t=1 ns, the load voltage becomes approximately:",
-      "options": [
-        "1.68 V",
-        "0.84 V",
-        "1.12 V",
-        "0 V"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "Incident and equal reflected wave add at the open load.",
-      "category": "Bounce diagram",
-      "difficulty": "standard"
-    },
-    {
-      "id": "q137",
-      "type": "single",
-      "question": "The source reflection coefficient ΓS is approximately:",
-      "options": [
-        "−0.67",
-        "+0.67",
-        "0",
-        "−1"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "(10−50)/(10+50)=−40/60≈−0.67.",
-      "category": "Bounce diagram",
-      "difficulty": "standard"
-    },
-    {
-      "id": "q138",
-      "type": "single",
-      "question": "The reflected wave generated at the source from 0.84 V is about:",
-      "options": [
-        "−0.56 V",
-        "+0.56 V",
-        "−0.84 V",
-        "+0.38 V"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "0.84×−0.67≈−0.56 V.",
-      "category": "Bounce diagram",
-      "difficulty": "standard"
-    },
-    {
-      "id": "q139",
-      "type": "single",
-      "question": "At t=2 ns, the source-end voltage is approximately:",
-      "options": [
-        "1.12 V",
-        "0.84 V",
-        "1.68 V",
-        "0.56 V"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "0.84+0.84−0.56≈1.12 V.",
-      "category": "Bounce diagram",
-      "difficulty": "standard"
-    },
-    {
-      "id": "q140",
-      "type": "single",
-      "question": "At t=3 ns, after the −0.56 V wave reaches the open load, load voltage becomes approximately:",
-      "options": [
-        "0.56 V",
-        "1.68 V",
-        "1.12 V",
-        "0 V"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "1.68−0.56−0.56≈0.56 V.",
-      "category": "Bounce diagram",
-      "difficulty": "hard"
-    },
-    {
-      "id": "q141",
-      "type": "single",
-      "question": "The −0.56 V wave reflecting from the source with ΓS≈−0.67 creates about:",
-      "options": [
-        "+0.375 V",
-        "−0.375 V",
-        "+0.84 V",
-        "−0.56 V"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "−0.56×−0.67≈+0.375 V.",
-      "category": "Bounce diagram",
-      "difficulty": "hard"
-    },
-    {
-      "id": "q142",
-      "type": "single",
-      "question": "At t=5 ns, the load voltage is approximately:",
-      "options": [
-        "1.31 V",
-        "1.00 V",
-        "0.56 V",
-        "1.68 V"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "0.56+0.375+0.375≈1.31 V.",
-      "category": "Bounce diagram",
-      "difficulty": "hard"
-    },
-    {
-      "id": "q143",
-      "type": "single",
-      "question": "The repeated reflections eventually settle to:",
-      "options": [
-        "1 V",
-        "0 V",
-        "1.68 V",
-        "0.84 V"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "The final DC voltage is 1 V.",
-      "category": "Bounce diagram",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q144",
-      "type": "tf",
-      "question": "In the open-load example, reflection amplitude decreases over successive bounces.",
-      "options": [
-        "True",
-        "False"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "Because |ΓS|<1 at the source.",
-      "category": "Bounce diagram",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q145",
-      "type": "single",
-      "question": "If the load is short-circuited, the load voltage is:",
-      "options": [
-        "0 V",
-        "1 V",
-        "0.84 V",
-        "1.68 V"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "A short circuit enforces zero voltage at the load.",
-      "category": "Bounce diagram",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q146",
-      "type": "single",
-      "question": "If the load is matched to Z0=50 Ω, the load reflection coefficient is:",
-      "options": [
-        "0",
-        "+1",
-        "−1",
-        "−0.67"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "Matched impedance gives no reflection.",
-      "category": "Bounce diagram",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q147",
-      "type": "tf",
-      "question": "With a matched 50 Ω load, the initially launched ~0.84 V reaches the load without reflection.",
-      "options": [
-        "True",
-        "False"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "ΓL=0.",
-      "category": "Bounce diagram",
-      "difficulty": "standard"
-    },
-    {
       "id": "q148",
       "type": "single",
       "question": "In a lossy transmission line, higher-frequency components are typically:",
@@ -2834,26 +2277,6 @@
       "explanation": "This is explicitly stated.",
       "category": "Loss mechanisms",
       "difficulty": "easy"
-    },
-    {
-      "id": "q169",
-      "type": "multi",
-      "question": "The five listed energy-loss mechanisms are:",
-      "options": [
-        "Radiative loss",
-        "Crosstalk",
-        "Impedance mismatches",
-        "Conductor and dielectric loss"
-      ],
-      "answer": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "explanation": "The fourth option groups the two final listed mechanisms.",
-      "category": "Loss mechanisms",
-      "difficulty": "standard"
     },
     {
       "id": "q170",
@@ -3449,23 +2872,6 @@
       "difficulty": "easy"
     },
     {
-      "id": "q205",
-      "type": "single",
-      "question": "The attenuation example on page 50 uses a:",
-      "options": [
-        "50 Ω FR-4 microstrip",
-        "100 Ω twisted pair",
-        "25 Ω stripline",
-        "75 Ω coax"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "This is explicitly stated.",
-      "category": "Loss example",
-      "difficulty": "easy"
-    },
-    {
       "id": "q206",
       "type": "single",
       "question": "The trace width in that example is:",
@@ -3474,23 +2880,6 @@
         "6 mil",
         "20 mil",
         "80 mil"
-      ],
-      "answer": [
-        0
-      ],
-      "explanation": "This is explicitly stated.",
-      "category": "Loss example",
-      "difficulty": "easy"
-    },
-    {
-      "id": "q207",
-      "type": "single",
-      "question": "In that example, dielectric loss becomes dominant above approximately:",
-      "options": [
-        "1 GHz",
-        "1 MHz",
-        "100 MHz",
-        "10 GHz"
       ],
       "answer": [
         0
